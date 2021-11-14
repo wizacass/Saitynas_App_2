@@ -105,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				A0B4DA212741566800C0EC1F /* Saitynas_App_2 */,
+				A0B4DA222741566800C0EC1F /* AppDelegate.swift */,
+				A0B4DA242741566800C0EC1F /* SceneDelegate.swift */,
 				A0B4DA382741566900C0EC1F /* Saitynas_App_2Tests */,
 				A0B4DA422741566900C0EC1F /* Saitynas_App_2UITests */,
 				A0B4DA202741566800C0EC1F /* Products */,
@@ -126,13 +128,9 @@
 		A0B4DA212741566800C0EC1F /* Saitynas_App_2 */ = {
 			isa = PBXGroup;
 			children = (
-				A0B4DA222741566800C0EC1F /* AppDelegate.swift */,
-				A0B4DA242741566800C0EC1F /* SceneDelegate.swift */,
-				A0B4DA262741566800C0EC1F /* ViewController.swift */,
-				A0B4DA282741566800C0EC1F /* Main.storyboard */,
-				A0B4DA2B2741566900C0EC1F /* Assets.xcassets */,
-				A0B4DA2D2741566900C0EC1F /* LaunchScreen.storyboard */,
-				A0B4DA302741566900C0EC1F /* Info.plist */,
+				A0B993502741598800EA60B0 /* Controllers */,
+				A0B9934F2741597900EA60B0 /* Storyboards */,
+				A0B9934E2741596B00EA60B0 /* Resources */,
 			);
 			path = Saitynas_App_2;
 			sourceTree = "<group>";
@@ -154,6 +152,32 @@
 			path = Saitynas_App_2UITests;
 			sourceTree = "<group>";
 		};
+		A0B9934E2741596B00EA60B0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A0B4DA2B2741566900C0EC1F /* Assets.xcassets */,
+				A0B4DA302741566900C0EC1F /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A0B9934F2741597900EA60B0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A0B4DA282741566800C0EC1F /* Main.storyboard */,
+				A0B4DA2D2741566900C0EC1F /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		A0B993502741598800EA60B0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A0B4DA262741566800C0EC1F /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		E1F867D7DF93210A9D57176C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +188,6 @@
 				9465DB913CD54F4A1CA30AC9 /* Pods-Saitynas_App_2Tests.debug.xcconfig */,
 				79ABC9337BEA7004DA6DED9D /* Pods-Saitynas_App_2Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
