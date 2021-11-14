@@ -11,10 +11,6 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func logoutButtonPressed(_ sender: UIButton) {
-//        if let viewController = storyboard?.instantiateViewController(.authenticationViewController) as? AuthenticationViewController {
-//            navigationController?.pushViewController(viewController, animated: true)
-//        }
         authenticationManager.logout()
-
     }
 }

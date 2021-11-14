@@ -9,10 +9,14 @@ class Bootstrapper {
     }
     
     func createContainer() -> DIContainer {
-        let apiClient = ApiClient(apiUrl)
+        let keychainStorage = KeychainStorage()
+        let tokensRepository = UserTokensRepository(keychainStorage)
+        
+        let apiClient = ApiClient(apiUrl, tokensRepository)
         let communicator = Communicator(apiClient)
         let accessCommunicator = AccessCommunicator(apiClient)
-        let authenticationManager = AuthenticationManager(accessCommunicator)
+        
+        let authenticationManager = AuthenticationManager(accessCommunicator, tokensRepository)
         
         return DIContainer(communicator, authenticationManager)
     }

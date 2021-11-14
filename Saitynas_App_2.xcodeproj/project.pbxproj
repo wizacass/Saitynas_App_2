@@ -16,6 +16,9 @@
 		A07120E027418E1700B5A945 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120DF27418E1700B5A945 /* AuthenticationManager.swift */; };
 		A07120E227418F5A00B5A945 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120E127418F5A00B5A945 /* LoginViewModel.swift */; };
 		A07120E42741967B00B5A945 /* StateObserverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120E32741967B00B5A945 /* StateObserverDelegate.swift */; };
+		A07120E72741A88D00B5A945 /* KeyValueStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120E62741A88D00B5A945 /* KeyValueStorageProtocol.swift */; };
+		A07120E92741AB5800B5A945 /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120E82741AB5800B5A945 /* KeychainStorage.swift */; };
+		A07120EB2741ABA300B5A945 /* UserTokensRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120EA2741ABA300B5A945 /* UserTokensRepository.swift */; };
 		A0B4DA232741566800C0EC1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA222741566800C0EC1F /* AppDelegate.swift */; };
 		A0B4DA252741566800C0EC1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA242741566800C0EC1F /* SceneDelegate.swift */; };
 		A0B4DA272741566800C0EC1F /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA262741566800C0EC1F /* AuthenticationViewController.swift */; };
@@ -73,6 +76,9 @@
 		A07120DF27418E1700B5A945 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		A07120E127418F5A00B5A945 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A07120E32741967B00B5A945 /* StateObserverDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateObserverDelegate.swift; sourceTree = "<group>"; };
+		A07120E62741A88D00B5A945 /* KeyValueStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStorageProtocol.swift; sourceTree = "<group>"; };
+		A07120E82741AB5800B5A945 /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
+		A07120EA2741ABA300B5A945 /* UserTokensRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTokensRepository.swift; sourceTree = "<group>"; };
 		A0B4DA1F2741566800C0EC1F /* Saitynas_App_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saitynas_App_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B4DA222741566800C0EC1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0B4DA242741566800C0EC1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +151,16 @@
 				3C536A0316055447994E05DB /* Pods_Saitynas_App_2Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A07120E52741A86D00B5A945 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				A07120E62741A88D00B5A945 /* KeyValueStorageProtocol.swift */,
+				A07120E82741AB5800B5A945 /* KeychainStorage.swift */,
+				A07120EA2741ABA300B5A945 /* UserTokensRepository.swift */,
+			);
+			name = Storage;
 			sourceTree = "<group>";
 		};
 		A0B4DA162741566800C0EC1F = {
@@ -238,6 +254,7 @@
 		A0B9935127415CA600EA60B0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A07120E52741A86D00B5A945 /* Storage */,
 				A0B99366274164FF00EA60B0 /* Networking */,
 				A0B9935727415DC800EA60B0 /* Bootstrapper.swift */,
 				A07120DF27418E1700B5A945 /* AuthenticationManager.swift */,
@@ -553,8 +570,10 @@
 				A0B993632741612B00EA60B0 /* MessageViewModel.swift in Sources */,
 				A07120E42741967B00B5A945 /* StateObserverDelegate.swift in Sources */,
 				A0B4DA272741566800C0EC1F /* AuthenticationViewController.swift in Sources */,
+				A07120E72741A88D00B5A945 /* KeyValueStorageProtocol.swift in Sources */,
 				A07120DC27418D3B00B5A945 /* TokensDTO.swift in Sources */,
 				A0B9935827415DC800EA60B0 /* Bootstrapper.swift in Sources */,
+				A07120EB2741ABA300B5A945 /* UserTokensRepository.swift in Sources */,
 				A0B4DA232741566800C0EC1F /* AppDelegate.swift in Sources */,
 				A07120DE27418D8D00B5A945 /* Role.swift in Sources */,
 				A07120E027418E1700B5A945 /* AuthenticationManager.swift in Sources */,
@@ -571,6 +590,7 @@
 				A0B993762741820C00EA60B0 /* LoginViewController.swift in Sources */,
 				A0B993612741609D00EA60B0 /* MessageDTO.swift in Sources */,
 				A0B9937C2741831200EA60B0 /* SpecialistViewController.swift in Sources */,
+				A07120E92741AB5800B5A945 /* KeychainStorage.swift in Sources */,
 				A0B9937427417ADE00EA60B0 /* UIStoryboardExtensions.swift in Sources */,
 				A0B9936E274179A200EA60B0 /* ViewControllerIdentifier.swift in Sources */,
 			);

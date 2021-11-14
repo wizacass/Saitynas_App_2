@@ -7,11 +7,11 @@ class ApiClient
     private let decoder = JSONDecoder()
     
     private var apiUrl: String
-    //    private var tokensRepo: UserTokensRepository
+    private var tokensRepo: UserTokensRepository
     
-    init(_ apiUrl: String) {
+    init(_ apiUrl: String, _ tokensRespo: UserTokensRepository) {
         self.apiUrl = apiUrl
-        //        self.tokensRepo = tokensRepo
+        self.tokensRepo = tokensRespo
     }
     
     func get<T: Decodable>(
@@ -61,9 +61,9 @@ class ApiClient
             "X-Api-Request": "true"
         ]
         
-        //        if let token = tokensRepo.accessToken {
-        //            headers.add(name: "Authorization", value: "Bearer \(token)")
-        //        }
+        if let token = tokensRepo.accessToken {
+            headers.add(name: "Authorization", value: "Bearer \(token)")
+        }
         
         return headers
     }
