@@ -24,21 +24,21 @@ class AuthenticationManager  {
     }
 
     func login(_ email: String, _ password: String, onComplete handleLogin: @escaping (ErrorDTO?) -> Void) {
-        //        communicator.login(email, password) { [weak self] tokens in
-        ////            guard let tokens = tokens else {
-        ////                handleLogin()
-        ////                return
-        ////            }
-        ////
-        ////            self?.saveTokens(tokens)
-        ////
-        //            handleLogin(nil)
-        //        } onError: { error in
-        //            handleLogin(error)
-        //        }
+                communicator.login(email, password) { [weak self] tokens in
+                    guard let tokens = tokens else {
+                        handleLogin(ErrorDTO(type: -1, title: "serialization_Error", details: "login"))
+                        return
+                    }
 
-        handleLogin(nil)
-        observers.forEach { $0?.onLogin() }
+        //            self?.saveTokens(tokens)
+        //
+                    print("Jwt: \(tokens.jwt)")
+
+                    self?.observers.forEach { $0?.onLogin() }
+                    handleLogin(nil)
+                } onError: { error in
+                    handleLogin(error)
+                }
     }
 
     func signup() {}
@@ -48,7 +48,7 @@ class AuthenticationManager  {
     //        repository.refreshToken = tokens.refreshToken
     //        isLoggedIn = true
     //    }
-    //
+
     func logout() {
         //        repository.clearAll()
         //        isLoggedIn = false
