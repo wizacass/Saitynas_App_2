@@ -9,6 +9,9 @@ class Bootstrapper {
     }
     
     func createContainer() -> DIContainer {
-        return DIContainer(apiUrl)
+        let apiClient = ApiClient(apiUrl)
+        let communicator = Communicator(apiClient)
+        
+        return DIContainer(communicator)
     }
 }

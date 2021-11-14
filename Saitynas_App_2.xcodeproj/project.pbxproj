@@ -26,6 +26,8 @@
 		A0B993612741609D00EA60B0 /* MessageDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B993602741609D00EA60B0 /* MessageDTO.swift */; };
 		A0B993632741612B00EA60B0 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B993622741612B00EA60B0 /* MessageViewModel.swift */; };
 		A0B993652741619900EA60B0 /* MessageViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B993642741619900EA60B0 /* MessageViewControllerProtocol.swift */; };
+		A0B993682741650A00EA60B0 /* ApiClient.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B993672741650A00EA60B0 /* ApiClient.swift.swift */; };
+		A0B9936A274166F000EA60B0 /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B99369274166F000EA60B0 /* Communicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		A0B993602741609D00EA60B0 /* MessageDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDTO.swift; sourceTree = "<group>"; };
 		A0B993622741612B00EA60B0 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		A0B993642741619900EA60B0 /* MessageViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewControllerProtocol.swift; sourceTree = "<group>"; };
+		A0B993672741650A00EA60B0 /* ApiClient.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift.swift; sourceTree = "<group>"; };
+		A0B99369274166F000EA60B0 /* Communicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
 		AF6170A55100D4AD16B5B781 /* Pods_Saitynas_App_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saitynas_App_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39840B9341DC88193000E2B /* Pods-Saitynas_App_2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saitynas_App_2.release.xcconfig"; path = "Target Support Files/Pods-Saitynas_App_2/Pods-Saitynas_App_2.release.xcconfig"; sourceTree = "<group>"; };
 		BA61AB65E9EFA55C15E75B34 /* Pods-Saitynas_App_2-Saitynas_App_2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saitynas_App_2-Saitynas_App_2UITests.release.xcconfig"; path = "Target Support Files/Pods-Saitynas_App_2-Saitynas_App_2UITests/Pods-Saitynas_App_2-Saitynas_App_2UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 		A0B9935127415CA600EA60B0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A0B99366274164FF00EA60B0 /* Networking */,
 				A0B9935727415DC800EA60B0 /* Bootstrapper.swift */,
 			);
 			name = Services;
@@ -237,6 +242,15 @@
 				A0B993622741612B00EA60B0 /* MessageViewModel.swift */,
 			);
 			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		A0B99366274164FF00EA60B0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A0B993672741650A00EA60B0 /* ApiClient.swift.swift */,
+				A0B99369274166F000EA60B0 /* Communicator.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		E1F867D7DF93210A9D57176C /* Pods */ = {
@@ -497,9 +511,11 @@
 				A0B9935827415DC800EA60B0 /* Bootstrapper.swift in Sources */,
 				A0B4DA232741566800C0EC1F /* AppDelegate.swift in Sources */,
 				A0B9935D2741607F00EA60B0 /* ErrorDTO.swift in Sources */,
+				A0B9936A274166F000EA60B0 /* Communicator.swift in Sources */,
 				A0B993652741619900EA60B0 /* MessageViewControllerProtocol.swift in Sources */,
 				A0B9935F2741608900EA60B0 /* Meta.swift in Sources */,
 				A0B4DA252741566800C0EC1F /* SceneDelegate.swift in Sources */,
+				A0B993682741650A00EA60B0 /* ApiClient.swift.swift in Sources */,
 				A0B993612741609D00EA60B0 /* MessageDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

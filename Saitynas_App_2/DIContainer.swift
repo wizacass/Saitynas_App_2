@@ -2,9 +2,9 @@ import Foundation
 
 class DIContainer {
 
-    let apiUrl: String
+    let communicator: Communicator
 
-    init(_ apiUrl: String) {
-        self.apiUrl = apiUrl
+    init(_ communicator: Communicator) {
+        self.communicator = communicator
     }
 }
