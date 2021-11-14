@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -187,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mya-As-J0e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="156" y="1088"/>
+            <point key="canvasLocation" x="156" y="1087.6847290640394"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="XKb-uY-Oad">
@@ -291,7 +292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ah-dN-hUQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926" y="1088"/>
+            <point key="canvasLocation" x="925.60000000000002" y="1087.6847290640394"/>
         </scene>
         <!--Navigation View Controller-->
         <scene sceneID="frT-pO-Od9">
@@ -300,34 +301,65 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="015-u0-Zbg">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H4b-WQ-AZd">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FBO-EI-1ew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-729" y="347"/>
         </scene>
         <!--Specialists-->
-        <scene sceneID="MT2-9G-pPQ">
+        <scene sceneID="csc-du-flL">
             <objects>
-                <viewController id="ch9-ed-fV1" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yFB-53-XeS">
+                <tableViewController title="Specialists" id="GwU-gV-QT2" customClass="SpecialistTableViewController" customModule="Saitynas_App_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="aGn-Dx-HIW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Specialist View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7d-VR-jfR">
-                                <rect key="frame" x="106.33333333333333" y="76" width="162.33333333333337" height="30"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="pqu-26-FUd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="G7d-VR-jfR" firstAttribute="top" secondItem="pqu-26-FUd" secondAttribute="top" constant="32" id="pIQ-ib-MF7"/>
-                            <constraint firstItem="G7d-VR-jfR" firstAttribute="centerX" secondItem="yFB-53-XeS" secondAttribute="centerX" id="ypw-7E-Zau"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Specialists" id="UuV-HW-FqR">
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="specialistCell" textLabel="ina-aR-hSr" detailTextLabel="rS1-8N-GLB" imageView="ily-Fx-tOV" style="IBUITableViewCellStyleSubtitle" id="ZvF-32-x3G">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZvF-32-x3G" id="NlD-xr-fAp">
+                                    <rect key="frame" x="0.0" y="0.0" width="349.33333333333331" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="txt_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ina-aR-hSr">
+                                            <rect key="frame" x="53.5" y="7.0000000000000009" width="53" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="txt_speciality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rS1-8N-GLB">
+                                            <rect key="frame" x="53.499999999999993" y="23.333333333333336" width="70.333333333333329" height="13.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ily-Fx-tOV">
+                                            <rect key="frame" x="14.16666666666667" y="10.000000000000002" width="24.333333333333332" height="23.666666666666668"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <imageReference key="image" image="person.circle" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                                                <hierarchicalColors>
+                                                    <color name="AccentColor"/>
+                                                    <color systemColor="secondaryLabelColor"/>
+                                                    <color systemColor="tertiaryLabelColor"/>
+                                                </hierarchicalColors>
+                                            </imageReference>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GwU-gV-QT2" id="er0-tC-zb3"/>
+                            <outlet property="delegate" destination="GwU-gV-QT2" id="qY1-Tl-zoA"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Specialists" id="Sed-sY-95Z">
                         <imageReference key="image" image="list.dash" catalog="system" symbolScale="default" renderingMode="hierarchical-single">
                             <hierarchicalColors>
                                 <color name="AccentColor"/>
@@ -343,10 +375,70 @@
                             </hierarchicalColors>
                         </imageReference>
                     </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aQk-zD-Xvb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                    <navigationItem key="navigationItem" title="Specialists" largeTitleDisplayMode="always" id="3tz-QP-RsT"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XV0-cq-7AE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1705" y="1088"/>
+            <point key="canvasLocation" x="1673" y="1770"/>
+        </scene>
+        <!--Specialists-->
+        <scene sceneID="pAf-0j-UQm">
+            <objects>
+                <navigationController id="VWv-Zk-Dgg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Specialists" id="HMS-Tl-Cok">
+                        <imageReference key="image" image="list.dash" catalog="system" symbolScale="default" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="AccentColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="list.dash" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="AccentColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ekr-4K-7Tg">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GwU-gV-QT2" kind="relationship" relationship="rootViewController" id="7Iu-qs-lf5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NtC-8T-cmS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1673" y="1088"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="H8p-dO-FuF">
+            <objects>
+                <viewController storyboardIdentifier="SpecialistVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HXw-4C-zTy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G6N-xp-ZhU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Specialist Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxf-Am-GLW">
+                                <rect key="frame" x="72.000000000000014" y="76" width="231.33333333333337" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="F98-ze-x2q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zxf-Am-GLW" firstAttribute="centerX" secondItem="G6N-xp-ZhU" secondAttribute="centerX" id="Hbl-eD-Iy2"/>
+                            <constraint firstItem="zxf-Am-GLW" firstAttribute="top" secondItem="F98-ze-x2q" secondAttribute="top" constant="32" id="SjC-S9-soN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fOY-mv-KDK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1673" y="2450"/>
         </scene>
         <!--Workplaces-->
         <scene sceneID="zMA-Vc-d66">
@@ -466,9 +558,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ch9-ed-fV1" kind="relationship" relationship="viewControllers" id="POm-h4-0PI"/>
                         <segue destination="hfF-Xd-XFh" kind="relationship" relationship="viewControllers" id="apH-Lj-ern"/>
                         <segue destination="9HX-i5-qAb" kind="relationship" relationship="viewControllers" id="bJb-jQ-KvN"/>
+                        <segue destination="VWv-Zk-Dgg" kind="relationship" relationship="viewControllers" id="kRa-tR-jIn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xI-cH-UMG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -592,7 +684,7 @@
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="star.bubble" catalog="system" width="128" height="110"/>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
