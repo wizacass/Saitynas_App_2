@@ -34,6 +34,8 @@
 		A0B9937427417ADE00EA60B0 /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B9937327417ADE00EA60B0 /* UIStoryboardExtensions.swift */; };
 		A0B993762741820C00EA60B0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B993752741820C00EA60B0 /* LoginViewController.swift */; };
 		A0B993782741822400EA60B0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B993772741822400EA60B0 /* SignupViewController.swift */; };
+		A0B9937A274182E100EA60B0 /* PatientTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B99379274182E100EA60B0 /* PatientTabViewController.swift */; };
+		A0B9937C2741831200EA60B0 /* SpecialistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B9937B2741831200EA60B0 /* SpecialistViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		A0B9937327417ADE00EA60B0 /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtensions.swift; sourceTree = "<group>"; };
 		A0B993752741820C00EA60B0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A0B993772741822400EA60B0 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		A0B99379274182E100EA60B0 /* PatientTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTabViewController.swift; sourceTree = "<group>"; };
+		A0B9937B2741831200EA60B0 /* SpecialistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistViewController.swift; sourceTree = "<group>"; };
 		AF6170A55100D4AD16B5B781 /* Pods_Saitynas_App_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saitynas_App_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39840B9341DC88193000E2B /* Pods-Saitynas_App_2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saitynas_App_2.release.xcconfig"; path = "Target Support Files/Pods-Saitynas_App_2/Pods-Saitynas_App_2.release.xcconfig"; sourceTree = "<group>"; };
 		BA61AB65E9EFA55C15E75B34 /* Pods-Saitynas_App_2-Saitynas_App_2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saitynas_App_2-Saitynas_App_2UITests.release.xcconfig"; path = "Target Support Files/Pods-Saitynas_App_2-Saitynas_App_2UITests/Pods-Saitynas_App_2-Saitynas_App_2UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 				A0B9937127417A0800EA60B0 /* SettingsViewController.swift */,
 				A0B993752741820C00EA60B0 /* LoginViewController.swift */,
 				A0B993772741822400EA60B0 /* SignupViewController.swift */,
+				A0B99379274182E100EA60B0 /* PatientTabViewController.swift */,
+				A0B9937B2741831200EA60B0 /* SpecialistViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -535,10 +541,12 @@
 				A0B9935F2741608900EA60B0 /* Meta.swift in Sources */,
 				A0B4DA252741566800C0EC1F /* SceneDelegate.swift in Sources */,
 				A0B993682741650A00EA60B0 /* ApiClient.swift.swift in Sources */,
+				A0B9937A274182E100EA60B0 /* PatientTabViewController.swift in Sources */,
 				A0B9937227417A0800EA60B0 /* SettingsViewController.swift in Sources */,
 				A0B9936C274178D400EA60B0 /* NaviagtionViewController.swift in Sources */,
 				A0B993762741820C00EA60B0 /* LoginViewController.swift in Sources */,
 				A0B993612741609D00EA60B0 /* MessageDTO.swift in Sources */,
+				A0B9937C2741831200EA60B0 /* SpecialistViewController.swift in Sources */,
 				A0B9937427417ADE00EA60B0 /* UIStoryboardExtensions.swift in Sources */,
 				A0B9936E274179A200EA60B0 /* ViewControllerIdentifier.swift in Sources */,
 			);

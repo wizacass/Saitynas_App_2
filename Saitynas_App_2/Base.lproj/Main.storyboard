@@ -3,6 +3,7 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,7 +29,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="9kl-Zk-NLP">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="32"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="128" id="CEq-5E-wuX"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="CEq-5E-wuX"/>
                                             <constraint firstAttribute="height" constant="32" id="F9P-Og-zel"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
@@ -132,7 +133,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R7V-f1-2O6">
                                                 <rect key="frame" x="0.0" y="25" width="311" height="38"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -245,7 +246,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qTe-xF-wp5">
                                                 <rect key="frame" x="0.0" y="25" width="311" height="38"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <textInputTraits key="textInputTraits" textContentType="new-password"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -295,28 +296,114 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FBO-EI-1ew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-503" y="1"/>
+            <point key="canvasLocation" x="-729" y="347"/>
         </scene>
-        <!--Settings View Controller-->
-        <scene sceneID="MGN-iF-48h">
+        <!--Specialists-->
+        <scene sceneID="MT2-9G-pPQ">
             <objects>
-                <viewController storyboardIdentifier="SettingsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Uk7-t2-dN0" customClass="SettingsViewController" customModule="Saitynas_App_2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Wly-AX-Ys3">
+                <viewController id="ch9-ed-fV1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yFB-53-XeS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gu1-pw-tJN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Specialist View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7d-VR-jfR">
+                                <rect key="frame" x="106.33333333333333" y="76" width="162.33333333333337" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pqu-26-FUd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="G7d-VR-jfR" firstAttribute="top" secondItem="pqu-26-FUd" secondAttribute="top" constant="32" id="pIQ-ib-MF7"/>
+                            <constraint firstItem="G7d-VR-jfR" firstAttribute="centerX" secondItem="yFB-53-XeS" secondAttribute="centerX" id="ypw-7E-Zau"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Specialists" id="UuV-HW-FqR">
+                        <imageReference key="image" image="list.dash" catalog="system" symbolScale="default" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="AccentColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="list.dash" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="AccentColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQk-zD-Xvb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1705" y="1088"/>
+        </scene>
+        <!--Workplaces-->
+        <scene sceneID="zMA-Vc-d66">
+            <objects>
+                <viewController id="hfF-Xd-XFh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zwl-wW-tmR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workplaces View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o64-tz-eH8">
+                                <rect key="frame" x="95.333333333333329" y="76" width="184.66666666666669" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="otF-Jl-IqZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o64-tz-eH8" firstAttribute="top" secondItem="otF-Jl-IqZ" secondAttribute="top" constant="32" id="bNa-zT-Dn5"/>
+                            <constraint firstItem="o64-tz-eH8" firstAttribute="centerX" secondItem="zwl-wW-tmR" secondAttribute="centerX" id="kJh-eB-yyW"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Workplaces" id="hot-dP-bwC">
+                        <imageReference key="image" image="cross.circle" catalog="system" symbolScale="default" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="AccentColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="cross.circle" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="AccentColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Sz-bn-Iet" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2428" y="1088"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="Tjn-ps-o0f">
+            <objects>
+                <viewController storyboardIdentifier="SettingsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9HX-i5-qAb" customClass="SettingsViewController" customModule="Saitynas_App_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5bF-qG-bZg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjK-Vq-49a">
                                 <rect key="frame" x="135.66666666666666" y="374" width="104" height="64"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WqI-zJ-Hz8">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pve-Xs-7Ed">
                                         <rect key="frame" x="17" y="33" width="70" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Logout"/>
                                         <connections>
-                                            <action selector="logoutButtonPressed:" destination="Uk7-t2-dN0" eventType="touchUpInside" id="TT6-BF-Vf5"/>
+                                            <action selector="logoutButtonPressed:" destination="9HX-i5-qAb" eventType="touchUpInside" id="cn0-VC-0iz"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logged in user!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4J-oJ-1dv">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logged in user!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMN-34-X4s">
                                         <rect key="frame" x="0.0" y="0.0" width="104" height="17"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
@@ -325,31 +412,189 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="F4J-oJ-1dv" secondAttribute="trailing" id="3T8-Rc-h0K"/>
-                                    <constraint firstItem="F4J-oJ-1dv" firstAttribute="top" secondItem="gu1-pw-tJN" secondAttribute="top" id="5GW-az-4FZ"/>
-                                    <constraint firstItem="WqI-zJ-Hz8" firstAttribute="centerX" secondItem="gu1-pw-tJN" secondAttribute="centerX" id="O1q-0l-mwn"/>
-                                    <constraint firstItem="F4J-oJ-1dv" firstAttribute="leading" secondItem="gu1-pw-tJN" secondAttribute="leading" id="ZQY-c3-6xl"/>
-                                    <constraint firstItem="WqI-zJ-Hz8" firstAttribute="top" secondItem="F4J-oJ-1dv" secondAttribute="bottom" constant="16" id="bAJ-Y7-OHq"/>
-                                    <constraint firstAttribute="bottom" secondItem="WqI-zJ-Hz8" secondAttribute="bottom" id="zaJ-7F-3HG"/>
+                                    <constraint firstItem="Pve-Xs-7Ed" firstAttribute="top" secondItem="CMN-34-X4s" secondAttribute="bottom" constant="16" id="5s1-Be-wQw"/>
+                                    <constraint firstItem="CMN-34-X4s" firstAttribute="leading" secondItem="hjK-Vq-49a" secondAttribute="leading" id="P3l-ix-6ez"/>
+                                    <constraint firstAttribute="trailing" secondItem="CMN-34-X4s" secondAttribute="trailing" id="Vbm-Z0-5nm"/>
+                                    <constraint firstItem="CMN-34-X4s" firstAttribute="top" secondItem="hjK-Vq-49a" secondAttribute="top" id="Xfy-Nu-ZmE"/>
+                                    <constraint firstItem="Pve-Xs-7Ed" firstAttribute="centerX" secondItem="hjK-Vq-49a" secondAttribute="centerX" id="gG7-av-pMf"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pve-Xs-7Ed" secondAttribute="bottom" id="pQ5-t8-0aS"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="BOf-U1-naa"/>
+                        <viewLayoutGuide key="safeArea" id="Fkm-E2-tcc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gu1-pw-tJN" firstAttribute="centerX" secondItem="Wly-AX-Ys3" secondAttribute="centerX" id="AD4-mC-Eim"/>
-                            <constraint firstItem="gu1-pw-tJN" firstAttribute="centerY" secondItem="Wly-AX-Ys3" secondAttribute="centerY" id="y5T-uB-p93"/>
+                            <constraint firstItem="hjK-Vq-49a" firstAttribute="centerX" secondItem="5bF-qG-bZg" secondAttribute="centerX" id="DRD-iC-ZfC"/>
+                            <constraint firstItem="hjK-Vq-49a" firstAttribute="centerY" secondItem="5bF-qG-bZg" secondAttribute="centerY" id="f25-ls-7WM"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Account" id="Qkb-b9-FsQ">
+                        <imageReference key="image" image="person.circle" catalog="system" symbolScale="default" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="AccentColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="person.circle" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="AccentColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zsV-qh-yNo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Mv-Mp-aay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="550" y="-426"/>
+            <point key="canvasLocation" x="3161" y="1088"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hlu-eB-Sdw">
+            <objects>
+                <tabBarController storyboardIdentifier="PatientMenuVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lZz-tR-PIT" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xbb-Mc-NAa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ch9-ed-fV1" kind="relationship" relationship="viewControllers" id="POm-h4-0PI"/>
+                        <segue destination="hfF-Xd-XFh" kind="relationship" relationship="viewControllers" id="apH-Lj-ern"/>
+                        <segue destination="9HX-i5-qAb" kind="relationship" relationship="viewControllers" id="bJb-jQ-KvN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5xI-cH-UMG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2428" y="347"/>
+        </scene>
+        <!--Evaluations-->
+        <scene sceneID="QHm-LR-pGf">
+            <objects>
+                <viewController storyboardIdentifier="EvalautionsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YJ2-bh-sJS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K4U-33-pMD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evaluations View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9c-6p-vCn">
+                                <rect key="frame" x="97.000000000000014" y="76" width="181.33333333333337" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fMc-jI-Gb8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="h9c-6p-vCn" firstAttribute="centerX" secondItem="K4U-33-pMD" secondAttribute="centerX" id="5TK-Bj-FqD"/>
+                            <constraint firstItem="h9c-6p-vCn" firstAttribute="top" secondItem="fMc-jI-Gb8" secondAttribute="top" constant="32" id="jIV-sL-otb"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Evaluations" id="6CY-6I-hIV">
+                        <imageReference key="image" image="star.bubble" catalog="system" symbolScale="default" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="AccentColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="star.bubble" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="AccentColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CR1-OW-axh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3892" y="1088"/>
+        </scene>
+        <!--Visits-->
+        <scene sceneID="vOu-k6-kkC">
+            <objects>
+                <viewController storyboardIdentifier="ScheduleVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qz6-0i-kLJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dem-gN-dv4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggf-Au-itE">
+                                <rect key="frame" x="108.00000000000001" y="76" width="159.33333333333337" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ySN-Wz-mcl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ggf-Au-itE" firstAttribute="top" secondItem="ySN-Wz-mcl" secondAttribute="top" constant="32" id="Cg9-dx-9tx"/>
+                            <constraint firstItem="ggf-Au-itE" firstAttribute="centerX" secondItem="dem-gN-dv4" secondAttribute="centerX" id="dOc-nc-JHu"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Visits" id="Rek-bN-TXE">
+                        <imageReference key="image" image="calendar" catalog="system" symbolScale="default" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="AccentColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="calendar" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="AccentColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ElP-rG-YaK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4602" y="1088"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hug-or-vMw">
+            <objects>
+                <tabBarController storyboardIdentifier="SpecialistMenuVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BOV-p2-DPa" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zxh-oi-5LM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Qz6-0i-kLJ" kind="relationship" relationship="viewControllers" id="53f-95-Y34"/>
+                        <segue destination="YJ2-bh-sJS" kind="relationship" relationship="viewControllers" id="AHM-aa-a2z"/>
+                        <segue destination="9HX-i5-qAb" kind="relationship" relationship="viewControllers" id="YaJ-L0-YyL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g57-75-lHj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3892" y="347"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bJb-jQ-KvN"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" name="AccentColor"/>
     <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="cross.circle" catalog="system" width="128" height="121"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="star.bubble" catalog="system" width="128" height="110"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

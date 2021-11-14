@@ -17,7 +17,7 @@ class NavigationViewController: UINavigationController {
 
     private func selectViewController(_ isLoggedIn: Bool) -> UIViewController? {
         return isLoggedIn ?
-        storyboard?.instantiateViewController(.accountViewController) :
+        storyboard?.instantiateViewController(.patientTabBarViewController) :
         storyboard?.instantiateViewController(.authenticationViewController)
     }
 }
