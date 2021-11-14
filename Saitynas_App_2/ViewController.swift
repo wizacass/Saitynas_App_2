@@ -9,11 +9,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        
-        viewModel = MessageViewModel(appDelegate.container.communicator, viewController: self)
+        viewModel = MessageViewModel(DIContainer.shared.communicator ,viewController: self)
         viewModel.loadMessage()
     }
 }
