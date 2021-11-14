@@ -1,7 +1,7 @@
 import Foundation
 
-struct MessageDto: Codable {
-    let meta: Meta
+struct MessageDTO: Codable {
+    let meta: MetaDTO
     let data: Message
 }
 

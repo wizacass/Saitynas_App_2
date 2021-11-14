@@ -9,8 +9,13 @@ class DIContainer {
     }
     
     let communicator: Communicator
+    let authenticationManager: AuthenticationManager
     
-    init(_ communicator: Communicator) {
+    init(
+        _ communicator: Communicator,
+        _ authenticationManager: AuthenticationManager
+    ) {
         self.communicator = communicator
+        self.authenticationManager = authenticationManager
     }
 }

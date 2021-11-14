@@ -14,7 +14,7 @@ class MessageViewModel {
         }
     }
     
-    var error: Error? {
+    var error: ErrorDTO? {
         didSet {
             guard let error = error else { return }
             

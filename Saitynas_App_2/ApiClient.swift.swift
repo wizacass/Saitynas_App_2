@@ -7,17 +7,17 @@ class ApiClient
     private let decoder = JSONDecoder()
     
     private var apiUrl: String
-    //    private var tokensRepo: UserTokensRepository
+    private var tokensRepo: UserTokensRepository
     
-    init(_ apiUrl: String) {
+    init(_ apiUrl: String, _ tokensRespo: UserTokensRepository) {
         self.apiUrl = apiUrl
-        //        self.tokensRepo = tokensRepo
+        self.tokensRepo = tokensRespo
     }
     
     func get<T: Decodable>(
         _ endpoint: String,
         _ onSuccess: @escaping (T?) -> Void,
-        _ onError: @escaping (Error?) -> Void
+        _ onError: @escaping (ErrorDTO?) -> Void
     ) {
         let url = createUrl(endpoint)
         let headers = createHeaders()
@@ -33,7 +33,7 @@ class ApiClient
         _ endpoint: String,
         _ body: [String: Any],
         _ onSuccess: @escaping (T?) -> Void,
-        _ onError: @escaping (Error?) -> Void
+        _ onError: @escaping (ErrorDTO?) -> Void
     ) {
         let url = createUrl(endpoint)
         let headers = createHeaders()
@@ -61,9 +61,9 @@ class ApiClient
             "X-Api-Request": "true"
         ]
         
-        //        if let token = tokensRepo.accessToken {
-        //            headers.add(name: "Authorization", value: "Bearer \(token)")
-        //        }
+        if let token = tokensRepo.accessToken {
+            headers.add(name: "Authorization", value: "Bearer \(token)")
+        }
         
         return headers
     }
@@ -71,7 +71,7 @@ class ApiClient
     private func handleResponse<T: Decodable, U>(
         _ response: DataResponse<U, AFError>,
         _ onSuccess: @escaping (T?) -> Void,
-        _ onError: @escaping (Error?) -> Void
+        _ onError: @escaping (ErrorDTO?) -> Void
     ) {
         switch response.result {
         case .success:
@@ -79,7 +79,7 @@ class ApiClient
             
             DispatchQueue.main.async { onSuccess(data) }
         case .failure:
-            let error: Error? = tryParse(response.data)
+            let error: ErrorDTO? = tryParse(response.data)
             
             DispatchQueue.main.async { onError(error) }
         }

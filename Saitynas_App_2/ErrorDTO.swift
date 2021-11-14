@@ -1,6 +1,6 @@
 import Foundation
 
-struct Error: Codable {
+struct ErrorDTO: Codable {
     let type: Int
     let title: String
     let details: String?

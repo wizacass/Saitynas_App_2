@@ -10,7 +10,9 @@ class NavigationViewController: UINavigationController {
     }
 
     private func loadApp() {
-        if let vc = selectViewController(true) {
+        let isLoggedIn = DIContainer.shared.authenticationManager.isLoggedIn
+
+        if let vc = selectViewController(isLoggedIn) {
             viewControllers.append(vc)
         }
     }
