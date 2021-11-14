@@ -12,7 +12,7 @@
 		9EA2F1B57E9D60E203FCE5C0 /* Pods_Saitynas_App_2_Saitynas_App_2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CE00A274170513F4173E71 /* Pods_Saitynas_App_2_Saitynas_App_2UITests.framework */; };
 		A0B4DA232741566800C0EC1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA222741566800C0EC1F /* AppDelegate.swift */; };
 		A0B4DA252741566800C0EC1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA242741566800C0EC1F /* SceneDelegate.swift */; };
-		A0B4DA272741566800C0EC1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA262741566800C0EC1F /* ViewController.swift */; };
+		A0B4DA272741566800C0EC1F /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA262741566800C0EC1F /* AuthenticationViewController.swift */; };
 		A0B4DA2A2741566800C0EC1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0B4DA282741566800C0EC1F /* Main.storyboard */; };
 		A0B4DA2C2741566900C0EC1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B4DA2B2741566900C0EC1F /* Assets.xcassets */; };
 		A0B4DA2F2741566900C0EC1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0B4DA2D2741566900C0EC1F /* LaunchScreen.storyboard */; };
@@ -28,6 +28,14 @@
 		A0B993652741619900EA60B0 /* MessageViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B993642741619900EA60B0 /* MessageViewControllerProtocol.swift */; };
 		A0B993682741650A00EA60B0 /* ApiClient.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B993672741650A00EA60B0 /* ApiClient.swift.swift */; };
 		A0B9936A274166F000EA60B0 /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B99369274166F000EA60B0 /* Communicator.swift */; };
+		A0B9936C274178D400EA60B0 /* NaviagtionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B9936B274178D400EA60B0 /* NaviagtionViewController.swift */; };
+		A0B9936E274179A200EA60B0 /* ViewControllerIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B9936D274179A200EA60B0 /* ViewControllerIdentifier.swift */; };
+		A0B9937227417A0800EA60B0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B9937127417A0800EA60B0 /* SettingsViewController.swift */; };
+		A0B9937427417ADE00EA60B0 /* UIStoryboardExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B9937327417ADE00EA60B0 /* UIStoryboardExtensions.swift */; };
+		A0B993762741820C00EA60B0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B993752741820C00EA60B0 /* LoginViewController.swift */; };
+		A0B993782741822400EA60B0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B993772741822400EA60B0 /* SignupViewController.swift */; };
+		A0B9937A274182E100EA60B0 /* PatientTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B99379274182E100EA60B0 /* PatientTabViewController.swift */; };
+		A0B9937C2741831200EA60B0 /* SpecialistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B9937B2741831200EA60B0 /* SpecialistViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +64,7 @@
 		A0B4DA1F2741566800C0EC1F /* Saitynas_App_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saitynas_App_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B4DA222741566800C0EC1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0B4DA242741566800C0EC1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A0B4DA262741566800C0EC1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A0B4DA262741566800C0EC1F /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		A0B4DA292741566800C0EC1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0B4DA2B2741566900C0EC1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0B4DA2E2741566900C0EC1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,6 +83,14 @@
 		A0B993642741619900EA60B0 /* MessageViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewControllerProtocol.swift; sourceTree = "<group>"; };
 		A0B993672741650A00EA60B0 /* ApiClient.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift.swift; sourceTree = "<group>"; };
 		A0B99369274166F000EA60B0 /* Communicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
+		A0B9936B274178D400EA60B0 /* NaviagtionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviagtionViewController.swift; sourceTree = "<group>"; };
+		A0B9936D274179A200EA60B0 /* ViewControllerIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerIdentifier.swift; sourceTree = "<group>"; };
+		A0B9937127417A0800EA60B0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A0B9937327417ADE00EA60B0 /* UIStoryboardExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtensions.swift; sourceTree = "<group>"; };
+		A0B993752741820C00EA60B0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A0B993772741822400EA60B0 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		A0B99379274182E100EA60B0 /* PatientTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTabViewController.swift; sourceTree = "<group>"; };
+		A0B9937B2741831200EA60B0 /* SpecialistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistViewController.swift; sourceTree = "<group>"; };
 		AF6170A55100D4AD16B5B781 /* Pods_Saitynas_App_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saitynas_App_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39840B9341DC88193000E2B /* Pods-Saitynas_App_2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saitynas_App_2.release.xcconfig"; path = "Target Support Files/Pods-Saitynas_App_2/Pods-Saitynas_App_2.release.xcconfig"; sourceTree = "<group>"; };
 		BA61AB65E9EFA55C15E75B34 /* Pods-Saitynas_App_2-Saitynas_App_2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saitynas_App_2-Saitynas_App_2UITests.release.xcconfig"; path = "Target Support Files/Pods-Saitynas_App_2-Saitynas_App_2UITests/Pods-Saitynas_App_2-Saitynas_App_2UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -195,8 +211,14 @@
 		A0B993502741598800EA60B0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A0B4DA262741566800C0EC1F /* ViewController.swift */,
+				A0B4DA262741566800C0EC1F /* AuthenticationViewController.swift */,
 				A0B993642741619900EA60B0 /* MessageViewControllerProtocol.swift */,
+				A0B9936B274178D400EA60B0 /* NaviagtionViewController.swift */,
+				A0B9937127417A0800EA60B0 /* SettingsViewController.swift */,
+				A0B993752741820C00EA60B0 /* LoginViewController.swift */,
+				A0B993772741822400EA60B0 /* SignupViewController.swift */,
+				A0B99379274182E100EA60B0 /* PatientTabViewController.swift */,
+				A0B9937B2741831200EA60B0 /* SpecialistViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -215,6 +237,7 @@
 			children = (
 				A0B9935327415CBE00EA60B0 /* API */,
 				A0B9935427415DA900EA60B0 /* DIContainer.swift */,
+				A0B9936D274179A200EA60B0 /* ViewControllerIdentifier.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -232,6 +255,7 @@
 		A0B9935927415F2500EA60B0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A0B9937327417ADE00EA60B0 /* UIStoryboardExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -505,9 +529,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0B993782741822400EA60B0 /* SignupViewController.swift in Sources */,
 				A0B9935527415DA900EA60B0 /* DIContainer.swift in Sources */,
 				A0B993632741612B00EA60B0 /* MessageViewModel.swift in Sources */,
-				A0B4DA272741566800C0EC1F /* ViewController.swift in Sources */,
+				A0B4DA272741566800C0EC1F /* AuthenticationViewController.swift in Sources */,
 				A0B9935827415DC800EA60B0 /* Bootstrapper.swift in Sources */,
 				A0B4DA232741566800C0EC1F /* AppDelegate.swift in Sources */,
 				A0B9935D2741607F00EA60B0 /* ErrorDTO.swift in Sources */,
@@ -516,7 +541,14 @@
 				A0B9935F2741608900EA60B0 /* Meta.swift in Sources */,
 				A0B4DA252741566800C0EC1F /* SceneDelegate.swift in Sources */,
 				A0B993682741650A00EA60B0 /* ApiClient.swift.swift in Sources */,
+				A0B9937A274182E100EA60B0 /* PatientTabViewController.swift in Sources */,
+				A0B9937227417A0800EA60B0 /* SettingsViewController.swift in Sources */,
+				A0B9936C274178D400EA60B0 /* NaviagtionViewController.swift in Sources */,
+				A0B993762741820C00EA60B0 /* LoginViewController.swift in Sources */,
 				A0B993612741609D00EA60B0 /* MessageDTO.swift in Sources */,
+				A0B9937C2741831200EA60B0 /* SpecialistViewController.swift in Sources */,
+				A0B9937427417ADE00EA60B0 /* UIStoryboardExtensions.swift in Sources */,
+				A0B9936E274179A200EA60B0 /* ViewControllerIdentifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

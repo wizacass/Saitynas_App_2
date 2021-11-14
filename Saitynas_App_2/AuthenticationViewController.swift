@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class AuthenticationViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: MessageViewControllerProtocol {
+extension AuthenticationViewController: MessageViewControllerProtocol {
     func showMessage(_ message: String) {
         titleLabel.text = message
     }
