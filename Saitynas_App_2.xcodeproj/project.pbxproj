@@ -15,6 +15,7 @@
 		A07120DE27418D8D00B5A945 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120DD27418D8D00B5A945 /* Role.swift */; };
 		A07120E027418E1700B5A945 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120DF27418E1700B5A945 /* AuthenticationManager.swift */; };
 		A07120E227418F5A00B5A945 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120E127418F5A00B5A945 /* LoginViewModel.swift */; };
+		A07120E42741967B00B5A945 /* StateObserverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120E32741967B00B5A945 /* StateObserverDelegate.swift */; };
 		A0B4DA232741566800C0EC1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA222741566800C0EC1F /* AppDelegate.swift */; };
 		A0B4DA252741566800C0EC1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA242741566800C0EC1F /* SceneDelegate.swift */; };
 		A0B4DA272741566800C0EC1F /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA262741566800C0EC1F /* AuthenticationViewController.swift */; };
@@ -71,6 +72,7 @@
 		A07120DD27418D8D00B5A945 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		A07120DF27418E1700B5A945 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		A07120E127418F5A00B5A945 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A07120E32741967B00B5A945 /* StateObserverDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateObserverDelegate.swift; sourceTree = "<group>"; };
 		A0B4DA1F2741566800C0EC1F /* Saitynas_App_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saitynas_App_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B4DA222741566800C0EC1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0B4DA242741566800C0EC1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				A0B9935427415DA900EA60B0 /* DIContainer.swift */,
 				A0B9936D274179A200EA60B0 /* ViewControllerIdentifier.swift */,
 				A07120DD27418D8D00B5A945 /* Role.swift */,
+				A07120E32741967B00B5A945 /* StateObserverDelegate.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				A0B9935527415DA900EA60B0 /* DIContainer.swift in Sources */,
 				A07120DA27418CE600B5A945 /* AccessCommunicator.swift in Sources */,
 				A0B993632741612B00EA60B0 /* MessageViewModel.swift in Sources */,
+				A07120E42741967B00B5A945 /* StateObserverDelegate.swift in Sources */,
 				A0B4DA272741566800C0EC1F /* AuthenticationViewController.swift in Sources */,
 				A07120DC27418D3B00B5A945 /* TokensDTO.swift in Sources */,
 				A0B9935827415DC800EA60B0 /* Bootstrapper.swift in Sources */,
