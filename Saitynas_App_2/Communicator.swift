@@ -9,8 +9,8 @@ class Communicator {
     }
 
     func getMessage(
-        onSuccess: @escaping (MessageDto?) -> Void,
-        onError: @escaping (Error?) -> Void
+        onSuccess: @escaping (MessageDTO?) -> Void,
+        onError: @escaping (ErrorDTO?) -> Void
     ) {
         apiClient.get("", onSuccess, onError)
     }

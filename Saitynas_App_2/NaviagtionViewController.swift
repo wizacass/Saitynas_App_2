@@ -10,7 +10,7 @@ class NavigationViewController: UINavigationController {
     }
 
     private func loadApp() {
-        if let vc = selectViewController(true) {
+        if let vc = selectViewController(false) {
             viewControllers.append(vc)
         }
     }

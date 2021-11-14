@@ -19,7 +19,7 @@ extension AuthenticationViewController: MessageViewControllerProtocol {
         titleLabel.text = message
     }
     
-    func showError(_ error: Error) {
+    func showError(_ error: ErrorDTO) {
         print("Error!")
         print(error.title)
     }

@@ -10,6 +10,11 @@
 		6BB37A170CF20C734A91965B /* Pods_Saitynas_App_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6170A55100D4AD16B5B781 /* Pods_Saitynas_App_2.framework */; };
 		9547F0EA8C37C4CA1F52555C /* Pods_Saitynas_App_2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C536A0316055447994E05DB /* Pods_Saitynas_App_2Tests.framework */; };
 		9EA2F1B57E9D60E203FCE5C0 /* Pods_Saitynas_App_2_Saitynas_App_2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CE00A274170513F4173E71 /* Pods_Saitynas_App_2_Saitynas_App_2UITests.framework */; };
+		A07120DA27418CE600B5A945 /* AccessCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120D927418CE600B5A945 /* AccessCommunicator.swift */; };
+		A07120DC27418D3B00B5A945 /* TokensDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120DB27418D3B00B5A945 /* TokensDTO.swift */; };
+		A07120DE27418D8D00B5A945 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120DD27418D8D00B5A945 /* Role.swift */; };
+		A07120E027418E1700B5A945 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120DF27418E1700B5A945 /* AuthenticationManager.swift */; };
+		A07120E227418F5A00B5A945 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120E127418F5A00B5A945 /* LoginViewModel.swift */; };
 		A0B4DA232741566800C0EC1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA222741566800C0EC1F /* AppDelegate.swift */; };
 		A0B4DA252741566800C0EC1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA242741566800C0EC1F /* SceneDelegate.swift */; };
 		A0B4DA272741566800C0EC1F /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA262741566800C0EC1F /* AuthenticationViewController.swift */; };
@@ -22,7 +27,7 @@
 		A0B9935527415DA900EA60B0 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B9935427415DA900EA60B0 /* DIContainer.swift */; };
 		A0B9935827415DC800EA60B0 /* Bootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B9935727415DC800EA60B0 /* Bootstrapper.swift */; };
 		A0B9935D2741607F00EA60B0 /* ErrorDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B9935C2741607F00EA60B0 /* ErrorDTO.swift */; };
-		A0B9935F2741608900EA60B0 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B9935E2741608900EA60B0 /* Meta.swift */; };
+		A0B9935F2741608900EA60B0 /* MetaDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B9935E2741608900EA60B0 /* MetaDTO.swift */; };
 		A0B993612741609D00EA60B0 /* MessageDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B993602741609D00EA60B0 /* MessageDTO.swift */; };
 		A0B993632741612B00EA60B0 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B993622741612B00EA60B0 /* MessageViewModel.swift */; };
 		A0B993652741619900EA60B0 /* MessageViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B993642741619900EA60B0 /* MessageViewControllerProtocol.swift */; };
@@ -61,6 +66,11 @@
 		3C536A0316055447994E05DB /* Pods_Saitynas_App_2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saitynas_App_2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79ABC9337BEA7004DA6DED9D /* Pods-Saitynas_App_2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saitynas_App_2Tests.release.xcconfig"; path = "Target Support Files/Pods-Saitynas_App_2Tests/Pods-Saitynas_App_2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9465DB913CD54F4A1CA30AC9 /* Pods-Saitynas_App_2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saitynas_App_2Tests.debug.xcconfig"; path = "Target Support Files/Pods-Saitynas_App_2Tests/Pods-Saitynas_App_2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A07120D927418CE600B5A945 /* AccessCommunicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCommunicator.swift; sourceTree = "<group>"; };
+		A07120DB27418D3B00B5A945 /* TokensDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensDTO.swift; sourceTree = "<group>"; };
+		A07120DD27418D8D00B5A945 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		A07120DF27418E1700B5A945 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		A07120E127418F5A00B5A945 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		A0B4DA1F2741566800C0EC1F /* Saitynas_App_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saitynas_App_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B4DA222741566800C0EC1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0B4DA242741566800C0EC1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +87,7 @@
 		A0B9935427415DA900EA60B0 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		A0B9935727415DC800EA60B0 /* Bootstrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootstrapper.swift; sourceTree = "<group>"; };
 		A0B9935C2741607F00EA60B0 /* ErrorDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDTO.swift; sourceTree = "<group>"; };
-		A0B9935E2741608900EA60B0 /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		A0B9935E2741608900EA60B0 /* MetaDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaDTO.swift; sourceTree = "<group>"; };
 		A0B993602741609D00EA60B0 /* MessageDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDTO.swift; sourceTree = "<group>"; };
 		A0B993622741612B00EA60B0 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		A0B993642741619900EA60B0 /* MessageViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewControllerProtocol.swift; sourceTree = "<group>"; };
@@ -228,6 +238,7 @@
 			children = (
 				A0B99366274164FF00EA60B0 /* Networking */,
 				A0B9935727415DC800EA60B0 /* Bootstrapper.swift */,
+				A07120DF27418E1700B5A945 /* AuthenticationManager.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -238,6 +249,7 @@
 				A0B9935327415CBE00EA60B0 /* API */,
 				A0B9935427415DA900EA60B0 /* DIContainer.swift */,
 				A0B9936D274179A200EA60B0 /* ViewControllerIdentifier.swift */,
+				A07120DD27418D8D00B5A945 /* Role.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -246,8 +258,9 @@
 			isa = PBXGroup;
 			children = (
 				A0B9935C2741607F00EA60B0 /* ErrorDTO.swift */,
-				A0B9935E2741608900EA60B0 /* Meta.swift */,
+				A0B9935E2741608900EA60B0 /* MetaDTO.swift */,
 				A0B993602741609D00EA60B0 /* MessageDTO.swift */,
+				A07120DB27418D3B00B5A945 /* TokensDTO.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -264,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				A0B993622741612B00EA60B0 /* MessageViewModel.swift */,
+				A07120E127418F5A00B5A945 /* LoginViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -273,6 +287,7 @@
 			children = (
 				A0B993672741650A00EA60B0 /* ApiClient.swift.swift */,
 				A0B99369274166F000EA60B0 /* Communicator.swift */,
+				A07120D927418CE600B5A945 /* AccessCommunicator.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -531,14 +546,19 @@
 			files = (
 				A0B993782741822400EA60B0 /* SignupViewController.swift in Sources */,
 				A0B9935527415DA900EA60B0 /* DIContainer.swift in Sources */,
+				A07120DA27418CE600B5A945 /* AccessCommunicator.swift in Sources */,
 				A0B993632741612B00EA60B0 /* MessageViewModel.swift in Sources */,
 				A0B4DA272741566800C0EC1F /* AuthenticationViewController.swift in Sources */,
+				A07120DC27418D3B00B5A945 /* TokensDTO.swift in Sources */,
 				A0B9935827415DC800EA60B0 /* Bootstrapper.swift in Sources */,
 				A0B4DA232741566800C0EC1F /* AppDelegate.swift in Sources */,
+				A07120DE27418D8D00B5A945 /* Role.swift in Sources */,
+				A07120E027418E1700B5A945 /* AuthenticationManager.swift in Sources */,
 				A0B9935D2741607F00EA60B0 /* ErrorDTO.swift in Sources */,
 				A0B9936A274166F000EA60B0 /* Communicator.swift in Sources */,
 				A0B993652741619900EA60B0 /* MessageViewControllerProtocol.swift in Sources */,
-				A0B9935F2741608900EA60B0 /* Meta.swift in Sources */,
+				A07120E227418F5A00B5A945 /* LoginViewModel.swift in Sources */,
+				A0B9935F2741608900EA60B0 /* MetaDTO.swift in Sources */,
 				A0B4DA252741566800C0EC1F /* SceneDelegate.swift in Sources */,
 				A0B993682741650A00EA60B0 /* ApiClient.swift.swift in Sources */,
 				A0B9937A274182E100EA60B0 /* PatientTabViewController.swift in Sources */,
