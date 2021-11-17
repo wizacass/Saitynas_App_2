@@ -1,5 +1,5 @@
 import Foundation
 
 protocol DataSourceObserverDelegate: ObserverDelegate {
-    func onDataSourceUpdated()
+    func onDataSourceUpdated<T>(_ source: T?)
 }

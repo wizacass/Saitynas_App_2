@@ -52,7 +52,10 @@
 		A0B993782741822400EA60B0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B993772741822400EA60B0 /* SignupViewController.swift */; };
 		A0B9937A274182E100EA60B0 /* PatientTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B99379274182E100EA60B0 /* PatientTabViewController.swift */; };
 		A0B9937C2741831200EA60B0 /* SpecialistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B9937B2741831200EA60B0 /* SpecialistViewController.swift */; };
+		A0DEB6BC2745423900EC62CB /* NullObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEB6BB2745423900EC62CB /* NullObject.swift */; };
+		A0DEB6BE274550C500EC62CB /* SpecialistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */; };
 		A0F48B6927452E1E00F54324 /* RoundableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F48B6827452E1E00F54324 /* RoundableView.swift */; };
+		A0F48B6B274530FD00F54324 /* SpecialistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F48B6A274530FD00F54324 /* SpecialistViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,7 +127,10 @@
 		A0B993772741822400EA60B0 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		A0B99379274182E100EA60B0 /* PatientTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTabViewController.swift; sourceTree = "<group>"; };
 		A0B9937B2741831200EA60B0 /* SpecialistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistViewController.swift; sourceTree = "<group>"; };
+		A0DEB6BB2745423900EC62CB /* NullObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullObject.swift; sourceTree = "<group>"; };
+		A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistDTO.swift; sourceTree = "<group>"; };
 		A0F48B6827452E1E00F54324 /* RoundableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundableView.swift; sourceTree = "<group>"; };
+		A0F48B6A274530FD00F54324 /* SpecialistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistViewModel.swift; sourceTree = "<group>"; };
 		AF6170A55100D4AD16B5B781 /* Pods_Saitynas_App_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saitynas_App_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39840B9341DC88193000E2B /* Pods-Saitynas_App_2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saitynas_App_2.release.xcconfig"; path = "Target Support Files/Pods-Saitynas_App_2/Pods-Saitynas_App_2.release.xcconfig"; sourceTree = "<group>"; };
 		BA61AB65E9EFA55C15E75B34 /* Pods-Saitynas_App_2-Saitynas_App_2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saitynas_App_2-Saitynas_App_2UITests.release.xcconfig"; path = "Target Support Files/Pods-Saitynas_App_2-Saitynas_App_2UITests/Pods-Saitynas_App_2-Saitynas_App_2UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -299,6 +305,7 @@
 				A0B9935427415DA900EA60B0 /* DIContainer.swift */,
 				A0B9936D274179A200EA60B0 /* ViewControllerIdentifier.swift */,
 				A07120DD27418D8D00B5A945 /* Role.swift */,
+				A0DEB6BB2745423900EC62CB /* NullObject.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -312,6 +319,7 @@
 				A07120DB27418D3B00B5A945 /* TokensDTO.swift */,
 				A07120F12741CCE800B5A945 /* SpecialistsDTO.swift */,
 				A07A3F402741CD5B00B029DE /* Specialist.swift */,
+				A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -330,6 +338,7 @@
 				A0B993622741612B00EA60B0 /* MessageViewModel.swift */,
 				A07120E127418F5A00B5A945 /* LoginViewModel.swift */,
 				A07120EF2741CCA800B5A945 /* SpecialistTableViewModel.swift */,
+				A0F48B6A274530FD00F54324 /* SpecialistViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -610,9 +619,12 @@
 				A0B993632741612B00EA60B0 /* MessageViewModel.swift in Sources */,
 				A07120E42741967B00B5A945 /* StateObserverDelegate.swift in Sources */,
 				A0B4DA272741566800C0EC1F /* AuthenticationViewController.swift in Sources */,
+				A0DEB6BE274550C500EC62CB /* SpecialistDTO.swift in Sources */,
 				A07120E72741A88D00B5A945 /* KeyValueStorageProtocol.swift in Sources */,
 				A07120DC27418D3B00B5A945 /* TokensDTO.swift in Sources */,
 				A0B9935827415DC800EA60B0 /* Bootstrapper.swift in Sources */,
+				A0DEB6BC2745423900EC62CB /* NullObject.swift in Sources */,
+				A0F48B6B274530FD00F54324 /* SpecialistViewModel.swift in Sources */,
 				A07120EB2741ABA300B5A945 /* UserTokensRepository.swift in Sources */,
 				A0B4DA232741566800C0EC1F /* AppDelegate.swift in Sources */,
 				A07120DE27418D8D00B5A945 /* Role.swift in Sources */,

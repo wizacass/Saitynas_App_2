@@ -6,4 +6,8 @@ struct Specialist: Codable {
     let lastName: String
     let speciality: String
     let address: String?
+    
+    var fullName: String {
+        return "\(firstName) \(lastName)"
+    }
 }

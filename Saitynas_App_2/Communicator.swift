@@ -21,4 +21,12 @@ class Communicator {
     ) {
         apiClient.get("/specialists", onSuccess, onError)
     }
+
+    func getSpecialist(
+        _ id: Int,
+        onSuccess: @escaping (SpecialistDTO?) -> Void,
+        onError: @escaping (ErrorDTO?) -> Void
+    ) {
+        apiClient.get("/specialists/\(id)", onSuccess, onError)
+    }
 }

@@ -30,7 +30,7 @@ class SpecialistTableViewModel {
         
         specialists = data
         
-        observers.forEach { $0?.onDataSourceUpdated() }
+        observers.forEach { $0?.onDataSourceUpdated(NullObject.instance) }
     }
     
     func getSpecialist(at index: Int) -> Specialist {
