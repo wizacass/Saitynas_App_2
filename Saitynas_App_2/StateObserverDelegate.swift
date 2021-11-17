@@ -1,8 +1,6 @@
 import Foundation
 
-protocol StateObserverDelegate: AnyObject {
-    var observerId: UUID { get }
-    
+protocol StateObserverDelegate: ObserverDelegate {
     func onLogin()
     func onLogout()
 }
