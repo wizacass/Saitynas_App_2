@@ -20,7 +20,6 @@ class SpecialistViewModel {
     }
 
     private func handleReceivedSpecialist(_ dto: SpecialistDTO?) {
-        print("Specialist received!")
         guard let data = dto?.data else {
             print("Whoops")
             return

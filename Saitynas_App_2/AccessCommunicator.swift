@@ -1,13 +1,13 @@
 import Foundation
 
 class AccessCommunicator {
-
+    
     private var apiClient: ApiClient
-
+    
     init(_ apiClient: ApiClient) {
         self.apiClient = apiClient
     }
-
+    
     func login(
         _ email: String,
         _ password: String,
@@ -18,14 +18,26 @@ class AccessCommunicator {
             "email": email,
             "password": password,
         ]
-
+        
         apiClient.post("/login", body, onSuccess, onError)
     }
-
+    
     func signup(
         _ email: String,
         _ password: String,
         onSuccess: @escaping (TokensDTO?) -> Void,
         onError: @escaping (ErrorDTO?) -> Void
     ) { }
+    
+    func refreshTokens(
+        _ refreshToken: String,
+        onSuccess: @escaping (TokensDTO?) -> Void,
+        onError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let body = [
+            "refreshToken": refreshToken,
+        ]
+        
+        apiClient.post("/refresh-token", body, onSuccess, onError)
+    }
 }

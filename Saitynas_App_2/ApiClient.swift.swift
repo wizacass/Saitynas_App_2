@@ -8,7 +8,7 @@ class ApiClient
     
     private var apiUrl: String
     private var tokensRepo: UserTokensRepository
-    
+
     init(_ apiUrl: String, _ tokensRespo: UserTokensRepository) {
         self.apiUrl = apiUrl
         self.tokensRepo = tokensRespo
@@ -79,7 +79,12 @@ class ApiClient
             
             DispatchQueue.main.async { onSuccess(data) }
         case .failure:
-            let error: ErrorDTO? = tryParse(response.data)
+            var error: ErrorDTO?
+            if (response.response?.statusCode == 401) {
+                error = ErrorDTO.TokenExpiredError
+            } else {
+                error = tryParse(response.data)
+            }
             
             DispatchQueue.main.async { onError(error) }
         }

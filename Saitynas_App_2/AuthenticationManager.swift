@@ -15,31 +15,45 @@ class AuthenticationManager  {
         self.repository = repository
     }
 
-    func subscribe(_ observer: StateObserverDelegate) {
-        observers.append(observer)
+    func login(_ email: String, _ password: String, onComplete handleLoginAttempt: @escaping (ErrorDTO?) -> Void) {
+        communicator.login(email, password, onSuccess: { [unowned self] tokens in
+            if self.trySaveTokens(tokens, onError: handleLoginAttempt) {
+                self.observers.forEach { $0?.onLogin() }
+                handleLoginAttempt(nil)
+            }
+        }, onError: handleLoginAttempt)
     }
 
-    func unsubscribe(_ observer: StateObserverDelegate) {
-        observers = observers.filter { $0?.observerId != observer.observerId }
-    }
+    func signup() { }
 
-    func login(_ email: String, _ password: String, onComplete handleLogin: @escaping (ErrorDTO?) -> Void) {
-        communicator.login(email, password) { [weak self] tokens in
+    func refreshTokens(onSuccess: @escaping () -> Void, onError handleError: @escaping (ErrorDTO?) -> Void) {
+        guard let refreshToken = repository.refreshToken else {
+            handleError(ErrorDTO("token_missing"))
+            return
+        }
+
+        communicator.refreshTokens(refreshToken, onSuccess: { [weak self] tokens in
             guard let tokens = tokens else {
-                handleLogin(ErrorDTO(type: -1, title: "serialization_Error", details: "login"))
+                handleError(ErrorDTO.serializationError("referesh_token"))
                 return
             }
 
             self?.saveTokens(tokens)
-            self?.observers.forEach { $0?.onLogin() }
+            onSuccess()
+        }, onError: handleError)
 
-            handleLogin(nil)
-        } onError: { error in
-            handleLogin(error)
-        }
+        onSuccess()
     }
 
-    func signup() { }
+    private func trySaveTokens(_ tokens: TokensDTO?, onError: @escaping (ErrorDTO?) -> Void) -> Bool {
+        guard let tokens = tokens else {
+            onError(ErrorDTO.serializationError("tokensDTO"))
+            return false
+        }
+
+        saveTokens(tokens)
+        return true
+    }
 
     private func saveTokens(_ tokens: TokensDTO) {
         repository.accessToken = tokens.jwt
@@ -49,5 +63,17 @@ class AuthenticationManager  {
     func logout() {
         repository.clearAll()
         observers.forEach { $0?.onLogout() }
+    }
+}
+
+extension AuthenticationManager: Observable {
+    func subscribe(_ observer: ObserverDelegate) {
+        if let observer = observer as? StateObserverDelegate {
+            observers.append(observer)
+        }
+    }
+
+    func unsubscribe(_ observer: ObserverDelegate) {
+        observers = observers.filter { $0?.observerId != observer.observerId }
     }
 }

@@ -40,10 +40,7 @@ extension SpecialistViewController: DataSourceObserverDelegate {
     }
 
     func onDataSourceUpdated<T>(_ source: T?) {
-        print("Specialist updated!")
-        guard let source = source as? Specialist else {
-            print(":))")
-            return }
+        guard let source = source as? Specialist else { return }
 
         nameLabel.text = source.fullName
         specialityLabel.text = source.speciality
