@@ -52,6 +52,7 @@
 		A0B993782741822400EA60B0 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B993772741822400EA60B0 /* SignupViewController.swift */; };
 		A0B9937A274182E100EA60B0 /* PatientTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B99379274182E100EA60B0 /* PatientTabViewController.swift */; };
 		A0B9937C2741831200EA60B0 /* SpecialistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B9937B2741831200EA60B0 /* SpecialistViewController.swift */; };
+		A0F48B6927452E1E00F54324 /* RoundableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F48B6827452E1E00F54324 /* RoundableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		A0B993772741822400EA60B0 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		A0B99379274182E100EA60B0 /* PatientTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTabViewController.swift; sourceTree = "<group>"; };
 		A0B9937B2741831200EA60B0 /* SpecialistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistViewController.swift; sourceTree = "<group>"; };
+		A0F48B6827452E1E00F54324 /* RoundableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundableView.swift; sourceTree = "<group>"; };
 		AF6170A55100D4AD16B5B781 /* Pods_Saitynas_App_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saitynas_App_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39840B9341DC88193000E2B /* Pods-Saitynas_App_2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saitynas_App_2.release.xcconfig"; path = "Target Support Files/Pods-Saitynas_App_2/Pods-Saitynas_App_2.release.xcconfig"; sourceTree = "<group>"; };
 		BA61AB65E9EFA55C15E75B34 /* Pods-Saitynas_App_2-Saitynas_App_2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saitynas_App_2-Saitynas_App_2UITests.release.xcconfig"; path = "Target Support Files/Pods-Saitynas_App_2-Saitynas_App_2UITests/Pods-Saitynas_App_2-Saitynas_App_2UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				A0B9935227415CB400EA60B0 /* Models */,
 				A0B9935A2741606400EA60B0 /* ViewModels */,
 				A0B993502741598800EA60B0 /* Controllers */,
+				A0F48B6727452E0C00F54324 /* UI */,
 				A0B9934F2741597900EA60B0 /* Storyboards */,
 				A0B9934E2741596B00EA60B0 /* Resources */,
 			);
@@ -339,6 +342,14 @@
 				A07120D927418CE600B5A945 /* AccessCommunicator.swift */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		A0F48B6727452E0C00F54324 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A0F48B6827452E1E00F54324 /* RoundableView.swift */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 		E1F867D7DF93210A9D57176C /* Pods */ = {
@@ -629,6 +640,7 @@
 				A07A3F412741CD5B00B029DE /* Specialist.swift in Sources */,
 				A0B9937427417ADE00EA60B0 /* UIStoryboardExtensions.swift in Sources */,
 				A0B9936E274179A200EA60B0 /* ViewControllerIdentifier.swift in Sources */,
+				A0F48B6927452E1E00F54324 /* RoundableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
