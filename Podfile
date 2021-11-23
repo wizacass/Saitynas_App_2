@@ -8,6 +8,7 @@ target 'Saitynas_App_2' do
   # Pods for Saitynas_App_2
   pod 'Alamofire', '~> 5.4'
   pod 'KeychainSwift', '~> 19.0'
+  pod 'SwiftLint'
 
   target 'Saitynas_App_2Tests' do
     inherit! :search_paths
