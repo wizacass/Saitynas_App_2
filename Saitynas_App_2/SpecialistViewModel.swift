@@ -26,7 +26,7 @@ class SpecialistViewModel {
         }
 
         specialist = data
-        observers.forEach{ $0?.onDataSourceUpdated(specialist) }
+        observers.forEach { $0?.onDataSourceUpdated(specialist) }
     }
 }
 

@@ -3,10 +3,12 @@ import Foundation
 class Bootstrapper {
     
     private let apiUrl: String
-    
+
+    // swiftlint:disable force_cast
     init() {
         apiUrl = Bundle.main.object(forInfoDictionaryKey: "Api Url") as! String
     }
+    // swiftlint:enable force_cast
     
     func createContainer() -> DIContainer {
         let keychainStorage = KeychainStorage()
@@ -14,10 +16,10 @@ class Bootstrapper {
         
         let apiClient = ApiClient(apiUrl, tokensRepository)
         let accessCommunicator = AccessCommunicator(apiClient)
-        
+
         let authenticationManager = AuthenticationManager(accessCommunicator, tokensRepository)
         let communicator = Communicator(apiClient, authenticationManager)
-        
+
         return DIContainer(communicator, authenticationManager)
     }
 }

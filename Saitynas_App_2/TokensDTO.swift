@@ -1,6 +1,6 @@
 import Foundation
 
-struct TokensDTO : Codable {
+struct TokensDTO: Codable {
     let jwt: String
     let refreshToken: String
 }

@@ -1,8 +1,8 @@
 import Foundation
 import Alamofire
 
-class ApiClient
-{
+class ApiClient {
+    
     private let queue = DispatchQueue.global(qos: .userInitiated)
     private let decoder = JSONDecoder()
     
@@ -80,7 +80,7 @@ class ApiClient
             DispatchQueue.main.async { onSuccess(data) }
         case .failure:
             var error: ErrorDTO?
-            if (response.response?.statusCode == 401) {
+            if response.response?.statusCode == 401 {
                 error = ErrorDTO.TokenExpiredError
             } else {
                 error = tryParse(response.data)

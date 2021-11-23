@@ -1,7 +1,7 @@
 import Foundation
 import KeychainSwift
 
-class KeychainStorage : KeyValueStorageProtocol {
+class KeychainStorage: KeyValueStorageProtocol {
     
     private let keychain = KeychainSwift(keyPrefix: "\(Bundle.main.bundleIdentifier!).")
     
