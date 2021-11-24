@@ -17,7 +17,7 @@ class ApiClient
     func get<T: Decodable>(
         _ endpoint: String,
         _ onSuccess: @escaping (T?) -> Void,
-        _ onError: @escaping (ErrorDTO?) -> Void
+        onError: @escaping (ErrorDTO?) -> Void
     ) {
         let url = createUrl(endpoint)
         let headers = createHeaders()

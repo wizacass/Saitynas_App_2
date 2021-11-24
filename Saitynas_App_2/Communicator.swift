@@ -12,9 +12,9 @@ class Communicator {
     
     func getMessage(
         onSuccess: @escaping (MessageDTO?) -> Void,
-        onError: @escaping (ErrorDTO?) -> Void
+        onError handleError: @escaping (ErrorDTO?) -> Void
     ) {
-        apiClient.get("", onSuccess, onError)
+        apiClient.get("", onSuccess, onError: handleError)
     }
 }
 
@@ -25,28 +25,37 @@ extension Communicator {
         onError handleError: @escaping (ErrorDTO?) -> Void
     ) {
         let endpoint = "/specialists"
-        apiClient.get(endpoint, onSuccess) { [weak self] error in
-            if error?.type == 401 {
-                self?.authenticationManager.refreshTokens(onSuccess: {
-                    self?.apiClient.get(endpoint, onSuccess, handleError)
-                }, onError: handleError)
-                return
-            }
-            DispatchQueue.main.async { handleError(error) }
-        }
+        apiClient.get(endpoint, onSuccess, onError: { [weak self] error in
+            self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
+        })
     }
 
     func getSpecialist(
         _ id: Int,
         onSuccess: @escaping (SpecialistDTO?) -> Void,
-        onError: @escaping (ErrorDTO?) -> Void
+        onError handleError: @escaping (ErrorDTO?) -> Void
     ) {
-        apiClient.get("/specialists/\(id)", onSuccess, onError)
+        let endpoint = "/specialists/\(id)"
+        apiClient.get(endpoint, onSuccess, onError: { [weak self] error in
+            self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
+        })
     }
+}
 
-    private func handleApiError(_ error: ErrorDTO?, onError: @escaping (ErrorDTO?) -> Void) {
+// MARK: - Requests retry
+extension Communicator {
+    private func retryGetRequest<T: Decodable>(
+        _ endpoint: String,
+        _ error: ErrorDTO?,
+        _ onSuccess: @escaping (T?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void)
+    {
         if error?.type == 401 {
-            //            authenticationManager.refreshTokens(onSuccess: { }, onError: <#T##(ErrorDTO?) -> Void#>)
+            authenticationManager.refreshTokens(onSuccess: { [weak self] in
+                self?.apiClient.get(endpoint, onSuccess, onError: handleError)
+            }, onError: handleError)
+        } else {
+            DispatchQueue.main.async { handleError(error) }
         }
     }
 }
