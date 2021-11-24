@@ -17,12 +17,7 @@ class SpecialistTableViewModel {
     }
     
     private func loadSpecialists() {
-        communicator.getSpecialists(onSuccess: handleSpecialistsReceived) { error in
-            print("Specialists error received!")
-            print(error?.title)
-            print(error?.details ?? "")
-        }
-        
+        communicator.getSpecialists(onSuccess: handleSpecialistsReceived) { _ in }
     }
     
     private func handleSpecialistsReceived(_ dto: SpecialistsDTO?) {
