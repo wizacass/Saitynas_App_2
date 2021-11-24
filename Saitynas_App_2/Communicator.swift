@@ -29,7 +29,7 @@ extension Communicator {
             self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
         })
     }
-
+    
     func getSpecialist(
         _ id: Int,
         onSuccess: @escaping (SpecialistDTO?) -> Void,
@@ -48,8 +48,8 @@ extension Communicator {
         _ endpoint: String,
         _ error: ErrorDTO?,
         _ onSuccess: @escaping (T?) -> Void,
-        onError handleError: @escaping (ErrorDTO?) -> Void)
-    {
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
         if error?.type == 401 {
             authenticationManager.refreshTokens(onSuccess: { [weak self] in
                 self?.apiClient.get(endpoint, onSuccess, onError: handleError)
