@@ -189,6 +189,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A016FDB6274EF36400CB4011 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A0B9936B274178D400EA60B0 /* NaviagtionViewController.swift */,
+				A07120ED2741CC2C00B5A945 /* SpecialistTableViewController.swift */,
+				A0A857D3274EF0AF000B133C /* UserTabViewController.swift */,
+				A0A857D5274EF1A6000B133C /* SpecialistTabViewController.swift */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		A016FDB7274EF37900CB4011 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				A0B993752741820C00EA60B0 /* LoginViewController.swift */,
+				A0B993772741822400EA60B0 /* SignupViewController.swift */,
+				A0B4DA262741566800C0EC1F /* AuthenticationViewController.swift */,
+				A0B993642741619900EA60B0 /* MessageViewControllerProtocol.swift */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
 		A07120E52741A86D00B5A945 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,17 +310,11 @@
 		A0B993502741598800EA60B0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A0B4DA262741566800C0EC1F /* AuthenticationViewController.swift */,
-				A0B993642741619900EA60B0 /* MessageViewControllerProtocol.swift */,
-				A0B9936B274178D400EA60B0 /* NaviagtionViewController.swift */,
+				A016FDB7274EF37900CB4011 /* Authentication */,
+				A016FDB6274EF36400CB4011 /* Navigation */,
 				A0B9937127417A0800EA60B0 /* SettingsViewController.swift */,
-				A0B993752741820C00EA60B0 /* LoginViewController.swift */,
-				A0B993772741822400EA60B0 /* SignupViewController.swift */,
 				A0B99379274182E100EA60B0 /* PatientTabViewController.swift */,
 				A0B9937B2741831200EA60B0 /* SpecialistViewController.swift */,
-				A07120ED2741CC2C00B5A945 /* SpecialistTableViewController.swift */,
-				A0A857D3274EF0AF000B133C /* UserTabViewController.swift */,
-				A0A857D5274EF1A6000B133C /* SpecialistTabViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
