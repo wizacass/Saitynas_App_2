@@ -16,6 +16,13 @@ class Communicator {
     ) {
         apiClient.get("", onSuccess, onError: handleError)
     }
+
+    func getRoles(
+        onSuccess: @escaping (EnumListDTO?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        apiClient.get("/roles", onSuccess, onError: handleError)
+    }
 }
 
 // MARK: - Specialists

@@ -211,6 +211,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign up"/>
+                                <connections>
+                                    <action selector="signupButtonPressed:" destination="rqt-mb-rfq" eventType="touchUpInside" id="vJ8-3J-cMl"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="6tl-hI-uYu">
                                 <rect key="frame" x="32" y="126" width="311" height="158"/>
@@ -275,6 +278,9 @@
                                     <constraint firstItem="h78-3L-RmE" firstAttribute="leading" secondItem="6tl-hI-uYu" secondAttribute="leading" id="MEL-fn-mBn"/>
                                 </constraints>
                             </stackView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s83-Fw-vEN">
+                                <rect key="frame" x="27.666666666666657" y="300" width="320" height="216"/>
+                            </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="E2q-nr-IjT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -284,10 +290,17 @@
                             <constraint firstItem="6tl-hI-uYu" firstAttribute="top" secondItem="7Od-19-5mj" secondAttribute="bottom" constant="64" id="IA9-IP-Ybl"/>
                             <constraint firstItem="6tl-hI-uYu" firstAttribute="leading" secondItem="E2q-nr-IjT" secondAttribute="leading" constant="32" id="Ivq-ds-RZ9"/>
                             <constraint firstItem="E2q-nr-IjT" firstAttribute="trailing" secondItem="6tl-hI-uYu" secondAttribute="trailing" constant="32" id="MGP-8y-xng"/>
+                            <constraint firstItem="s83-Fw-vEN" firstAttribute="centerX" secondItem="E21-tu-0PO" secondAttribute="centerX" id="OvO-hk-zCV"/>
                             <constraint firstItem="7Od-19-5mj" firstAttribute="top" secondItem="E2q-nr-IjT" secondAttribute="top" constant="32" id="XqL-VL-jee"/>
+                            <constraint firstItem="s83-Fw-vEN" firstAttribute="top" secondItem="6tl-hI-uYu" secondAttribute="bottom" constant="16" id="lx8-XQ-K9D"/>
                             <constraint firstItem="7Od-19-5mj" firstAttribute="centerX" secondItem="E21-tu-0PO" secondAttribute="centerX" id="qR2-Zk-0jw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailInput" destination="kUi-ch-miR" id="rM7-rU-v3b"/>
+                        <outlet property="passwordInput" destination="qTe-xF-wp5" id="xbI-io-RPj"/>
+                        <outlet property="rolePicker" destination="s83-Fw-vEN" id="aBL-lM-ERf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ah-dN-hUQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
