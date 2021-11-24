@@ -25,9 +25,18 @@ class AccessCommunicator {
     func signup(
         _ email: String,
         _ password: String,
+        _ roleId: Int,
         onSuccess: @escaping (TokensDTO?) -> Void,
         onError: @escaping (ErrorDTO?) -> Void
-    ) { }
+    ) {
+        let body: [String: Any] = [
+            "email": email,
+            "password": password,
+            "role": roleId
+        ]
+
+        apiClient.post("/signup", body, onSuccess, onError)
+    }
     
     func refreshTokens(
         _ refreshToken: String,

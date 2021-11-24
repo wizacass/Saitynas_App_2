@@ -13,7 +13,13 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel = SignupViewModel(DIContainer.shared.communicator)
+        initialize()
+    }
+
+    private func initialize() {
+        let c = DIContainer.shared
+
+        viewModel = SignupViewModel(c.communicator, c.authenticationManager)
         viewModel.subscribe(self)
         viewModel.loadRoles()
 
@@ -27,7 +33,9 @@ class SignupViewController: UIViewController {
             let password = passwordInput.text
         else { return }
 
-        viewModel.signup(email, password)
+        viewModel.signup(email, password) { [weak self] in
+            self?.dismiss(animated: true, completion: nil)
+        }
     }
 }
 
@@ -46,7 +54,7 @@ extension SignupViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        viewModel.selectedRoleId = row
+        viewModel.selectedRoleIndex = row
     }
 }
 

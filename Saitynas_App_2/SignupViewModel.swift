@@ -3,15 +3,17 @@ import UIKit
 
 class SignupViewModel {
 
-    var selectedRoleId = 0
+    var selectedRoleIndex = 0
     var roles: [EnumDTO] = []
 
     private var observers: [DataSourceObserverDelegate?] = []
 
     private var communicator: Communicator
+    private var authenticationManager: AuthenticationManager
 
-    init(_ communicator: Communicator) {
+    init(_ communicator: Communicator, _ authenticationManager: AuthenticationManager) {
         self.communicator = communicator
+        self.authenticationManager = authenticationManager
     }
 
     func loadRoles() {
@@ -25,10 +27,12 @@ class SignupViewModel {
         observers.forEach { $0?.onDataSourceUpdated(roles) }
     }
 
-    func signup(_ email: String, _ password: String) {
-        print("Email: \(email)")
-        print("Password: \(password)")
-        print("Role: \(roles[selectedRoleId].name)")
+    func signup(_ email: String, _ password: String, onSuccess: @escaping () -> Void) {
+        let roleId = roles[selectedRoleIndex].id
+        authenticationManager.signup(email, password, roleId, onSuccess: onSuccess, onError: { error in
+            print("Signup error!")
+            print(error?.title)
+        })
     }
 }
 

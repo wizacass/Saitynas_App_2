@@ -16,7 +16,7 @@ class Communicator {
     ) {
         apiClient.get("", onSuccess, onError: handleError)
     }
-
+    
     func getRoles(
         onSuccess: @escaping (EnumListDTO?) -> Void,
         onError handleError: @escaping (ErrorDTO?) -> Void

@@ -24,7 +24,20 @@ class AuthenticationManager {
         }, onError: handleLoginAttempt)
     }
 
-    func signup() { }
+    func signup(
+        _ email: String,
+        _ password: String,
+        _ roleId: Int,
+        onSuccess: @escaping () -> Void,
+        onError handleSignupAttempt: @escaping (ErrorDTO?) -> Void
+    ) {
+        communicator.signup(email, password, roleId, onSuccess: { [unowned self] tokens in
+            if self.trySaveTokens(tokens, onError: handleSignupAttempt) {
+                self.observers.forEach { $0?.onLogin() }
+                onSuccess()
+            }
+        }, onError: handleSignupAttempt)
+    }
 
     func refreshTokens(onSuccess: @escaping () -> Void, onError handleError: @escaping (ErrorDTO?) -> Void) {
         guard let refreshToken = repository.refreshToken else {
