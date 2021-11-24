@@ -1,6 +1,6 @@
 import Foundation
 
-enum Role {
-    case patient
-    case specialist
+enum Role: String {
+    case patient = "Patient"
+    case specialist = "Specialist"
 }

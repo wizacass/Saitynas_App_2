@@ -279,7 +279,7 @@
                                 </constraints>
                             </stackView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s83-Fw-vEN">
-                                <rect key="frame" x="28" y="300" width="320" height="216"/>
+                                <rect key="frame" x="27.666666666666657" y="300" width="320" height="216"/>
                             </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="E2q-nr-IjT"/>
@@ -657,6 +657,9 @@
                             </hierarchicalColors>
                         </imageReference>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="emailLabel" destination="CMN-34-X4s" id="ZIg-WH-yUr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Mv-Mp-aay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -767,10 +770,10 @@
             </objects>
             <point key="canvasLocation" x="4602" y="1088"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Specialist Tab View Controller-->
         <scene sceneID="hug-or-vMw">
             <objects>
-                <tabBarController storyboardIdentifier="SpecialistMenuVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BOV-p2-DPa" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="SpecialistMenuVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BOV-p2-DPa" customClass="SpecialistTabViewController" customModule="Saitynas_App_2" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zxh-oi-5LM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -788,7 +791,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bJb-jQ-KvN"/>
+        <segue reference="YaJ-L0-YyL"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="AccentColor"/>
     <resources>

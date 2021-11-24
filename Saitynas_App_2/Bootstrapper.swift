@@ -19,7 +19,10 @@ class Bootstrapper {
 
         let authenticationManager = AuthenticationManager(accessCommunicator, tokensRepository)
         let communicator = Communicator(apiClient, authenticationManager)
+        
+        let jwtUser = JwtUser(tokensRepository)
+        authenticationManager.subscribe(jwtUser)
 
-        return DIContainer(communicator, authenticationManager)
+        return DIContainer(communicator, authenticationManager, jwtUser)
     }
 }
