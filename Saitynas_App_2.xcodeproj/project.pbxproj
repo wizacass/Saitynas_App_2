@@ -29,6 +29,8 @@
 		A0A857CA274ED4DD000B133C /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857C9274ED4DD000B133C /* SignupViewModel.swift */; };
 		A0A857CC274ED83F000B133C /* EnumDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857CB274ED83F000B133C /* EnumDTO.swift */; };
 		A0A857CE274ED8F9000B133C /* EnumListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857CD274ED8F9000B133C /* EnumListDTO.swift */; };
+		A0A857D0274EE69F000B133C /* JwtUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857CF274EE69F000B133C /* JwtUser.swift */; };
+		A0A857D2274EE91E000B133C /* JwtExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857D1274EE91E000B133C /* JwtExtensions.swift */; };
 		A0B4DA232741566800C0EC1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA222741566800C0EC1F /* AppDelegate.swift */; };
 		A0B4DA252741566800C0EC1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA242741566800C0EC1F /* SceneDelegate.swift */; };
 		A0B4DA272741566800C0EC1F /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA262741566800C0EC1F /* AuthenticationViewController.swift */; };
@@ -103,6 +105,8 @@
 		A0A857C9274ED4DD000B133C /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		A0A857CB274ED83F000B133C /* EnumDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumDTO.swift; sourceTree = "<group>"; };
 		A0A857CD274ED8F9000B133C /* EnumListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumListDTO.swift; sourceTree = "<group>"; };
+		A0A857CF274EE69F000B133C /* JwtUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwtUser.swift; sourceTree = "<group>"; };
+		A0A857D1274EE91E000B133C /* JwtExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwtExtensions.swift; sourceTree = "<group>"; };
 		A0B4DA1F2741566800C0EC1F /* Saitynas_App_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saitynas_App_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B4DA222741566800C0EC1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0B4DA242741566800C0EC1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -312,6 +316,7 @@
 				A0B9936D274179A200EA60B0 /* ViewControllerIdentifier.swift */,
 				A07120DD27418D8D00B5A945 /* Role.swift */,
 				A0DEB6BB2745423900EC62CB /* NullObject.swift */,
+				A0A857CF274EE69F000B133C /* JwtUser.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				A0B9937327417ADE00EA60B0 /* UIStoryboardExtensions.swift */,
+				A0A857D1274EE91E000B133C /* JwtExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -657,6 +663,7 @@
 				A07120EB2741ABA300B5A945 /* UserTokensRepository.swift in Sources */,
 				A0B4DA232741566800C0EC1F /* AppDelegate.swift in Sources */,
 				A07120DE27418D8D00B5A945 /* Role.swift in Sources */,
+				A0A857D2274EE91E000B133C /* JwtExtensions.swift in Sources */,
 				A07A3F442744F61300B029DE /* DataSourceObserverDelegate.swift in Sources */,
 				A07120E027418E1700B5A945 /* AuthenticationManager.swift in Sources */,
 				A0B9935D2741607F00EA60B0 /* ErrorDTO.swift in Sources */,
@@ -677,6 +684,7 @@
 				A07120F22741CCE800B5A945 /* SpecialistsDTO.swift in Sources */,
 				A0B993612741609D00EA60B0 /* MessageDTO.swift in Sources */,
 				A0B9937C2741831200EA60B0 /* SpecialistViewController.swift in Sources */,
+				A0A857D0274EE69F000B133C /* JwtUser.swift in Sources */,
 				A07120E92741AB5800B5A945 /* KeychainStorage.swift in Sources */,
 				A07A3F462744F6CE00B029DE /* Observable.swift in Sources */,
 				A07A3F412741CD5B00B029DE /* Specialist.swift in Sources */,

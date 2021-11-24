@@ -9,6 +9,7 @@ target 'Saitynas_App_2' do
   pod 'Alamofire', '~> 5.4'
   pod 'KeychainSwift', '~> 19.0'
   pod 'SwiftLint'
+  pod 'JWTDecode', '~> 2.6'
 
   target 'Saitynas_App_2Tests' do
     inherit! :search_paths
