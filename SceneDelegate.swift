@@ -9,7 +9,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
     ) {
-        guard let _ = (scene as? UIWindowScene) else { return }
+        if (scene as? UIWindowScene) == nil { return }
     }
     
     func sceneDidDisconnect(_ scene: UIScene) { }

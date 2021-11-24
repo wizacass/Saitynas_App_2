@@ -1,6 +1,6 @@
 import Foundation
 
-class AuthenticationManager  {
+class AuthenticationManager {
 
     var isLoggedIn: Bool {
         return repository.accessToken != nil

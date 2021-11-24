@@ -16,7 +16,7 @@ class AccessCommunicator {
     ) {
         let body = [
             "email": email,
-            "password": password,
+            "password": password
         ]
         
         apiClient.post("/login", body, onSuccess, onError)
@@ -35,7 +35,7 @@ class AccessCommunicator {
         onError: @escaping (ErrorDTO?) -> Void
     ) {
         let body = [
-            "refreshToken": refreshToken,
+            "refreshToken": refreshToken
         ]
         
         apiClient.post("/refresh-token", body, onSuccess, onError)
