@@ -770,10 +770,10 @@
             </objects>
             <point key="canvasLocation" x="4602" y="1088"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Specialist Tab View Controller-->
         <scene sceneID="hug-or-vMw">
             <objects>
-                <tabBarController storyboardIdentifier="SpecialistMenuVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BOV-p2-DPa" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="SpecialistMenuVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BOV-p2-DPa" customClass="SpecialistTabViewController" customModule="Saitynas_App_2" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zxh-oi-5LM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -791,7 +791,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bJb-jQ-KvN"/>
+        <segue reference="YaJ-L0-YyL"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="AccentColor"/>
     <resources>

@@ -1,6 +1,6 @@
 import Foundation
 
 enum Role: String {
-    case patient
-    case specialist
+    case patient = "Patient"
+    case specialist = "Specialist"
 }

@@ -17,6 +17,7 @@ class JwtUser {
     
     init(_ tokensRepository: UserTokensRepository) {
         self.tokensRepository = tokensRepository
+        updateToken()
     }
     
     private func updateToken() {

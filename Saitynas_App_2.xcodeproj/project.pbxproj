@@ -31,6 +31,8 @@
 		A0A857CE274ED8F9000B133C /* EnumListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857CD274ED8F9000B133C /* EnumListDTO.swift */; };
 		A0A857D0274EE69F000B133C /* JwtUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857CF274EE69F000B133C /* JwtUser.swift */; };
 		A0A857D2274EE91E000B133C /* JwtExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857D1274EE91E000B133C /* JwtExtensions.swift */; };
+		A0A857D4274EF0AF000B133C /* UserTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857D3274EF0AF000B133C /* UserTabViewController.swift */; };
+		A0A857D6274EF1A6000B133C /* SpecialistTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857D5274EF1A6000B133C /* SpecialistTabViewController.swift */; };
 		A0B4DA232741566800C0EC1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA222741566800C0EC1F /* AppDelegate.swift */; };
 		A0B4DA252741566800C0EC1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA242741566800C0EC1F /* SceneDelegate.swift */; };
 		A0B4DA272741566800C0EC1F /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA262741566800C0EC1F /* AuthenticationViewController.swift */; };
@@ -107,6 +109,8 @@
 		A0A857CD274ED8F9000B133C /* EnumListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumListDTO.swift; sourceTree = "<group>"; };
 		A0A857CF274EE69F000B133C /* JwtUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwtUser.swift; sourceTree = "<group>"; };
 		A0A857D1274EE91E000B133C /* JwtExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JwtExtensions.swift; sourceTree = "<group>"; };
+		A0A857D3274EF0AF000B133C /* UserTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTabViewController.swift; sourceTree = "<group>"; };
+		A0A857D5274EF1A6000B133C /* SpecialistTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistTabViewController.swift; sourceTree = "<group>"; };
 		A0B4DA1F2741566800C0EC1F /* Saitynas_App_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saitynas_App_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B4DA222741566800C0EC1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0B4DA242741566800C0EC1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -293,6 +297,8 @@
 				A0B99379274182E100EA60B0 /* PatientTabViewController.swift */,
 				A0B9937B2741831200EA60B0 /* SpecialistViewController.swift */,
 				A07120ED2741CC2C00B5A945 /* SpecialistTableViewController.swift */,
+				A0A857D3274EF0AF000B133C /* UserTabViewController.swift */,
+				A0A857D5274EF1A6000B133C /* SpecialistTabViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -656,6 +662,7 @@
 				A0B4DA272741566800C0EC1F /* AuthenticationViewController.swift in Sources */,
 				A0DEB6BE274550C500EC62CB /* SpecialistDTO.swift in Sources */,
 				A07120E72741A88D00B5A945 /* KeyValueStorageProtocol.swift in Sources */,
+				A0A857D4274EF0AF000B133C /* UserTabViewController.swift in Sources */,
 				A07120DC27418D3B00B5A945 /* TokensDTO.swift in Sources */,
 				A0B9935827415DC800EA60B0 /* Bootstrapper.swift in Sources */,
 				A0DEB6BC2745423900EC62CB /* NullObject.swift in Sources */,
@@ -673,6 +680,7 @@
 				A07120E227418F5A00B5A945 /* LoginViewModel.swift in Sources */,
 				A07120F02741CCA800B5A945 /* SpecialistTableViewModel.swift in Sources */,
 				A0B9935F2741608900EA60B0 /* MetaDTO.swift in Sources */,
+				A0A857D6274EF1A6000B133C /* SpecialistTabViewController.swift in Sources */,
 				A0B4DA252741566800C0EC1F /* SceneDelegate.swift in Sources */,
 				A0A857CC274ED83F000B133C /* EnumDTO.swift in Sources */,
 				A0B993682741650A00EA60B0 /* ApiClient.swift.swift in Sources */,
