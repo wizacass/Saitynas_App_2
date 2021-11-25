@@ -304,9 +304,11 @@
                         <viewLayoutGuide key="safeArea" id="Nl7-CL-LPx"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="YDI-zt-NWc" firstAttribute="top" secondItem="dNE-eZ-dkD" secondAttribute="bottom" priority="250" constant="128" id="83b-gm-rZi"/>
                             <constraint firstItem="dNE-eZ-dkD" firstAttribute="top" secondItem="Nl7-CL-LPx" secondAttribute="top" constant="32" id="IeL-2G-GhQ"/>
-                            <constraint firstItem="YDI-zt-NWc" firstAttribute="top" secondItem="dNE-eZ-dkD" secondAttribute="bottom" constant="128" id="Mt3-oA-WBD"/>
+                            <constraint firstItem="YDI-zt-NWc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dNE-eZ-dkD" secondAttribute="bottom" constant="32" id="Mt3-oA-WBD"/>
                             <constraint firstItem="YDI-zt-NWc" firstAttribute="leading" secondItem="Nl7-CL-LPx" secondAttribute="leading" constant="32" id="OHg-JK-43t"/>
+                            <constraint firstItem="2OW-k4-pLY" firstAttribute="top" relation="greaterThanOrEqual" secondItem="YDI-zt-NWc" secondAttribute="bottom" constant="32" id="OJC-3W-dYE"/>
                             <constraint firstItem="2OW-k4-pLY" firstAttribute="centerX" secondItem="X6I-Ct-KKn" secondAttribute="centerX" id="QWQ-Sd-ltm"/>
                             <constraint firstItem="Nl7-CL-LPx" firstAttribute="trailing" secondItem="YDI-zt-NWc" secondAttribute="trailing" constant="32" id="S8j-Mg-aHj"/>
                             <constraint firstItem="Nl7-CL-LPx" firstAttribute="bottom" secondItem="2OW-k4-pLY" secondAttribute="bottom" constant="48" id="dC3-za-Rg5"/>
@@ -314,7 +316,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomConstraint" destination="dC3-za-Rg5" id="Q6I-vm-sL4"/>
                         <outlet property="emailTextField" destination="P0E-k2-5Dm" id="qk3-7Z-5D9"/>
+                        <outlet property="passwordTextField" destination="hCJ-cG-x8x" id="40q-62-Gqz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mya-As-J0e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -429,6 +433,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomConstraint" destination="G6g-kj-hup" id="t58-oi-PHT"/>
                         <outlet property="emailInput" destination="kUi-ch-miR" id="rM7-rU-v3b"/>
                         <outlet property="passwordInput" destination="qTe-xF-wp5" id="xbI-io-RPj"/>
                         <outlet property="rolePicker" destination="s83-Fw-vEN" id="aBL-lM-ERf"/>

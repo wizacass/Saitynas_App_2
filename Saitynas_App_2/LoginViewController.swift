@@ -1,14 +1,16 @@
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: AccessControllerBase {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
+
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+
     private var authenticationManager: AuthenticationManager!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad(bottomConstraint)
         
         authenticationManager = DIContainer.shared.authenticationManager
     }

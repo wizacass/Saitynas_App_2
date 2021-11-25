@@ -11,6 +11,7 @@
 		9547F0EA8C37C4CA1F52555C /* Pods_Saitynas_App_2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C536A0316055447994E05DB /* Pods_Saitynas_App_2Tests.framework */; };
 		9EA2F1B57E9D60E203FCE5C0 /* Pods_Saitynas_App_2_Saitynas_App_2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CE00A274170513F4173E71 /* Pods_Saitynas_App_2_Saitynas_App_2UITests.framework */; };
 		A02D6974274F05C70016B48D /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D6973274F05C70016B48D /* ShadowView.swift */; };
+		A02D6976274FDE970016B48D /* AccessControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D6975274FDE960016B48D /* AccessControllerBase.swift */; };
 		A0447268274EFCAF004292EE /* ButtonWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0447267274EFCAF004292EE /* ButtonWithShadow.swift */; };
 		A044726A274EFD77004292EE /* ColorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0447269274EFD77004292EE /* ColorCode.swift */; };
 		A044726C274EFDB7004292EE /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044726B274EFDB7004292EE /* UIColorExtensions.swift */; };
@@ -94,6 +95,7 @@
 		79ABC9337BEA7004DA6DED9D /* Pods-Saitynas_App_2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saitynas_App_2Tests.release.xcconfig"; path = "Target Support Files/Pods-Saitynas_App_2Tests/Pods-Saitynas_App_2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9465DB913CD54F4A1CA30AC9 /* Pods-Saitynas_App_2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saitynas_App_2Tests.debug.xcconfig"; path = "Target Support Files/Pods-Saitynas_App_2Tests/Pods-Saitynas_App_2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A02D6973274F05C70016B48D /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		A02D6975274FDE960016B48D /* AccessControllerBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControllerBase.swift; sourceTree = "<group>"; };
 		A0447267274EFCAF004292EE /* ButtonWithShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithShadow.swift; sourceTree = "<group>"; };
 		A0447269274EFD77004292EE /* ColorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCode.swift; sourceTree = "<group>"; };
 		A044726B274EFDB7004292EE /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				A0B993772741822400EA60B0 /* SignupViewController.swift */,
 				A0B4DA262741566800C0EC1F /* AuthenticationViewController.swift */,
 				A0B993642741619900EA60B0 /* MessageViewControllerProtocol.swift */,
+				A02D6975274FDE960016B48D /* AccessControllerBase.swift */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";
@@ -715,6 +718,7 @@
 				A07120F02741CCA800B5A945 /* SpecialistTableViewModel.swift in Sources */,
 				A0B9935F2741608900EA60B0 /* MetaDTO.swift in Sources */,
 				A0A857D6274EF1A6000B133C /* SpecialistTabViewController.swift in Sources */,
+				A02D6976274FDE970016B48D /* AccessControllerBase.swift in Sources */,
 				A0B4DA252741566800C0EC1F /* SceneDelegate.swift in Sources */,
 				A0A857CC274ED83F000B133C /* EnumDTO.swift in Sources */,
 				A0B993682741650A00EA60B0 /* ApiClient.swift.swift in Sources */,

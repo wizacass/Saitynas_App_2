@@ -1,17 +1,19 @@
 import UIKit
 
-class SignupViewController: UIViewController {
+class SignupViewController: AccessControllerBase {
 
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     @IBOutlet weak var rolePicker: UIPickerView!
+
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
 
     private var viewModel: SignupViewModel!
 
     private let id = UUID()
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad(bottomConstraint)
 
         initialize()
     }
