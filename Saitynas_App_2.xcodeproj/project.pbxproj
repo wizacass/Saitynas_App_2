@@ -16,6 +16,12 @@
 		A044726A274EFD77004292EE /* ColorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0447269274EFD77004292EE /* ColorCode.swift */; };
 		A044726C274EFDB7004292EE /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044726B274EFDB7004292EE /* UIColorExtensions.swift */; };
 		A044726E274EFF14004292EE /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044726D274EFF14004292EE /* InputField.swift */; };
+		A06179C12757C3FE00ABBF82 /* WorkplaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179C02757C3FE00ABBF82 /* WorkplaceTableViewController.swift */; };
+		A06179C32757C47400ABBF82 /* WorkplaceTableVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179C22757C47400ABBF82 /* WorkplaceTableVIewModel.swift */; };
+		A06179C52757C51300ABBF82 /* CellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179C42757C51300ABBF82 /* CellIdentifier.swift */; };
+		A06179C72757C5B900ABBF82 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179C62757C5B900ABBF82 /* UITableViewExtensions.swift */; };
+		A06179C92757C6D400ABBF82 /* Workplace.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179C82757C6D400ABBF82 /* Workplace.swift */; };
+		A06179CB2757C70300ABBF82 /* WorkplacesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179CA2757C70300ABBF82 /* WorkplacesDTO.swift */; };
 		A07120DA27418CE600B5A945 /* AccessCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120D927418CE600B5A945 /* AccessCommunicator.swift */; };
 		A07120DC27418D3B00B5A945 /* TokensDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120DB27418D3B00B5A945 /* TokensDTO.swift */; };
 		A07120DE27418D8D00B5A945 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120DD27418D8D00B5A945 /* Role.swift */; };
@@ -100,6 +106,12 @@
 		A0447269274EFD77004292EE /* ColorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCode.swift; sourceTree = "<group>"; };
 		A044726B274EFDB7004292EE /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		A044726D274EFF14004292EE /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
+		A06179C02757C3FE00ABBF82 /* WorkplaceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkplaceTableViewController.swift; sourceTree = "<group>"; };
+		A06179C22757C47400ABBF82 /* WorkplaceTableVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkplaceTableVIewModel.swift; sourceTree = "<group>"; };
+		A06179C42757C51300ABBF82 /* CellIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifier.swift; sourceTree = "<group>"; };
+		A06179C62757C5B900ABBF82 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		A06179C82757C6D400ABBF82 /* Workplace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workplace.swift; sourceTree = "<group>"; };
+		A06179CA2757C70300ABBF82 /* WorkplacesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkplacesDTO.swift; sourceTree = "<group>"; };
 		A07120D927418CE600B5A945 /* AccessCommunicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCommunicator.swift; sourceTree = "<group>"; };
 		A07120DB27418D3B00B5A945 /* TokensDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensDTO.swift; sourceTree = "<group>"; };
 		A07120DD27418D8D00B5A945 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
@@ -208,6 +220,7 @@
 				A07120ED2741CC2C00B5A945 /* SpecialistTableViewController.swift */,
 				A0A857D3274EF0AF000B133C /* UserTabViewController.swift */,
 				A0A857D5274EF1A6000B133C /* SpecialistTabViewController.swift */,
+				A06179C02757C3FE00ABBF82 /* WorkplaceTableViewController.swift */,
 			);
 			name = Navigation;
 			sourceTree = "<group>";
@@ -353,6 +366,7 @@
 				A0DEB6BB2745423900EC62CB /* NullObject.swift */,
 				A0A857CF274EE69F000B133C /* JwtUser.swift */,
 				A0447269274EFD77004292EE /* ColorCode.swift */,
+				A06179C42757C51300ABBF82 /* CellIdentifier.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -369,6 +383,8 @@
 				A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */,
 				A0A857CB274ED83F000B133C /* EnumDTO.swift */,
 				A0A857CD274ED8F9000B133C /* EnumListDTO.swift */,
+				A06179C82757C6D400ABBF82 /* Workplace.swift */,
+				A06179CA2757C70300ABBF82 /* WorkplacesDTO.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -380,6 +396,7 @@
 				A0A857D1274EE91E000B133C /* JwtExtensions.swift */,
 				A044726B274EFDB7004292EE /* UIColorExtensions.swift */,
 				A044726D274EFF14004292EE /* InputField.swift */,
+				A06179C62757C5B900ABBF82 /* UITableViewExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -392,6 +409,7 @@
 				A07120EF2741CCA800B5A945 /* SpecialistTableViewModel.swift */,
 				A0F48B6A274530FD00F54324 /* SpecialistViewModel.swift */,
 				A0A857C9274ED4DD000B133C /* SignupViewModel.swift */,
+				A06179C22757C47400ABBF82 /* WorkplaceTableVIewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -689,10 +707,12 @@
 			files = (
 				A0B993782741822400EA60B0 /* SignupViewController.swift in Sources */,
 				A0B9935527415DA900EA60B0 /* DIContainer.swift in Sources */,
+				A06179C52757C51300ABBF82 /* CellIdentifier.swift in Sources */,
 				A07120DA27418CE600B5A945 /* AccessCommunicator.swift in Sources */,
 				A0B993632741612B00EA60B0 /* MessageViewModel.swift in Sources */,
 				A07120E42741967B00B5A945 /* StateObserverDelegate.swift in Sources */,
 				A0A857CA274ED4DD000B133C /* SignupViewModel.swift in Sources */,
+				A06179C12757C3FE00ABBF82 /* WorkplaceTableViewController.swift in Sources */,
 				A0B4DA272741566800C0EC1F /* AuthenticationViewController.swift in Sources */,
 				A0DEB6BE274550C500EC62CB /* SpecialistDTO.swift in Sources */,
 				A07120E72741A88D00B5A945 /* KeyValueStorageProtocol.swift in Sources */,
@@ -703,13 +723,16 @@
 				A0B9935827415DC800EA60B0 /* Bootstrapper.swift in Sources */,
 				A0DEB6BC2745423900EC62CB /* NullObject.swift in Sources */,
 				A0F48B6B274530FD00F54324 /* SpecialistViewModel.swift in Sources */,
+				A06179CB2757C70300ABBF82 /* WorkplacesDTO.swift in Sources */,
 				A07120EB2741ABA300B5A945 /* UserTokensRepository.swift in Sources */,
 				A0B4DA232741566800C0EC1F /* AppDelegate.swift in Sources */,
 				A07120DE27418D8D00B5A945 /* Role.swift in Sources */,
 				A0A857D2274EE91E000B133C /* JwtExtensions.swift in Sources */,
 				A07A3F442744F61300B029DE /* DataSourceObserverDelegate.swift in Sources */,
 				A07120E027418E1700B5A945 /* AuthenticationManager.swift in Sources */,
+				A06179C72757C5B900ABBF82 /* UITableViewExtensions.swift in Sources */,
 				A0B9935D2741607F00EA60B0 /* ErrorDTO.swift in Sources */,
+				A06179C32757C47400ABBF82 /* WorkplaceTableVIewModel.swift in Sources */,
 				A0B9936A274166F000EA60B0 /* Communicator.swift in Sources */,
 				A044726A274EFD77004292EE /* ColorCode.swift in Sources */,
 				A07A3F482744F7CF00B029DE /* ObserverDelegate.swift in Sources */,
@@ -731,6 +754,7 @@
 				A0B993762741820C00EA60B0 /* LoginViewController.swift in Sources */,
 				A07120F22741CCE800B5A945 /* SpecialistsDTO.swift in Sources */,
 				A0B993612741609D00EA60B0 /* MessageDTO.swift in Sources */,
+				A06179C92757C6D400ABBF82 /* Workplace.swift in Sources */,
 				A0B9937C2741831200EA60B0 /* SpecialistViewController.swift in Sources */,
 				A0A857D0274EE69F000B133C /* JwtUser.swift in Sources */,
 				A07120E92741AB5800B5A945 /* KeychainStorage.swift in Sources */,
