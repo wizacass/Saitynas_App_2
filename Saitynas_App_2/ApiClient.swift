@@ -1,7 +1,7 @@
 import Foundation
 import Alamofire
 
-class ApiClient {
+class ApiClient: ApiClientProtocol {
     
     private let queue = DispatchQueue.global(qos: .userInitiated)
     private let decoder = JSONDecoder()

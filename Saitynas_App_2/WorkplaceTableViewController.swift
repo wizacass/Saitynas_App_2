@@ -33,10 +33,10 @@ extension WorkplaceTableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(.workplaceCell, for: indexPath)
-//        let workplace = viewModel.getWorkplace(at: indexPath.row)
-//
-//        cell.textLabel?.text = specialist.fullName
-//        cell.detailTextLabel?.text = specialist.speciality
+        let workplace = viewModel.getWorkplace(at: indexPath.row)
+
+        cell.textLabel?.text = workplace.address
+        cell.detailTextLabel?.text = workplace.city
 
         return cell
     }

@@ -22,6 +22,7 @@
 		A06179C72757C5B900ABBF82 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179C62757C5B900ABBF82 /* UITableViewExtensions.swift */; };
 		A06179C92757C6D400ABBF82 /* Workplace.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179C82757C6D400ABBF82 /* Workplace.swift */; };
 		A06179CB2757C70300ABBF82 /* WorkplacesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179CA2757C70300ABBF82 /* WorkplacesDTO.swift */; };
+		A06179CD2757C98300ABBF82 /* ApiClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179CC2757C98300ABBF82 /* ApiClientProtocol.swift */; };
 		A07120DA27418CE600B5A945 /* AccessCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120D927418CE600B5A945 /* AccessCommunicator.swift */; };
 		A07120DC27418D3B00B5A945 /* TokensDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120DB27418D3B00B5A945 /* TokensDTO.swift */; };
 		A07120DE27418D8D00B5A945 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120DD27418D8D00B5A945 /* Role.swift */; };
@@ -61,7 +62,7 @@
 		A0B993612741609D00EA60B0 /* MessageDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B993602741609D00EA60B0 /* MessageDTO.swift */; };
 		A0B993632741612B00EA60B0 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B993622741612B00EA60B0 /* MessageViewModel.swift */; };
 		A0B993652741619900EA60B0 /* MessageViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B993642741619900EA60B0 /* MessageViewControllerProtocol.swift */; };
-		A0B993682741650A00EA60B0 /* ApiClient.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B993672741650A00EA60B0 /* ApiClient.swift.swift */; };
+		A0B993682741650A00EA60B0 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B993672741650A00EA60B0 /* ApiClient.swift */; };
 		A0B9936A274166F000EA60B0 /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B99369274166F000EA60B0 /* Communicator.swift */; };
 		A0B9936C274178D400EA60B0 /* NaviagtionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B9936B274178D400EA60B0 /* NaviagtionViewController.swift */; };
 		A0B9936E274179A200EA60B0 /* ViewControllerIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B9936D274179A200EA60B0 /* ViewControllerIdentifier.swift */; };
@@ -112,6 +113,7 @@
 		A06179C62757C5B900ABBF82 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		A06179C82757C6D400ABBF82 /* Workplace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workplace.swift; sourceTree = "<group>"; };
 		A06179CA2757C70300ABBF82 /* WorkplacesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkplacesDTO.swift; sourceTree = "<group>"; };
+		A06179CC2757C98300ABBF82 /* ApiClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientProtocol.swift; sourceTree = "<group>"; };
 		A07120D927418CE600B5A945 /* AccessCommunicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCommunicator.swift; sourceTree = "<group>"; };
 		A07120DB27418D3B00B5A945 /* TokensDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensDTO.swift; sourceTree = "<group>"; };
 		A07120DD27418D8D00B5A945 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
@@ -155,7 +157,7 @@
 		A0B993602741609D00EA60B0 /* MessageDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDTO.swift; sourceTree = "<group>"; };
 		A0B993622741612B00EA60B0 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		A0B993642741619900EA60B0 /* MessageViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewControllerProtocol.swift; sourceTree = "<group>"; };
-		A0B993672741650A00EA60B0 /* ApiClient.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift.swift; sourceTree = "<group>"; };
+		A0B993672741650A00EA60B0 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		A0B99369274166F000EA60B0 /* Communicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
 		A0B9936B274178D400EA60B0 /* NaviagtionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviagtionViewController.swift; sourceTree = "<group>"; };
 		A0B9936D274179A200EA60B0 /* ViewControllerIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerIdentifier.swift; sourceTree = "<group>"; };
@@ -417,9 +419,10 @@
 		A0B99366274164FF00EA60B0 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				A0B993672741650A00EA60B0 /* ApiClient.swift.swift */,
+				A0B993672741650A00EA60B0 /* ApiClient.swift */,
 				A0B99369274166F000EA60B0 /* Communicator.swift */,
 				A07120D927418CE600B5A945 /* AccessCommunicator.swift */,
+				A06179CC2757C98300ABBF82 /* ApiClientProtocol.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -742,9 +745,10 @@
 				A0B9935F2741608900EA60B0 /* MetaDTO.swift in Sources */,
 				A0A857D6274EF1A6000B133C /* SpecialistTabViewController.swift in Sources */,
 				A02D6976274FDE970016B48D /* AccessControllerBase.swift in Sources */,
+				A06179CD2757C98300ABBF82 /* ApiClientProtocol.swift in Sources */,
 				A0B4DA252741566800C0EC1F /* SceneDelegate.swift in Sources */,
 				A0A857CC274ED83F000B133C /* EnumDTO.swift in Sources */,
-				A0B993682741650A00EA60B0 /* ApiClient.swift.swift in Sources */,
+				A0B993682741650A00EA60B0 /* ApiClient.swift in Sources */,
 				A0447268274EFCAF004292EE /* ButtonWithShadow.swift in Sources */,
 				A0B9937A274182E100EA60B0 /* PatientTabViewController.swift in Sources */,
 				A02D6974274F05C70016B48D /* ShadowView.swift in Sources */,

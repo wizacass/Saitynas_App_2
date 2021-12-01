@@ -17,7 +17,7 @@ class WorkplaceTableViewModel {
     }
 
     private func loadSpecialists() {
-       // communicator.getSpecialists(onSuccess: handleSpecialistsReceived) { _ in }
+        communicator.getWorkplaces(onSuccess: handleWorkplacessReceived) { _ in }
     }
 
     private func handleWorkplacessReceived(_ dto: WorkplacesDTO?) {
