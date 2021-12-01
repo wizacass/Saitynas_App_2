@@ -881,49 +881,6 @@
             </objects>
             <point key="canvasLocation" x="1672.8" y="2449.5073891625616"/>
         </scene>
-        <!--Workplaces-->
-        <scene sceneID="zMA-Vc-d66">
-            <objects>
-                <viewController id="hfF-Xd-XFh" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zwl-wW-tmR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workplaces View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o64-tz-eH8">
-                                <rect key="frame" x="95" y="76" width="185" height="30"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="otF-Jl-IqZ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="o64-tz-eH8" firstAttribute="top" secondItem="otF-Jl-IqZ" secondAttribute="top" constant="32" id="bNa-zT-Dn5"/>
-                            <constraint firstItem="o64-tz-eH8" firstAttribute="centerX" secondItem="zwl-wW-tmR" secondAttribute="centerX" id="kJh-eB-yyW"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Workplaces" id="hot-dP-bwC">
-                        <imageReference key="image" image="cross.circle" catalog="system" symbolScale="default" renderingMode="hierarchical-single">
-                            <hierarchicalColors>
-                                <color name="AccentColor"/>
-                                <color systemColor="secondaryLabelColor"/>
-                                <color systemColor="tertiaryLabelColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
-                        <imageReference key="selectedImage" image="cross.circle" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
-                            <hierarchicalColors>
-                                <color name="AccentColor"/>
-                                <color systemColor="secondaryLabelColor"/>
-                                <color systemColor="tertiaryLabelColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Sz-bn-Iet" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2428" y="1088"/>
-        </scene>
         <!--Account-->
         <scene sceneID="Tjn-ps-o0f">
             <objects>
@@ -1003,7 +960,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="VWv-Zk-Dgg" kind="relationship" relationship="viewControllers" id="kRa-tR-jIn"/>
-                        <segue destination="hfF-Xd-XFh" kind="relationship" relationship="viewControllers" id="apH-Lj-ern"/>
+                        <segue destination="ejp-ez-mda" kind="relationship" relationship="viewControllers" id="mZV-i5-ci9"/>
                         <segue destination="9HX-i5-qAb" kind="relationship" relationship="viewControllers" id="bJb-jQ-KvN"/>
                     </connections>
                 </tabBarController>
@@ -1116,6 +1073,94 @@
             </objects>
             <point key="canvasLocation" x="3892" y="347"/>
         </scene>
+        <!--Workplaces-->
+        <scene sceneID="qw8-Gg-p6P">
+            <objects>
+                <tableViewController title="Workplaces" id="LE0-UG-gLj" customClass="WorkplaceTableViewController" customModule="Saitynas_App_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Qm1-3x-BP3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="workplaceCell" textLabel="Tbz-8o-sfn" detailTextLabel="Sib-3X-BUh" imageView="DpN-dl-J12" style="IBUITableViewCellStyleSubtitle" id="Xf4-2A-pQX">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xf4-2A-pQX" id="qeb-R4-sjb">
+                                    <rect key="frame" x="0.0" y="0.0" width="349.33333333333331" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="txt_title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tbz-8o-sfn">
+                                            <rect key="frame" x="55.666666666666671" y="7.0000000000000009" width="43.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="txt_Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sib-3X-BUh">
+                                            <rect key="frame" x="55.666666666666671" y="23.333333333333336" width="63.333333333333336" height="13.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DpN-dl-J12">
+                                            <rect key="frame" x="12.000000000000002" y="9.3333333333333339" width="28.666666666666668" height="24.666666666666668"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <imageReference key="image" image="building.2.fill" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                                                <hierarchicalColors>
+                                                    <color name="AccentColor"/>
+                                                    <color systemColor="secondaryLabelColor"/>
+                                                    <color systemColor="tertiaryLabelColor"/>
+                                                </hierarchicalColors>
+                                            </imageReference>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LE0-UG-gLj" id="erf-vg-e6K"/>
+                            <outlet property="delegate" destination="LE0-UG-gLj" id="LNk-mq-dX4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Workplaces" id="ITv-6H-VrK"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q77-ha-OZe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2428" y="1770"/>
+        </scene>
+        <!--Workplaces-->
+        <scene sceneID="YsF-Vt-yN0">
+            <objects>
+                <navigationController id="ejp-ez-mda" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Workplaces" id="1XG-lA-TnZ">
+                        <imageReference key="image" image="cross.circle" catalog="system" symbolScale="default" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="AccentColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="cross.circle" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="AccentColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EYP-px-cAg">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LE0-UG-gLj" kind="relationship" relationship="rootViewController" id="WYS-qq-AKz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RSb-zf-zqk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2428" y="1088"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="BZn-rX-GvR">
@@ -1132,12 +1177,13 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="YaJ-L0-YyL"/>
+        <segue reference="bJb-jQ-KvN"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="AccentColor"/>
     <resources>
         <image name="VectorLogo" width="256" height="256"/>
         <image name="at" catalog="system" width="128" height="124"/>
+        <image name="building.2.fill" catalog="system" width="128" height="106"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="cross.circle" catalog="system" width="128" height="121"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>

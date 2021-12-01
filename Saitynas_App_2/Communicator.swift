@@ -1,8 +1,8 @@
 import Foundation
 
 class Communicator {
-    
-    private var apiClient: ApiClient
+
+    private var apiClient: ApiClientProtocol
     private var authenticationManager: AuthenticationManager
     
     init(_ apiClient: ApiClient, _ authenticationManager: AuthenticationManager) {
@@ -43,6 +43,19 @@ extension Communicator {
         onError handleError: @escaping (ErrorDTO?) -> Void
     ) {
         let endpoint = "/specialists/\(id)"
+        apiClient.get(endpoint, onSuccess, onError: { [weak self] error in
+            self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
+        })
+    }
+}
+
+// MARK: - Workplaces
+extension Communicator {
+    func getWorkplaces(
+        onSuccess: @escaping (WorkplacesDTO?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/workplaces"
         apiClient.get(endpoint, onSuccess, onError: { [weak self] error in
             self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
         })
