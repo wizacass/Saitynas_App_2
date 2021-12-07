@@ -47,6 +47,17 @@ extension Communicator {
             self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
         })
     }
+
+    func getSpecialistEvaluations(
+        _ id: Int,
+        onSuccess: @escaping (EvaluationsDTO?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/specialists/\(id)/evaluations"
+        apiClient.get(endpoint, onSuccess, onError: { [weak self] error in
+            self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
+        })
+    }
 }
 
 // MARK: - Workplaces

@@ -887,12 +887,22 @@
                                     <constraint firstAttribute="height" constant="48" id="fuI-h8-emd"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="View Evaluations">
+                                <buttonConfiguration key="configuration" style="tinted" title="View Reviews">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="evaluationsButtonPressed:" destination="HXw-4C-zTy" eventType="touchUpInside" id="0Ju-1W-thQ"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgu-pI-yjQ">
+                                <rect key="frame" x="128" y="427.33333333333331" width="119.33333333333331" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="GzK-66-ze6"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Write a Review">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
+                                </buttonConfiguration>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F98-ze-x2q"/>
@@ -906,6 +916,8 @@
                             <constraint firstItem="zxf-Am-GLW" firstAttribute="top" secondItem="F98-ze-x2q" secondAttribute="top" constant="32" id="SjC-S9-soN"/>
                             <constraint firstItem="VcI-QH-Hrw" firstAttribute="leading" secondItem="F98-ze-x2q" secondAttribute="leading" constant="24" id="UZI-Le-bi5"/>
                             <constraint firstItem="d4E-fT-Mec" firstAttribute="top" secondItem="jtz-V3-coa" secondAttribute="bottom" constant="32" id="Z7t-Iy-9Kv"/>
+                            <constraint firstItem="Lgu-pI-yjQ" firstAttribute="top" secondItem="d4E-fT-Mec" secondAttribute="bottom" constant="16" id="e2h-Td-xJn"/>
+                            <constraint firstItem="Lgu-pI-yjQ" firstAttribute="centerX" secondItem="G6N-xp-ZhU" secondAttribute="centerX" id="uFe-lu-I0Y"/>
                             <constraint firstItem="F98-ze-x2q" firstAttribute="trailing" secondItem="VcI-QH-Hrw" secondAttribute="trailing" constant="24" id="xde-Rb-ZvU"/>
                         </constraints>
                     </view>

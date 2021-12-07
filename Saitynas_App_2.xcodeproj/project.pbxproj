@@ -13,6 +13,9 @@
 		A02D6974274F05C70016B48D /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D6973274F05C70016B48D /* ShadowView.swift */; };
 		A02D6976274FDE970016B48D /* AccessControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D6975274FDE960016B48D /* AccessControllerBase.swift */; };
 		A04327C1275FE1DA00CDF63B /* EvaluationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04327C0275FE1DA00CDF63B /* EvaluationsTableViewController.swift */; };
+		A04327C3275FFDE900CDF63B /* EvaluationsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04327C2275FFDE900CDF63B /* EvaluationsTableViewModel.swift */; };
+		A04327C52760006B00CDF63B /* Evaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04327C42760006B00CDF63B /* Evaluation.swift */; };
+		A04327C7276000E300CDF63B /* EvaluationsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04327C6276000E300CDF63B /* EvaluationsDTO.swift */; };
 		A0447268274EFCAF004292EE /* ButtonWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0447267274EFCAF004292EE /* ButtonWithShadow.swift */; };
 		A044726A274EFD77004292EE /* ColorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0447269274EFD77004292EE /* ColorCode.swift */; };
 		A044726C274EFDB7004292EE /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044726B274EFDB7004292EE /* UIColorExtensions.swift */; };
@@ -105,6 +108,9 @@
 		A02D6973274F05C70016B48D /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		A02D6975274FDE960016B48D /* AccessControllerBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControllerBase.swift; sourceTree = "<group>"; };
 		A04327C0275FE1DA00CDF63B /* EvaluationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationsTableViewController.swift; sourceTree = "<group>"; };
+		A04327C2275FFDE900CDF63B /* EvaluationsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationsTableViewModel.swift; sourceTree = "<group>"; };
+		A04327C42760006B00CDF63B /* Evaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evaluation.swift; sourceTree = "<group>"; };
+		A04327C6276000E300CDF63B /* EvaluationsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationsDTO.swift; sourceTree = "<group>"; };
 		A0447267274EFCAF004292EE /* ButtonWithShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithShadow.swift; sourceTree = "<group>"; };
 		A0447269274EFD77004292EE /* ColorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCode.swift; sourceTree = "<group>"; };
 		A044726B274EFDB7004292EE /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
@@ -390,6 +396,8 @@
 				A0A857CD274ED8F9000B133C /* EnumListDTO.swift */,
 				A06179C82757C6D400ABBF82 /* Workplace.swift */,
 				A06179CA2757C70300ABBF82 /* WorkplacesDTO.swift */,
+				A04327C42760006B00CDF63B /* Evaluation.swift */,
+				A04327C6276000E300CDF63B /* EvaluationsDTO.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -415,6 +423,7 @@
 				A0F48B6A274530FD00F54324 /* SpecialistViewModel.swift */,
 				A0A857C9274ED4DD000B133C /* SignupViewModel.swift */,
 				A06179C22757C47400ABBF82 /* WorkplaceTableVIewModel.swift */,
+				A04327C2275FFDE900CDF63B /* EvaluationsTableViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -716,9 +725,11 @@
 				A06179C52757C51300ABBF82 /* CellIdentifier.swift in Sources */,
 				A07120DA27418CE600B5A945 /* AccessCommunicator.swift in Sources */,
 				A0B993632741612B00EA60B0 /* MessageViewModel.swift in Sources */,
+				A04327C3275FFDE900CDF63B /* EvaluationsTableViewModel.swift in Sources */,
 				A07120E42741967B00B5A945 /* StateObserverDelegate.swift in Sources */,
 				A0A857CA274ED4DD000B133C /* SignupViewModel.swift in Sources */,
 				A06179C12757C3FE00ABBF82 /* WorkplaceTableViewController.swift in Sources */,
+				A04327C52760006B00CDF63B /* Evaluation.swift in Sources */,
 				A0B4DA272741566800C0EC1F /* AuthenticationViewController.swift in Sources */,
 				A0DEB6BE274550C500EC62CB /* SpecialistDTO.swift in Sources */,
 				A07120E72741A88D00B5A945 /* KeyValueStorageProtocol.swift in Sources */,
@@ -742,6 +753,7 @@
 				A06179C32757C47400ABBF82 /* WorkplaceTableVIewModel.swift in Sources */,
 				A0B9936A274166F000EA60B0 /* Communicator.swift in Sources */,
 				A044726A274EFD77004292EE /* ColorCode.swift in Sources */,
+				A04327C7276000E300CDF63B /* EvaluationsDTO.swift in Sources */,
 				A07A3F482744F7CF00B029DE /* ObserverDelegate.swift in Sources */,
 				A0B993652741619900EA60B0 /* MessageViewControllerProtocol.swift in Sources */,
 				A07120E227418F5A00B5A945 /* LoginViewModel.swift in Sources */,

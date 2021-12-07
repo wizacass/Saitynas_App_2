@@ -1,6 +1,6 @@
 import Foundation
 
-class SpecialistDTO: Codable {
+struct SpecialistDTO: Codable {
     let meta: MetaDTO
     let data: Specialist
 }

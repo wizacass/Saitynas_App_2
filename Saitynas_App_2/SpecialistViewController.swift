@@ -11,15 +11,16 @@ class SpecialistViewController: UIViewController {
     private let id = UUID()
 
     private var viewModel: SpecialistViewModel!
+    private var communicator: Communicator!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let communicator = DIContainer.shared.communicator
+        communicator = DIContainer.shared.communicator
         viewModel = SpecialistViewModel(communicator)
     }
 
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         viewModel.subscribe(self)
 
         if let specialistId = specialistId {
@@ -37,6 +38,8 @@ class SpecialistViewController: UIViewController {
 
     @IBAction func evaluationsButtonPressed(_ sender: UIButton) {
         if let viewController = storyboard?.instantiateViewController(.evaluaionsTableViewController) as? EvaluationsTableViewController {
+            viewController.viewModel = EvaluationsTableViewModel(communicator, specialistId ?? 0)
+
             present(viewController, animated: true, completion: nil)
         }
     }
@@ -52,6 +55,6 @@ extension SpecialistViewController: DataSourceObserverDelegate {
 
         nameLabel.text = source.fullName
         specialityLabel.text = source.speciality
-        ratingLabel.text = "Rating: x/10"
+        ratingLabel.text = "Reviews"
     }
 }

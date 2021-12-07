@@ -92,6 +92,11 @@ class ApiClient: ApiClientProtocol {
     
     private func tryParse<T: Decodable>(_ data: Data?) -> T? {
         guard let data = data else { return nil }
-        return try? decoder.decode(T.self, from: data)
+        do {
+            return try decoder.decode(T.self, from: data)
+        } catch {
+            print(error)
+            return nil
+        }
     }
 }
