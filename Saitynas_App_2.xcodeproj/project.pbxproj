@@ -10,6 +10,7 @@
 		6BB37A170CF20C734A91965B /* Pods_Saitynas_App_2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6170A55100D4AD16B5B781 /* Pods_Saitynas_App_2.framework */; };
 		9547F0EA8C37C4CA1F52555C /* Pods_Saitynas_App_2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C536A0316055447994E05DB /* Pods_Saitynas_App_2Tests.framework */; };
 		9EA2F1B57E9D60E203FCE5C0 /* Pods_Saitynas_App_2_Saitynas_App_2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CE00A274170513F4173E71 /* Pods_Saitynas_App_2_Saitynas_App_2UITests.framework */; };
+		A00CDEBE2760159100E1EA13 /* CreateEvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00CDEBD2760159100E1EA13 /* CreateEvaluationViewController.swift */; };
 		A02D6974274F05C70016B48D /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D6973274F05C70016B48D /* ShadowView.swift */; };
 		A02D6976274FDE970016B48D /* AccessControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D6975274FDE960016B48D /* AccessControllerBase.swift */; };
 		A04327C1275FE1DA00CDF63B /* EvaluationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04327C0275FE1DA00CDF63B /* EvaluationsTableViewController.swift */; };
@@ -105,6 +106,7 @@
 		3C536A0316055447994E05DB /* Pods_Saitynas_App_2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saitynas_App_2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79ABC9337BEA7004DA6DED9D /* Pods-Saitynas_App_2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saitynas_App_2Tests.release.xcconfig"; path = "Target Support Files/Pods-Saitynas_App_2Tests/Pods-Saitynas_App_2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9465DB913CD54F4A1CA30AC9 /* Pods-Saitynas_App_2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saitynas_App_2Tests.debug.xcconfig"; path = "Target Support Files/Pods-Saitynas_App_2Tests/Pods-Saitynas_App_2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A00CDEBD2760159100E1EA13 /* CreateEvaluationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEvaluationViewController.swift; sourceTree = "<group>"; };
 		A02D6973274F05C70016B48D /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		A02D6975274FDE960016B48D /* AccessControllerBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControllerBase.swift; sourceTree = "<group>"; };
 		A04327C0275FE1DA00CDF63B /* EvaluationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationsTableViewController.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 				A0B99379274182E100EA60B0 /* PatientTabViewController.swift */,
 				A0B9937B2741831200EA60B0 /* SpecialistViewController.swift */,
 				A04327C0275FE1DA00CDF63B /* EvaluationsTableViewController.swift */,
+				A00CDEBD2760159100E1EA13 /* CreateEvaluationViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -725,6 +728,7 @@
 				A06179C52757C51300ABBF82 /* CellIdentifier.swift in Sources */,
 				A07120DA27418CE600B5A945 /* AccessCommunicator.swift in Sources */,
 				A0B993632741612B00EA60B0 /* MessageViewModel.swift in Sources */,
+				A00CDEBE2760159100E1EA13 /* CreateEvaluationViewController.swift in Sources */,
 				A04327C3275FFDE900CDF63B /* EvaluationsTableViewModel.swift in Sources */,
 				A07120E42741967B00B5A945 /* StateObserverDelegate.swift in Sources */,
 				A0A857CA274ED4DD000B133C /* SignupViewModel.swift in Sources */,
