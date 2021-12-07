@@ -6,7 +6,7 @@ class SpecialistViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var specialityLabel: UILabel!
-    @IBOutlet weak var idLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
 
     private let id = UUID()
 
@@ -17,20 +17,26 @@ class SpecialistViewController: UIViewController {
 
         let communicator = DIContainer.shared.communicator
         viewModel = SpecialistViewModel(communicator)
-        viewModel.subscribe(self)
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        viewModel.subscribe(self)
+
         if let specialistId = specialistId {
             viewModel.loadSpecialist(id: specialistId)
         }
+
         super.viewDidAppear(animated)
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         viewModel.unsubscribe(self)
 
         super.viewWillDisappear(animated)
+    }
+
+    @IBAction func evaluationsButtonPressed(_ sender: UIButton) {
+        print("Loading evaluations...")
     }
 }
 
@@ -44,6 +50,6 @@ extension SpecialistViewController: DataSourceObserverDelegate {
 
         nameLabel.text = source.fullName
         specialityLabel.text = source.speciality
-        idLabel.text = "\(source.id)"
+        ratingLabel.text = "Rating: x/10"
     }
 }
