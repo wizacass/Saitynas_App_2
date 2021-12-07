@@ -12,6 +12,7 @@
 		9EA2F1B57E9D60E203FCE5C0 /* Pods_Saitynas_App_2_Saitynas_App_2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CE00A274170513F4173E71 /* Pods_Saitynas_App_2_Saitynas_App_2UITests.framework */; };
 		A02D6974274F05C70016B48D /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D6973274F05C70016B48D /* ShadowView.swift */; };
 		A02D6976274FDE970016B48D /* AccessControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D6975274FDE960016B48D /* AccessControllerBase.swift */; };
+		A04327C1275FE1DA00CDF63B /* EvaluationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04327C0275FE1DA00CDF63B /* EvaluationsTableViewController.swift */; };
 		A0447268274EFCAF004292EE /* ButtonWithShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0447267274EFCAF004292EE /* ButtonWithShadow.swift */; };
 		A044726A274EFD77004292EE /* ColorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0447269274EFD77004292EE /* ColorCode.swift */; };
 		A044726C274EFDB7004292EE /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044726B274EFDB7004292EE /* UIColorExtensions.swift */; };
@@ -103,6 +104,7 @@
 		9465DB913CD54F4A1CA30AC9 /* Pods-Saitynas_App_2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saitynas_App_2Tests.debug.xcconfig"; path = "Target Support Files/Pods-Saitynas_App_2Tests/Pods-Saitynas_App_2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A02D6973274F05C70016B48D /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		A02D6975274FDE960016B48D /* AccessControllerBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControllerBase.swift; sourceTree = "<group>"; };
+		A04327C0275FE1DA00CDF63B /* EvaluationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationsTableViewController.swift; sourceTree = "<group>"; };
 		A0447267274EFCAF004292EE /* ButtonWithShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithShadow.swift; sourceTree = "<group>"; };
 		A0447269274EFD77004292EE /* ColorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCode.swift; sourceTree = "<group>"; };
 		A044726B274EFDB7004292EE /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 				A0B9937127417A0800EA60B0 /* SettingsViewController.swift */,
 				A0B99379274182E100EA60B0 /* PatientTabViewController.swift */,
 				A0B9937B2741831200EA60B0 /* SpecialistViewController.swift */,
+				A04327C0275FE1DA00CDF63B /* EvaluationsTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -735,6 +738,7 @@
 				A07120E027418E1700B5A945 /* AuthenticationManager.swift in Sources */,
 				A06179C72757C5B900ABBF82 /* UITableViewExtensions.swift in Sources */,
 				A0B9935D2741607F00EA60B0 /* ErrorDTO.swift in Sources */,
+				A04327C1275FE1DA00CDF63B /* EvaluationsTableViewController.swift in Sources */,
 				A06179C32757C47400ABBF82 /* WorkplaceTableVIewModel.swift in Sources */,
 				A0B9936A274166F000EA60B0 /* Communicator.swift in Sources */,
 				A044726A274EFD77004292EE /* ColorCode.swift in Sources */,

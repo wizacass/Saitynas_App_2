@@ -36,7 +36,9 @@ class SpecialistViewController: UIViewController {
     }
 
     @IBAction func evaluationsButtonPressed(_ sender: UIButton) {
-        print("Loading evaluations...")
+        if let viewController = storyboard?.instantiateViewController(.evaluaionsTableViewController) as? EvaluationsTableViewController {
+            present(viewController, animated: true, completion: nil)
+        }
     }
 }
 
