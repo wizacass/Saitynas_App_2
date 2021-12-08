@@ -47,6 +47,17 @@ extension Communicator {
             self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
         })
     }
+
+    func getSpecialistEvaluations(
+        _ id: Int,
+        onSuccess: @escaping (EvaluationsDTO?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/specialists/\(id)/evaluations"
+        apiClient.get(endpoint, onSuccess, onError: { [weak self] error in
+            self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
+        })
+    }
 }
 
 // MARK: - Workplaces
@@ -59,6 +70,27 @@ extension Communicator {
         apiClient.get(endpoint, onSuccess, onError: { [weak self] error in
             self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
         })
+    }
+}
+
+// MARK: - Evaluations
+extension Communicator {
+    func postEvaluation(
+        _ value: Int,
+        _ comment: String,
+        _ specialistId: Int,
+        onSuccess: @escaping (NullObject?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/evaluations"
+
+        let body: [String: Any] = [
+            "value": value,
+            "comment": comment,
+            "specialistId": specialistId
+        ]
+
+        apiClient.post(endpoint, body, onSuccess, handleError)
     }
 }
 

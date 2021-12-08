@@ -1,6 +1,6 @@
 import Foundation
 
-class NullObject {
+class NullObject: Codable {
     private static let staticInstance = NullObject()
 
     static var instance: NullObject {
