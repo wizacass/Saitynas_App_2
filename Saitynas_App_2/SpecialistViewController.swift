@@ -37,8 +37,18 @@ class SpecialistViewController: UIViewController {
     }
 
     @IBAction func evaluationsButtonPressed(_ sender: UIButton) {
-        if let viewController = storyboard?.instantiateViewController(.evaluaionsTableViewController) as? EvaluationsTableViewController {
+        if let viewController = storyboard?.instantiateViewController(.evaluaionsTableViewController)
+            as? EvaluationsTableViewController {
             viewController.viewModel = EvaluationsTableViewModel(communicator, specialistId ?? 0)
+
+            present(viewController, animated: true, completion: nil)
+        }
+    }
+
+    @IBAction func createEvaluationButtonPressed(_ sender: UIButton) {
+        if let viewController = storyboard?.instantiateViewController(.createEvaluationViewController)
+            as? CreateEvaluationViewController {
+            viewController.viewModel = CreateReviewViewModel(communicator, specialistId ?? 0)
 
             present(viewController, animated: true, completion: nil)
         }

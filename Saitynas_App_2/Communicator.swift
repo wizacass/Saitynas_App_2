@@ -73,6 +73,27 @@ extension Communicator {
     }
 }
 
+// MARK: - Evaluations
+extension Communicator {
+    func postEvaluation(
+        _ value: Int,
+        _ comment: String,
+        _ specialistId: Int,
+        onSuccess: @escaping (NullObject?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/evaluations"
+
+        let body: [String: Any] = [
+            "value": value,
+            "comment": comment,
+            "specialistId": specialistId
+        ]
+
+        apiClient.post(endpoint, body, onSuccess, handleError)
+    }
+}
+
 // MARK: - Requests retry
 extension Communicator {
     private func retryGetRequest<T: Decodable>(

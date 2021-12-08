@@ -904,7 +904,7 @@
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleBody"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Nkf-ds-Z1b" kind="presentation" id="nNQ-DG-etv"/>
+                                    <action selector="createEvaluationButtonPressed:" destination="HXw-4C-zTy" eventType="touchUpInside" id="LzD-WN-Qqp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -937,19 +937,19 @@
         <!--Create Evaluation View Controller-->
         <scene sceneID="HfD-aB-e8d">
             <objects>
-                <viewController id="Nkf-ds-Z1b" customClass="CreateEvaluationViewController" customModule="Saitynas_App_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateEvaluationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nkf-ds-Z1b" customClass="CreateEvaluationViewController" customModule="Saitynas_App_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zkz-qZ-Tzu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write a Review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEe-Mr-2w8">
-                                <rect key="frame" x="89.666666666666686" y="32" width="196" height="37"/>
+                                <rect key="frame" x="89.666666666666686" y="76" width="196" height="37"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e2R-vc-dgP" customClass="RoundableView" customModule="Saitynas_App_2" customModuleProvider="target">
-                                <rect key="frame" x="32" y="101" width="311" height="210"/>
+                                <rect key="frame" x="32" y="145" width="311" height="210"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llk-9Q-mW7" userLabel="Email View">
                                         <rect key="frame" x="8" y="8" width="295" height="61"/>
@@ -1046,7 +1046,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="3qo-rn-ajb">
-                                <rect key="frame" x="89.666666666666686" y="628" width="196" height="48"/>
+                                <rect key="frame" x="89.666666666666686" y="682" width="196" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="6zc-fv-GZc"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="196" id="eMs-tL-sVF"/>
@@ -1061,6 +1061,7 @@
                                     <color key="baseForegroundColor" name="PrimaryButtonTextColor"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="sendButtonPressed:" destination="Nkf-ds-Z1b" eventType="touchUpInside" id="2Zo-Wj-4RF"/>
                                     <action selector="signupButtonPressed:" destination="rqt-mb-rfq" eventType="touchUpInside" id="7aY-xp-KY1"/>
                                 </connections>
                             </button>
@@ -1078,6 +1079,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="commentInput" destination="hiz-am-BgN" id="dwh-P7-hRg"/>
                         <outlet property="rolePicker" destination="z1w-VR-GXY" id="cRG-K9-KZE"/>
                     </connections>
                 </viewController>

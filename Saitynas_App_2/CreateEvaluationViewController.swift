@@ -2,7 +2,10 @@ import UIKit
 
 class CreateEvaluationViewController: UIViewController {
     
+    @IBOutlet weak var commentInput: InputField!
     @IBOutlet weak var rolePicker: UIPickerView!
+    
+    var viewModel: CreateReviewViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -11,6 +14,11 @@ class CreateEvaluationViewController: UIViewController {
         rolePicker.dataSource = self
     }
     
+    @IBAction func sendButtonPressed(_ sender: UIButton) {
+        viewModel.sendReview(commentInput.text ?? "") { [weak self] in
+            self?.dismiss(animated: true, completion: nil)
+        }
+    }
 }
 
 // MARK: - Role picker Data Source
@@ -20,14 +28,14 @@ extension CreateEvaluationViewController: UIPickerViewDelegate, UIPickerViewData
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 10
+        return viewModel.reviews.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "\(row + 1)"
+        return "\(viewModel.reviews[row])"
     }
     
-    //    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-    //        viewModel.selectedRoleIndex = row
-    //    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        viewModel.selectedIndex = row
+    }
 }

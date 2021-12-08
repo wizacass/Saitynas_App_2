@@ -10,4 +10,5 @@ enum ViewControllerIdentifier: String {
     case scheduleViewController = "ScheduleVC"
     case specialistDetailViewController = "SpecialistVC"
     case evaluaionsTableViewController = "EvaluationsVC"
+    case createEvaluationViewController = "CreateEvaluationVC"
 }

@@ -11,6 +11,7 @@
 		9547F0EA8C37C4CA1F52555C /* Pods_Saitynas_App_2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C536A0316055447994E05DB /* Pods_Saitynas_App_2Tests.framework */; };
 		9EA2F1B57E9D60E203FCE5C0 /* Pods_Saitynas_App_2_Saitynas_App_2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CE00A274170513F4173E71 /* Pods_Saitynas_App_2_Saitynas_App_2UITests.framework */; };
 		A00CDEBE2760159100E1EA13 /* CreateEvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00CDEBD2760159100E1EA13 /* CreateEvaluationViewController.swift */; };
+		A00CDEC0276016C500E1EA13 /* CreateReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00CDEBF276016C500E1EA13 /* CreateReviewViewModel.swift */; };
 		A02D6974274F05C70016B48D /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D6973274F05C70016B48D /* ShadowView.swift */; };
 		A02D6976274FDE970016B48D /* AccessControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D6975274FDE960016B48D /* AccessControllerBase.swift */; };
 		A04327C1275FE1DA00CDF63B /* EvaluationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04327C0275FE1DA00CDF63B /* EvaluationsTableViewController.swift */; };
@@ -107,6 +108,7 @@
 		79ABC9337BEA7004DA6DED9D /* Pods-Saitynas_App_2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saitynas_App_2Tests.release.xcconfig"; path = "Target Support Files/Pods-Saitynas_App_2Tests/Pods-Saitynas_App_2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9465DB913CD54F4A1CA30AC9 /* Pods-Saitynas_App_2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Saitynas_App_2Tests.debug.xcconfig"; path = "Target Support Files/Pods-Saitynas_App_2Tests/Pods-Saitynas_App_2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A00CDEBD2760159100E1EA13 /* CreateEvaluationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEvaluationViewController.swift; sourceTree = "<group>"; };
+		A00CDEBF276016C500E1EA13 /* CreateReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReviewViewModel.swift; sourceTree = "<group>"; };
 		A02D6973274F05C70016B48D /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		A02D6975274FDE960016B48D /* AccessControllerBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControllerBase.swift; sourceTree = "<group>"; };
 		A04327C0275FE1DA00CDF63B /* EvaluationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationsTableViewController.swift; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 				A0A857C9274ED4DD000B133C /* SignupViewModel.swift */,
 				A06179C22757C47400ABBF82 /* WorkplaceTableVIewModel.swift */,
 				A04327C2275FFDE900CDF63B /* EvaluationsTableViewModel.swift */,
+				A00CDEBF276016C500E1EA13 /* CreateReviewViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -745,6 +748,7 @@
 				A0DEB6BC2745423900EC62CB /* NullObject.swift in Sources */,
 				A0F48B6B274530FD00F54324 /* SpecialistViewModel.swift in Sources */,
 				A06179CB2757C70300ABBF82 /* WorkplacesDTO.swift in Sources */,
+				A00CDEC0276016C500E1EA13 /* CreateReviewViewModel.swift in Sources */,
 				A07120EB2741ABA300B5A945 /* UserTokensRepository.swift in Sources */,
 				A0B4DA232741566800C0EC1F /* AppDelegate.swift in Sources */,
 				A07120DE27418D8D00B5A945 /* Role.swift in Sources */,
