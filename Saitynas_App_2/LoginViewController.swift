@@ -23,8 +23,21 @@ class LoginViewController: AccessControllerBase {
         
         authenticationManager.login(email, password) { [weak self] error in
             if let error = error {
-                print("Login error!")
-                print(error.title)
+                let alert = UIAlertController(
+                    title: "Login error!",
+                    message: error.title.formattedMessage,
+                    preferredStyle: .alert
+                )
+
+                let alertAction = UIAlertAction(
+                    title: "Ok",
+                    style: .default,
+                    handler: nil
+                )
+                alert.addAction(alertAction)
+
+                self?.present(alert, animated: true, completion: nil)
+
                 return
             }
             
