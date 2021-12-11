@@ -46,6 +46,7 @@
 		A07A3F442744F61300B029DE /* DataSourceObserverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A3F432744F61300B029DE /* DataSourceObserverDelegate.swift */; };
 		A07A3F462744F6CE00B029DE /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A3F452744F6CE00B029DE /* Observable.swift */; };
 		A07A3F482744F7CF00B029DE /* ObserverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A3F472744F7CF00B029DE /* ObserverDelegate.swift */; };
+		A08AD5E72764D7C1000C7EA8 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08AD5E62764D7C1000C7EA8 /* UIAlertControllerExtensions.swift */; };
 		A0A857CA274ED4DD000B133C /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857C9274ED4DD000B133C /* SignupViewModel.swift */; };
 		A0A857CC274ED83F000B133C /* EnumDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857CB274ED83F000B133C /* EnumDTO.swift */; };
 		A0A857CE274ED8F9000B133C /* EnumListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857CD274ED8F9000B133C /* EnumListDTO.swift */; };
@@ -144,6 +145,7 @@
 		A07A3F432744F61300B029DE /* DataSourceObserverDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceObserverDelegate.swift; sourceTree = "<group>"; };
 		A07A3F452744F6CE00B029DE /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		A07A3F472744F7CF00B029DE /* ObserverDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverDelegate.swift; sourceTree = "<group>"; };
+		A08AD5E62764D7C1000C7EA8 /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
 		A0A857C9274ED4DD000B133C /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		A0A857CB274ED83F000B133C /* EnumDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumDTO.swift; sourceTree = "<group>"; };
 		A0A857CD274ED8F9000B133C /* EnumListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumListDTO.swift; sourceTree = "<group>"; };
@@ -418,6 +420,7 @@
 				A044726D274EFF14004292EE /* InputField.swift */,
 				A06179C62757C5B900ABBF82 /* UITableViewExtensions.swift */,
 				A00CDEC32760FF8100E1EA13 /* StringExtensions.swift */,
+				A08AD5E62764D7C1000C7EA8 /* UIAlertControllerExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -751,6 +754,7 @@
 				A0DEB6BC2745423900EC62CB /* NullObject.swift in Sources */,
 				A0F48B6B274530FD00F54324 /* SpecialistViewModel.swift in Sources */,
 				A06179CB2757C70300ABBF82 /* WorkplacesDTO.swift in Sources */,
+				A08AD5E72764D7C1000C7EA8 /* UIAlertControllerExtensions.swift in Sources */,
 				A00CDEC0276016C500E1EA13 /* CreateReviewViewModel.swift in Sources */,
 				A07120EB2741ABA300B5A945 /* UserTokensRepository.swift in Sources */,
 				A0B4DA232741566800C0EC1F /* AppDelegate.swift in Sources */,

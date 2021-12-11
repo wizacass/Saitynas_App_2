@@ -15,13 +15,16 @@ class AuthenticationManager {
         self.repository = repository
     }
 
-    func login(_ email: String, _ password: String, onComplete handleLoginAttempt: @escaping (ErrorDTO?) -> Void) {
+    func login(
+        _ email: String,
+        _ password: String,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
         communicator.login(email, password, onSuccess: { [unowned self] tokens in
-            if self.trySaveTokens(tokens, onError: handleLoginAttempt) {
+            if self.trySaveTokens(tokens, onError: handleError) {
                 self.observers.forEach { $0?.onLogin() }
-                handleLoginAttempt(nil)
             }
-        }, onError: handleLoginAttempt)
+        }, onError: handleError)
     }
 
     func signup(
@@ -29,14 +32,14 @@ class AuthenticationManager {
         _ password: String,
         _ roleId: Int,
         onSuccess: @escaping () -> Void,
-        onError handleSignupAttempt: @escaping (ErrorDTO?) -> Void
+        onError handleError: @escaping (ErrorDTO?) -> Void
     ) {
         communicator.signup(email, password, roleId, onSuccess: { [unowned self] tokens in
-            if self.trySaveTokens(tokens, onError: handleSignupAttempt) {
+            if self.trySaveTokens(tokens, onError: handleError) {
                 self.observers.forEach { $0?.onLogin() }
                 onSuccess()
             }
-        }, onError: handleSignupAttempt)
+        }, onError: handleError)
     }
 
     func refreshTokens(onSuccess: @escaping () -> Void, onError handleError: @escaping (ErrorDTO?) -> Void) {
