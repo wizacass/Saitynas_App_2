@@ -313,7 +313,6 @@
 		A0B4DA212741566800C0EC1F /* Saitynas_App_2 */ = {
 			isa = PBXGroup;
 			children = (
-				A0BCFC9A27650796009378BB /* Saitynas_App_2.entitlements */,
 				A0B9935127415CA600EA60B0 /* Services */,
 				A0B9935927415F2500EA60B0 /* Extensions */,
 				A07A3F422744F5E000B029DE /* Protocols */,
@@ -347,6 +346,7 @@
 		A0B9934E2741596B00EA60B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A0BCFC9A27650796009378BB /* Saitynas_App_2.entitlements */,
 				A0B4DA2B2741566900C0EC1F /* Assets.xcassets */,
 				A0B4DA302741566900C0EC1F /* Info.plist */,
 			);

@@ -78,7 +78,7 @@ class SignupViewController: AccessControllerBase {
             let password = passwordTextField.text
         else { return }
 
-        authenticationManager.signup(email, password, viewModel.selectedRole, onSuccess: {}, onError: handleSignupError)
+        authenticationManager.signup(email, password, viewModel.selectedRole, onError: handleSignupError)
     }
 
     private func handleSignupError(_ error: ErrorDTO?) {
