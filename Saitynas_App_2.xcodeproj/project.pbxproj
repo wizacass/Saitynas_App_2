@@ -47,6 +47,10 @@
 		A07A3F462744F6CE00B029DE /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A3F452744F6CE00B029DE /* Observable.swift */; };
 		A07A3F482744F7CF00B029DE /* ObserverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07A3F472744F7CF00B029DE /* ObserverDelegate.swift */; };
 		A08AD5E72764D7C1000C7EA8 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08AD5E62764D7C1000C7EA8 /* UIAlertControllerExtensions.swift */; };
+		A08AD5E92764DB63000C7EA8 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08AD5E82764DB63000C7EA8 /* AuthenticationViewModel.swift */; };
+		A08AD5EB2764DC63000C7EA8 /* AuthenticationViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08AD5EA2764DC63000C7EA8 /* AuthenticationViewControllerProtocol.swift */; };
+		A08AD5EF2764DD71000C7EA8 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08AD5EE2764DD71000C7EA8 /* PrimaryButton.swift */; };
+		A08AD5F12764E26D000C7EA8 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08AD5F02764E26D000C7EA8 /* UIButtonExtensions.swift */; };
 		A0A857CA274ED4DD000B133C /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857C9274ED4DD000B133C /* SignupViewModel.swift */; };
 		A0A857CC274ED83F000B133C /* EnumDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857CB274ED83F000B133C /* EnumDTO.swift */; };
 		A0A857CE274ED8F9000B133C /* EnumListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857CD274ED8F9000B133C /* EnumListDTO.swift */; };
@@ -146,6 +150,10 @@
 		A07A3F452744F6CE00B029DE /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		A07A3F472744F7CF00B029DE /* ObserverDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverDelegate.swift; sourceTree = "<group>"; };
 		A08AD5E62764D7C1000C7EA8 /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
+		A08AD5E82764DB63000C7EA8 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		A08AD5EA2764DC63000C7EA8 /* AuthenticationViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewControllerProtocol.swift; sourceTree = "<group>"; };
+		A08AD5EE2764DD71000C7EA8 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		A08AD5F02764E26D000C7EA8 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		A0A857C9274ED4DD000B133C /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		A0A857CB274ED83F000B133C /* EnumDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumDTO.swift; sourceTree = "<group>"; };
 		A0A857CD274ED8F9000B133C /* EnumListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumListDTO.swift; sourceTree = "<group>"; };
@@ -251,6 +259,7 @@
 				A0B4DA262741566800C0EC1F /* AuthenticationViewController.swift */,
 				A0B993642741619900EA60B0 /* MessageViewControllerProtocol.swift */,
 				A02D6975274FDE960016B48D /* AccessControllerBase.swift */,
+				A08AD5EA2764DC63000C7EA8 /* AuthenticationViewControllerProtocol.swift */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";
@@ -417,10 +426,10 @@
 				A0B9937327417ADE00EA60B0 /* UIStoryboardExtensions.swift */,
 				A0A857D1274EE91E000B133C /* JwtExtensions.swift */,
 				A044726B274EFDB7004292EE /* UIColorExtensions.swift */,
-				A044726D274EFF14004292EE /* InputField.swift */,
 				A06179C62757C5B900ABBF82 /* UITableViewExtensions.swift */,
 				A00CDEC32760FF8100E1EA13 /* StringExtensions.swift */,
 				A08AD5E62764D7C1000C7EA8 /* UIAlertControllerExtensions.swift */,
+				A08AD5F02764E26D000C7EA8 /* UIButtonExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -436,6 +445,7 @@
 				A06179C22757C47400ABBF82 /* WorkplaceTableVIewModel.swift */,
 				A04327C2275FFDE900CDF63B /* EvaluationsTableViewModel.swift */,
 				A00CDEBF276016C500E1EA13 /* CreateReviewViewModel.swift */,
+				A08AD5E82764DB63000C7EA8 /* AuthenticationViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -454,9 +464,11 @@
 		A0F48B6727452E0C00F54324 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				A044726D274EFF14004292EE /* InputField.swift */,
 				A0F48B6827452E1E00F54324 /* RoundableView.swift */,
 				A0447267274EFCAF004292EE /* ButtonWithShadow.swift */,
 				A02D6973274F05C70016B48D /* ShadowView.swift */,
+				A08AD5EE2764DD71000C7EA8 /* PrimaryButton.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -752,6 +764,7 @@
 				A07120DC27418D3B00B5A945 /* TokensDTO.swift in Sources */,
 				A0B9935827415DC800EA60B0 /* Bootstrapper.swift in Sources */,
 				A0DEB6BC2745423900EC62CB /* NullObject.swift in Sources */,
+				A08AD5F12764E26D000C7EA8 /* UIButtonExtensions.swift in Sources */,
 				A0F48B6B274530FD00F54324 /* SpecialistViewModel.swift in Sources */,
 				A06179CB2757C70300ABBF82 /* WorkplacesDTO.swift in Sources */,
 				A08AD5E72764D7C1000C7EA8 /* UIAlertControllerExtensions.swift in Sources */,
@@ -760,6 +773,7 @@
 				A0B4DA232741566800C0EC1F /* AppDelegate.swift in Sources */,
 				A07120DE27418D8D00B5A945 /* Role.swift in Sources */,
 				A0A857D2274EE91E000B133C /* JwtExtensions.swift in Sources */,
+				A08AD5EB2764DC63000C7EA8 /* AuthenticationViewControllerProtocol.swift in Sources */,
 				A07A3F442744F61300B029DE /* DataSourceObserverDelegate.swift in Sources */,
 				A07120E027418E1700B5A945 /* AuthenticationManager.swift in Sources */,
 				A06179C72757C5B900ABBF82 /* UITableViewExtensions.swift in Sources */,
@@ -784,8 +798,10 @@
 				A0447268274EFCAF004292EE /* ButtonWithShadow.swift in Sources */,
 				A0B9937A274182E100EA60B0 /* PatientTabViewController.swift in Sources */,
 				A02D6974274F05C70016B48D /* ShadowView.swift in Sources */,
+				A08AD5EF2764DD71000C7EA8 /* PrimaryButton.swift in Sources */,
 				A0B9937227417A0800EA60B0 /* SettingsViewController.swift in Sources */,
 				A07120EE2741CC2C00B5A945 /* SpecialistTableViewController.swift in Sources */,
+				A08AD5E92764DB63000C7EA8 /* AuthenticationViewModel.swift in Sources */,
 				A0B9936C274178D400EA60B0 /* NaviagtionViewController.swift in Sources */,
 				A0B993762741820C00EA60B0 /* LoginViewController.swift in Sources */,
 				A07120F22741CCE800B5A945 /* SpecialistsDTO.swift in Sources */,

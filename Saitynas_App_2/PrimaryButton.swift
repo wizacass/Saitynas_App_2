@@ -1,0 +1,34 @@
+import UIKit
+
+@IBDesignable class PrimaryButton: UIButton {
+
+    @IBInspectable var hasShadow: Bool = false
+
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+
+        if hasShadow {
+            applyShadow()
+        }
+    }
+
+    private func applyShadow() {
+        self.layer.shadowColor = UIColor.fromColorCode(.shadow)?.cgColor
+        self.layer.shadowOffset = CGSize(width: 0, height: 4)
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowRadius = 4.0
+        self.layer.masksToBounds = false
+    }
+    
+    func enable() {
+        self.isEnabled = true
+        self.setBackgroundColor(.buttonDefaultBackground)
+        self.setTitleColor(.buttonDefaultForeground)
+    }
+
+    func disable() {
+        self.isEnabled = false
+        self.setBackgroundColor(.buttonDisabledBackground)
+        self.setTitleColor(.buttonDisabledForeground)
+    }
+}
