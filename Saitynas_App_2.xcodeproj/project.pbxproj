@@ -191,6 +191,7 @@
 		A0B993772741822400EA60B0 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		A0B99379274182E100EA60B0 /* PatientTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientTabViewController.swift; sourceTree = "<group>"; };
 		A0B9937B2741831200EA60B0 /* SpecialistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistViewController.swift; sourceTree = "<group>"; };
+		A0BCFC9A27650796009378BB /* Saitynas_App_2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Saitynas_App_2.entitlements; sourceTree = "<group>"; };
 		A0DEB6BB2745423900EC62CB /* NullObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullObject.swift; sourceTree = "<group>"; };
 		A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistDTO.swift; sourceTree = "<group>"; };
 		A0F48B6827452E1E00F54324 /* RoundableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundableView.swift; sourceTree = "<group>"; };
@@ -312,6 +313,7 @@
 		A0B4DA212741566800C0EC1F /* Saitynas_App_2 */ = {
 			isa = PBXGroup;
 			children = (
+				A0BCFC9A27650796009378BB /* Saitynas_App_2.entitlements */,
 				A0B9935127415CA600EA60B0 /* Services */,
 				A0B9935927415F2500EA60B0 /* Extensions */,
 				A07A3F422744F5E000B029DE /* Protocols */,
@@ -993,6 +995,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Saitynas_App_2/Saitynas_App_2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1022,6 +1025,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Saitynas_App_2/Saitynas_App_2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

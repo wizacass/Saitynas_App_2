@@ -1,19 +1,49 @@
 import Foundation
 import UIKit
 
-class SignupViewModel {
+class SignupViewModel: AuthenticationViewModel {
 
     var selectedRoleIndex = 0
     var roles: [EnumDTO] = []
 
+    var selectedRole: Int {
+        return roles[selectedRoleIndex].id
+    }
+
+    var isEmailValid = false {
+        didSet { checkEnableSignupButton() }
+    }
+
+    var emailError: String? {
+        didSet {
+            delegate?.setEmailError(emailError)
+            isEmailValid = emailError == nil
+        }
+    }
+
+    var isPasswordValid = false {
+        didSet { checkEnableSignupButton() }
+    }
+
+    var passwordError: String? {
+        didSet {
+            delegate?.setPasswordError(passwordError)
+            isPasswordValid = passwordError == nil
+        }
+    }
+
     private var observers: [DataSourceObserverDelegate?] = []
 
     private var communicator: Communicator
-    private var authenticationManager: AuthenticationManager
 
-    init(_ communicator: Communicator, _ authenticationManager: AuthenticationManager) {
+    private weak var delegate: AuthenticationViewControllerProtocol?
+
+    init(
+        _ communicator: Communicator,
+        viewController delegate: AuthenticationViewControllerProtocol
+    ) {
         self.communicator = communicator
-        self.authenticationManager = authenticationManager
+        self.delegate = delegate
     }
 
     func loadRoles() {
@@ -27,12 +57,21 @@ class SignupViewModel {
         observers.forEach { $0?.onDataSourceUpdated(roles) }
     }
 
-    func signup(_ email: String, _ password: String, onSuccess: @escaping () -> Void) {
-        let roleId = roles[selectedRoleIndex].id
-        authenticationManager.signup(email, password, roleId, onSuccess: onSuccess, onError: { error in
-            print("Signup error!")
-            print(error?.title)
-        })
+    func checkEmail(_ email: String?) {
+        emailError = validateEmail(email)
+    }
+
+    func checkPassword(_ password: String?) {
+        passwordError = validateNewPassword(password)
+    }
+
+    private func checkEnableSignupButton() {
+        let isValid = isEmailValid && isPasswordValid
+        if isValid {
+            delegate?.enableAction()
+        } else {
+            delegate?.disableAction()
+        }
     }
 }
 

@@ -29,6 +29,10 @@ class AuthenticationViewModel {
             return "Password should have at least one uppercase letter!"
         }
 
+        if !password.hasNumber {
+            return "Password should contain at least 1 number!"
+        }
+
         return nil
     }
 }

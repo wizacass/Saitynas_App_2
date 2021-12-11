@@ -30,4 +30,11 @@ extension String {
         let test = NSPredicate(format: "SELF MATCHES %@", regex)
         return test.evaluate(with: self)
     }
+
+    var hasNumber: Bool {
+        let regex  = ".*[0-9]+.*"
+
+        let test = NSPredicate(format: "SELF MATCHES %@", regex)
+        return test.evaluate(with: self)
+    }
 }
