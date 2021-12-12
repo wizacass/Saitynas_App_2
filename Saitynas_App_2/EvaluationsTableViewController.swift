@@ -13,6 +13,14 @@ class EvaluationsTableViewController: UITableViewController {
         ("My Evaluations", "")
     ]
 
+    private let evaluationColors = [
+        UIColor.fromColorCode(.badEval),
+        UIColor.fromColorCode(.mehEval),
+        UIColor.fromColorCode(.normalEval),
+        UIColor.fromColorCode(.goodEval),
+        UIColor.fromColorCode(.awesomeEval)
+    ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -64,6 +72,7 @@ extension EvaluationsTableViewController {
             cell.textLabel?.text = evaluation.author
             cell.detailTextLabel?.text = evaluation.comment
             cell.imageView?.image = UIImage.init(systemName: "\(evaluation.value).circle")
+          //  cell.imageView?.tintColor = selectEvaluationImageColor(evaluation.value)
         }
 
         return cell
@@ -80,6 +89,10 @@ extension EvaluationsTableViewController {
         default:
             return nil
         }
+    }
+
+    private func selectEvaluationImageColor(_ rating: Int) -> UIColor? {
+        return evaluationColors[rating % evaluationColors.count]
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
