@@ -31,7 +31,7 @@ class EvaluationsTableViewModel {
     private func handleEvaluationsReceived(_ dto: EvaluationsDTO?) {
         guard let data = dto?.data else { return }
 
-        evaluations = data
+        evaluations = data.sorted(by: { $0.value > $1.value })
 
         observers.forEach { $0?.onDataSourceUpdated(NullObject.instance) }
     }
