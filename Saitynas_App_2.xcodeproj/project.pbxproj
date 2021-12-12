@@ -86,6 +86,9 @@
 		A0B9937C2741831200EA60B0 /* SpecialistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B9937B2741831200EA60B0 /* SpecialistViewController.swift */; };
 		A0BCFC9C27652DC4009378BB /* EvaluationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BCFC9B27652DC4009378BB /* EvaluationDetailViewController.swift */; };
 		A0BCFC9E2765526D009378BB /* EvaluationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BCFC9D2765526D009378BB /* EvaluationViewModel.swift */; };
+		A0BCFCA02766B340009378BB /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BCFC9F2766B340009378BB /* ChangePasswordViewController.swift */; };
+		A0BCFCA22766B579009378BB /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BCFCA12766B579009378BB /* ChangePasswordViewModel.swift */; };
+		A0BCFCA42766B632009378BB /* ChangePasswordViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BCFCA32766B632009378BB /* ChangePasswordViewControllerProtocol.swift */; };
 		A0DEB6BC2745423900EC62CB /* NullObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEB6BB2745423900EC62CB /* NullObject.swift */; };
 		A0DEB6BE274550C500EC62CB /* SpecialistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */; };
 		A0F48B6927452E1E00F54324 /* RoundableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F48B6827452E1E00F54324 /* RoundableView.swift */; };
@@ -196,6 +199,9 @@
 		A0BCFC9A27650796009378BB /* Saitynas_App_2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Saitynas_App_2.entitlements; sourceTree = "<group>"; };
 		A0BCFC9B27652DC4009378BB /* EvaluationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationDetailViewController.swift; sourceTree = "<group>"; };
 		A0BCFC9D2765526D009378BB /* EvaluationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationViewModel.swift; sourceTree = "<group>"; };
+		A0BCFC9F2766B340009378BB /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		A0BCFCA12766B579009378BB /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
+		A0BCFCA32766B632009378BB /* ChangePasswordViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewControllerProtocol.swift; sourceTree = "<group>"; };
 		A0DEB6BB2745423900EC62CB /* NullObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullObject.swift; sourceTree = "<group>"; };
 		A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistDTO.swift; sourceTree = "<group>"; };
 		A0F48B6827452E1E00F54324 /* RoundableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundableView.swift; sourceTree = "<group>"; };
@@ -265,6 +271,8 @@
 				A0B993642741619900EA60B0 /* MessageViewControllerProtocol.swift */,
 				A02D6975274FDE960016B48D /* AccessControllerBase.swift */,
 				A08AD5EA2764DC63000C7EA8 /* AuthenticationViewControllerProtocol.swift */,
+				A0BCFC9F2766B340009378BB /* ChangePasswordViewController.swift */,
+				A0BCFCA32766B632009378BB /* ChangePasswordViewControllerProtocol.swift */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";
@@ -454,6 +462,7 @@
 				A00CDEBF276016C500E1EA13 /* CreateReviewViewModel.swift */,
 				A08AD5E82764DB63000C7EA8 /* AuthenticationViewModel.swift */,
 				A0BCFC9D2765526D009378BB /* EvaluationViewModel.swift */,
+				A0BCFCA12766B579009378BB /* ChangePasswordViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -770,12 +779,14 @@
 				A044726C274EFDB7004292EE /* UIColorExtensions.swift in Sources */,
 				A0A857D4274EF0AF000B133C /* UserTabViewController.swift in Sources */,
 				A044726E274EFF14004292EE /* InputField.swift in Sources */,
+				A0BCFCA02766B340009378BB /* ChangePasswordViewController.swift in Sources */,
 				A07120DC27418D3B00B5A945 /* TokensDTO.swift in Sources */,
 				A0B9935827415DC800EA60B0 /* Bootstrapper.swift in Sources */,
 				A0DEB6BC2745423900EC62CB /* NullObject.swift in Sources */,
 				A08AD5F12764E26D000C7EA8 /* UIButtonExtensions.swift in Sources */,
 				A0F48B6B274530FD00F54324 /* SpecialistViewModel.swift in Sources */,
 				A06179CB2757C70300ABBF82 /* WorkplacesDTO.swift in Sources */,
+				A0BCFCA22766B579009378BB /* ChangePasswordViewModel.swift in Sources */,
 				A0BCFC9E2765526D009378BB /* EvaluationViewModel.swift in Sources */,
 				A08AD5E72764D7C1000C7EA8 /* UIAlertControllerExtensions.swift in Sources */,
 				A00CDEC0276016C500E1EA13 /* CreateReviewViewModel.swift in Sources */,
@@ -793,6 +804,7 @@
 				A0B9936A274166F000EA60B0 /* Communicator.swift in Sources */,
 				A044726A274EFD77004292EE /* ColorCode.swift in Sources */,
 				A04327C7276000E300CDF63B /* EvaluationsDTO.swift in Sources */,
+				A0BCFCA42766B632009378BB /* ChangePasswordViewControllerProtocol.swift in Sources */,
 				A07A3F482744F7CF00B029DE /* ObserverDelegate.swift in Sources */,
 				A00CDEC42760FF8100E1EA13 /* StringExtensions.swift in Sources */,
 				A0B993652741619900EA60B0 /* MessageViewControllerProtocol.swift in Sources */,
