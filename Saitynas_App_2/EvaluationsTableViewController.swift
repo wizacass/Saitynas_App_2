@@ -95,6 +95,15 @@ extension EvaluationsTableViewController {
 
         return footer
     }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let evaluation = getEvaluation(indexPath) else { return }
+        if let viewController =
+            storyboard?.instantiateViewController(.evaluationDetailViewController) as? EvaluationDetailViewController {
+            viewController.viewModel = EvaluationViewModel(evaluation)
+            present(viewController, animated: true, completion: nil)
+        }
+    }
 }
 
 extension EvaluationsTableViewController: DataSourceObserverDelegate {
