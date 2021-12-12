@@ -41,7 +41,7 @@ class SpecialistViewController: UIViewController {
             as? EvaluationsTableViewController {
             viewController.viewModel = EvaluationsTableViewModel(communicator, specialistId ?? 0)
 
-            present(viewController, animated: true, completion: nil)
+            navigationController?.pushViewController(viewController, animated: true)
         }
     }
 

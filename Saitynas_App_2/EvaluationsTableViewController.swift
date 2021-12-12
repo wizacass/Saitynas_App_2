@@ -13,6 +13,14 @@ class EvaluationsTableViewController: UITableViewController {
         ("My Evaluations", "")
     ]
 
+    private let evaluationColors = [
+        UIColor.fromColorCode(.badEval),
+        UIColor.fromColorCode(.mehEval),
+        UIColor.fromColorCode(.normalEval),
+        UIColor.fromColorCode(.goodEval),
+        UIColor.fromColorCode(.awesomeEval)
+    ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -64,6 +72,7 @@ extension EvaluationsTableViewController {
             cell.textLabel?.text = evaluation.author
             cell.detailTextLabel?.text = evaluation.comment
             cell.imageView?.image = UIImage.init(systemName: "\(evaluation.value).circle")
+            cell.imageView?.tintColor = selectEvaluationImageColor(evaluation.value)
         }
 
         return cell
@@ -82,6 +91,19 @@ extension EvaluationsTableViewController {
         }
     }
 
+    private func selectEvaluationImageColor(_ rating: Int) -> UIColor? {
+        switch rating {
+        case 0...3:
+            return evaluationColors[0]
+        case 4...7:
+            return evaluationColors[2]
+        case 8...10:
+            return evaluationColors[3]
+        default:
+            return evaluationColors[4]
+        }
+    }
+
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sectionInfo[section].header
     }
@@ -94,6 +116,17 @@ extension EvaluationsTableViewController {
         }
 
         return footer
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let evaluation = getEvaluation(indexPath) else { return }
+        if let viewController =
+            storyboard?.instantiateViewController(.evaluationDetailViewController) as? EvaluationDetailViewController {
+            viewController.viewModel = EvaluationViewModel(evaluation)
+            viewController.evaluationsViewController = self
+
+            present(viewController, animated: true, completion: nil)
+        }
     }
 }
 

@@ -92,6 +92,16 @@ extension Communicator {
 
         apiClient.post(endpoint, body, onSuccess, handleError)
     }
+
+    func deleteEvaluation(
+        _ id: Int,
+        onSuccess: @escaping (NullObject?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/evaluations/\(id)"
+
+        apiClient.delete(endpoint, onSuccess, handleError)
+    }
 }
 
 // MARK: - Requests retry
