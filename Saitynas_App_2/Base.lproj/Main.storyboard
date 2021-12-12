@@ -1154,6 +1154,9 @@
                                         <buttonConfiguration key="configuration" style="tinted" title="Edit">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="editButtonPressed:" destination="rAn-SL-QdV" eventType="touchUpInside" id="sFR-tW-jwF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gu3-6D-FVw">
                                         <rect key="frame" x="171.66666666666663" y="0.0" width="139.33333333333337" height="48"/>
@@ -1165,6 +1168,9 @@
                                         <buttonConfiguration key="configuration" style="tinted" title="Delete">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="deleteButtonPressed:" destination="rAn-SL-QdV" eventType="touchUpInside" id="65R-5G-W0i"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

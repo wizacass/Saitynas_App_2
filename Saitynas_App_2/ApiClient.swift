@@ -2,7 +2,7 @@ import Foundation
 import Alamofire
 
 class ApiClient: ApiClientProtocol {
-    
+
     private let queue = DispatchQueue.global(qos: .userInitiated)
     private let decoder = JSONDecoder()
     
@@ -39,6 +39,21 @@ class ApiClient: ApiClientProtocol {
         let headers = createHeaders()
         
         AF.request(url, method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers)
+            .validate()
+            .responseJSON(queue: queue) { [weak self] response in
+                self?.handleResponse(response, onSuccess, onError)
+            }
+    }
+
+    func delete<T: Decodable>(
+        _ endpoint: String,
+        _ onSuccess: @escaping (T?) -> Void,
+        _ onError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let url = createUrl(endpoint)
+        let headers = createHeaders()
+
+        AF.request(url, method: .delete, headers: headers)
             .validate()
             .responseJSON(queue: queue) { [weak self] response in
                 self?.handleResponse(response, onSuccess, onError)

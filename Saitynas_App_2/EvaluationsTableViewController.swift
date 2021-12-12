@@ -123,6 +123,8 @@ extension EvaluationsTableViewController {
         if let viewController =
             storyboard?.instantiateViewController(.evaluationDetailViewController) as? EvaluationDetailViewController {
             viewController.viewModel = EvaluationViewModel(evaluation)
+            viewController.evaluationsViewController = self
+
             present(viewController, animated: true, completion: nil)
         }
     }
