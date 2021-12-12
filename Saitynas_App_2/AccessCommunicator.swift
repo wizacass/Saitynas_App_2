@@ -49,4 +49,18 @@ class AccessCommunicator {
         
         apiClient.post("/refresh-token", body, onSuccess, onError)
     }
+
+    func changePassword(
+        _ currentPassword: String,
+        _ newPassword: String,
+        onSuccess: @escaping (NullObject?) -> Void,
+        onError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let body = [
+            "oldPassword": currentPassword,
+            "newPassword": newPassword
+        ]
+
+        apiClient.put("/users/passwords", body, onSuccess, onError)
+    }
 }

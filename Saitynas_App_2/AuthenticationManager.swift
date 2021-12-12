@@ -61,6 +61,20 @@ class AuthenticationManager {
         onSuccess()
     }
 
+    func changePassword(
+        _ currentPassword: String?,
+        _ newPassword: String?,
+        onSuccess: @escaping (NullObject?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        guard
+            let currentPassword = currentPassword,
+            let newPassword = newPassword
+        else { return }
+
+        communicator.changePassword(currentPassword, newPassword, onSuccess: onSuccess, onError: handleError)
+    }
+
     private func trySaveTokens(_ tokens: TokensDTO?, onError: @escaping (ErrorDTO?) -> Void) -> Bool {
         guard let tokens = tokens else {
             onError(ErrorDTO.serializationError("tokensDTO"))

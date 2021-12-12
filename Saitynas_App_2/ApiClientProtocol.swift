@@ -14,6 +14,13 @@ protocol ApiClientProtocol {
         _ onError: @escaping (ErrorDTO?) -> Void
     )
 
+    func put<T: Decodable>(
+        _ endpoint: String,
+        _ body: [String: Any],
+        _ onSuccess: @escaping (T?) -> Void,
+        _ onError: @escaping (ErrorDTO?) -> Void
+    )
+
     func delete<T: Decodable>(
         _ endpoint: String,
         _ onSuccess: @escaping (T?) -> Void,
