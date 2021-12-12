@@ -57,7 +57,31 @@ class ChangePasswordViewController: AccessControllerBase {
     }
 
     @IBAction func changePasswordButtonPressed(_ sender: PrimaryButton) {
-        print("Changing password...")
+        sender.disable()
+        authenticationManager.changePassword(
+            currentPasswordTextField.text,
+            newPasswordTextField.text,
+            onSuccess: handlePasswordChanged,
+            onError: handleChangePasswordError
+        )
+    }
+
+    private func handlePasswordChanged(_ obj: NullObject?) {
+        authenticationManager.logout()
+        dismiss(animated: true, completion: nil)
+    }
+
+    private func handleChangePasswordError(_ error: ErrorDTO?) {
+        guard let error = error else { return }
+
+        let alert = UIAlertController.createAlert(
+            error.title.formattedMessage,
+            error.details?.formattedMessage
+        )
+
+        present(alert, animated: true) { [weak self] in
+            self?.changePasswordButton.enable()
+        }
     }
 }
 

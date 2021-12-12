@@ -45,6 +45,22 @@ class ApiClient: ApiClientProtocol {
             }
     }
 
+    func put<T: Decodable>(
+        _ endpoint: String,
+        _ body: [String: Any],
+        _ onSuccess: @escaping (T?) -> Void,
+        _ onError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let url = createUrl(endpoint)
+        let headers = createHeaders()
+
+        AF.request(url, method: .put, parameters: body, encoding: JSONEncoding.default, headers: headers)
+            .validate()
+            .responseJSON(queue: queue) { [weak self] response in
+                self?.handleResponse(response, onSuccess, onError)
+            }
+    }
+
     func delete<T: Decodable>(
         _ endpoint: String,
         _ onSuccess: @escaping (T?) -> Void,
