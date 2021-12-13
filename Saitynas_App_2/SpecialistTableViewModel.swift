@@ -1,23 +1,28 @@
 import Foundation
 
 class SpecialistTableViewModel {
-    
-    private var observers: [DataSourceObserverDelegate?] = []
-    
+
     var count: Int {
         return specialists.count
     }
     
     private var communicator: Communicator
     private var specialists: [Specialist] = []
+    private var workplaceId: Int?
+
+    private var observers: [DataSourceObserverDelegate?] = []
     
-    init(_ communicator: Communicator) {
+    init(_ communicator: Communicator, workplaceId: Int? = nil) {
         self.communicator = communicator
-        loadSpecialists()
+        self.workplaceId = workplaceId
     }
     
-    private func loadSpecialists() {
-        communicator.getSpecialists(onSuccess: handleSpecialistsReceived) { _ in }
+    func loadSpecialists() {
+        if let workplaceId = workplaceId {
+            communicator.getWorkplaceSpecialists(workplaceId, onSuccess: handleSpecialistsReceived) { _ in }
+        } else {
+            communicator.getSpecialists(onSuccess: handleSpecialistsReceived) { _ in }
+        }
     }
     
     private func handleSpecialistsReceived(_ dto: SpecialistsDTO?) {

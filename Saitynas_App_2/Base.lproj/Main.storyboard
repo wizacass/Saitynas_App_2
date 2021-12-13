@@ -698,7 +698,7 @@
         <!--Specialists-->
         <scene sceneID="csc-du-flL">
             <objects>
-                <tableViewController title="Specialists" id="GwU-gV-QT2" customClass="SpecialistTableViewController" customModule="Saitynas_App_2" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SpecialistsTableVC" title="Specialists" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GwU-gV-QT2" customClass="SpecialistTableViewController" customModule="Saitynas_App_2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="aGn-Dx-HIW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
