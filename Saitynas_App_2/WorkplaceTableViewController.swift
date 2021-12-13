@@ -3,6 +3,7 @@ import UIKit
 class WorkplaceTableViewController: UITableViewController {
 
     private var viewModel: WorkplaceTableViewModel!
+    private var communicator: Communicator!
 
     private let id = UUID()
 
@@ -13,7 +14,7 @@ class WorkplaceTableViewController: UITableViewController {
     }
 
     private func initialize() {
-        let communicator = DIContainer.shared.communicator
+        communicator = DIContainer.shared.communicator
         viewModel = WorkplaceTableViewModel(communicator)
         viewModel.subscribe(self)
     }
@@ -42,11 +43,14 @@ extension WorkplaceTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let workplaceId = viewModel.getWorkplace(at: indexPath.row).id
-//        if let viewController = storyboard?.instantiateViewController(.specialistDetailViewController) as? SpecialistViewController {
-//            viewController.specialistId = specialistId
-//            navigationController?.pushViewController(viewController, animated: true)
-//        }
+        let workplaceId = viewModel.getWorkplace(at: indexPath.row).id
+        if let viewController =
+            storyboard?.instantiateViewController(.specialistsTableViewController) as? SpecialistTableViewController {
+            let specialistViewModel = SpecialistTableViewModel(communicator, workplaceId: workplaceId)
+            viewController.viewModel =
+            specialistViewModel
+            navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 }
 

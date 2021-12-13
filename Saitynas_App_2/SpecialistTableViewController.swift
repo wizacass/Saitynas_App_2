@@ -2,7 +2,7 @@ import UIKit
 
 class SpecialistTableViewController: UITableViewController {
     
-    private var viewModel: SpecialistTableViewModel!
+    var viewModel: SpecialistTableViewModel!
     
     private let id = UUID()
     
@@ -14,8 +14,18 @@ class SpecialistTableViewController: UITableViewController {
     
     private func initialize() {
         let communicator = DIContainer.shared.communicator
-        viewModel = SpecialistTableViewModel(communicator)
+
+        if viewModel == nil {
+            viewModel = SpecialistTableViewModel(communicator)
+        }
+
         viewModel.subscribe(self)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.loadSpecialists()
+
+        super.viewWillAppear(animated)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -43,7 +53,8 @@ extension SpecialistTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let specialistId = viewModel.getSpecialist(at: indexPath.row).id
-        if let viewController = storyboard?.instantiateViewController(.specialistDetailViewController) as? SpecialistViewController {
+        if let viewController =
+            storyboard?.instantiateViewController(.specialistDetailViewController) as? SpecialistViewController {
             viewController.specialistId = specialistId
             navigationController?.pushViewController(viewController, animated: true)
         }
