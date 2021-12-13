@@ -12,7 +12,7 @@ class EvaluationDetailViewController: UIViewController {
 
     var viewModel: EvaluationViewModel!
 
-    weak var evaluationsViewController: EvaluationsTableViewController?
+    weak var previousViewController: UIViewController?
 
     private var communicator: Communicator!
 
@@ -28,10 +28,22 @@ class EvaluationDetailViewController: UIViewController {
         buttonsView.isHidden = !isOwner
         communicator = DIContainer.shared.communicator
 
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
         setupView(viewModel.evaluation)
+
+        super.viewWillAppear(animated)
     }
 
     @IBAction func editButtonPressed(_ sender: UIButton) {
+        if let viewController =
+            storyboard?.instantiateViewController(.createEvaluationViewController) as? CreateEvaluationViewController {
+
+            viewController.viewModel = EditReviewViewModel(communicator, viewModel.evaluation)
+
+            present(viewController, animated: true, completion: nil)
+        }
     }
 
     @IBAction func deleteButtonPressed(_ sender: UIButton) {
@@ -53,7 +65,7 @@ class EvaluationDetailViewController: UIViewController {
     }
 
     private func handleDeletedEvaluation(_ obj: NullObject?) {
-        evaluationsViewController?.viewWillAppear(true)
+        previousViewController?.viewWillAppear(true)
         dismiss(animated: true, completion: nil)
     }
 

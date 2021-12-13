@@ -5,18 +5,31 @@ class CreateEvaluationViewController: UIViewController {
     @IBOutlet weak var commentInput: InputField!
     @IBOutlet weak var rolePicker: UIPickerView!
     
-    var viewModel: CreateReviewViewModel!
+    var viewModel: ReviewViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         rolePicker.delegate = self
         rolePicker.dataSource = self
+
+        if let viewModel = viewModel as? EditReviewViewModel {
+            commentInput.text = viewModel.evaluation.comment
+        }
     }
     
     @IBAction func sendButtonPressed(_ sender: UIButton) {
-        viewModel.sendReview(commentInput.text ?? "") { [weak self] in
-            self?.dismiss(animated: true, completion: nil)
+        switch viewModel {
+        case let viewModel as CreateReviewViewModel:
+            viewModel.sendReview(commentInput.text ?? "") { [weak self] in
+                self?.dismiss(animated: true, completion: nil)
+            }
+        case let viewModel as EditReviewViewModel:
+            viewModel.editReview(commentInput.text ?? "") { [weak self] in
+                self?.dismiss(animated: true, completion: nil)
+            }
+        default:
+            return
         }
     }
 }

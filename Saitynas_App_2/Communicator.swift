@@ -106,6 +106,23 @@ extension Communicator {
         apiClient.post(endpoint, body, onSuccess, handleError)
     }
 
+    func editEvaluation(
+        _ id: Int,
+        _ value: Int,
+        _ comment: String,
+        onSuccess: @escaping (NullObject?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/evaluations/\(id)"
+
+        let body: [String: Any] = [
+            "value": value,
+            "comment": comment
+        ]
+
+        apiClient.put(endpoint, body, onSuccess, handleError)
+    }
+
     func deleteEvaluation(
         _ id: Int,
         onSuccess: @escaping (NullObject?) -> Void,
