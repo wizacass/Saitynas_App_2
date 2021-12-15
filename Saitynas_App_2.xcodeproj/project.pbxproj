@@ -89,6 +89,8 @@
 		A0BCFCA02766B340009378BB /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BCFC9F2766B340009378BB /* ChangePasswordViewController.swift */; };
 		A0BCFCA22766B579009378BB /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BCFCA12766B579009378BB /* ChangePasswordViewModel.swift */; };
 		A0BCFCA42766B632009378BB /* ChangePasswordViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BCFCA32766B632009378BB /* ChangePasswordViewControllerProtocol.swift */; };
+		A0BCFCA62767E51D009378BB /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BCFCA52767E51D009378BB /* ReviewViewModel.swift */; };
+		A0BCFCA82767E79B009378BB /* EditReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BCFCA72767E79B009378BB /* EditReviewViewModel.swift */; };
 		A0DEB6BC2745423900EC62CB /* NullObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEB6BB2745423900EC62CB /* NullObject.swift */; };
 		A0DEB6BE274550C500EC62CB /* SpecialistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */; };
 		A0F48B6927452E1E00F54324 /* RoundableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F48B6827452E1E00F54324 /* RoundableView.swift */; };
@@ -202,6 +204,8 @@
 		A0BCFC9F2766B340009378BB /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		A0BCFCA12766B579009378BB /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
 		A0BCFCA32766B632009378BB /* ChangePasswordViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewControllerProtocol.swift; sourceTree = "<group>"; };
+		A0BCFCA52767E51D009378BB /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
+		A0BCFCA72767E79B009378BB /* EditReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReviewViewModel.swift; sourceTree = "<group>"; };
 		A0DEB6BB2745423900EC62CB /* NullObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullObject.swift; sourceTree = "<group>"; };
 		A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistDTO.swift; sourceTree = "<group>"; };
 		A0F48B6827452E1E00F54324 /* RoundableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundableView.swift; sourceTree = "<group>"; };
@@ -463,6 +467,8 @@
 				A08AD5E82764DB63000C7EA8 /* AuthenticationViewModel.swift */,
 				A0BCFC9D2765526D009378BB /* EvaluationViewModel.swift */,
 				A0BCFCA12766B579009378BB /* ChangePasswordViewModel.swift */,
+				A0BCFCA52767E51D009378BB /* ReviewViewModel.swift */,
+				A0BCFCA72767E79B009378BB /* EditReviewViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -778,6 +784,7 @@
 				A07120E72741A88D00B5A945 /* KeyValueStorageProtocol.swift in Sources */,
 				A044726C274EFDB7004292EE /* UIColorExtensions.swift in Sources */,
 				A0A857D4274EF0AF000B133C /* UserTabViewController.swift in Sources */,
+				A0BCFCA82767E79B009378BB /* EditReviewViewModel.swift in Sources */,
 				A044726E274EFF14004292EE /* InputField.swift in Sources */,
 				A0BCFCA02766B340009378BB /* ChangePasswordViewController.swift in Sources */,
 				A07120DC27418D3B00B5A945 /* TokensDTO.swift in Sources */,
@@ -819,6 +826,7 @@
 				A0B993682741650A00EA60B0 /* ApiClient.swift in Sources */,
 				A0447268274EFCAF004292EE /* ButtonWithShadow.swift in Sources */,
 				A0B9937A274182E100EA60B0 /* PatientTabViewController.swift in Sources */,
+				A0BCFCA62767E51D009378BB /* ReviewViewModel.swift in Sources */,
 				A02D6974274F05C70016B48D /* ShadowView.swift in Sources */,
 				A08AD5EF2764DD71000C7EA8 /* PrimaryButton.swift in Sources */,
 				A0B9937227417A0800EA60B0 /* SettingsViewController.swift in Sources */,
