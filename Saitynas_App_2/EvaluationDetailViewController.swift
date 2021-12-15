@@ -17,6 +17,7 @@ class EvaluationDetailViewController: UIViewController {
     private var communicator: Communicator!
 
     private let dateFormatter = DateFormatter()
+    private let id = UUID()
 
     private var isOwner: Bool {
         return viewModel.evaluation.author == DIContainer.shared.jwtUser.email
@@ -27,7 +28,6 @@ class EvaluationDetailViewController: UIViewController {
 
         buttonsView.isHidden = !isOwner
         communicator = DIContainer.shared.communicator
-
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -36,11 +36,19 @@ class EvaluationDetailViewController: UIViewController {
         super.viewWillAppear(animated)
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        previousViewController?.viewWillAppear(true)
+
+        super.viewWillDisappear(animated)
+    }
+
     @IBAction func editButtonPressed(_ sender: UIButton) {
         if let viewController =
             storyboard?.instantiateViewController(.createEvaluationViewController) as? CreateEvaluationViewController {
+            let evaluationViewModel = EditReviewViewModel(communicator, viewModel.evaluation)
+            evaluationViewModel.subscribe(self)
 
-            viewController.viewModel = EditReviewViewModel(communicator, viewModel.evaluation)
+            viewController.viewModel = evaluationViewModel
 
             present(viewController, animated: true, completion: nil)
         }
@@ -65,7 +73,6 @@ class EvaluationDetailViewController: UIViewController {
     }
 
     private func handleDeletedEvaluation(_ obj: NullObject?) {
-        previousViewController?.viewWillAppear(true)
         dismiss(animated: true, completion: nil)
     }
 
@@ -75,5 +82,18 @@ class EvaluationDetailViewController: UIViewController {
         commentLabel.text = evaluation.comment
         authorLabel.text = evaluation.author
         dateLabel.text = "Written at: \(evaluation.createdAt.formattedDate)"
+    }
+}
+
+extension EvaluationDetailViewController: DataSourceObserverDelegate {
+    var observerId: UUID {
+        return id
+    }
+
+    func onDataSourceUpdated<T>(_ source: T?) {
+        guard let evaluation = source as? Evaluation else { return }
+
+        viewModel.evaluation = evaluation
+        setupView(evaluation)
     }
 }
