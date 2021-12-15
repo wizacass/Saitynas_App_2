@@ -134,6 +134,19 @@ extension Communicator {
     }
 }
 
+// MARK: - User information
+extension Communicator {
+    func getMyEvaluations(
+        onSuccess: @escaping (EvaluationsDTO?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/users/me/evaluations"
+        apiClient.get(endpoint, onSuccess, onError: { [weak self] error in
+            self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
+        })
+    }
+}
+
 // MARK: - Requests retry
 extension Communicator {
     private func retryGetRequest<T: Decodable>(

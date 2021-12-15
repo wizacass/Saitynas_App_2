@@ -1538,7 +1538,7 @@
         <!--Reviews-->
         <scene sceneID="ILf-BI-Rtt">
             <objects>
-                <navigationController id="Cnm-fb-8xu" sceneMemberID="viewController">
+                <navigationController id="Cnm-fb-8xu" customClass="SpecialistEvaluationsNavigationViewController" customModule="Saitynas_App_2" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Reviews" id="VJy-gE-hg3">
                         <imageReference key="image" image="star.bubble" catalog="system" renderingMode="hierarchical-single">
                             <hierarchicalColors>
