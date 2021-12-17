@@ -18,8 +18,15 @@ class NavigationViewController: UINavigationController {
     }
 
     private func selectViewController(_ isLoggedIn: Bool) -> UIViewController? {
-        return isLoggedIn ?
-        storyboard?.instantiateViewController(.patientTabBarViewController) :
-        storyboard?.instantiateViewController(.authenticationViewController)
+        let user = DIContainer.shared.jwtUser
+
+        switch user.role {
+        case .patient:
+            return storyboard?.instantiateViewController(.patientTabBarViewController)
+        case .specialist:
+            return storyboard?.instantiateViewController(.specialistTabBarViewController)
+        default:
+            return storyboard?.instantiateViewController(.authenticationViewController)
+        }
     }
 }

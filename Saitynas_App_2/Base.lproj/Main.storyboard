@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2KJ-eN-vWd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2KJ-eN-vWd">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -708,25 +708,25 @@
                                 <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZvF-32-x3G" id="NlD-xr-fAp">
-                                    <rect key="frame" x="0.0" y="0.0" width="349.33333333333331" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="350.33333333333331" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="txt_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ina-aR-hSr">
-                                            <rect key="frame" x="53.5" y="7.0000000000000009" width="53" height="14.333333333333334"/>
+                                            <rect key="frame" x="54.166666666666671" y="7.0000000000000009" width="53" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="txt_speciality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rS1-8N-GLB">
-                                            <rect key="frame" x="53.499999999999993" y="23.333333333333336" width="70.333333333333329" height="13.333333333333334"/>
+                                            <rect key="frame" x="54.166666666666679" y="23.333333333333336" width="70.333333333333329" height="13.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ily-Fx-tOV">
-                                            <rect key="frame" x="14.16666666666667" y="10.000000000000002" width="24.333333333333332" height="23.666666666666668"/>
+                                            <rect key="frame" x="13.500000000000002" y="9.0000000000000018" width="25.666666666666668" height="25.666666666666668"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <imageReference key="image" image="person.circle" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
                                                 <hierarchicalColors>
@@ -1031,7 +1031,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d6p-Zt-D4w">
-                                                        <rect key="frame" x="0.0" y="3.6666666666666679" width="24" height="27"/>
+                                                        <rect key="frame" x="0.0" y="2.6666666666666679" width="24" height="29"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="24" id="0bm-Gd-Yar"/>
                                                             <constraint firstAttribute="width" secondItem="d6p-Zt-D4w" secondAttribute="height" multiplier="1:1" id="I5o-tl-EiL"/>
@@ -1333,25 +1333,25 @@
                                 <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CqX-Yz-K48" id="Qwe-9e-eSU">
-                                    <rect key="frame" x="0.0" y="0.0" width="320.66666666666669" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="321.66666666666669" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cal-Na-CP5">
-                                            <rect key="frame" x="53.5" y="7.0000000000000009" width="25" height="14.333333333333334"/>
+                                            <rect key="frame" x="54.166666666666671" y="7.0000000000000009" width="25" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BHX-hY-QH6">
-                                            <rect key="frame" x="53.5" y="23.333333333333336" width="40.666666666666664" height="13.333333333333334"/>
+                                            <rect key="frame" x="54.166666666666671" y="23.333333333333336" width="40.666666666666664" height="13.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kt3-Kr-4F2">
-                                            <rect key="frame" x="14.16666666666667" y="10.000000000000002" width="24.333333333333332" height="23.666666666666668"/>
+                                            <rect key="frame" x="13.500000000000002" y="9.0000000000000018" width="25.666666666666668" height="25.666666666666668"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <imageReference key="image" image="star.circle" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
                                                 <hierarchicalColors>
@@ -1478,49 +1478,6 @@
             </objects>
             <point key="canvasLocation" x="2428" y="347"/>
         </scene>
-        <!--Evaluations-->
-        <scene sceneID="QHm-LR-pGf">
-            <objects>
-                <viewController storyboardIdentifier="EvalautionsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YJ2-bh-sJS" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="K4U-33-pMD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evaluations View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9c-6p-vCn">
-                                <rect key="frame" x="97" y="76" width="181" height="30"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="fMc-jI-Gb8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="h9c-6p-vCn" firstAttribute="centerX" secondItem="K4U-33-pMD" secondAttribute="centerX" id="5TK-Bj-FqD"/>
-                            <constraint firstItem="h9c-6p-vCn" firstAttribute="top" secondItem="fMc-jI-Gb8" secondAttribute="top" constant="32" id="jIV-sL-otb"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Evaluations" id="6CY-6I-hIV">
-                        <imageReference key="image" image="star.bubble" catalog="system" symbolScale="default" renderingMode="hierarchical-single">
-                            <hierarchicalColors>
-                                <color name="AccentColor"/>
-                                <color systemColor="secondaryLabelColor"/>
-                                <color systemColor="tertiaryLabelColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
-                        <imageReference key="selectedImage" image="star.bubble" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
-                            <hierarchicalColors>
-                                <color name="AccentColor"/>
-                                <color systemColor="secondaryLabelColor"/>
-                                <color systemColor="tertiaryLabelColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CR1-OW-axh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3892" y="1088"/>
-        </scene>
         <!--Visits-->
         <scene sceneID="vOu-k6-kkC">
             <objects>
@@ -1535,12 +1492,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="0lD-Sn-Mbc">
+                                <rect key="frame" x="32" y="136.66666666666669" width="313" height="564.33333333333337"/>
+                                <imageReference key="image" image="calendar.badge.clock" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                                    <hierarchicalColors>
+                                        <color name="InputFieldBorderColor"/>
+                                        <color systemColor="secondaryLabelColor"/>
+                                        <color systemColor="tertiaryLabelColor"/>
+                                    </hierarchicalColors>
+                                </imageReference>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ySN-Wz-mcl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ySN-Wz-mcl" firstAttribute="bottom" secondItem="0lD-Sn-Mbc" secondAttribute="bottom" constant="32" id="5Ck-Oj-xz9"/>
                             <constraint firstItem="ggf-Au-itE" firstAttribute="top" secondItem="ySN-Wz-mcl" secondAttribute="top" constant="32" id="Cg9-dx-9tx"/>
                             <constraint firstItem="ggf-Au-itE" firstAttribute="centerX" secondItem="dem-gN-dv4" secondAttribute="centerX" id="dOc-nc-JHu"/>
+                            <constraint firstItem="0lD-Sn-Mbc" firstAttribute="leading" secondItem="ySN-Wz-mcl" secondAttribute="leading" constant="32" id="feW-nC-ObG"/>
+                            <constraint firstItem="0lD-Sn-Mbc" firstAttribute="top" secondItem="ggf-Au-itE" secondAttribute="bottom" constant="32" id="fnN-XM-bQz"/>
+                            <constraint firstItem="ySN-Wz-mcl" firstAttribute="trailing" secondItem="0lD-Sn-Mbc" secondAttribute="trailing" constant="32" id="t4L-z0-AXQ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Visits" id="Rek-bN-TXE">
@@ -1564,6 +1535,35 @@
             </objects>
             <point key="canvasLocation" x="4602" y="1088"/>
         </scene>
+        <!--Reviews-->
+        <scene sceneID="ILf-BI-Rtt">
+            <objects>
+                <navigationController id="Cnm-fb-8xu" customClass="SpecialistEvaluationsNavigationViewController" customModule="Saitynas_App_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Reviews" id="VJy-gE-hg3">
+                        <imageReference key="image" image="star.bubble" catalog="system" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="AccentColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="star.bubble" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="AccentColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xca-9m-ug4">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vPG-dX-pot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3892" y="1088"/>
+        </scene>
         <!--Specialist Tab View Controller-->
         <scene sceneID="hug-or-vMw">
             <objects>
@@ -1575,7 +1575,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Qz6-0i-kLJ" kind="relationship" relationship="viewControllers" id="53f-95-Y34"/>
-                        <segue destination="YJ2-bh-sJS" kind="relationship" relationship="viewControllers" id="AHM-aa-a2z"/>
+                        <segue destination="Cnm-fb-8xu" kind="relationship" relationship="viewControllers" id="IZn-sN-CCX"/>
                         <segue destination="9HX-i5-qAb" kind="relationship" relationship="viewControllers" id="YaJ-L0-YyL"/>
                     </connections>
                 </tabBarController>
@@ -1596,25 +1596,25 @@
                                 <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xf4-2A-pQX" id="qeb-R4-sjb">
-                                    <rect key="frame" x="0.0" y="0.0" width="349.33333333333331" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="350.33333333333331" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="txt_title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tbz-8o-sfn">
-                                            <rect key="frame" x="55.666666666666671" y="7.0000000000000009" width="43.666666666666664" height="14.333333333333334"/>
+                                            <rect key="frame" x="56.333333333333343" y="7.0000000000000009" width="43.666666666666664" height="14.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="txt_Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sib-3X-BUh">
-                                            <rect key="frame" x="55.666666666666671" y="23.333333333333336" width="63.333333333333336" height="13.333333333333334"/>
+                                            <rect key="frame" x="56.333333333333329" y="23.333333333333336" width="63.333333333333336" height="13.333333333333334"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DpN-dl-J12">
-                                            <rect key="frame" x="12.000000000000002" y="9.3333333333333339" width="28.666666666666668" height="24.666666666666668"/>
+                                            <rect key="frame" x="11.333333333333336" y="8.3333333333333339" width="30" height="26.666666666666668"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <imageReference key="image" image="building.2.fill" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
                                                 <hierarchicalColors>
@@ -1978,7 +1978,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="bJb-jQ-KvN"/>
+        <segue reference="YaJ-L0-YyL"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="AccentColor"/>
     <resources>
@@ -1986,6 +1986,7 @@
         <image name="at" catalog="system" width="128" height="124"/>
         <image name="building.2.fill" catalog="system" width="128" height="106"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="calendar.badge.clock" catalog="system" width="128" height="108"/>
         <image name="cross.circle" catalog="system" width="128" height="121"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="lock" catalog="system" width="128" height="128"/>

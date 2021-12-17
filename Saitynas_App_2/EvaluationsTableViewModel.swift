@@ -2,7 +2,7 @@ import Foundation
 
 class EvaluationsTableViewModel {
     private var observers: [DataSourceObserverDelegate?] = []
-    private var specialistId: Int
+    private var specialistId: Int?
 
     var count: Int {
         return evaluations.count
@@ -19,13 +19,17 @@ class EvaluationsTableViewModel {
     private var communicator: Communicator
     private var evaluations: [Evaluation] = []
 
-    init(_ communicator: Communicator, _ specialistId: Int) {
+    init(_ communicator: Communicator, _ specialistId: Int? = nil) {
         self.communicator = communicator
         self.specialistId = specialistId
     }
 
     func loadSpecialistEvaluations() {
-        communicator.getSpecialistEvaluations(specialistId, onSuccess: handleEvaluationsReceived) { _ in }
+        if let specialistId = specialistId {
+            communicator.getSpecialistEvaluations(specialistId, onSuccess: handleEvaluationsReceived) { _ in }
+        } else {
+            communicator.getMyEvaluations(onSuccess: handleEvaluationsReceived) { _ in }
+        }
     }
 
     private func handleEvaluationsReceived(_ dto: EvaluationsDTO?) {
