@@ -3,6 +3,8 @@ import UIKit
 
 class NavigationViewController: UINavigationController {
 
+    private var c: DIContainer!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -10,23 +12,30 @@ class NavigationViewController: UINavigationController {
     }
 
     private func loadApp() {
-        let isLoggedIn = DIContainer.shared.authenticationManager.isLoggedIn
+        c = DIContainer.shared
 
-        if let vc = selectViewController(isLoggedIn) {
+        if let vc = selectViewController() {
             viewControllers.append(vc)
         }
     }
 
-    private func selectViewController(_ isLoggedIn: Bool) -> UIViewController? {
-        let user = DIContainer.shared.jwtUser
+    private func selectViewController() -> UIViewController? {
+        let user = c.jwtUser
+        let hasProfile = c.preferences.hasProfile
 
-        switch user.role {
+        let identifier = selectNextViewIdentifier(user, hasProfile: hasProfile)
+
+        return storyboard?.instantiateViewController(identifier)
+    }
+
+    private func selectNextViewIdentifier(_ user: JwtUser?, hasProfile: Bool) -> ViewControllerIdentifier {
+        switch user?.role {
         case .patient:
-            return storyboard?.instantiateViewController(.patientTabBarViewController)
+            return hasProfile ? .patientTabBarViewController : .patientInformationViewController
         case .specialist:
-            return storyboard?.instantiateViewController(.specialistTabBarViewController)
-        default:
-            return storyboard?.instantiateViewController(.authenticationViewController)
+            return  .specialistTabBarViewController
+        case .none:
+            return .authenticationViewController
         }
     }
 }

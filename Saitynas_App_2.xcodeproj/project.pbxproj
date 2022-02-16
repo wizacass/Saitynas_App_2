@@ -97,6 +97,8 @@
 		A0BCFCA82767E79B009378BB /* EditReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BCFCA72767E79B009378BB /* EditReviewViewModel.swift */; };
 		A0DEB6BC2745423900EC62CB /* NullObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEB6BB2745423900EC62CB /* NullObject.swift */; };
 		A0DEB6BE274550C500EC62CB /* SpecialistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */; };
+		A0EA55CB27BDA1DE00B25C65 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA55CA27BDA1DE00B25C65 /* UserDefaultsStorage.swift */; };
+		A0EA55CD27BDA33900B25C65 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA55CC27BDA33900B25C65 /* UserPreferences.swift */; };
 		A0F48B6927452E1E00F54324 /* RoundableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F48B6827452E1E00F54324 /* RoundableView.swift */; };
 		A0F48B6B274530FD00F54324 /* SpecialistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F48B6A274530FD00F54324 /* SpecialistViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -216,6 +218,8 @@
 		A0BCFCA72767E79B009378BB /* EditReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReviewViewModel.swift; sourceTree = "<group>"; };
 		A0DEB6BB2745423900EC62CB /* NullObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullObject.swift; sourceTree = "<group>"; };
 		A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistDTO.swift; sourceTree = "<group>"; };
+		A0EA55CA27BDA1DE00B25C65 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
+		A0EA55CC27BDA33900B25C65 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		A0F48B6827452E1E00F54324 /* RoundableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundableView.swift; sourceTree = "<group>"; };
 		A0F48B6A274530FD00F54324 /* SpecialistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistViewModel.swift; sourceTree = "<group>"; };
 		AF6170A55100D4AD16B5B781 /* Pods_Saitynas_App_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saitynas_App_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -297,6 +301,8 @@
 				A07120E62741A88D00B5A945 /* KeyValueStorageProtocol.swift */,
 				A07120E82741AB5800B5A945 /* KeychainStorage.swift */,
 				A07120EA2741ABA300B5A945 /* UserTokensRepository.swift */,
+				A0EA55CA27BDA1DE00B25C65 /* UserDefaultsStorage.swift */,
+				A0EA55CC27BDA33900B25C65 /* UserPreferences.swift */,
 			);
 			name = Storage;
 			sourceTree = "<group>";
@@ -804,6 +810,7 @@
 				A07120DC27418D3B00B5A945 /* TokensDTO.swift in Sources */,
 				A0B9935827415DC800EA60B0 /* Bootstrapper.swift in Sources */,
 				A0DEB6BC2745423900EC62CB /* NullObject.swift in Sources */,
+				A0EA55CD27BDA33900B25C65 /* UserPreferences.swift in Sources */,
 				A08AD5F12764E26D000C7EA8 /* UIButtonExtensions.swift in Sources */,
 				A0F48B6B274530FD00F54324 /* SpecialistViewModel.swift in Sources */,
 				A06179CB2757C70300ABBF82 /* WorkplacesDTO.swift in Sources */,
@@ -843,6 +850,7 @@
 				A0BCFCA62767E51D009378BB /* ReviewViewModel.swift in Sources */,
 				A02D6974274F05C70016B48D /* ShadowView.swift in Sources */,
 				A08AD5EF2764DD71000C7EA8 /* PrimaryButton.swift in Sources */,
+				A0EA55CB27BDA1DE00B25C65 /* UserDefaultsStorage.swift in Sources */,
 				A0B9937227417A0800EA60B0 /* SettingsViewController.swift in Sources */,
 				A07120EE2741CC2C00B5A945 /* SpecialistTableViewController.swift in Sources */,
 				A08AD5E92764DB63000C7EA8 /* AuthenticationViewModel.swift in Sources */,
