@@ -51,6 +51,9 @@
 		A08AD5EB2764DC63000C7EA8 /* AuthenticationViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08AD5EA2764DC63000C7EA8 /* AuthenticationViewControllerProtocol.swift */; };
 		A08AD5EF2764DD71000C7EA8 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08AD5EE2764DD71000C7EA8 /* PrimaryButton.swift */; };
 		A08AD5F12764E26D000C7EA8 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08AD5F02764E26D000C7EA8 /* UIButtonExtensions.swift */; };
+		A0A8395E27BD59FD00A54C2D /* PatientInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A8395D27BD59FD00A54C2D /* PatientInfoViewController.swift */; };
+		A0A8396027BD5EAC00A54C2D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A8395F27BD5EAC00A54C2D /* User.swift */; };
+		A0A8396227BD5F1E00A54C2D /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A8396127BD5F1E00A54C2D /* UserDTO.swift */; };
 		A0A857CA274ED4DD000B133C /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857C9274ED4DD000B133C /* SignupViewModel.swift */; };
 		A0A857CC274ED83F000B133C /* EnumDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857CB274ED83F000B133C /* EnumDTO.swift */; };
 		A0A857CE274ED8F9000B133C /* EnumListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857CD274ED8F9000B133C /* EnumListDTO.swift */; };
@@ -162,6 +165,9 @@
 		A08AD5EA2764DC63000C7EA8 /* AuthenticationViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewControllerProtocol.swift; sourceTree = "<group>"; };
 		A08AD5EE2764DD71000C7EA8 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		A08AD5F02764E26D000C7EA8 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
+		A0A8395D27BD59FD00A54C2D /* PatientInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientInfoViewController.swift; sourceTree = "<group>"; };
+		A0A8395F27BD5EAC00A54C2D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A0A8396127BD5F1E00A54C2D /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 		A0A857C9274ED4DD000B133C /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		A0A857CB274ED83F000B133C /* EnumDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumDTO.swift; sourceTree = "<group>"; };
 		A0A857CD274ED8F9000B133C /* EnumListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumListDTO.swift; sourceTree = "<group>"; };
@@ -280,6 +286,7 @@
 				A08AD5EA2764DC63000C7EA8 /* AuthenticationViewControllerProtocol.swift */,
 				A0BCFC9F2766B340009378BB /* ChangePasswordViewController.swift */,
 				A0BCFCA32766B632009378BB /* ChangePasswordViewControllerProtocol.swift */,
+				A0A8395D27BD59FD00A54C2D /* PatientInfoViewController.swift */,
 			);
 			name = Authentication;
 			sourceTree = "<group>";
@@ -438,6 +445,8 @@
 				A06179CA2757C70300ABBF82 /* WorkplacesDTO.swift */,
 				A04327C42760006B00CDF63B /* Evaluation.swift */,
 				A04327C6276000E300CDF63B /* EvaluationsDTO.swift */,
+				A0A8395F27BD5EAC00A54C2D /* User.swift */,
+				A0A8396127BD5F1E00A54C2D /* UserDTO.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -786,7 +795,9 @@
 				A0DEB6BE274550C500EC62CB /* SpecialistDTO.swift in Sources */,
 				A07120E72741A88D00B5A945 /* KeyValueStorageProtocol.swift in Sources */,
 				A044726C274EFDB7004292EE /* UIColorExtensions.swift in Sources */,
+				A0A8395E27BD59FD00A54C2D /* PatientInfoViewController.swift in Sources */,
 				A0A857D4274EF0AF000B133C /* UserTabViewController.swift in Sources */,
+				A0A8396027BD5EAC00A54C2D /* User.swift in Sources */,
 				A0BCFCA82767E79B009378BB /* EditReviewViewModel.swift in Sources */,
 				A044726E274EFF14004292EE /* InputField.swift in Sources */,
 				A0BCFCA02766B340009378BB /* ChangePasswordViewController.swift in Sources */,
@@ -848,6 +859,7 @@
 				A07A3F412741CD5B00B029DE /* Specialist.swift in Sources */,
 				A0B9937427417ADE00EA60B0 /* UIStoryboardExtensions.swift in Sources */,
 				A0B9936E274179A200EA60B0 /* ViewControllerIdentifier.swift in Sources */,
+				A0A8396227BD5F1E00A54C2D /* UserDTO.swift in Sources */,
 				A0A857CE274ED8F9000B133C /* EnumListDTO.swift in Sources */,
 				A0F48B6927452E1E00F54324 /* RoundableView.swift in Sources */,
 			);
