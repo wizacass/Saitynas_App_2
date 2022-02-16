@@ -1,6 +1,6 @@
 import Foundation
 
 protocol StateObserverDelegate: ObserverDelegate {
-    func onLogin()
+    func onLogin(_ user: User?)
     func onLogout()
 }

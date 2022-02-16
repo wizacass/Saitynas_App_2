@@ -43,20 +43,23 @@ extension AuthenticationViewController: StateObserverDelegate {
         return id
     }
 
-    private var nextViewIdentifier: ViewControllerIdentifier? {
-        switch jwtUser.role {
+    private func selectNextViewIdentifier(_ user: User?) -> ViewControllerIdentifier? {
+        guard
+            let user = user,
+            let role = Role(rawValue: user.role)
+        else { return nil }
+
+        switch role {
         case .patient:
-            return .patientTabBarViewController
+            return user.hasProfile ? .patientTabBarViewController : .patientInformationViewController
         case .specialist:
-            return .specialistTabBarViewController
-        case .none:
-            return nil
+            return  .specialistTabBarViewController
         }
     }
 
-    func onLogin() {
+    func onLogin(_ user: User?) {
         guard
-            let identifier = nextViewIdentifier,
+            let identifier = selectNextViewIdentifier(user),
             let viewController = storyboard?.instantiateViewController(identifier)
         else { return }
 

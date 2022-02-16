@@ -106,7 +106,7 @@ extension LoginViewController: StateObserverDelegate {
         return id
     }
 
-    func onLogin() {
+    func onLogin(_ user: User?) {
         dismiss(animated: true, completion: nil)
     }
 

@@ -24,7 +24,7 @@ class UserTabViewController: UITabBarController, StateObserverDelegate {
         return count > 1
     }
 
-    func onLogin() { }
+    func onLogin(_ user: User?) { }
 
     func onLogout() {
         authenticationManager?.unsubscribe(self)

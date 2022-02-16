@@ -38,7 +38,13 @@ class AuthenticationManager {
 
     private func handleAccess(_ tokens: TokensDTO?, onError handleError: @escaping (ErrorDTO?) -> Void) {
         if trySaveTokens(tokens, onError: handleError) {
-            observers.forEach { $0?.onLogin() }
+            communicator.getUserInformation(onSuccess: handleUserInfoRetrieved, onError: handleError)
+        }
+    }
+
+    private func handleUserInfoRetrieved(_ dto: UserDTO?) {
+        if let user = dto?.data {
+            observers.forEach { $0?.onLogin(user) }
         }
     }
 
