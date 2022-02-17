@@ -99,6 +99,7 @@
 		A0DEB6BE274550C500EC62CB /* SpecialistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */; };
 		A0EA55CB27BDA1DE00B25C65 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA55CA27BDA1DE00B25C65 /* UserDefaultsStorage.swift */; };
 		A0EA55CD27BDA33900B25C65 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA55CC27BDA33900B25C65 /* UserPreferences.swift */; };
+		A0EA55D127BE6F8C00B25C65 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA55D027BE6F8C00B25C65 /* Patient.swift */; };
 		A0F48B6927452E1E00F54324 /* RoundableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F48B6827452E1E00F54324 /* RoundableView.swift */; };
 		A0F48B6B274530FD00F54324 /* SpecialistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F48B6A274530FD00F54324 /* SpecialistViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -220,6 +221,7 @@
 		A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistDTO.swift; sourceTree = "<group>"; };
 		A0EA55CA27BDA1DE00B25C65 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
 		A0EA55CC27BDA33900B25C65 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
+		A0EA55D027BE6F8C00B25C65 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
 		A0F48B6827452E1E00F54324 /* RoundableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundableView.swift; sourceTree = "<group>"; };
 		A0F48B6A274530FD00F54324 /* SpecialistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistViewModel.swift; sourceTree = "<group>"; };
 		AF6170A55100D4AD16B5B781 /* Pods_Saitynas_App_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saitynas_App_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -453,6 +455,7 @@
 				A04327C6276000E300CDF63B /* EvaluationsDTO.swift */,
 				A0A8395F27BD5EAC00A54C2D /* User.swift */,
 				A0A8396127BD5F1E00A54C2D /* UserDTO.swift */,
+				A0EA55D027BE6F8C00B25C65 /* Patient.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -792,6 +795,7 @@
 				A0B993632741612B00EA60B0 /* MessageViewModel.swift in Sources */,
 				A00CDEBE2760159100E1EA13 /* CreateEvaluationViewController.swift in Sources */,
 				A04327C3275FFDE900CDF63B /* EvaluationsTableViewModel.swift in Sources */,
+				A0EA55D127BE6F8C00B25C65 /* Patient.swift in Sources */,
 				A07120E42741967B00B5A945 /* StateObserverDelegate.swift in Sources */,
 				A0A857CA274ED4DD000B133C /* SignupViewModel.swift in Sources */,
 				A06179C12757C3FE00ABBF82 /* WorkplaceTableViewController.swift in Sources */,

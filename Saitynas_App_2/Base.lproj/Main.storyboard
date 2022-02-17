@@ -453,7 +453,7 @@
                                                                                     <constraint firstAttribute="height" constant="36" id="Iqj-Dm-lT7"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
+                                                                                <textInputTraits key="textInputTraits" textContentType="given-name"/>
                                                                                 <userDefinedRuntimeAttributes>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                                         <real key="value" value="8"/>
@@ -532,7 +532,7 @@
                                                                                     <constraint firstAttribute="height" constant="36" id="QV9-BE-zws"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                                                <textInputTraits key="textInputTraits" textContentType="family-name"/>
                                                                                 <userDefinedRuntimeAttributes>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                                         <real key="value" value="8"/>
@@ -639,7 +639,7 @@
                                                                                     <constraint firstAttribute="height" constant="36" id="CW1-nT-fqB"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                                                <textInputTraits key="textInputTraits" textContentType="address-level2"/>
                                                                                 <userDefinedRuntimeAttributes>
                                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                                         <real key="value" value="8"/>
@@ -817,7 +817,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="7CS-6a-aJf"/>
                     <connections>
+                        <outlet property="birthDatePicker" destination="HtM-nH-1sQ" id="GeL-Gc-dk0"/>
                         <outlet property="bottomConstraint" destination="Ieu-U5-qee" id="Frc-z7-QF5"/>
+                        <outlet property="cityTextField" destination="wPs-5J-iXC" id="3WK-3f-2XQ"/>
+                        <outlet property="firstNameTextField" destination="m2b-o6-why" id="gzK-cG-YLY"/>
+                        <outlet property="lastNameTextField" destination="O57-P1-4Wd" id="o73-CU-H3f"/>
+                        <outlet property="laterButton" destination="EVV-sZ-EqA" id="zND-lc-YQ2"/>
+                        <outlet property="submitButton" destination="BIX-dz-3Td" id="Iin-eg-aHq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eg9-UV-Nlg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2381,7 +2387,7 @@
             <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
         </designable>
         <designable name="O57-P1-4Wd">
-            <size key="intrinsicContentSize" width="20" height="17"/>
+            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
         </designable>
         <designable name="P0E-k2-5Dm">
             <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
@@ -2408,7 +2414,7 @@
             <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
         </designable>
         <designable name="wPs-5J-iXC">
-            <size key="intrinsicContentSize" width="20" height="17"/>
+            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
