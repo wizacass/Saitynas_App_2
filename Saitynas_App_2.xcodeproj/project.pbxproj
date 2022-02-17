@@ -284,14 +284,7 @@
 		A016FDB7274EF37900CB4011 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				A0B993752741820C00EA60B0 /* LoginViewController.swift */,
-				A0B993772741822400EA60B0 /* SignupViewController.swift */,
-				A0B4DA262741566800C0EC1F /* AuthenticationViewController.swift */,
 				A0B993642741619900EA60B0 /* MessageViewControllerProtocol.swift */,
-				A02D6975274FDE960016B48D /* AccessControllerBase.swift */,
-				A08AD5EA2764DC63000C7EA8 /* AuthenticationViewControllerProtocol.swift */,
-				A0BCFC9F2766B340009378BB /* ChangePasswordViewController.swift */,
-				A0BCFCA32766B632009378BB /* ChangePasswordViewControllerProtocol.swift */,
 				A0A8395D27BD59FD00A54C2D /* PatientInfoViewController.swift */,
 			);
 			name = Authentication;
@@ -348,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				A0B9935127415CA600EA60B0 /* Services */,
+				A0EA55D427BE7AF400B25C65 /* Authentication */,
 				A0B9935927415F2500EA60B0 /* Extensions */,
 				A07A3F422744F5E000B029DE /* Protocols */,
 				A0B9935227415CB400EA60B0 /* Models */,
@@ -414,10 +408,9 @@
 		A0B9935127415CA600EA60B0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A0EA55D727BE7B8100B25C65 /* Dependency Injection */,
 				A07120E52741A86D00B5A945 /* Storage */,
 				A0B99366274164FF00EA60B0 /* Networking */,
-				A0B9935727415DC800EA60B0 /* Bootstrapper.swift */,
-				A07120DF27418E1700B5A945 /* AuthenticationManager.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -426,13 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				A0B9935327415CBE00EA60B0 /* API */,
-				A0B9935427415DA900EA60B0 /* DIContainer.swift */,
-				A0B9936D274179A200EA60B0 /* ViewControllerIdentifier.swift */,
-				A07120DD27418D8D00B5A945 /* Role.swift */,
 				A0DEB6BB2745423900EC62CB /* NullObject.swift */,
-				A0A857CF274EE69F000B133C /* JwtUser.swift */,
-				A0447269274EFD77004292EE /* ColorCode.swift */,
-				A06179C42757C51300ABBF82 /* CellIdentifier.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -463,13 +450,7 @@
 		A0B9935927415F2500EA60B0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A0B9937327417ADE00EA60B0 /* UIStoryboardExtensions.swift */,
-				A0A857D1274EE91E000B133C /* JwtExtensions.swift */,
-				A044726B274EFDB7004292EE /* UIColorExtensions.swift */,
-				A06179C62757C5B900ABBF82 /* UITableViewExtensions.swift */,
 				A00CDEC32760FF8100E1EA13 /* StringExtensions.swift */,
-				A08AD5E62764D7C1000C7EA8 /* UIAlertControllerExtensions.swift */,
-				A08AD5F02764E26D000C7EA8 /* UIButtonExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -478,16 +459,13 @@
 			isa = PBXGroup;
 			children = (
 				A0B993622741612B00EA60B0 /* MessageViewModel.swift */,
-				A07120E127418F5A00B5A945 /* LoginViewModel.swift */,
 				A07120EF2741CCA800B5A945 /* SpecialistTableViewModel.swift */,
 				A0F48B6A274530FD00F54324 /* SpecialistViewModel.swift */,
-				A0A857C9274ED4DD000B133C /* SignupViewModel.swift */,
 				A06179C22757C47400ABBF82 /* WorkplaceTableVIewModel.swift */,
 				A04327C2275FFDE900CDF63B /* EvaluationsTableViewModel.swift */,
 				A00CDEBF276016C500E1EA13 /* CreateReviewViewModel.swift */,
 				A08AD5E82764DB63000C7EA8 /* AuthenticationViewModel.swift */,
 				A0BCFC9D2765526D009378BB /* EvaluationViewModel.swift */,
-				A0BCFCA12766B579009378BB /* ChangePasswordViewModel.swift */,
 				A0BCFCA52767E51D009378BB /* ReviewViewModel.swift */,
 				A0BCFCA72767E79B009378BB /* EditReviewViewModel.swift */,
 			);
@@ -505,7 +483,7 @@
 			name = Networking;
 			sourceTree = "<group>";
 		};
-		A0F48B6727452E0C00F54324 /* UI */ = {
+		A0EA55D227BE7ABA00B25C65 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				A044726D274EFF14004292EE /* InputField.swift */,
@@ -513,6 +491,116 @@
 				A0447267274EFCAF004292EE /* ButtonWithShadow.swift */,
 				A02D6973274F05C70016B48D /* ShadowView.swift */,
 				A08AD5EE2764DD71000C7EA8 /* PrimaryButton.swift */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		A0EA55D327BE7AC600B25C65 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A0B9937327417ADE00EA60B0 /* UIStoryboardExtensions.swift */,
+				A044726B274EFDB7004292EE /* UIColorExtensions.swift */,
+				A06179C62757C5B900ABBF82 /* UITableViewExtensions.swift */,
+				A08AD5E62764D7C1000C7EA8 /* UIAlertControllerExtensions.swift */,
+				A08AD5F02764E26D000C7EA8 /* UIButtonExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		A0EA55D427BE7AF400B25C65 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				A0EA55DA27BE7BFA00B25C65 /* Signup */,
+				A0EA55D927BE7BE100B25C65 /* Login */,
+				A0EA55DB27BE7C2E00B25C65 /* Change Password */,
+				A0EA55D827BE7BD600B25C65 /* Services */,
+				A0EA55D627BE7B6100B25C65 /* Models */,
+				A0EA55DC27BE7C6A00B25C65 /* Controllers */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		A0EA55D527BE7B2200B25C65 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A0B9936D274179A200EA60B0 /* ViewControllerIdentifier.swift */,
+				A0447269274EFD77004292EE /* ColorCode.swift */,
+				A06179C42757C51300ABBF82 /* CellIdentifier.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		A0EA55D627BE7B6100B25C65 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A07120DD27418D8D00B5A945 /* Role.swift */,
+				A0A857CF274EE69F000B133C /* JwtUser.swift */,
+				A0A857D1274EE91E000B133C /* JwtExtensions.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A0EA55D727BE7B8100B25C65 /* Dependency Injection */ = {
+			isa = PBXGroup;
+			children = (
+				A0B9935727415DC800EA60B0 /* Bootstrapper.swift */,
+				A0B9935427415DA900EA60B0 /* DIContainer.swift */,
+			);
+			name = "Dependency Injection";
+			sourceTree = "<group>";
+		};
+		A0EA55D827BE7BD600B25C65 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A07120DF27418E1700B5A945 /* AuthenticationManager.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		A0EA55D927BE7BE100B25C65 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A07120E127418F5A00B5A945 /* LoginViewModel.swift */,
+				A0B993752741820C00EA60B0 /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		A0EA55DA27BE7BFA00B25C65 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				A0A857C9274ED4DD000B133C /* SignupViewModel.swift */,
+				A0B993772741822400EA60B0 /* SignupViewController.swift */,
+			);
+			name = Signup;
+			sourceTree = "<group>";
+		};
+		A0EA55DB27BE7C2E00B25C65 /* Change Password */ = {
+			isa = PBXGroup;
+			children = (
+				A0BCFCA12766B579009378BB /* ChangePasswordViewModel.swift */,
+				A0BCFCA32766B632009378BB /* ChangePasswordViewControllerProtocol.swift */,
+				A0BCFC9F2766B340009378BB /* ChangePasswordViewController.swift */,
+			);
+			name = "Change Password";
+			sourceTree = "<group>";
+		};
+		A0EA55DC27BE7C6A00B25C65 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A02D6975274FDE960016B48D /* AccessControllerBase.swift */,
+				A08AD5EA2764DC63000C7EA8 /* AuthenticationViewControllerProtocol.swift */,
+				A0B4DA262741566800C0EC1F /* AuthenticationViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A0F48B6727452E0C00F54324 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A0EA55D527BE7B2200B25C65 /* Utilities */,
+				A0EA55D327BE7AC600B25C65 /* Extensions */,
+				A0EA55D227BE7ABA00B25C65 /* Components */,
 			);
 			name = UI;
 			sourceTree = "<group>";
