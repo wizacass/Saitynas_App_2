@@ -13,7 +13,7 @@ class UserTokensRepository {
 
     var accessToken: String? {
         get {
-            return storage.get(accessTokenKey)
+            return storage.getString(accessTokenKey)
         }
 
         set(token) {
@@ -24,7 +24,7 @@ class UserTokensRepository {
 
     var refreshToken: String? {
         get {
-            return storage.get(refreshTokenKey)
+            return storage.getString(refreshTokenKey)
         }
 
         set(token) {

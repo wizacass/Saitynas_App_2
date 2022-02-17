@@ -9,10 +9,16 @@ class AuthenticationManager {
     private var communicator: AccessCommunicator
     private var observers: [StateObserverDelegate?] = []
     private var repository: UserTokensRepository
+    private var userPreferences: UserPreferences
 
-    init(_ communicator: AccessCommunicator, _ repository: UserTokensRepository) {
+    init(
+        _ communicator: AccessCommunicator,
+        _ repository: UserTokensRepository,
+        _ userPreferences: UserPreferences
+    ) {
         self.communicator = communicator
         self.repository = repository
+        self.userPreferences = userPreferences
     }
 
     func login(
@@ -38,7 +44,14 @@ class AuthenticationManager {
 
     private func handleAccess(_ tokens: TokensDTO?, onError handleError: @escaping (ErrorDTO?) -> Void) {
         if trySaveTokens(tokens, onError: handleError) {
-            observers.forEach { $0?.onLogin() }
+            communicator.getUserInformation(onSuccess: handleUserInfoRetrieved, onError: handleError)
+        }
+    }
+
+    private func handleUserInfoRetrieved(_ dto: UserDTO?) {
+        if let user = dto?.data {
+            userPreferences.hasProfile = user.hasProfile
+            observers.forEach { $0?.onLogin(user) }
         }
     }
 
@@ -92,6 +105,8 @@ class AuthenticationManager {
 
     func logout() {
         repository.clearAll()
+        userPreferences.clearAll()
+
         observers.forEach { $0?.onLogout() }
     }
 }

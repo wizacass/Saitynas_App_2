@@ -2,9 +2,9 @@ import Foundation
 
 class AccessCommunicator {
     
-    private var apiClient: ApiClient
+    private var apiClient: ApiClientProtocol
     
-    init(_ apiClient: ApiClient) {
+    init(_ apiClient: ApiClientProtocol) {
         self.apiClient = apiClient
     }
     
@@ -62,5 +62,12 @@ class AccessCommunicator {
         ]
 
         apiClient.put("/users/passwords", body, onSuccess, onError)
+    }
+
+    func getUserInformation(
+        onSuccess: @escaping (UserDTO?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        apiClient.get("/users/me", onSuccess, onError: handleError)
     }
 }

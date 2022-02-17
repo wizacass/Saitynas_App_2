@@ -5,7 +5,7 @@ class JwtUser {
     var role: Role? {
         return jwt?.role
     }
-    
+
     var email: String? {
         return jwt?.email
     }
@@ -31,7 +31,7 @@ extension JwtUser: StateObserverDelegate {
         return id
     }
     
-    func onLogin() {
+    func onLogin(_ user: User?) {
         updateToken()
     }
     

@@ -60,6 +60,26 @@ extension Communicator {
     }
 }
 
+// MARK: - Patients
+extension Communicator {
+    func createPatient(
+        _ p: Patient,
+        onSuccess: @escaping (NullObject?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void) {
+            let endpoint = "/patients"
+            let body: [String: Any] = [
+                "firstName": p.firstName,
+                "lastname": p.lastName,
+                "birthDate": p.birthDate,
+                "city": p.city
+            ]
+
+            apiClient.post(endpoint, body, onSuccess, { [weak self] error in
+                self?.retryPostRequest(endpoint, body, error, onSuccess, onError: handleError)
+            })
+    }
+}
+
 // MARK: - Workplaces
 extension Communicator {
     func getWorkplaces(
@@ -158,6 +178,22 @@ extension Communicator {
         if error?.type == 401 {
             authenticationManager.refreshTokens(onSuccess: { [weak self] in
                 self?.apiClient.get(endpoint, onSuccess, onError: handleError)
+            }, onError: handleError)
+        } else {
+            DispatchQueue.main.async { handleError(error) }
+        }
+    }
+
+    private func retryPostRequest<T: Decodable>(
+        _ endpoint: String,
+        _ body: [String: Any],
+        _ error: ErrorDTO?,
+        _ onSuccess: @escaping (T?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        if error?.type == 401 {
+            authenticationManager.refreshTokens(onSuccess: { [weak self] in
+                self?.apiClient.post(endpoint, body, onSuccess, handleError)
             }, onError: handleError)
         } else {
             DispatchQueue.main.async { handleError(error) }

@@ -1,6 +1,9 @@
 import UIKit
 
+// swiftlint:disable type_name
 class SpecialistEvaluationsNavigationViewController: UINavigationController {
+// swiftlint:enable type_name
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

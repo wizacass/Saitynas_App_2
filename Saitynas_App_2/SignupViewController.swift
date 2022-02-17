@@ -135,7 +135,7 @@ extension SignupViewController: DataSourceObserverDelegate, StateObserverDelegat
         DispatchQueue.main.async(execute: rolePicker.reloadAllComponents)
     }
 
-    func onLogin() {
+    func onLogin(_ user: User?) {
         dismiss(animated: true, completion: nil)
     }
 
