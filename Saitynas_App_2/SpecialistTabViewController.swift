@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 class SpecialistTabViewController: UserTabViewController {
     override func viewDidLoad() {
