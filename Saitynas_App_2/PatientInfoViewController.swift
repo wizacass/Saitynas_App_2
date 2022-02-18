@@ -32,18 +32,6 @@ class PatientInfoViewController: AccessControllerBase {
         userPreferences = c.preferences
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        authenticationManager?.subscribe(self)
-
-        super.viewWillAppear(animated)
-    }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        authenticationManager?.unsubscribe(self)
-
-        super.viewDidDisappear(animated)
-    }
-
     @IBAction func submitButtonPressed(_ sender: UIButton) {
         guard
             let firstName = firstNameTextField.text,
@@ -53,12 +41,14 @@ class PatientInfoViewController: AccessControllerBase {
 
         let patient = Patient(firstName, lastName, birthDatePicker.date, city)
         
-        communicator?.createPatient(patient, onSuccess: { [weak self] _ in
-            self?.userPreferences?.hasProfile = true
-            if let viewController = self?.storyboard?.instantiateViewController(.patientTabBarViewController) {
-                self?.navigationController?.pushViewController(viewController, animated: true)
-            }
-        }, onError: handleError)
+        communicator?.createPatient(patient, onSuccess: handlePatientCreated, onError: handleError)
+    }
+
+    private func handlePatientCreated(_ obj: NullObject?) {
+        userPreferences?.hasProfile = true
+        if let viewController = storyboard?.instantiateViewController(.patientTabBarViewController) {
+            navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 
     private func handleError(_ error: ErrorDTO?) {
@@ -74,31 +64,5 @@ class PatientInfoViewController: AccessControllerBase {
 
     @IBAction func laterButtonPressed(_ sender: UIButton) {
         authenticationManager?.logout()
-    }
-}
-
-extension PatientInfoViewController: StateObserverDelegate {
-    func onLogin(_ user: User?) { }
-
-    func onLogout() {
-        let hasController = hasControllerInStack
-        navigationController?.popViewController(animated: true)
-
-        if hasController { return }
-        if let viewController = storyboard?.instantiateViewController(.authenticationViewController) {
-            navigationController?.pushViewController(viewController, animated: true)
-        }
-    }
-
-    private var hasControllerInStack: Bool {
-        guard let count = navigationController?.viewControllers.count else {
-            return false
-        }
-
-        return count > 1
-    }
-
-    var observerId: UUID {
-        return id
     }
 }

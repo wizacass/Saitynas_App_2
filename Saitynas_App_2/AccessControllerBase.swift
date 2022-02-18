@@ -6,6 +6,7 @@ class AccessControllerBase: UIViewController {
     let inputBorderColor = UIColor.fromColorCode(.inputFieldBorder)
 
     private weak var bottomConstraint: NSLayoutConstraint?
+
     private var defaultConstraintDistance: CGFloat!
 
     private let distanceFromKeyboard: CGFloat = 16
@@ -35,19 +36,6 @@ class AccessControllerBase: UIViewController {
     func dismissView() {
         dismiss(animated: true, completion: nil)
     }
-
-//    func showAlert(_ title: String, _ body: String? = nil, _ imageName: ImageNameConstant? = nil) {
-//        let alert = UIAlertController.createAlert(title, body, .normal, withImage: imageName)
-//        self.present(alert, animated: true)
-//    }
-
-//    func validateEmail(_ email: String?) -> (Bool, String?) {
-//        guard let email = email else { return (false, "generic_error") }
-//        if email.isEmpty { return (false, "empty_email_error") }
-//        if !email.isEmail { return (false, "not_valid_email") }
-//
-//        return (true, nil)
-//    }
 }
 
 // MARK: - Keyboard Observers

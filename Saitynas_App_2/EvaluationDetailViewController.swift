@@ -14,7 +14,7 @@ class EvaluationDetailViewController: UIViewController {
 
     weak var previousViewController: UIViewController?
 
-    private var communicator: Communicator!
+    private weak var communicator: Communicator!
 
     private let dateFormatter = DateFormatter()
     private let id = UUID()

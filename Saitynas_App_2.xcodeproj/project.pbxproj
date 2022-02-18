@@ -347,6 +347,7 @@
 				A0B9935227415CB400EA60B0 /* Models */,
 				A0B9935A2741606400EA60B0 /* ViewModels */,
 				A0B993502741598800EA60B0 /* Controllers */,
+				A0EA55DD27BE7D5E00B25C65 /* Navigation */,
 				A0F48B6727452E0C00F54324 /* UI */,
 				A0B9934F2741597900EA60B0 /* Storyboards */,
 				A0B9934E2741596B00EA60B0 /* Resources */,
@@ -593,6 +594,21 @@
 				A0B4DA262741566800C0EC1F /* AuthenticationViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A0EA55DD27BE7D5E00B25C65 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				A0EA55DE27BE7D7100B25C65 /* Controllers */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		A0EA55DE27BE7D7100B25C65 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		A0F48B6727452E0C00F54324 /* UI */ = {

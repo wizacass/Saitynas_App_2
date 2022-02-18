@@ -4,7 +4,7 @@ class SettingsViewController: UIViewController {
 
     @IBOutlet weak var emailLabel: UILabel!
 
-    private var authenticationManager: AuthenticationManager!
+    private weak var authenticationManager: AuthenticationManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
