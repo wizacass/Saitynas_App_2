@@ -11,7 +11,7 @@ class SpecialistViewController: UIViewController {
     private let id = UUID()
 
     private var viewModel: SpecialistViewModel!
-    private var communicator: Communicator!
+    private weak var communicator: Communicator!
 
     override func viewDidLoad() {
         super.viewDidLoad()
