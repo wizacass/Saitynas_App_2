@@ -36,7 +36,7 @@ class NavigationViewController: UINavigationController {
         case .patient:
             return hasProfile ? .patientTabBarViewController : .patientInformationViewController
         case .specialist:
-            return  .specialistTabBarViewController
+            return hasProfile ? .specialistTabBarViewController : .specialistInformationViewController
         case .none:
             return .authenticationViewController
         }

@@ -100,6 +100,7 @@
 		A0EA55CB27BDA1DE00B25C65 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA55CA27BDA1DE00B25C65 /* UserDefaultsStorage.swift */; };
 		A0EA55CD27BDA33900B25C65 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA55CC27BDA33900B25C65 /* UserPreferences.swift */; };
 		A0EA55D127BE6F8C00B25C65 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA55D027BE6F8C00B25C65 /* Patient.swift */; };
+		A0EA55E827C1361E00B25C65 /* SpecialistInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA55E727C1361E00B25C65 /* SpecialistInfoViewController.swift */; };
 		A0F48B6927452E1E00F54324 /* RoundableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F48B6827452E1E00F54324 /* RoundableView.swift */; };
 		A0F48B6B274530FD00F54324 /* SpecialistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F48B6A274530FD00F54324 /* SpecialistViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -222,6 +223,7 @@
 		A0EA55CA27BDA1DE00B25C65 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
 		A0EA55CC27BDA33900B25C65 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		A0EA55D027BE6F8C00B25C65 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		A0EA55E727C1361E00B25C65 /* SpecialistInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistInfoViewController.swift; sourceTree = "<group>"; };
 		A0F48B6827452E1E00F54324 /* RoundableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundableView.swift; sourceTree = "<group>"; };
 		A0F48B6A274530FD00F54324 /* SpecialistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistViewModel.swift; sourceTree = "<group>"; };
 		AF6170A55100D4AD16B5B781 /* Pods_Saitynas_App_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saitynas_App_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -615,6 +617,7 @@
 			isa = PBXGroup;
 			children = (
 				A0A8395D27BD59FD00A54C2D /* PatientInfoViewController.swift */,
+				A0EA55E727C1361E00B25C65 /* SpecialistInfoViewController.swift */,
 			);
 			name = "Profile Management";
 			sourceTree = "<group>";
@@ -959,6 +962,7 @@
 				A02D6976274FDE970016B48D /* AccessControllerBase.swift in Sources */,
 				A06179CD2757C98300ABBF82 /* ApiClientProtocol.swift in Sources */,
 				A0B4DA252741566800C0EC1F /* SceneDelegate.swift in Sources */,
+				A0EA55E827C1361E00B25C65 /* SpecialistInfoViewController.swift in Sources */,
 				A0A857CC274ED83F000B133C /* EnumDTO.swift in Sources */,
 				A0B993682741650A00EA60B0 /* ApiClient.swift in Sources */,
 				A0447268274EFCAF004292EE /* ButtonWithShadow.swift in Sources */,
