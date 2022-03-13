@@ -2,7 +2,10 @@ import UIKit
 
 class SpecialistInfoViewController: AccessControllerBase {
 
-    @IBOutlet weak var rolePicker: UIPickerView!
+    @IBOutlet weak var firstNameTextField: InputField!
+    @IBOutlet weak var lastNameTextField: InputField!
+    @IBOutlet weak var cityTextField: InputField!
+    @IBOutlet weak var specialityPicker: UIPickerView!
     
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
 
@@ -23,10 +26,10 @@ class SpecialistInfoViewController: AccessControllerBase {
 
         authenticationManager = c.authenticationManager
 
-        viewModel = SpecialistInfoViewModel(c.communicator)
+        viewModel = SpecialistInfoViewModel(c.communicator, c.preferences)
 
-        rolePicker.delegate = self
-        rolePicker.dataSource = self
+        specialityPicker.delegate = self
+        specialityPicker.dataSource = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -43,7 +46,23 @@ class SpecialistInfoViewController: AccessControllerBase {
     }
 
     @IBAction func submitButtonPressed(_ sender: PrimaryButton) {
-        print("Submitting data...")
+        guard
+            let firstName = firstNameTextField.text,
+            let lastName = lastNameTextField.text,
+            let city = cityTextField.text
+        else { return }
+
+        viewModel.createPatient(
+            firstName, lastName, city,
+            onSuccess: handleSpecialistCreated,
+            onError: handleError
+        )
+    }
+
+    private func handleSpecialistCreated() {
+        if let viewController = storyboard?.instantiateViewController(.specialistTabBarViewController) {
+            navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 
     @IBAction func laterButtonPressed(_ sender: UIButton) {
@@ -58,15 +77,15 @@ extension SpecialistInfoViewController: UIPickerViewDelegate, UIPickerViewDataSo
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return viewModel.roles.count
+        return viewModel.speciality.count
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return viewModel.roles[row].name
+        return viewModel.speciality[row].name
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        viewModel.selectedRoleIndex = row
+        viewModel.selectedSpecialityIndex = row
     }
 }
 
@@ -76,6 +95,6 @@ extension SpecialistInfoViewController: DataSourceObserverDelegate {
     }
 
     func onDataSourceUpdated<T>(_ source: T?) {
-        DispatchQueue.main.async(execute: rolePicker.reloadAllComponents)
+        DispatchQueue.main.async(execute: specialityPicker.reloadAllComponents)
     }
 }

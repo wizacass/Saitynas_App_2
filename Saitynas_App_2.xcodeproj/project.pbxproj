@@ -14,6 +14,7 @@
 		A00CDEC0276016C500E1EA13 /* CreateReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00CDEBF276016C500E1EA13 /* CreateReviewViewModel.swift */; };
 		A00CDEC42760FF8100E1EA13 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00CDEC32760FF8100E1EA13 /* StringExtensions.swift */; };
 		A023652527DE578300A1DDCE /* SpecialistInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A023652427DE578300A1DDCE /* SpecialistInfoViewModel.swift */; };
+		A023652727DE5C7600A1DDCE /* CreateSpecialistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A023652627DE5C7600A1DDCE /* CreateSpecialistDTO.swift */; };
 		A02D6974274F05C70016B48D /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D6973274F05C70016B48D /* ShadowView.swift */; };
 		A02D6976274FDE970016B48D /* AccessControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D6975274FDE960016B48D /* AccessControllerBase.swift */; };
 		A04327C1275FE1DA00CDF63B /* EvaluationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04327C0275FE1DA00CDF63B /* EvaluationsTableViewController.swift */; };
@@ -133,6 +134,7 @@
 		A00CDEBF276016C500E1EA13 /* CreateReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReviewViewModel.swift; sourceTree = "<group>"; };
 		A00CDEC32760FF8100E1EA13 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		A023652427DE578300A1DDCE /* SpecialistInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistInfoViewModel.swift; sourceTree = "<group>"; };
+		A023652627DE5C7600A1DDCE /* CreateSpecialistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSpecialistDTO.swift; sourceTree = "<group>"; };
 		A02D6973274F05C70016B48D /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		A02D6975274FDE960016B48D /* AccessControllerBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControllerBase.swift; sourceTree = "<group>"; };
 		A04327C0275FE1DA00CDF63B /* EvaluationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationsTableViewController.swift; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 				A07120F12741CCE800B5A945 /* SpecialistsDTO.swift */,
 				A07A3F402741CD5B00B029DE /* Specialist.swift */,
 				A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */,
+				A023652627DE5C7600A1DDCE /* CreateSpecialistDTO.swift */,
 				A0A857CB274ED83F000B133C /* EnumDTO.swift */,
 				A0A857CD274ED8F9000B133C /* EnumListDTO.swift */,
 				A06179C82757C6D400ABBF82 /* Workplace.swift */,
@@ -924,6 +927,7 @@
 				A07120E72741A88D00B5A945 /* KeyValueStorageProtocol.swift in Sources */,
 				A044726C274EFDB7004292EE /* UIColorExtensions.swift in Sources */,
 				A0A8395E27BD59FD00A54C2D /* PatientInfoViewController.swift in Sources */,
+				A023652727DE5C7600A1DDCE /* CreateSpecialistDTO.swift in Sources */,
 				A0A857D4274EF0AF000B133C /* UserTabViewController.swift in Sources */,
 				A0A8396027BD5EAC00A54C2D /* User.swift in Sources */,
 				A0BCFCA82767E79B009378BB /* EditReviewViewModel.swift in Sources */,

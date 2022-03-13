@@ -2,17 +2,20 @@ import Foundation
 
 class SpecialistInfoViewModel {
 
-    var selectedRoleIndex = 0
-    var roles: [EnumDTO] = []
+    var selectedSpecialityIndex = 0
+    var speciality: [EnumDTO] = []
 
     private var observers: [DataSourceObserverDelegate?] = []
 
     private var communicator: Communicator
+    private var userPreferences: UserPreferences
 
     init(
-        _ communicator: Communicator
+        _ communicator: Communicator,
+        _ userPreferences: UserPreferences
     ) {
         self.communicator = communicator
+        self.userPreferences = userPreferences
     }
 
     func loadRoles() {
@@ -22,8 +25,26 @@ class SpecialistInfoViewModel {
     private func handleReceivedRoles(_ dto: EnumListDTO?) {
         guard let data = dto?.data else { return }
 
-        roles = data
-        observers.forEach { $0?.onDataSourceUpdated(roles) }
+        speciality = data
+        observers.forEach { $0?.onDataSourceUpdated(speciality) }
+    }
+
+    func createPatient(
+        _ firstName: String, _ lastName: String, _ city: String,
+        onSuccess: @escaping () -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let specialist = CreateSpecialistDTO(
+            firstName: firstName,
+            lastName: lastName,
+            city: city,
+            specialityId: speciality[selectedSpecialityIndex].id
+        )
+
+        communicator.createSpecialist(specialist, onSuccess: { [weak self] _ in
+            self?.userPreferences.hasProfile = true
+            DispatchQueue.main.async(execute: onSuccess)
+        }, onError: handleError)
     }
 }
 

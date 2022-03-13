@@ -2743,7 +2743,10 @@
                     <navigationItem key="navigationItem" id="TKv-UY-p5q"/>
                     <connections>
                         <outlet property="bottomConstraint" destination="Wxe-k9-Xit" id="ywo-ZW-Rsw"/>
-                        <outlet property="rolePicker" destination="lqc-A8-PDC" id="CqI-DM-Zsn"/>
+                        <outlet property="cityTextField" destination="KPn-eK-Ptt" id="8pD-1K-6uz"/>
+                        <outlet property="firstNameTextField" destination="mND-I9-sCK" id="z5h-CJ-Xaq"/>
+                        <outlet property="lastNameTextField" destination="Z4i-JR-CHq" id="nfP-zD-xCJ"/>
+                        <outlet property="specialityPicker" destination="lqc-A8-PDC" id="CqI-DM-Zsn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gaO-so-G26" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
