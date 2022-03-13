@@ -13,6 +13,8 @@
 		A00CDEBE2760159100E1EA13 /* CreateEvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00CDEBD2760159100E1EA13 /* CreateEvaluationViewController.swift */; };
 		A00CDEC0276016C500E1EA13 /* CreateReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00CDEBF276016C500E1EA13 /* CreateReviewViewModel.swift */; };
 		A00CDEC42760FF8100E1EA13 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00CDEC32760FF8100E1EA13 /* StringExtensions.swift */; };
+		A023652527DE578300A1DDCE /* SpecialistInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A023652427DE578300A1DDCE /* SpecialistInfoViewModel.swift */; };
+		A023652727DE5C7600A1DDCE /* CreateSpecialistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A023652627DE5C7600A1DDCE /* CreateSpecialistDTO.swift */; };
 		A02D6974274F05C70016B48D /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D6973274F05C70016B48D /* ShadowView.swift */; };
 		A02D6976274FDE970016B48D /* AccessControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D6975274FDE960016B48D /* AccessControllerBase.swift */; };
 		A04327C1275FE1DA00CDF63B /* EvaluationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04327C0275FE1DA00CDF63B /* EvaluationsTableViewController.swift */; };
@@ -100,6 +102,7 @@
 		A0EA55CB27BDA1DE00B25C65 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA55CA27BDA1DE00B25C65 /* UserDefaultsStorage.swift */; };
 		A0EA55CD27BDA33900B25C65 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA55CC27BDA33900B25C65 /* UserPreferences.swift */; };
 		A0EA55D127BE6F8C00B25C65 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA55D027BE6F8C00B25C65 /* Patient.swift */; };
+		A0EA55E827C1361E00B25C65 /* SpecialistInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA55E727C1361E00B25C65 /* SpecialistInfoViewController.swift */; };
 		A0F48B6927452E1E00F54324 /* RoundableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F48B6827452E1E00F54324 /* RoundableView.swift */; };
 		A0F48B6B274530FD00F54324 /* SpecialistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F48B6A274530FD00F54324 /* SpecialistViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -130,6 +133,8 @@
 		A00CDEBD2760159100E1EA13 /* CreateEvaluationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEvaluationViewController.swift; sourceTree = "<group>"; };
 		A00CDEBF276016C500E1EA13 /* CreateReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReviewViewModel.swift; sourceTree = "<group>"; };
 		A00CDEC32760FF8100E1EA13 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		A023652427DE578300A1DDCE /* SpecialistInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistInfoViewModel.swift; sourceTree = "<group>"; };
+		A023652627DE5C7600A1DDCE /* CreateSpecialistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSpecialistDTO.swift; sourceTree = "<group>"; };
 		A02D6973274F05C70016B48D /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		A02D6975274FDE960016B48D /* AccessControllerBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControllerBase.swift; sourceTree = "<group>"; };
 		A04327C0275FE1DA00CDF63B /* EvaluationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationsTableViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +227,7 @@
 		A0EA55CA27BDA1DE00B25C65 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
 		A0EA55CC27BDA33900B25C65 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		A0EA55D027BE6F8C00B25C65 /* Patient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
+		A0EA55E727C1361E00B25C65 /* SpecialistInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistInfoViewController.swift; sourceTree = "<group>"; };
 		A0F48B6827452E1E00F54324 /* RoundableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundableView.swift; sourceTree = "<group>"; };
 		A0F48B6A274530FD00F54324 /* SpecialistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistViewModel.swift; sourceTree = "<group>"; };
 		AF6170A55100D4AD16B5B781 /* Pods_Saitynas_App_2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Saitynas_App_2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -423,6 +429,7 @@
 				A07120F12741CCE800B5A945 /* SpecialistsDTO.swift */,
 				A07A3F402741CD5B00B029DE /* Specialist.swift */,
 				A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */,
+				A023652627DE5C7600A1DDCE /* CreateSpecialistDTO.swift */,
 				A0A857CB274ED83F000B133C /* EnumDTO.swift */,
 				A0A857CD274ED8F9000B133C /* EnumListDTO.swift */,
 				A06179C82757C6D400ABBF82 /* Workplace.swift */,
@@ -558,8 +565,8 @@
 		A0EA55DA27BE7BFA00B25C65 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
-				A0A857C9274ED4DD000B133C /* SignupViewModel.swift */,
 				A0B993772741822400EA60B0 /* SignupViewController.swift */,
+				A0A857C9274ED4DD000B133C /* SignupViewModel.swift */,
 			);
 			name = Signup;
 			sourceTree = "<group>";
@@ -615,6 +622,8 @@
 			isa = PBXGroup;
 			children = (
 				A0A8395D27BD59FD00A54C2D /* PatientInfoViewController.swift */,
+				A0EA55E727C1361E00B25C65 /* SpecialistInfoViewController.swift */,
+				A023652427DE578300A1DDCE /* SpecialistInfoViewModel.swift */,
 			);
 			name = "Profile Management";
 			sourceTree = "<group>";
@@ -918,6 +927,7 @@
 				A07120E72741A88D00B5A945 /* KeyValueStorageProtocol.swift in Sources */,
 				A044726C274EFDB7004292EE /* UIColorExtensions.swift in Sources */,
 				A0A8395E27BD59FD00A54C2D /* PatientInfoViewController.swift in Sources */,
+				A023652727DE5C7600A1DDCE /* CreateSpecialistDTO.swift in Sources */,
 				A0A857D4274EF0AF000B133C /* UserTabViewController.swift in Sources */,
 				A0A8396027BD5EAC00A54C2D /* User.swift in Sources */,
 				A0BCFCA82767E79B009378BB /* EditReviewViewModel.swift in Sources */,
@@ -941,6 +951,7 @@
 				A08AD5EB2764DC63000C7EA8 /* AuthenticationViewControllerProtocol.swift in Sources */,
 				A07A3F442744F61300B029DE /* DataSourceObserverDelegate.swift in Sources */,
 				A07120E027418E1700B5A945 /* AuthenticationManager.swift in Sources */,
+				A023652527DE578300A1DDCE /* SpecialistInfoViewModel.swift in Sources */,
 				A06179C72757C5B900ABBF82 /* UITableViewExtensions.swift in Sources */,
 				A0B9935D2741607F00EA60B0 /* ErrorDTO.swift in Sources */,
 				A04327C1275FE1DA00CDF63B /* EvaluationsTableViewController.swift in Sources */,
@@ -959,6 +970,7 @@
 				A02D6976274FDE970016B48D /* AccessControllerBase.swift in Sources */,
 				A06179CD2757C98300ABBF82 /* ApiClientProtocol.swift in Sources */,
 				A0B4DA252741566800C0EC1F /* SceneDelegate.swift in Sources */,
+				A0EA55E827C1361E00B25C65 /* SpecialistInfoViewController.swift in Sources */,
 				A0A857CC274ED83F000B133C /* EnumDTO.swift in Sources */,
 				A0B993682741650A00EA60B0 /* ApiClient.swift in Sources */,
 				A0447268274EFCAF004292EE /* ButtonWithShadow.swift in Sources */,

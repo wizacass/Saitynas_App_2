@@ -51,17 +51,6 @@ class PatientInfoViewController: AccessControllerBase {
         }
     }
 
-    private func handleError(_ error: ErrorDTO?) {
-        guard let error = error else { return }
-
-        let alert = UIAlertController.createAlert(
-            error.title.formattedMessage,
-            error.details?.formattedMessage
-        )
-
-        present(alert, animated: true, completion: nil)
-    }
-
     @IBAction func laterButtonPressed(_ sender: UIButton) {
         authenticationManager?.logout()
     }

@@ -36,6 +36,17 @@ class AccessControllerBase: UIViewController {
     func dismissView() {
         dismiss(animated: true, completion: nil)
     }
+
+    func handleError(_ error: ErrorDTO?) {
+        guard let error = error else { return }
+
+        let alert = UIAlertController.createAlert(
+            error.title.formattedMessage,
+            error.details?.formattedMessage
+        )
+
+        present(alert, animated: true, completion: nil)
+    }
 }
 
 // MARK: - Keyboard Observers

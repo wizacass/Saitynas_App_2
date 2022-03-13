@@ -58,6 +58,37 @@ extension Communicator {
             self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
         })
     }
+
+    func createSpecialist(
+        _ s: CreateSpecialistDTO,
+        onSuccess: @escaping (NullObject?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/specialists"
+        let body: [String: Any] = [
+            "firstName": s.firstName,
+            "lastname": s.lastName,
+            "city": s.city,
+            "specialityId": s.specialityId
+        ]
+
+        apiClient.post(endpoint, body, onSuccess, { [weak self] error in
+            self?.retryPostRequest(endpoint, body, error, onSuccess, onError: handleError)
+        })
+    }
+}
+
+// MARK: - Specialities
+extension Communicator {
+    func getSpecialities (
+        onSuccess: @escaping (EnumListDTO?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/specialities"
+        apiClient.get(endpoint, onSuccess, onError: { [weak self] error in
+            self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
+        })
+    }
 }
 
 // MARK: - Patients
