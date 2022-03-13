@@ -2387,7 +2387,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="311" height="468"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dq2-Lo-6Tg" userLabel="Content">
-                                                        <rect key="frame" x="0.0" y="0.0" width="311" height="463"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="311" height="459"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q7V-my-fIe" userLabel="First Name View">
                                                                 <rect key="frame" x="8" y="32" width="295" height="85"/>
@@ -2612,7 +2612,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lqc-A8-PDC" userLabel="Speciality Picker View">
-                                                                <rect key="frame" x="8" y="359" width="295" height="96"/>
+                                                                <rect key="frame" x="8" y="355" width="295" height="96"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="96" id="vS7-Ff-zt5"/>
                                                                 </constraints>
@@ -2635,7 +2635,7 @@
                                                             <constraint firstItem="Qk9-7V-yOc" firstAttribute="leading" secondItem="Dq2-Lo-6Tg" secondAttribute="leading" constant="8" id="Vbs-9s-lHK"/>
                                                             <constraint firstAttribute="trailing" secondItem="Qk9-7V-yOc" secondAttribute="trailing" constant="8" id="YpU-Ph-zg0"/>
                                                             <constraint firstItem="zhZ-t9-vYC" firstAttribute="centerX" secondItem="Dq2-Lo-6Tg" secondAttribute="centerX" id="gBj-3u-FIt"/>
-                                                            <constraint firstItem="lqc-A8-PDC" firstAttribute="top" secondItem="zhZ-t9-vYC" secondAttribute="bottom" constant="8" id="gNe-8Q-qf4"/>
+                                                            <constraint firstItem="lqc-A8-PDC" firstAttribute="top" secondItem="zhZ-t9-vYC" secondAttribute="bottom" constant="4" id="gNe-8Q-qf4"/>
                                                             <constraint firstItem="lqc-A8-PDC" firstAttribute="leading" secondItem="Dq2-Lo-6Tg" secondAttribute="leading" constant="8" id="pEd-pM-Qrn"/>
                                                             <constraint firstItem="g90-TQ-Tjd" firstAttribute="leading" secondItem="Dq2-Lo-6Tg" secondAttribute="leading" constant="8" id="qxk-iS-2VX"/>
                                                             <constraint firstAttribute="bottom" secondItem="lqc-A8-PDC" secondAttribute="bottom" constant="8" id="rbS-Hk-KVx"/>
@@ -2696,6 +2696,9 @@
                                 <rect key="frame" x="129" y="731" width="117.33333333333331" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="I will do it later"/>
+                                <connections>
+                                    <action selector="laterButtonPressed:" destination="bIJ-Nz-s6P" eventType="touchUpInside" id="xNt-G0-DZS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="jXq-vS-IGC" customClass="PrimaryButton" customModule="Saitynas_App_2" customModuleProvider="target">
                                 <rect key="frame" x="89.666666666666686" y="667" width="196" height="48"/>
@@ -2715,6 +2718,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="hasShadow" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="bIJ-Nz-s6P" eventType="touchUpInside" id="dIA-Qn-ZSM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dFk-Cl-aP2"/>
@@ -2737,6 +2743,7 @@
                     <navigationItem key="navigationItem" id="TKv-UY-p5q"/>
                     <connections>
                         <outlet property="bottomConstraint" destination="Wxe-k9-Xit" id="ywo-ZW-Rsw"/>
+                        <outlet property="rolePicker" destination="lqc-A8-PDC" id="CqI-DM-Zsn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gaO-so-G26" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

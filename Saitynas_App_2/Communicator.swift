@@ -60,6 +60,19 @@ extension Communicator {
     }
 }
 
+// MARK: - Specialities
+extension Communicator {
+    func getSpecialities (
+        onSuccess: @escaping (EnumListDTO?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/specialities"
+        apiClient.get(endpoint, onSuccess, onError: { [weak self] error in
+            self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
+        })
+    }
+}
+
 // MARK: - Patients
 extension Communicator {
     func createPatient(
