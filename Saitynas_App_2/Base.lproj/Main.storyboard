@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2KJ-eN-vWd">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -1195,6 +1195,34 @@
             </objects>
             <point key="canvasLocation" x="1673" y="1770"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="HZh-hl-hEZ">
+            <objects>
+                <viewController id="nAw-sE-y11" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sad-lA-rHQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching for a specialist..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQH-c9-v2w">
+                                <rect key="frame" x="45.333333333333343" y="120" width="284.66666666666663" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PjK-d5-IKl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pQH-c9-v2w" firstAttribute="top" secondItem="PjK-d5-IKl" secondAttribute="top" constant="32" id="BJY-rL-XQ4"/>
+                            <constraint firstItem="pQH-c9-v2w" firstAttribute="centerX" secondItem="Sad-lA-rHQ" secondAttribute="centerX" id="i94-da-ic6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="P9d-56-C2T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sra-yB-7dq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2428" y="2450"/>
+        </scene>
         <!--Specialists-->
         <scene sceneID="pAf-0j-UQm">
             <objects>
@@ -1746,7 +1774,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Q8-vI-NFv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2428" y="3153"/>
+            <point key="canvasLocation" x="1673" y="4570"/>
         </scene>
         <!--Evaluations-->
         <scene sceneID="adp-sd-Kx5">
@@ -1801,7 +1829,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYm-JQ-pzW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2428" y="2450"/>
+            <point key="canvasLocation" x="1673" y="3867"/>
         </scene>
         <!--Consultations-->
         <scene sceneID="MG1-b4-HSt">
@@ -1812,13 +1840,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Request a consultation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idp-42-Cze">
-                                <rect key="frame" x="65.333333333333329" y="76" width="244.66666666666669" height="30"/>
+                                <rect key="frame" x="65.333333333333329" y="120" width="244.66666666666669" height="30"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currently available specialists: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgN-ie-jhY">
-                                <rect key="frame" x="65.666666666666671" y="122" width="243.66666666666663" height="21"/>
+                                <rect key="frame" x="65.666666666666671" y="166" width="243.66666666666663" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1841,10 +1869,11 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="searchButtonPressed:" destination="Ocf-J7-Avj" eventType="touchUpInside" id="QJx-RS-JpH"/>
+                                    <segue destination="nAw-sE-y11" kind="show" id="CJN-cn-qsg"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFm-jv-WA9" customClass="ShadowView" customModule="Saitynas_App_2" customModuleProvider="target">
-                                <rect key="frame" x="32" y="207" width="311" height="226"/>
+                                <rect key="frame" x="32" y="251" width="311" height="226"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ina-rq-JA8" customClass="RoundableView" customModule="Saitynas_App_2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="226"/>
@@ -1943,6 +1972,7 @@
                             </hierarchicalColors>
                         </imageReference>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="GY0-p1-EOS"/>
                     <connections>
                         <outlet property="specialityPicker" destination="zfV-3R-gM5" id="02M-FE-5CW"/>
                         <outlet property="specialityToggle" destination="7VJ-st-guE" id="R9B-Cp-63n"/>
@@ -1950,7 +1980,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SE2-69-Asi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2428" y="1088"/>
+            <point key="canvasLocation" x="2428" y="1770"/>
         </scene>
         <!--Account-->
         <scene sceneID="Tjn-ps-o0f">
@@ -2047,7 +2077,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="VWv-Zk-Dgg" kind="relationship" relationship="viewControllers" id="kRa-tR-jIn"/>
-                        <segue destination="Ocf-J7-Avj" kind="relationship" relationship="viewControllers" id="eNe-Ll-Phh"/>
+                        <segue destination="dGN-Ka-veq" kind="relationship" relationship="viewControllers" id="U0f-Vt-3ai"/>
                         <segue destination="9HX-i5-qAb" kind="relationship" relationship="viewControllers" id="bJb-jQ-KvN"/>
                     </connections>
                 </tabBarController>
@@ -2488,6 +2518,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ER-lZ-VeN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3161" y="1770"/>
+        </scene>
+        <!--Consultations-->
+        <scene sceneID="Fop-XU-zQn">
+            <objects>
+                <navigationController id="dGN-Ka-veq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Consultations" id="Vxr-uW-hg3">
+                        <imageReference key="image" image="cross.circle" catalog="system" symbolScale="default" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="AccentColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="cross.circle" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="AccentColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W8e-dN-bfm">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ocf-J7-Avj" kind="relationship" relationship="rootViewController" id="5Ng-Ad-3jc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oi7-nZ-kIw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2428" y="1088"/>
         </scene>
         <!--Workplaces-->
         <scene sceneID="YsF-Vt-yN0">
