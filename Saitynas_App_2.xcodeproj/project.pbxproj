@@ -97,6 +97,9 @@
 		A0BCFCA42766B632009378BB /* ChangePasswordViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BCFCA32766B632009378BB /* ChangePasswordViewControllerProtocol.swift */; };
 		A0BCFCA62767E51D009378BB /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BCFCA52767E51D009378BB /* ReviewViewModel.swift */; };
 		A0BCFCA82767E79B009378BB /* EditReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BCFCA72767E79B009378BB /* EditReviewViewModel.swift */; };
+		A0C5EAC227E0EA4D0014D81D /* ConsultationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C5EAC127E0EA4D0014D81D /* ConsultationsViewController.swift */; };
+		A0C5EAC427E0F0C50014D81D /* ConsultationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C5EAC327E0F0C50014D81D /* ConsultationsViewModel.swift */; };
+		A0C5EAC627E0F4750014D81D /* UIPickerViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C5EAC527E0F4750014D81D /* UIPickerViewExtensions.swift */; };
 		A0DEB6BC2745423900EC62CB /* NullObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEB6BB2745423900EC62CB /* NullObject.swift */; };
 		A0DEB6BE274550C500EC62CB /* SpecialistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */; };
 		A0EA55CB27BDA1DE00B25C65 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA55CA27BDA1DE00B25C65 /* UserDefaultsStorage.swift */; };
@@ -222,6 +225,9 @@
 		A0BCFCA32766B632009378BB /* ChangePasswordViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewControllerProtocol.swift; sourceTree = "<group>"; };
 		A0BCFCA52767E51D009378BB /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
 		A0BCFCA72767E79B009378BB /* EditReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReviewViewModel.swift; sourceTree = "<group>"; };
+		A0C5EAC127E0EA4D0014D81D /* ConsultationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationsViewController.swift; sourceTree = "<group>"; };
+		A0C5EAC327E0F0C50014D81D /* ConsultationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationsViewModel.swift; sourceTree = "<group>"; };
+		A0C5EAC527E0F4750014D81D /* UIPickerViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPickerViewExtensions.swift; sourceTree = "<group>"; };
 		A0DEB6BB2745423900EC62CB /* NullObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullObject.swift; sourceTree = "<group>"; };
 		A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistDTO.swift; sourceTree = "<group>"; };
 		A0EA55CA27BDA1DE00B25C65 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
@@ -477,6 +483,15 @@
 			name = Networking;
 			sourceTree = "<group>";
 		};
+		A0C5EAC027E0EA340014D81D /* Consultations */ = {
+			isa = PBXGroup;
+			children = (
+				A0C5EAC127E0EA4D0014D81D /* ConsultationsViewController.swift */,
+				A0C5EAC327E0F0C50014D81D /* ConsultationsViewModel.swift */,
+			);
+			name = Consultations;
+			sourceTree = "<group>";
+		};
 		A0EA55D227BE7ABA00B25C65 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -497,6 +512,7 @@
 				A06179C62757C5B900ABBF82 /* UITableViewExtensions.swift */,
 				A08AD5E62764D7C1000C7EA8 /* UIAlertControllerExtensions.swift */,
 				A08AD5F02764E26D000C7EA8 /* UIButtonExtensions.swift */,
+				A0C5EAC527E0F4750014D81D /* UIPickerViewExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -603,9 +619,10 @@
 		A0EA55E427BF9E1D00B25C65 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A016FDB6274EF36400CB4011 /* Navigation */,
 				A0EA55D427BE7AF400B25C65 /* Authentication */,
 				A0EA55E627BF9EDE00B25C65 /* Profile Management */,
-				A016FDB6274EF36400CB4011 /* Navigation */,
+				A0C5EAC027E0EA340014D81D /* Consultations */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -932,6 +949,7 @@
 				A0A8396027BD5EAC00A54C2D /* User.swift in Sources */,
 				A0BCFCA82767E79B009378BB /* EditReviewViewModel.swift in Sources */,
 				A044726E274EFF14004292EE /* InputField.swift in Sources */,
+				A0C5EAC427E0F0C50014D81D /* ConsultationsViewModel.swift in Sources */,
 				A0BCFCA02766B340009378BB /* ChangePasswordViewController.swift in Sources */,
 				A07120DC27418D3B00B5A945 /* TokensDTO.swift in Sources */,
 				A0B9935827415DC800EA60B0 /* Bootstrapper.swift in Sources */,
@@ -946,6 +964,7 @@
 				A00CDEC0276016C500E1EA13 /* CreateReviewViewModel.swift in Sources */,
 				A07120EB2741ABA300B5A945 /* UserTokensRepository.swift in Sources */,
 				A0B4DA232741566800C0EC1F /* AppDelegate.swift in Sources */,
+				A0C5EAC227E0EA4D0014D81D /* ConsultationsViewController.swift in Sources */,
 				A07120DE27418D8D00B5A945 /* Role.swift in Sources */,
 				A0A857D2274EE91E000B133C /* JwtExtensions.swift in Sources */,
 				A08AD5EB2764DC63000C7EA8 /* AuthenticationViewControllerProtocol.swift in Sources */,
@@ -997,6 +1016,7 @@
 				A0B9936E274179A200EA60B0 /* ViewControllerIdentifier.swift in Sources */,
 				A0A8396227BD5F1E00A54C2D /* UserDTO.swift in Sources */,
 				A0A857CE274ED8F9000B133C /* EnumListDTO.swift in Sources */,
+				A0C5EAC627E0F4750014D81D /* UIPickerViewExtensions.swift in Sources */,
 				A0F48B6927452E1E00F54324 /* RoundableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
