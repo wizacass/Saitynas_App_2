@@ -64,6 +64,8 @@
 		A0A857D4274EF0AF000B133C /* UserTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857D3274EF0AF000B133C /* UserTabViewController.swift */; };
 		A0A857D6274EF1A6000B133C /* SpecialistTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A857D5274EF1A6000B133C /* SpecialistTabViewController.swift */; };
 		A0AADE1E276A3E380057972B /* SpecialistEvaluationsNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AADE1D276A3E380057972B /* SpecialistEvaluationsNavigationViewController.swift */; };
+		A0B26F5727E77C6400257931 /* RemoteNotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B26F5627E77C6400257931 /* RemoteNotificationsService.swift */; };
+		A0B26F5927E7804A00257931 /* ConsultationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B26F5827E7804A00257931 /* ConsultationViewController.swift */; };
 		A0B4DA232741566800C0EC1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA222741566800C0EC1F /* AppDelegate.swift */; };
 		A0B4DA252741566800C0EC1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA242741566800C0EC1F /* SceneDelegate.swift */; };
 		A0B4DA272741566800C0EC1F /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA262741566800C0EC1F /* AuthenticationViewController.swift */; };
@@ -97,6 +99,9 @@
 		A0BCFCA42766B632009378BB /* ChangePasswordViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BCFCA32766B632009378BB /* ChangePasswordViewControllerProtocol.swift */; };
 		A0BCFCA62767E51D009378BB /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BCFCA52767E51D009378BB /* ReviewViewModel.swift */; };
 		A0BCFCA82767E79B009378BB /* EditReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BCFCA72767E79B009378BB /* EditReviewViewModel.swift */; };
+		A0C5EAC227E0EA4D0014D81D /* ConsultationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C5EAC127E0EA4D0014D81D /* ConsultationsViewController.swift */; };
+		A0C5EAC427E0F0C50014D81D /* ConsultationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C5EAC327E0F0C50014D81D /* ConsultationsViewModel.swift */; };
+		A0C5EAC627E0F4750014D81D /* UIPickerViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C5EAC527E0F4750014D81D /* UIPickerViewExtensions.swift */; };
 		A0DEB6BC2745423900EC62CB /* NullObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEB6BB2745423900EC62CB /* NullObject.swift */; };
 		A0DEB6BE274550C500EC62CB /* SpecialistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */; };
 		A0EA55CB27BDA1DE00B25C65 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA55CA27BDA1DE00B25C65 /* UserDefaultsStorage.swift */; };
@@ -184,6 +189,8 @@
 		A0A857D3274EF0AF000B133C /* UserTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTabViewController.swift; sourceTree = "<group>"; };
 		A0A857D5274EF1A6000B133C /* SpecialistTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistTabViewController.swift; sourceTree = "<group>"; };
 		A0AADE1D276A3E380057972B /* SpecialistEvaluationsNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistEvaluationsNavigationViewController.swift; sourceTree = "<group>"; };
+		A0B26F5627E77C6400257931 /* RemoteNotificationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNotificationsService.swift; sourceTree = "<group>"; };
+		A0B26F5827E7804A00257931 /* ConsultationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationViewController.swift; sourceTree = "<group>"; };
 		A0B4DA1F2741566800C0EC1F /* Saitynas_App_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saitynas_App_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B4DA222741566800C0EC1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0B4DA242741566800C0EC1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +229,9 @@
 		A0BCFCA32766B632009378BB /* ChangePasswordViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewControllerProtocol.swift; sourceTree = "<group>"; };
 		A0BCFCA52767E51D009378BB /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
 		A0BCFCA72767E79B009378BB /* EditReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReviewViewModel.swift; sourceTree = "<group>"; };
+		A0C5EAC127E0EA4D0014D81D /* ConsultationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationsViewController.swift; sourceTree = "<group>"; };
+		A0C5EAC327E0F0C50014D81D /* ConsultationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationsViewModel.swift; sourceTree = "<group>"; };
+		A0C5EAC527E0F4750014D81D /* UIPickerViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPickerViewExtensions.swift; sourceTree = "<group>"; };
 		A0DEB6BB2745423900EC62CB /* NullObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullObject.swift; sourceTree = "<group>"; };
 		A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistDTO.swift; sourceTree = "<group>"; };
 		A0EA55CA27BDA1DE00B25C65 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
@@ -406,6 +416,7 @@
 				A07A3F422744F5E000B029DE /* State Management */,
 				A07120E52741A86D00B5A945 /* Storage */,
 				A0B99366274164FF00EA60B0 /* Networking */,
+				A0B26F5627E77C6400257931 /* RemoteNotificationsService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -477,6 +488,16 @@
 			name = Networking;
 			sourceTree = "<group>";
 		};
+		A0C5EAC027E0EA340014D81D /* Consultations */ = {
+			isa = PBXGroup;
+			children = (
+				A0C5EAC127E0EA4D0014D81D /* ConsultationsViewController.swift */,
+				A0C5EAC327E0F0C50014D81D /* ConsultationsViewModel.swift */,
+				A0B26F5827E7804A00257931 /* ConsultationViewController.swift */,
+			);
+			name = Consultations;
+			sourceTree = "<group>";
+		};
 		A0EA55D227BE7ABA00B25C65 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -497,6 +518,7 @@
 				A06179C62757C5B900ABBF82 /* UITableViewExtensions.swift */,
 				A08AD5E62764D7C1000C7EA8 /* UIAlertControllerExtensions.swift */,
 				A08AD5F02764E26D000C7EA8 /* UIButtonExtensions.swift */,
+				A0C5EAC527E0F4750014D81D /* UIPickerViewExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -603,9 +625,10 @@
 		A0EA55E427BF9E1D00B25C65 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A016FDB6274EF36400CB4011 /* Navigation */,
 				A0EA55D427BE7AF400B25C65 /* Authentication */,
 				A0EA55E627BF9EDE00B25C65 /* Profile Management */,
-				A016FDB6274EF36400CB4011 /* Navigation */,
+				A0C5EAC027E0EA340014D81D /* Consultations */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
@@ -932,6 +955,7 @@
 				A0A8396027BD5EAC00A54C2D /* User.swift in Sources */,
 				A0BCFCA82767E79B009378BB /* EditReviewViewModel.swift in Sources */,
 				A044726E274EFF14004292EE /* InputField.swift in Sources */,
+				A0C5EAC427E0F0C50014D81D /* ConsultationsViewModel.swift in Sources */,
 				A0BCFCA02766B340009378BB /* ChangePasswordViewController.swift in Sources */,
 				A07120DC27418D3B00B5A945 /* TokensDTO.swift in Sources */,
 				A0B9935827415DC800EA60B0 /* Bootstrapper.swift in Sources */,
@@ -946,6 +970,7 @@
 				A00CDEC0276016C500E1EA13 /* CreateReviewViewModel.swift in Sources */,
 				A07120EB2741ABA300B5A945 /* UserTokensRepository.swift in Sources */,
 				A0B4DA232741566800C0EC1F /* AppDelegate.swift in Sources */,
+				A0C5EAC227E0EA4D0014D81D /* ConsultationsViewController.swift in Sources */,
 				A07120DE27418D8D00B5A945 /* Role.swift in Sources */,
 				A0A857D2274EE91E000B133C /* JwtExtensions.swift in Sources */,
 				A08AD5EB2764DC63000C7EA8 /* AuthenticationViewControllerProtocol.swift in Sources */,
@@ -956,6 +981,8 @@
 				A0B9935D2741607F00EA60B0 /* ErrorDTO.swift in Sources */,
 				A04327C1275FE1DA00CDF63B /* EvaluationsTableViewController.swift in Sources */,
 				A06179C32757C47400ABBF82 /* WorkplaceTableVIewModel.swift in Sources */,
+				A0B26F5727E77C6400257931 /* RemoteNotificationsService.swift in Sources */,
+				A0B26F5927E7804A00257931 /* ConsultationViewController.swift in Sources */,
 				A0B9936A274166F000EA60B0 /* Communicator.swift in Sources */,
 				A044726A274EFD77004292EE /* ColorCode.swift in Sources */,
 				A04327C7276000E300CDF63B /* EvaluationsDTO.swift in Sources */,
@@ -997,6 +1024,7 @@
 				A0B9936E274179A200EA60B0 /* ViewControllerIdentifier.swift in Sources */,
 				A0A8396227BD5F1E00A54C2D /* UserDTO.swift in Sources */,
 				A0A857CE274ED8F9000B133C /* EnumListDTO.swift in Sources */,
+				A0C5EAC627E0F4750014D81D /* UIPickerViewExtensions.swift in Sources */,
 				A0F48B6927452E1E00F54324 /* RoundableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1178,6 +1206,7 @@
 				CODE_SIGN_ENTITLEMENTS = Saitynas_App_2/Saitynas_App_2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N5F2QJZLPH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Saitynas_App_2/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SaitynaiApp;
@@ -1208,6 +1237,7 @@
 				CODE_SIGN_ENTITLEMENTS = Saitynas_App_2/Saitynas_App_2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N5F2QJZLPH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Saitynas_App_2/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SaitynaiApp;

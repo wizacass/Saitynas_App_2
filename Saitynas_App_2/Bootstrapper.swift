@@ -26,6 +26,14 @@ class Bootstrapper {
         let jwtUser = JwtUser(tokensRepository)
         authenticationManager.subscribe(jwtUser)
 
-        return DIContainer(communicator, authenticationManager, jwtUser, userPreferences)
+        let notificationsService = RemoteNotificationsService(tokensRepository)
+
+        return DIContainer(
+            communicator,
+            authenticationManager,
+            jwtUser,
+            userPreferences,
+            notificationsService
+        )
     }
 }

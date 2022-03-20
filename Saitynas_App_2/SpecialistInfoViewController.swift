@@ -70,7 +70,7 @@ class SpecialistInfoViewController: AccessControllerBase {
     }
 }
 
-// MARK: - Role picker Data Source
+// MARK: - Speciality picker Data Source
 extension SpecialistInfoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
