@@ -1590,6 +1590,48 @@
             </objects>
             <point key="canvasLocation" x="1672.8" y="3152.9556650246309"/>
         </scene>
+        <!--Consultation View Controller-->
+        <scene sceneID="zC8-iu-14D">
+            <objects>
+                <viewController storyboardIdentifier="ConsultationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Pf-EU-4IA" customClass="ConsultationViewController" customModule="Saitynas_App_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PrP-JQ-GWw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consultation VIew" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHM-bP-9g0">
+                                <rect key="frame" x="66.666666666666686" y="387.66666666666669" width="242" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4G-ZP-EVE">
+                                <rect key="frame" x="89.666666666666686" y="682" width="196" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="VwO-CV-kXj"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="196" id="pLe-fx-MD4"/>
+                                </constraints>
+                                <color key="tintColor" name="ErrorColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="End Consultation"/>
+                                <connections>
+                                    <action selector="endConsultationPressed:" destination="7Pf-EU-4IA" eventType="touchUpInside" id="iXr-yy-ssR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q9c-7h-aoz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mHM-bP-9g0" firstAttribute="centerY" secondItem="PrP-JQ-GWw" secondAttribute="centerY" id="94u-2u-pxw"/>
+                            <constraint firstItem="mHM-bP-9g0" firstAttribute="centerX" secondItem="PrP-JQ-GWw" secondAttribute="centerX" id="H1F-wp-wYJ"/>
+                            <constraint firstItem="Q9c-7h-aoz" firstAttribute="bottom" secondItem="R4G-ZP-EVE" secondAttribute="bottom" constant="48" id="NTO-Ke-Kkw"/>
+                            <constraint firstItem="R4G-ZP-EVE" firstAttribute="centerX" secondItem="PrP-JQ-GWw" secondAttribute="centerX" id="xBQ-6M-Y5D"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CGe-u4-aqo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2428" y="3153"/>
+        </scene>
         <!--Evaluation Detail View Controller-->
         <scene sceneID="2cW-Lf-6kn">
             <objects>
@@ -2991,22 +3033,22 @@
             <size key="intrinsicContentSize" width="78" height="34.333333333333336"/>
         </designable>
         <designable name="BZn-rX-GvR">
-            <size key="intrinsicContentSize" width="20" height="17"/>
+            <size key="intrinsicContentSize" width="4" height="17"/>
         </designable>
         <designable name="Bo4-Pz-aOE">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="KPn-eK-Ptt">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="O57-P1-4Wd">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="P0E-k2-5Dm">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="SXb-AA-odS">
-            <size key="intrinsicContentSize" width="20" height="17"/>
+            <size key="intrinsicContentSize" width="4" height="17"/>
         </designable>
         <designable name="TQo-76-sKp">
             <size key="intrinsicContentSize" width="139.66666666666666" height="31"/>
@@ -3015,28 +3057,28 @@
             <size key="intrinsicContentSize" width="81.666666666666671" height="34.333333333333336"/>
         </designable>
         <designable name="Z4i-JR-CHq">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="ZGp-5D-ofx">
-            <size key="intrinsicContentSize" width="20" height="17"/>
+            <size key="intrinsicContentSize" width="4" height="17"/>
         </designable>
         <designable name="hCJ-cG-x8x">
-            <size key="intrinsicContentSize" width="20" height="17"/>
+            <size key="intrinsicContentSize" width="4" height="17"/>
         </designable>
         <designable name="hiz-am-BgN">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="jXq-vS-IGC">
             <size key="intrinsicContentSize" width="78" height="34.333333333333336"/>
         </designable>
         <designable name="m2b-o6-why">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="mND-I9-sCK">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="wPs-5J-iXC">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>

@@ -4,6 +4,7 @@ class UserTokensRepository {
 
     private let accessTokenKey = "access_token"
     private let refreshTokenKey = "refresh_token"
+    private let deviceTokenKey = "device_token"
 
     private var storage: KeyValueStorageProtocol
 
@@ -30,6 +31,17 @@ class UserTokensRepository {
         set(token) {
             guard let token = token else { return }
             storage.set(token, for: refreshTokenKey)
+        }
+    }
+
+    var deviceToken: String? {
+        get {
+            return storage.getString(deviceTokenKey)
+        }
+
+        set(token) {
+            guard let token = token else { return }
+            storage.set(token, for: deviceTokenKey)
         }
     }
 
