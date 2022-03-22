@@ -111,6 +111,29 @@ extension Communicator {
     }
 }
 
+// MARK: - Consultations
+extension Communicator {
+    func requestConsultation(
+        _ deviceToken: String,
+        _ specialityId: Int?,
+        onSuccess: @escaping (NullObject?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/consultations"
+        var body: [String: Any] = [
+            "device_token": deviceToken
+        ]
+
+        if let specialityId = specialityId {
+            body["speciality_id"] = specialityId
+        }
+
+        apiClient.post(endpoint, body, onSuccess, { [weak self] error in
+            self?.retryPostRequest(endpoint, body, error, onSuccess, onError: handleError)
+        })
+    }
+}
+
 // MARK: - Workplaces
 extension Communicator {
     func getWorkplaces(

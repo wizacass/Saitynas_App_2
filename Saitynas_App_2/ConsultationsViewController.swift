@@ -6,6 +6,7 @@ class ConsultationsViewController: UIViewController {
     @IBOutlet weak var specialityPicker: UIPickerView!
 
     private var viewModel: ConsultationsViewModel!
+    private var consultationsService: ConsultationsService?
 
     private let id = UUID()
 
@@ -21,6 +22,7 @@ class ConsultationsViewController: UIViewController {
         let c = DIContainer.shared
 
         viewModel = ConsultationsViewModel(c.communicator)
+        consultationsService = c.consultationsService
 
         specialityPicker.delegate = self
         specialityPicker.dataSource = self
@@ -48,11 +50,13 @@ class ConsultationsViewController: UIViewController {
     }
 
     @IBAction func searchButtonPressed(_ sender: PrimaryButton) {
-        let specialist = specialityToggle.selectedSegmentIndex == 0 ?
-            "any specialist" :
-            viewModel.speciality[viewModel.selectedSpecialityIndex].name
+        var specialityId: Int?
 
-        print("Searching for \(specialist)")
+        if specialityToggle.selectedSegmentIndex != 0 {
+            specialityId = viewModel.speciality[viewModel.selectedSpecialityIndex].id
+        }
+
+        consultationsService?.requestConsultation(specialityId)
     }
 }
 
