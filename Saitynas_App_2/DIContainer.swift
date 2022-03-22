@@ -13,18 +13,21 @@ class DIContainer {
     let jwtUser: JwtUser
     let preferences: UserPreferences
     let notificationsService: RemoteNotificationsService
+    let consultationsService: ConsultationsService
 
     init(
         _ communicator: Communicator,
         _ authenticationManager: AuthenticationManager,
         _ jwtUser: JwtUser,
         _ preferences: UserPreferences,
-        _ notificationsService: RemoteNotificationsService
+        _ notificationsService: RemoteNotificationsService,
+        _ consultationsService: ConsultationsService
     ) {
         self.communicator = communicator
         self.authenticationManager = authenticationManager
         self.jwtUser = jwtUser
         self.preferences = preferences
         self.notificationsService = notificationsService
+        self.consultationsService = consultationsService
     }
 }

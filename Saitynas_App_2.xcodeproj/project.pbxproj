@@ -17,6 +17,7 @@
 		A023652727DE5C7600A1DDCE /* CreateSpecialistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A023652627DE5C7600A1DDCE /* CreateSpecialistDTO.swift */; };
 		A02D6974274F05C70016B48D /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D6973274F05C70016B48D /* ShadowView.swift */; };
 		A02D6976274FDE970016B48D /* AccessControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02D6975274FDE960016B48D /* AccessControllerBase.swift */; };
+		A032207F27E8F8DA00C1DF16 /* ConsultationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A032207E27E8F8DA00C1DF16 /* ConsultationsService.swift */; };
 		A04327C1275FE1DA00CDF63B /* EvaluationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04327C0275FE1DA00CDF63B /* EvaluationsTableViewController.swift */; };
 		A04327C3275FFDE900CDF63B /* EvaluationsTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04327C2275FFDE900CDF63B /* EvaluationsTableViewModel.swift */; };
 		A04327C52760006B00CDF63B /* Evaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04327C42760006B00CDF63B /* Evaluation.swift */; };
@@ -142,6 +143,7 @@
 		A023652627DE5C7600A1DDCE /* CreateSpecialistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSpecialistDTO.swift; sourceTree = "<group>"; };
 		A02D6973274F05C70016B48D /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		A02D6975274FDE960016B48D /* AccessControllerBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessControllerBase.swift; sourceTree = "<group>"; };
+		A032207E27E8F8DA00C1DF16 /* ConsultationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationsService.swift; sourceTree = "<group>"; };
 		A04327C0275FE1DA00CDF63B /* EvaluationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationsTableViewController.swift; sourceTree = "<group>"; };
 		A04327C2275FFDE900CDF63B /* EvaluationsTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationsTableViewModel.swift; sourceTree = "<group>"; };
 		A04327C42760006B00CDF63B /* Evaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evaluation.swift; sourceTree = "<group>"; };
@@ -494,6 +496,7 @@
 				A0C5EAC127E0EA4D0014D81D /* ConsultationsViewController.swift */,
 				A0C5EAC327E0F0C50014D81D /* ConsultationsViewModel.swift */,
 				A0B26F5827E7804A00257931 /* ConsultationViewController.swift */,
+				A032207E27E8F8DA00C1DF16 /* ConsultationsService.swift */,
 			);
 			name = Consultations;
 			sourceTree = "<group>";
@@ -959,6 +962,7 @@
 				A0BCFCA02766B340009378BB /* ChangePasswordViewController.swift in Sources */,
 				A07120DC27418D3B00B5A945 /* TokensDTO.swift in Sources */,
 				A0B9935827415DC800EA60B0 /* Bootstrapper.swift in Sources */,
+				A032207F27E8F8DA00C1DF16 /* ConsultationsService.swift in Sources */,
 				A0DEB6BC2745423900EC62CB /* NullObject.swift in Sources */,
 				A0EA55CD27BDA33900B25C65 /* UserPreferences.swift in Sources */,
 				A08AD5F12764E26D000C7EA8 /* UIButtonExtensions.swift in Sources */,
