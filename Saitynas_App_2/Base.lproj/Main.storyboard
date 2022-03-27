@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2KJ-eN-vWd">
-    <device id="retina5_9" orientation="portrait" appearance="dark"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -2095,8 +2095,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6YR-ON-uWU">
                                                 <rect key="frame" x="12" y="49" width="287" height="40"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKh-56-qDF">
-                                                        <rect key="frame" x="61" y="11.666666666666657" width="43.333333333333343" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKh-56-qDF">
+                                                        <rect key="frame" x="61" y="11.666666666666657" width="63.333333333333343" height="17"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2191,6 +2191,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="activityStatusLabel" destination="tKh-56-qDF" id="JLD-eG-W4m"/>
+                        <outlet property="activitySwitch" destination="Ong-w5-srX" id="HYg-Sr-Uo0"/>
                         <outlet property="activityToggleView" destination="6NV-1B-KVu" id="gTW-Pu-pfE"/>
                         <outlet property="emailLabel" destination="CMN-34-X4s" id="ZIg-WH-yUr"/>
                     </connections>
@@ -3124,22 +3125,22 @@
             <size key="intrinsicContentSize" width="78" height="34.333333333333336"/>
         </designable>
         <designable name="BZn-rX-GvR">
-            <size key="intrinsicContentSize" width="20" height="17"/>
+            <size key="intrinsicContentSize" width="4" height="17"/>
         </designable>
         <designable name="Bo4-Pz-aOE">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="KPn-eK-Ptt">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="O57-P1-4Wd">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="P0E-k2-5Dm">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="SXb-AA-odS">
-            <size key="intrinsicContentSize" width="20" height="17"/>
+            <size key="intrinsicContentSize" width="4" height="17"/>
         </designable>
         <designable name="TQo-76-sKp">
             <size key="intrinsicContentSize" width="139.66666666666666" height="31"/>
@@ -3148,28 +3149,28 @@
             <size key="intrinsicContentSize" width="81.666666666666671" height="34.333333333333336"/>
         </designable>
         <designable name="Z4i-JR-CHq">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="ZGp-5D-ofx">
-            <size key="intrinsicContentSize" width="20" height="17"/>
+            <size key="intrinsicContentSize" width="4" height="17"/>
         </designable>
         <designable name="hCJ-cG-x8x">
-            <size key="intrinsicContentSize" width="20" height="17"/>
+            <size key="intrinsicContentSize" width="4" height="17"/>
         </designable>
         <designable name="hiz-am-BgN">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="jXq-vS-IGC">
             <size key="intrinsicContentSize" width="78" height="34.333333333333336"/>
         </designable>
         <designable name="m2b-o6-why">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="mND-I9-sCK">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
         <designable name="wPs-5J-iXC">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="4" height="18.666666666666668"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
