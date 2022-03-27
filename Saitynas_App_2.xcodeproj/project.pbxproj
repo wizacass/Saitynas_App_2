@@ -33,6 +33,8 @@
 		A06179C92757C6D400ABBF82 /* Workplace.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179C82757C6D400ABBF82 /* Workplace.swift */; };
 		A06179CB2757C70300ABBF82 /* WorkplacesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179CA2757C70300ABBF82 /* WorkplacesDTO.swift */; };
 		A06179CD2757C98300ABBF82 /* ApiClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179CC2757C98300ABBF82 /* ApiClientProtocol.swift */; };
+		A062833627F0B6FD000B3A4B /* GetEnumDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062833527F0B6FD000B3A4B /* GetEnumDTO.swift */; };
+		A062833B27F0BB2A000B3A4B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062833A27F0BB2A000B3A4B /* SettingsViewModel.swift */; };
 		A07120DA27418CE600B5A945 /* AccessCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120D927418CE600B5A945 /* AccessCommunicator.swift */; };
 		A07120DC27418D3B00B5A945 /* TokensDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120DB27418D3B00B5A945 /* TokensDTO.swift */; };
 		A07120DE27418D8D00B5A945 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120DD27418D8D00B5A945 /* Role.swift */; };
@@ -159,6 +161,8 @@
 		A06179C82757C6D400ABBF82 /* Workplace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workplace.swift; sourceTree = "<group>"; };
 		A06179CA2757C70300ABBF82 /* WorkplacesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkplacesDTO.swift; sourceTree = "<group>"; };
 		A06179CC2757C98300ABBF82 /* ApiClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientProtocol.swift; sourceTree = "<group>"; };
+		A062833527F0B6FD000B3A4B /* GetEnumDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEnumDTO.swift; sourceTree = "<group>"; };
+		A062833A27F0BB2A000B3A4B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		A07120D927418CE600B5A945 /* AccessCommunicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCommunicator.swift; sourceTree = "<group>"; };
 		A07120DB27418D3B00B5A945 /* TokensDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensDTO.swift; sourceTree = "<group>"; };
 		A07120DD27418D8D00B5A945 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
@@ -298,6 +302,15 @@
 			name = Navigation;
 			sourceTree = "<group>";
 		};
+		A062833927F0BB11000B3A4B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A062833A27F0BB2A000B3A4B /* SettingsViewModel.swift */,
+				A0B9937127417A0800EA60B0 /* SettingsViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		A07120E52741A86D00B5A945 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,7 +413,6 @@
 		A0B993502741598800EA60B0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A0B9937127417A0800EA60B0 /* SettingsViewController.swift */,
 				A07120ED2741CC2C00B5A945 /* SpecialistTableViewController.swift */,
 				A06179C02757C3FE00ABBF82 /* WorkplaceTableViewController.swift */,
 				A0B9937B2741831200EA60B0 /* SpecialistViewController.swift */,
@@ -443,8 +455,9 @@
 				A07A3F402741CD5B00B029DE /* Specialist.swift */,
 				A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */,
 				A023652627DE5C7600A1DDCE /* CreateSpecialistDTO.swift */,
-				A0A857CB274ED83F000B133C /* EnumDTO.swift */,
+				A062833527F0B6FD000B3A4B /* GetEnumDTO.swift */,
 				A0A857CD274ED8F9000B133C /* EnumListDTO.swift */,
+				A0A857CB274ED83F000B133C /* EnumDTO.swift */,
 				A06179C82757C6D400ABBF82 /* Workplace.swift */,
 				A06179CA2757C70300ABBF82 /* WorkplacesDTO.swift */,
 				A04327C42760006B00CDF63B /* Evaluation.swift */,
@@ -628,6 +641,7 @@
 		A0EA55E427BF9E1D00B25C65 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A062833927F0BB11000B3A4B /* Settings */,
 				A016FDB6274EF36400CB4011 /* Navigation */,
 				A0EA55D427BE7AF400B25C65 /* Authentication */,
 				A0EA55E627BF9EDE00B25C65 /* Profile Management */,
@@ -952,6 +966,7 @@
 				A0DEB6BE274550C500EC62CB /* SpecialistDTO.swift in Sources */,
 				A07120E72741A88D00B5A945 /* KeyValueStorageProtocol.swift in Sources */,
 				A044726C274EFDB7004292EE /* UIColorExtensions.swift in Sources */,
+				A062833B27F0BB2A000B3A4B /* SettingsViewModel.swift in Sources */,
 				A0A8395E27BD59FD00A54C2D /* PatientInfoViewController.swift in Sources */,
 				A023652727DE5C7600A1DDCE /* CreateSpecialistDTO.swift in Sources */,
 				A0A857D4274EF0AF000B133C /* UserTabViewController.swift in Sources */,
@@ -1006,6 +1021,7 @@
 				A0B993682741650A00EA60B0 /* ApiClient.swift in Sources */,
 				A0447268274EFCAF004292EE /* ButtonWithShadow.swift in Sources */,
 				A0B9937A274182E100EA60B0 /* PatientTabViewController.swift in Sources */,
+				A062833627F0B6FD000B3A4B /* GetEnumDTO.swift in Sources */,
 				A0BCFCA62767E51D009378BB /* ReviewViewModel.swift in Sources */,
 				A02D6974274F05C70016B48D /* ShadowView.swift in Sources */,
 				A08AD5EF2764DD71000C7EA8 /* PrimaryButton.swift in Sources */,

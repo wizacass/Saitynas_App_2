@@ -37,6 +37,13 @@ class AccessCommunicator {
 
         apiClient.post("/signup", body, onSuccess, onError)
     }
+
+    func logout(
+        onSuccess: @escaping (NullObject?) -> Void,
+        onError: @escaping (ErrorDTO?) -> Void
+    ) {
+        apiClient.post("/logout", [:], onSuccess, onError)
+    }
     
     func refreshTokens(
         _ refreshToken: String,

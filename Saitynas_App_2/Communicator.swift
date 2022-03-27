@@ -91,6 +91,19 @@ extension Communicator {
     }
 }
 
+// MARK: - Activity Status
+extension Communicator {
+    func getActivityStatuses (
+        onSuccess: @escaping (EnumListDTO?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/activityStatuses"
+        apiClient.get(endpoint, onSuccess, onError: { [weak self] error in
+            self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
+        })
+    }
+}
+
 // MARK: - Patients
 extension Communicator {
     func createPatient(
@@ -219,6 +232,31 @@ extension Communicator {
             self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
         })
     }
+
+    func getMyActivityStatus (
+        onSuccess: @escaping (GetEnumDTO?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/users/me/status"
+        apiClient.get(endpoint, onSuccess, onError: { [weak self] error in
+            self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
+        })
+    }
+
+    func updateMyActivityStatus (
+        _ statusId: Int,
+        onSuccess: @escaping (NullObject?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/users/me/status"
+        let body: [String: Any] = [
+            "specialistStatus": statusId
+        ]
+
+        apiClient.put(endpoint, body, onSuccess, { [weak self] error in
+            self?.retryPutRequest(endpoint, body, error, onSuccess, onError: handleError)
+        })
+    }
 }
 
 // MARK: - Requests retry
@@ -248,6 +286,22 @@ extension Communicator {
         if error?.type == 401 {
             authenticationManager.refreshTokens(onSuccess: { [weak self] in
                 self?.apiClient.post(endpoint, body, onSuccess, handleError)
+            }, onError: handleError)
+        } else {
+            DispatchQueue.main.async { handleError(error) }
+        }
+    }
+
+    private func retryPutRequest<T: Decodable>(
+        _ endpoint: String,
+        _ body: [String: Any],
+        _ error: ErrorDTO?,
+        _ onSuccess: @escaping (T?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        if error?.type == 401 {
+            authenticationManager.refreshTokens(onSuccess: { [weak self] in
+                self?.apiClient.put(endpoint, body, onSuccess, handleError)
             }, onError: handleError)
         } else {
             DispatchQueue.main.async { handleError(error) }

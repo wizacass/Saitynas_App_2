@@ -104,6 +104,12 @@ class AuthenticationManager {
     }
 
     func logout() {
+        communicator.logout(onSuccess: handleLogout, onError: { error in
+            print("Error in logging out: \(error?.title ?? "FATAL ERROR")")
+        })
+    }
+
+    private func handleLogout(_ data: NullObject?) {
         repository.clearAll()
         userPreferences.clearAll()
 
