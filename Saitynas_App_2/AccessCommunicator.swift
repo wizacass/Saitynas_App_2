@@ -42,7 +42,10 @@ class AccessCommunicator {
         onSuccess: @escaping (NullObject?) -> Void,
         onError: @escaping (ErrorDTO?) -> Void
     ) {
-        apiClient.post("/logout", [:], onSuccess, onError)
+        apiClient.post("/logout", [:], onSuccess) { error in
+            DispatchQueue.main.async { onSuccess(nil) }
+            onError(error)
+        }
     }
     
     func refreshTokens(
