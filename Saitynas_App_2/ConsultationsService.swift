@@ -39,4 +39,18 @@ class ConsultationsService {
             print("Error in cancelling consultation: \(error?.title ?? "FATAL ERROR")")
         })
     }
+
+    func endConsultation(onSuccess: @escaping () -> Void) {
+        guard
+            let consultationId = userPreferences.consultationId,
+            let deviceToken = tokensRepository.deviceToken
+        else { return }
+
+        communicator.endConsultation(consultationId, deviceToken, onSuccess: { [weak self] _ in
+            self?.userPreferences.consultationId = nil
+            onSuccess()
+        }, onError: { error in
+            print("Error in ending consultation: \(error?.title ?? "FATAL ERROR")")
+        })
+    }
 }
