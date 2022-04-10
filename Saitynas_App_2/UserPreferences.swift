@@ -3,6 +3,7 @@ import Foundation
 class UserPreferences {
 
     private let hasProfileKey = "has_profile"
+    private let consultationIdKey = "consultation_id"
 
     private var storage: KeyValueStorageProtocol
 
@@ -20,7 +21,22 @@ class UserPreferences {
         }
     }
 
+    var consultationId: Int? {
+        get {
+            return storage.getInt(consultationIdKey)
+        }
+
+        set(value) {
+            if let value = value {
+                storage.set(value, for: consultationIdKey)
+            } else {
+                storage.delete(consultationIdKey)
+            }
+        }
+    }
+
     func clearAll() {
         storage.delete(hasProfileKey)
+        storage.delete(consultationIdKey)
     }
 }
