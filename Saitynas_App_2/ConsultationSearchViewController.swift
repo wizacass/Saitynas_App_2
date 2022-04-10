@@ -3,13 +3,21 @@ import UIKit
 class ConsultationSearchViewController: UIViewController {
 
     private var notificationService: RemoteNotificationsService?
+    private var consultationsService: ConsultationsService?
 
     private let id = UUID()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        notificationService = DIContainer.shared.notificationsService
+        initialize()
+    }
+
+    private func initialize() {
+        let c = DIContainer.shared
+
+        notificationService = c.notificationsService
+        consultationsService = c.consultationsService
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -24,6 +32,12 @@ class ConsultationSearchViewController: UIViewController {
 
         navigationController?.setNavigationBarHidden(false, animated: animated)
         notificationService?.unsubscribe(self)
+    }
+
+    @IBAction func cancelButtonPressed(_ sender: UIButton) {
+        consultationsService?.cancelConsultation { [weak self] in
+            self?.navigationController?.popViewController(animated: true)
+        }
     }
 }
 

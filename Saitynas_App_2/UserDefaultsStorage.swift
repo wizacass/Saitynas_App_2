@@ -1,7 +1,6 @@
 import Foundation
 
 class UserDefaultsStorage: KeyValueStorageProtocol {
-
     private let settings = UserDefaults.standard
 
     func getString(_ key: String) -> String? {
@@ -14,11 +13,19 @@ class UserDefaultsStorage: KeyValueStorageProtocol {
         return settings.bool(forKey: key)
     }
 
+    func getInt(_ key: String) -> Int? {
+        return settings.integer(forKey: key)
+    }
+
     func set(_ value: String, for key: String) {
         settings.set(value, forKey: key)
     }
 
     func set(_ value: Bool, for key: String) {
+        settings.set(value, forKey: key)
+    }
+
+    func set(_ value: Int, for key: String) {
         settings.set(value, forKey: key)
     }
 

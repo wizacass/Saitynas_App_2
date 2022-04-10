@@ -71,6 +71,8 @@
 		A0AADE1E276A3E380057972B /* SpecialistEvaluationsNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AADE1D276A3E380057972B /* SpecialistEvaluationsNavigationViewController.swift */; };
 		A0B26F5727E77C6400257931 /* RemoteNotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B26F5627E77C6400257931 /* RemoteNotificationsService.swift */; };
 		A0B26F5927E7804A00257931 /* ConsultationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B26F5827E7804A00257931 /* ConsultationViewController.swift */; };
+		A0B34467280367E900A0CD53 /* IdDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B34466280367E900A0CD53 /* IdDto.swift */; };
+		A0B344692803685C00A0CD53 /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B344682803685C00A0CD53 /* Id.swift */; };
 		A0B4DA232741566800C0EC1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA222741566800C0EC1F /* AppDelegate.swift */; };
 		A0B4DA252741566800C0EC1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA242741566800C0EC1F /* SceneDelegate.swift */; };
 		A0B4DA272741566800C0EC1F /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B4DA262741566800C0EC1F /* AuthenticationViewController.swift */; };
@@ -201,6 +203,8 @@
 		A0AADE1D276A3E380057972B /* SpecialistEvaluationsNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistEvaluationsNavigationViewController.swift; sourceTree = "<group>"; };
 		A0B26F5627E77C6400257931 /* RemoteNotificationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNotificationsService.swift; sourceTree = "<group>"; };
 		A0B26F5827E7804A00257931 /* ConsultationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationViewController.swift; sourceTree = "<group>"; };
+		A0B34466280367E900A0CD53 /* IdDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdDto.swift; sourceTree = "<group>"; };
+		A0B344682803685C00A0CD53 /* Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
 		A0B4DA1F2741566800C0EC1F /* Saitynas_App_2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saitynas_App_2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0B4DA222741566800C0EC1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0B4DA242741566800C0EC1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -469,6 +473,8 @@
 				A0A8395F27BD5EAC00A54C2D /* User.swift */,
 				A0A8396127BD5F1E00A54C2D /* UserDTO.swift */,
 				A0EA55D027BE6F8C00B25C65 /* Patient.swift */,
+				A0B34466280367E900A0CD53 /* IdDto.swift */,
+				A0B344682803685C00A0CD53 /* Id.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -513,8 +519,8 @@
 				A0C5EAC127E0EA4D0014D81D /* ConsultationsViewController.swift */,
 				A0C5EAC327E0F0C50014D81D /* ConsultationsViewModel.swift */,
 				A0B26F5827E7804A00257931 /* ConsultationViewController.swift */,
-				A032207E27E8F8DA00C1DF16 /* ConsultationsService.swift */,
 				A057551627F492D300B148F6 /* ConsultationSearchViewController.swift */,
+				A032207E27E8F8DA00C1DF16 /* ConsultationsService.swift */,
 			);
 			name = Consultations;
 			sourceTree = "<group>";
@@ -1009,6 +1015,7 @@
 				A06179C32757C47400ABBF82 /* WorkplaceTableVIewModel.swift in Sources */,
 				A0B26F5727E77C6400257931 /* RemoteNotificationsService.swift in Sources */,
 				A0B26F5927E7804A00257931 /* ConsultationViewController.swift in Sources */,
+				A0B34467280367E900A0CD53 /* IdDto.swift in Sources */,
 				A0B9936A274166F000EA60B0 /* Communicator.swift in Sources */,
 				A044726A274EFD77004292EE /* ColorCode.swift in Sources */,
 				A04327C7276000E300CDF63B /* EvaluationsDTO.swift in Sources */,
@@ -1054,6 +1061,7 @@
 				A0A857CE274ED8F9000B133C /* EnumListDTO.swift in Sources */,
 				A0C5EAC627E0F4750014D81D /* UIPickerViewExtensions.swift in Sources */,
 				A0F48B6927452E1E00F54324 /* RoundableView.swift in Sources */,
+				A0B344692803685C00A0CD53 /* Id.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

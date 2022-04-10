@@ -1,5 +1,6 @@
 import Foundation
 
+// swiftlint:disable file_length
 class Communicator {
 
     private var apiClient: ApiClientProtocol
@@ -129,17 +130,34 @@ extension Communicator {
     func requestConsultation(
         _ deviceToken: String,
         _ specialityId: Int?,
-        onSuccess: @escaping (NullObject?) -> Void,
+        onSuccess: @escaping (IdDto?) -> Void,
         onError handleError: @escaping (ErrorDTO?) -> Void
     ) {
         let endpoint = "/consultations"
         var body: [String: Any] = [
-            "device_token": deviceToken
+            "deviceToken": deviceToken
         ]
 
         if let specialityId = specialityId {
-            body["speciality_id"] = specialityId
+            body["specialityId"] = specialityId
         }
+
+        apiClient.post(endpoint, body, onSuccess, { [weak self] error in
+            self?.retryPostRequest(endpoint, body, error, onSuccess, onError: handleError)
+        })
+    }
+
+    func cancelConsultation(
+        _ consultationId: Int,
+        _ deviceToken: String,
+        onSuccess: @escaping (NullObject?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/consultations/cancel"
+        let body: [String: Any] = [
+            "consultationId": consultationId,
+            "deviceToken": deviceToken
+        ]
 
         apiClient.post(endpoint, body, onSuccess, { [weak self] error in
             self?.retryPostRequest(endpoint, body, error, onSuccess, onError: handleError)

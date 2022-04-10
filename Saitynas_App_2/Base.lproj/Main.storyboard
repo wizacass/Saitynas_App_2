@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2KJ-eN-vWd">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -129,21 +129,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="550" y="348"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="RQy-lz-Kg9">
-            <objects>
-                <viewController id="QbM-3y-ts1" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gO6-Pm-jrJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Qpc-20-MQN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lmu-e5-vrs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1075" y="1527"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="PWM-cw-fEy">
@@ -1209,11 +1194,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGC-IG-LkO">
+                                <rect key="frame" x="89.666666666666686" y="682" width="196" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="196" id="OZl-Hn-IV4"/>
+                                    <constraint firstAttribute="height" constant="48" id="dyl-NN-bzj"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Cancel Search"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="nAw-sE-y11" eventType="touchUpInside" id="0en-5Y-t0Y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PjK-d5-IKl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pQH-c9-v2w" firstAttribute="top" secondItem="PjK-d5-IKl" secondAttribute="top" constant="32" id="BJY-rL-XQ4"/>
+                            <constraint firstItem="PjK-d5-IKl" firstAttribute="bottom" secondItem="hGC-IG-LkO" secondAttribute="bottom" constant="48" id="IvO-q5-pGh"/>
+                            <constraint firstItem="hGC-IG-LkO" firstAttribute="centerX" secondItem="Sad-lA-rHQ" secondAttribute="centerX" id="JzB-xy-34p"/>
                             <constraint firstItem="pQH-c9-v2w" firstAttribute="centerX" secondItem="Sad-lA-rHQ" secondAttribute="centerX" id="i94-da-ic6"/>
                         </constraints>
                     </view>
@@ -1617,16 +1616,27 @@
                                     <action selector="endConsultationPressed:" destination="7Pf-EU-4IA" eventType="touchUpInside" id="iXr-yy-ssR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Os-pR-e6t">
+                                <rect key="frame" x="156" y="440.66666666666669" width="63.333333333333343" height="17"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q9c-7h-aoz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="mHM-bP-9g0" firstAttribute="centerY" secondItem="PrP-JQ-GWw" secondAttribute="centerY" id="94u-2u-pxw"/>
+                            <constraint firstItem="4Os-pR-e6t" firstAttribute="top" secondItem="mHM-bP-9g0" secondAttribute="bottom" constant="16" id="CWM-qo-84v"/>
                             <constraint firstItem="mHM-bP-9g0" firstAttribute="centerX" secondItem="PrP-JQ-GWw" secondAttribute="centerX" id="H1F-wp-wYJ"/>
                             <constraint firstItem="Q9c-7h-aoz" firstAttribute="bottom" secondItem="R4G-ZP-EVE" secondAttribute="bottom" constant="48" id="NTO-Ke-Kkw"/>
+                            <constraint firstItem="4Os-pR-e6t" firstAttribute="centerX" secondItem="PrP-JQ-GWw" secondAttribute="centerX" id="pAw-pi-rDO"/>
                             <constraint firstItem="R4G-ZP-EVE" firstAttribute="centerX" secondItem="PrP-JQ-GWw" secondAttribute="centerX" id="xBQ-6M-Y5D"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="consultationIdLabel" destination="4Os-pR-e6t" id="hQA-Ev-E3T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGe-u4-aqo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

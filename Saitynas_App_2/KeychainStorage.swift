@@ -12,6 +12,14 @@ class KeychainStorage: KeyValueStorageProtocol {
     func getBool(_ key: String) -> Bool {
         return keychain.getBool(key) ?? false
     }
+
+    func getInt(_ key: String) -> Int? {
+        if let value = keychain.get(key) {
+            return Int(value)
+        }
+
+        return nil
+    }
     
     func set(_ value: String, for key: String) {
         keychain.set(value, forKey: key)
@@ -19,6 +27,10 @@ class KeychainStorage: KeyValueStorageProtocol {
 
     func set(_ value: Bool, for key: String) {
         keychain.set(value, forKey: key)
+    }
+
+    func set(_ value: Int, for key: String) {
+        keychain.set(String(value), forKey: key)
     }
     
     func delete(_ key: String) {

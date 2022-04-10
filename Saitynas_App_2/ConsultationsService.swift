@@ -4,10 +4,12 @@ class ConsultationsService {
 
     private var communicator: Communicator
     private var tokensRepository: UserTokensRepository
+    private var userPreferences: UserPreferences
 
-    init(_ communicator: Communicator, _ tokensRepository: UserTokensRepository) {
+    init(_ communicator: Communicator, _ tokensRepository: UserTokensRepository, _ userPreferences: UserPreferences) {
         self.communicator = communicator
         self.tokensRepository = tokensRepository
+        self.userPreferences = userPreferences
     }
 
     func requestConsultation(_ specialityId: Int? = nil, onSuccess: @escaping () -> Void) {
@@ -16,13 +18,25 @@ class ConsultationsService {
         communicator.requestConsultation(
             deviceToken,
             specialityId,
-            onSuccess: { _ in onSuccess() },
-            onError: { error in
+            onSuccess: { [weak self] dto in
+                self?.userPreferences.consultationId = dto?.data.id
+                onSuccess()
+            }, onError: { error in
                 print("Error in requesting consultation: \(error?.title ?? "FATAL ERROR")")
             })
     }
+    
+    func cancelConsultation(onSuccess: @escaping () -> Void) {
+        guard
+            let consultationId = userPreferences.consultationId,
+            let deviceToken = tokensRepository.deviceToken
+        else { return }
 
-    private func handleConsultationRequested(_ data: NullObject?) {
-        print("Consultation queued!")
+        communicator.cancelConsultation(consultationId, deviceToken, onSuccess: { [weak self] _ in
+            self?.userPreferences.consultationId = nil
+            onSuccess()
+        }, onError: { error in
+            print("Error in cancelling consultation: \(error?.title ?? "FATAL ERROR")")
+        })
     }
 }
