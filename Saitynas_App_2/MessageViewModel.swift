@@ -31,7 +31,7 @@ class MessageViewModel {
     }
     
     func loadMessage() {
-        communicator.getMessage() { [weak self] messageDto in
+        communicator.getMessage { [weak self] messageDto in
             if let message = messageDto?.data.message {
                 self?.message = message
             } else {

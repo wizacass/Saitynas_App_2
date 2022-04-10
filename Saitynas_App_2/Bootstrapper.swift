@@ -28,7 +28,7 @@ class Bootstrapper {
 
         let notificationsService = RemoteNotificationsService(tokensRepository)
 
-        let consultationsService = ConsultationsService(communicator, tokensRepository)
+        let consultationsService = ConsultationsService(communicator, tokensRepository, userPreferences)
 
         return DIContainer(
             communicator,
