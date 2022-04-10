@@ -10,13 +10,13 @@ class ConsultationsService {
         self.tokensRepository = tokensRepository
     }
 
-    func requestConsultation(_ specialityId: Int? = nil) {
+    func requestConsultation(_ specialityId: Int? = nil, onSuccess: @escaping () -> Void) {
         guard let deviceToken = tokensRepository.deviceToken else { return }
 
         communicator.requestConsultation(
             deviceToken,
             specialityId,
-            onSuccess: handleConsultationRequested,
+            onSuccess: { _ in onSuccess() },
             onError: { error in
                 print("Error in requesting consultation: \(error?.title ?? "FATAL ERROR")")
             })

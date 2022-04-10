@@ -26,6 +26,8 @@
 		A044726A274EFD77004292EE /* ColorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0447269274EFD77004292EE /* ColorCode.swift */; };
 		A044726C274EFDB7004292EE /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044726B274EFDB7004292EE /* UIColorExtensions.swift */; };
 		A044726E274EFF14004292EE /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044726D274EFF14004292EE /* InputField.swift */; };
+		A057551727F492D400B148F6 /* ConsultationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057551627F492D300B148F6 /* ConsultationSearchViewController.swift */; };
+		A057551927F494AC00B148F6 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057551827F494AC00B148F6 /* UIViewControllerExtensions.swift */; };
 		A06179C12757C3FE00ABBF82 /* WorkplaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179C02757C3FE00ABBF82 /* WorkplaceTableViewController.swift */; };
 		A06179C32757C47400ABBF82 /* WorkplaceTableVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179C22757C47400ABBF82 /* WorkplaceTableVIewModel.swift */; };
 		A06179C52757C51300ABBF82 /* CellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179C42757C51300ABBF82 /* CellIdentifier.swift */; };
@@ -154,6 +156,8 @@
 		A0447269274EFD77004292EE /* ColorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCode.swift; sourceTree = "<group>"; };
 		A044726B274EFDB7004292EE /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		A044726D274EFF14004292EE /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
+		A057551627F492D300B148F6 /* ConsultationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationSearchViewController.swift; sourceTree = "<group>"; };
+		A057551827F494AC00B148F6 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		A06179C02757C3FE00ABBF82 /* WorkplaceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkplaceTableViewController.swift; sourceTree = "<group>"; };
 		A06179C22757C47400ABBF82 /* WorkplaceTableVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkplaceTableVIewModel.swift; sourceTree = "<group>"; };
 		A06179C42757C51300ABBF82 /* CellIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifier.swift; sourceTree = "<group>"; };
@@ -510,6 +514,7 @@
 				A0C5EAC327E0F0C50014D81D /* ConsultationsViewModel.swift */,
 				A0B26F5827E7804A00257931 /* ConsultationViewController.swift */,
 				A032207E27E8F8DA00C1DF16 /* ConsultationsService.swift */,
+				A057551627F492D300B148F6 /* ConsultationSearchViewController.swift */,
 			);
 			name = Consultations;
 			sourceTree = "<group>";
@@ -535,6 +540,7 @@
 				A08AD5E62764D7C1000C7EA8 /* UIAlertControllerExtensions.swift */,
 				A08AD5F02764E26D000C7EA8 /* UIButtonExtensions.swift */,
 				A0C5EAC527E0F4750014D81D /* UIPickerViewExtensions.swift */,
+				A057551827F494AC00B148F6 /* UIViewControllerExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -976,6 +982,7 @@
 				A0C5EAC427E0F0C50014D81D /* ConsultationsViewModel.swift in Sources */,
 				A0BCFCA02766B340009378BB /* ChangePasswordViewController.swift in Sources */,
 				A07120DC27418D3B00B5A945 /* TokensDTO.swift in Sources */,
+				A057551727F492D400B148F6 /* ConsultationSearchViewController.swift in Sources */,
 				A0B9935827415DC800EA60B0 /* Bootstrapper.swift in Sources */,
 				A032207F27E8F8DA00C1DF16 /* ConsultationsService.swift in Sources */,
 				A0DEB6BC2745423900EC62CB /* NullObject.swift in Sources */,
@@ -1015,6 +1022,7 @@
 				A0A857D6274EF1A6000B133C /* SpecialistTabViewController.swift in Sources */,
 				A02D6976274FDE970016B48D /* AccessControllerBase.swift in Sources */,
 				A06179CD2757C98300ABBF82 /* ApiClientProtocol.swift in Sources */,
+				A057551927F494AC00B148F6 /* UIViewControllerExtensions.swift in Sources */,
 				A0B4DA252741566800C0EC1F /* SceneDelegate.swift in Sources */,
 				A0EA55E827C1361E00B25C65 /* SpecialistInfoViewController.swift in Sources */,
 				A0A857CC274ED83F000B133C /* EnumDTO.swift in Sources */,

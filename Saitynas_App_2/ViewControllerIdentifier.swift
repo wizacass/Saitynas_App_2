@@ -16,4 +16,5 @@ enum ViewControllerIdentifier: String {
     case patientInformationViewController    = "PatientInfoVC"
     case specialistInformationViewController = "SpecialistInfoVC"
     case consultationViewController          = "ConsultationVC"
+    case consultationSearchViewController    = "ConsultationSearchVC"
 }
