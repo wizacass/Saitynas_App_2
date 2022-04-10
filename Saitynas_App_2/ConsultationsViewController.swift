@@ -56,7 +56,15 @@ class ConsultationsViewController: UIViewController {
             specialityId = viewModel.speciality[viewModel.selectedSpecialityIndex].id
         }
 
-        consultationsService?.requestConsultation(specialityId)
+        consultationsService?.requestConsultation(specialityId, onSuccess: handleConsultationRequested)
+    }
+
+    private func handleConsultationRequested() {
+        guard let viewController = storyboard?.instantiateViewController(.consultationSearchViewController) else {
+            return
+        }
+
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
