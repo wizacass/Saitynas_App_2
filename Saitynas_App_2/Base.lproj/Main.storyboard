@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2KJ-eN-vWd">
-    <device id="retina5_9" orientation="portrait" appearance="dark"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -2229,7 +2229,7 @@
             </objects>
             <point key="canvasLocation" x="2428" y="347"/>
         </scene>
-        <!--Visits-->
+        <!--Consultations-->
         <scene sceneID="vOu-k6-kkC">
             <objects>
                 <viewController storyboardIdentifier="ScheduleVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qz6-0i-kLJ" sceneMemberID="viewController">
@@ -2244,7 +2244,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="0lD-Sn-Mbc">
-                                <rect key="frame" x="32" y="136.66666666666669" width="313" height="564.33333333333337"/>
+                                <rect key="frame" x="32" y="136.66666666666666" width="313" height="484.33333333333337"/>
                                 <imageReference key="image" image="calendar.badge.clock" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
                                     <hierarchicalColors>
                                         <color name="InputFieldBorderColor"/>
@@ -2253,19 +2253,30 @@
                                     </hierarchicalColors>
                                 </imageReference>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNc-1L-BLc">
+                                <rect key="frame" x="89.666666666666686" y="649" width="196" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Iae-Sl-vLJ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="196" id="YmI-bV-TGW"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Consultations History"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ySN-Wz-mcl"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ySN-Wz-mcl" firstAttribute="bottom" secondItem="0lD-Sn-Mbc" secondAttribute="bottom" constant="32" id="5Ck-Oj-xz9"/>
                             <constraint firstItem="ggf-Au-itE" firstAttribute="top" secondItem="ySN-Wz-mcl" secondAttribute="top" constant="32" id="Cg9-dx-9tx"/>
+                            <constraint firstItem="aNc-1L-BLc" firstAttribute="top" secondItem="0lD-Sn-Mbc" secondAttribute="bottom" constant="32" id="P97-5g-D9t"/>
                             <constraint firstItem="ggf-Au-itE" firstAttribute="centerX" secondItem="dem-gN-dv4" secondAttribute="centerX" id="dOc-nc-JHu"/>
                             <constraint firstItem="0lD-Sn-Mbc" firstAttribute="leading" secondItem="ySN-Wz-mcl" secondAttribute="leading" constant="32" id="feW-nC-ObG"/>
                             <constraint firstItem="0lD-Sn-Mbc" firstAttribute="top" secondItem="ggf-Au-itE" secondAttribute="bottom" constant="32" id="fnN-XM-bQz"/>
+                            <constraint firstItem="aNc-1L-BLc" firstAttribute="centerX" secondItem="dem-gN-dv4" secondAttribute="centerX" id="nQk-Py-52u"/>
                             <constraint firstItem="ySN-Wz-mcl" firstAttribute="trailing" secondItem="0lD-Sn-Mbc" secondAttribute="trailing" constant="32" id="t4L-z0-AXQ"/>
+                            <constraint firstItem="ySN-Wz-mcl" firstAttribute="bottom" secondItem="aNc-1L-BLc" secondAttribute="bottom" constant="32" id="wIi-5O-eyn"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Visits" id="Rek-bN-TXE">
+                    <tabBarItem key="tabBarItem" title="Consultations" id="Rek-bN-TXE">
                         <imageReference key="image" image="calendar" catalog="system" symbolScale="default" renderingMode="hierarchical-single">
                             <hierarchicalColors>
                                 <color name="AccentColor"/>
@@ -2284,14 +2295,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ElP-rG-YaK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4602" y="1088"/>
+            <point key="canvasLocation" x="4600.8000000000002" y="1087.6847290640394"/>
         </scene>
         <!--Reviews-->
         <scene sceneID="ILf-BI-Rtt">
             <objects>
                 <navigationController id="Cnm-fb-8xu" customClass="SpecialistEvaluationsNavigationViewController" customModule="Saitynas_App_2" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Reviews" id="VJy-gE-hg3">
-                        <imageReference key="image" image="star.bubble" catalog="system" renderingMode="hierarchical-single">
+                        <imageReference key="image" image="star.bubble" catalog="system" symbolScale="default" renderingMode="hierarchical-single">
                             <hierarchicalColors>
                                 <color name="AccentColor"/>
                                 <color systemColor="secondaryLabelColor"/>
@@ -3144,7 +3155,7 @@
             <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
         </designable>
         <designable name="O57-P1-4Wd">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="21" height="22"/>
         </designable>
         <designable name="P0E-k2-5Dm">
             <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
@@ -3174,13 +3185,13 @@
             <size key="intrinsicContentSize" width="78" height="34.333333333333336"/>
         </designable>
         <designable name="m2b-o6-why">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="21" height="22"/>
         </designable>
         <designable name="mND-I9-sCK">
             <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
         </designable>
         <designable name="wPs-5J-iXC">
-            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
+            <size key="intrinsicContentSize" width="21" height="22"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>

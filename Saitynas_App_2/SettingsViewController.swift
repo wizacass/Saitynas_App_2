@@ -9,6 +9,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
 
     private weak var authenticationManager: AuthenticationManager!
+    private weak var jwtUser: JwtUser?
 
     private var viewModel: SettingsViewModel?
 
@@ -29,12 +30,19 @@ class SettingsViewController: UIViewController {
         viewModel?.subscribe(self)
 
         authenticationManager = c.authenticationManager
+        jwtUser = c.jwtUser
 
-        activityToggleView.isHidden = c.jwtUser.role != Role.specialist
-        emailLabel.text = c.jwtUser.email ?? "Failed to get email!"
+        activityToggleView.isHidden = jwtUser?.role != Role.specialist
+        emailLabel.text = jwtUser?.email ?? "Failed to get email!"
+    }
 
-        viewModel?.retrieveActivityStatuses(onError: { _ in })
-        viewModel?.retrieveUserActivityStatus(onError: { _ in })
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if jwtUser?.role == .specialist {
+            viewModel?.retrieveActivityStatuses(onError: { _ in })
+            viewModel?.retrieveUserActivityStatus(onError: { _ in })
+        }
     }
 
     @IBAction func activitySwitchToggled(_ sender: UISwitch) {

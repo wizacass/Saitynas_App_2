@@ -2,13 +2,25 @@ import UIKit
 
 class PatientTabViewController: UserTabViewController {
 
+    private weak var consultationsService: ConsultationsService?
+    private weak var preferences: UserPreferences?
+
     private let id = UUID()
     private let notificationCenter = NotificationCenter.default
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        DIContainer.shared.notificationsService.subscribe(self)
+        initialize()
+    }
+
+    private func initialize() {
+        let c = DIContainer.shared
+
+        consultationsService = c.consultationsService
+        preferences = c.preferences
+
+        c.notificationsService.subscribe(self)
         subscribeToBackgroundNotifiactions()
     }
 
@@ -16,14 +28,51 @@ class PatientTabViewController: UserTabViewController {
         notificationCenter.addObserver(
             self,
             selector: #selector(appCameToForeground),
-            name: UIApplication.willEnterForegroundNotification, object: nil
+            name: UIApplication.willEnterForegroundNotification,
+            object: nil
+        )
+
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(appWillTerminate),
+            name: UIApplication.willTerminateNotification,
+            object: nil
         )
     }
 
     @objc func appCameToForeground() {
-        print("App came to foreground!")
+        DispatchQueue.global(qos: .userInteractive).asyncAfter(
+            deadline: .now() + DispatchTimeInterval.seconds(1),
+            execute: tryStartConsultation
+        )
+    }
 
-        // TODO: - Check for a consultation
+    @objc func appWillTerminate() {
+        tryEndConsultation()
+    }
+
+    private func tryStartConsultation() {
+        guard let consultationId = preferences?.consultationId else { return }
+
+        if consultationId == 0 { return }
+
+        consultationsService?.startConsultation(onSuccess: handleConsultationStarted)
+    }
+
+    private func handleConsultationStarted() {
+        if let viewController = storyboard?.instantiateViewController(.consultationViewController) {
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
+
+    private func tryEndConsultation() {
+        guard let consultationId = preferences?.consultationId else { return }
+
+        if consultationId == 0 { return }
+
+        let sem = DispatchSemaphore(value: 0)
+        consultationsService?.endConsultation { sem.signal() }
+        sem.wait()
     }
 }
 
@@ -33,8 +82,6 @@ extension PatientTabViewController: DataSourceObserverDelegate {
     }
 
     func onDataSourceUpdated<T>(_ source: T?) {
-        if let viewController = storyboard?.instantiateViewController(.consultationViewController) {
-            navigationController?.pushViewController(viewController, animated: true)
-        }
+        tryStartConsultation()
     }
 }
