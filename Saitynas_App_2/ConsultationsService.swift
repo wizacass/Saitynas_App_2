@@ -6,6 +6,8 @@ class ConsultationsService {
     private var tokensRepository: UserTokensRepository
     private var userPreferences: UserPreferences
 
+    private var observers: [DataSourceObserverDelegate?] = []
+
     init(_ communicator: Communicator, _ tokensRepository: UserTokensRepository, _ userPreferences: UserPreferences) {
         self.communicator = communicator
         self.tokensRepository = tokensRepository
@@ -40,6 +42,20 @@ class ConsultationsService {
         })
     }
 
+    func startConsultation(onSuccess: @escaping () -> Void) {
+        guard
+            let consultationId = userPreferences.consultationId,
+            let deviceToken = tokensRepository.deviceToken
+        else { return }
+
+        communicator.startConsultation(consultationId, deviceToken, onSuccess: { [weak self] _ in
+            onSuccess()
+            self?.observers.forEach({ $0?.onDataSourceUpdated(NullObject.instance) })
+        }, onError: { error in
+            print("Error in starting consultation: \(error?.title ?? "FATAL ERROR")")
+        })
+    }
+
     func endConsultation(onSuccess: @escaping () -> Void) {
         guard
             let consultationId = userPreferences.consultationId,
@@ -52,5 +68,17 @@ class ConsultationsService {
         }, onError: { error in
             print("Error in ending consultation: \(error?.title ?? "FATAL ERROR")")
         })
+    }
+}
+
+extension ConsultationsService: Observable {
+    func subscribe(_ observer: ObserverDelegate) {
+        if let observer = observer as? DataSourceObserverDelegate {
+            observers.append(observer)
+        }
+    }
+
+    func unsubscribe(_ observer: ObserverDelegate) {
+        observers = observers.filter { $0?.observerId != observer.observerId }
     }
 }

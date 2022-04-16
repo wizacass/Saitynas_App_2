@@ -2,7 +2,6 @@ import UIKit
 
 class ConsultationSearchViewController: UIViewController {
 
-    private var notificationService: RemoteNotificationsService?
     private var consultationsService: ConsultationsService?
 
     private let id = UUID()
@@ -16,7 +15,6 @@ class ConsultationSearchViewController: UIViewController {
     private func initialize() {
         let c = DIContainer.shared
 
-        notificationService = c.notificationsService
         consultationsService = c.consultationsService
     }
 
@@ -24,14 +22,14 @@ class ConsultationSearchViewController: UIViewController {
         super.viewWillAppear(animated)
 
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        notificationService?.subscribe(self)
+        consultationsService?.subscribe(self)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
         navigationController?.setNavigationBarHidden(false, animated: animated)
-        notificationService?.unsubscribe(self)
+        consultationsService?.unsubscribe(self)
     }
 
     @IBAction func cancelButtonPressed(_ sender: UIButton) {

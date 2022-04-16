@@ -164,6 +164,23 @@ extension Communicator {
         })
     }
 
+    func startConsultation(
+        _ consultationId: Int,
+        _ deviceToken: String,
+        onSuccess: @escaping (NullObject?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/consultations/start"
+        let body: [String: Any] = [
+            "consultationId": consultationId,
+            "deviceToken": deviceToken
+        ]
+
+        apiClient.post(endpoint, body, onSuccess, { [weak self] error in
+            self?.retryPostRequest(endpoint, body, error, onSuccess, onError: handleError)
+        })
+    }
+
     func endConsultation(
         _ consultationId: Int,
         _ deviceToken: String,
