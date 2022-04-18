@@ -122,7 +122,7 @@ extension Communicator {
             apiClient.post(endpoint, body, onSuccess, { [weak self] error in
                 self?.retryPostRequest(endpoint, body, error, onSuccess, onError: handleError)
             })
-    }
+        }
 }
 
 // MARK: - Consultations
@@ -190,6 +190,21 @@ extension Communicator {
         let endpoint = "/consultations/end"
         let body: [String: Any] = [
             "consultationId": consultationId,
+            "deviceToken": deviceToken
+        ]
+
+        apiClient.post(endpoint, body, onSuccess, { [weak self] error in
+            self?.retryPostRequest(endpoint, body, error, onSuccess, onError: handleError)
+        })
+    }
+
+    func acceptConsultation(
+        _ deviceToken: String,
+        onSuccess: @escaping (IdDto?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/consultations/accept"
+        let body: [String: Any] = [
             "deviceToken": deviceToken
         ]
 
