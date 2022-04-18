@@ -297,12 +297,14 @@ extension Communicator {
 
     func updateMyActivityStatus (
         _ statusId: Int,
+        _ deviceToken: String,
         onSuccess: @escaping (NullObject?) -> Void,
         onError handleError: @escaping (ErrorDTO?) -> Void
     ) {
         let endpoint = "/users/me/status"
         let body: [String: Any] = [
-            "specialistStatus": statusId
+            "specialistStatus": statusId,
+            "deviceToken": deviceToken
         ]
 
         apiClient.put(endpoint, body, onSuccess, { [weak self] error in

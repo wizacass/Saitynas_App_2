@@ -8,9 +8,11 @@ class SettingsViewModel {
     private var statuses: [EnumDTO] = []
 
     private var communicator: Communicator
+    private var tokensRepository: UserTokensRepository
 
-    init(_ communicator: Communicator) {
+    init(_ communicator: Communicator, _ tokensRepository: UserTokensRepository) {
         self.communicator = communicator
+        self.tokensRepository = tokensRepository
     }
 
     func retrieveActivityStatuses(onError handleError: @escaping (ErrorDTO?) -> Void) {
@@ -34,8 +36,10 @@ class SettingsViewModel {
     }
 
     func updateUserActivityStatus(willGoOnline: Bool, onError handleError: @escaping (ErrorDTO?) -> Void) {
+        guard let deviceToken = tokensRepository.deviceToken else { return }
+
         let index = willGoOnline ? 1 : 2
-        communicator.updateMyActivityStatus(statuses[index].id, onSuccess: { [weak self] _ in
+        communicator.updateMyActivityStatus(statuses[index].id, deviceToken, onSuccess: { [weak self] _ in
             self?.notifyObservers(self?.statuses[index])
         }, onError: handleError)
     }

@@ -4,6 +4,7 @@ class PatientTabViewController: UserTabViewController {
 
     private weak var consultationsService: ConsultationsService?
     private weak var preferences: UserPreferences?
+    private weak var jwtUser: JwtUser?
 
     private let id = UUID()
     private let notificationCenter = NotificationCenter.default
@@ -19,6 +20,7 @@ class PatientTabViewController: UserTabViewController {
 
         consultationsService = c.consultationsService
         preferences = c.preferences
+        jwtUser = c.jwtUser
 
         c.notificationsService.subscribe(self)
         subscribeToBackgroundNotifiactions()
@@ -54,7 +56,7 @@ class PatientTabViewController: UserTabViewController {
     private func tryStartConsultation() {
         guard let consultationId = preferences?.consultationId else { return }
 
-        if consultationId == 0 { return }
+        if !shouldAttemptRequest(consultationId) { return }
 
         consultationsService?.startConsultation(onSuccess: handleConsultationStarted)
     }
@@ -68,11 +70,15 @@ class PatientTabViewController: UserTabViewController {
     private func tryEndConsultation() {
         guard let consultationId = preferences?.consultationId else { return }
 
-        if consultationId == 0 { return }
+        if !shouldAttemptRequest(consultationId) { return }
 
         let sem = DispatchSemaphore(value: 0)
         consultationsService?.endConsultation { sem.signal() }
         sem.wait()
+    }
+
+    private func shouldAttemptRequest(_ consultationId: Int) -> Bool {
+        return consultationId != 0 && jwtUser?.role == .patient
     }
 }
 

@@ -12,6 +12,7 @@ class DIContainer {
     let authenticationManager: AuthenticationManager
     let jwtUser: JwtUser
     let preferences: UserPreferences
+    let tokensRepository: UserTokensRepository
     let notificationsService: RemoteNotificationsService
     let consultationsService: ConsultationsService
 
@@ -20,6 +21,7 @@ class DIContainer {
         _ authenticationManager: AuthenticationManager,
         _ jwtUser: JwtUser,
         _ preferences: UserPreferences,
+        _ tokensRepository: UserTokensRepository,
         _ notificationsService: RemoteNotificationsService,
         _ consultationsService: ConsultationsService
     ) {
@@ -27,6 +29,7 @@ class DIContainer {
         self.authenticationManager = authenticationManager
         self.jwtUser = jwtUser
         self.preferences = preferences
+        self.tokensRepository = tokensRepository
         self.notificationsService = notificationsService
         self.consultationsService = consultationsService
     }

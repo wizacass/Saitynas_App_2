@@ -35,6 +35,7 @@ class Bootstrapper {
             authenticationManager,
             jwtUser,
             userPreferences,
+            tokensRepository,
             notificationsService,
             consultationsService
         )
