@@ -39,10 +39,15 @@ class AccessCommunicator {
     }
 
     func logout(
+        _ deviceToken: String,
         onSuccess: @escaping (NullObject?) -> Void,
         onError: @escaping (ErrorDTO?) -> Void
     ) {
-        apiClient.post("/logout", [:], onSuccess) { error in
+        let body = [
+            "deviceToken": deviceToken
+        ]
+
+        apiClient.post("/logout", body, onSuccess) { error in
             DispatchQueue.main.async { onSuccess(nil) }
             onError(error)
         }

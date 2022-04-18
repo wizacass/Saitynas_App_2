@@ -26,7 +26,7 @@ class SettingsViewController: UIViewController {
     private func initialize() {
         let c = DIContainer.shared
 
-        viewModel = SettingsViewModel(c.communicator)
+        viewModel = SettingsViewModel(c.communicator, c.tokensRepository)
         viewModel?.subscribe(self)
 
         authenticationManager = c.authenticationManager
