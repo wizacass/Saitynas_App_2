@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>In order to hear you during consultations</string>
+	<key>NSCameraUsageDescription</key>
+	<string>In order to see you during consultations</string>
+	<key>Agora App ID</key>
+	<string>79ad8034ba7441fe8285f4aeb038384b</string>
 	<key>Api Url</key>
 	<string>saitynas-ktu.herokuapp.com</string>
 	<key>UIApplicationSceneManifest</key>

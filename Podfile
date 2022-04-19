@@ -10,6 +10,7 @@ target 'Saitynas_App_2' do
   pod 'KeychainSwift', '~> 19.0'
   pod 'SwiftLint'
   pod 'JWTDecode', '~> 2.6'
+  pod 'AgoraRtcEngine_iOS'
 
   target 'Saitynas_App_2Tests' do
     inherit! :search_paths
