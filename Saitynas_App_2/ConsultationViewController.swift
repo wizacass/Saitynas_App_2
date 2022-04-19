@@ -11,12 +11,13 @@ class ConsultationViewController: UIViewController {
     private var agoraKit: AgoraRtcEngineKit?
     private var consultationsService: ConsultationsService?
 
+    private let minimumLocalViewWidth: CGFloat = 120.0
+    private let agoraUid: UInt = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         consultationsService = DIContainer.shared.consultationsService
-
-        agoraParentView.backgroundColor = .magenta
 
         initAgoraView()
 
@@ -32,17 +33,11 @@ class ConsultationViewController: UIViewController {
     }
 
     func initializeAndJoinChannel() {
-        // Pass in your App ID here
         agoraKit = AgoraRtcEngineKit.sharedEngine(withAppId: "79ad8034ba7441fe8285f4aeb038384b", delegate: self)
 
-        // Video is disabled by default. You need to call enableVideo to start a video stream.
         agoraKit?.enableVideo()
 
-        // Create a videoCanvas to render the local video
-        let videoCanvas = AgoraRtcVideoCanvas()
-        videoCanvas.uid = 0
-        videoCanvas.renderMode = .hidden
-        videoCanvas.view = localView
+        let videoCanvas = createAgoraCanvas(localView, uid: agoraUid)
         agoraKit?.setupLocalVideo(videoCanvas)
 
         // Join the channel with a token. Pass in your token and channel name here
@@ -50,7 +45,7 @@ class ConsultationViewController: UIViewController {
             byToken: "00679ad8034ba7441fe8285f4aeb038384bIAByfPWJLO4I0TaGJVKFgkcIB49giCyjWAkQPw1JGG3EDAx+f9gAAAAAEACKbcvBh2RgYgEAAQCFZGBi",
             channelId: "test",
             info: nil,
-            uid: 0,
+            uid: agoraUid,
             joinSuccess: { (channel, uid, elapsed) in
             })
     }
@@ -58,8 +53,17 @@ class ConsultationViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
-        remoteView.frame = agoraParentView.bounds
-        localView.frame = CGRect(x: agoraParentView.bounds.width - 90, y: 0, width: 90, height: 160)
+        let bounds = agoraParentView.bounds
+        let width = max(bounds.width / 4.0, minimumLocalViewWidth)
+        let height = width / 3.0 * 4.0
+
+        remoteView.frame = bounds
+        localView.frame = CGRect(
+            x: bounds.width - width,
+            y: 0,
+            width: width,
+            height: height
+        )
     }
 
     override func viewDidDisappear(_ animated: Bool) {
@@ -69,19 +73,35 @@ class ConsultationViewController: UIViewController {
     }
 
     @IBAction func endConsultationPressed(_ sender: UIButton) {
+        endConsultation()
+    }
+
+    private func endConsultation() {
         consultationsService?.endConsultation { [weak self] in
             self?.navigationController?.popViewController(animated: true)
+            // TODO: Push review alert
         }
+    }
+
+    private func createAgoraCanvas(_ view: UIView, uid: UInt) -> AgoraRtcVideoCanvas {
+        let videoCanvas = AgoraRtcVideoCanvas()
+
+        videoCanvas.uid = uid
+        videoCanvas.renderMode = .hidden
+        videoCanvas.view = view
+
+        return videoCanvas
     }
 }
 
 extension ConsultationViewController: AgoraRtcEngineDelegate {
-    // This callback is triggered when a remote user joins the channel
     func rtcEngine(_ engine: AgoraRtcEngineKit, didJoinedOfUid uid: UInt, elapsed: Int) {
-        let videoCanvas = AgoraRtcVideoCanvas()
-        videoCanvas.uid = uid
-        videoCanvas.renderMode = .hidden
-        videoCanvas.view = remoteView
+        let videoCanvas = createAgoraCanvas(remoteView, uid: uid)
+
         agoraKit?.setupRemoteVideo(videoCanvas)
+    }
+
+    func rtcEngine(_ engine: AgoraRtcEngineKit, didOfflineOfUid uid: UInt, reason: AgoraUserOfflineReason) {
+        endConsultation()
     }
 }

@@ -1612,7 +1612,16 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBv-p2-42u">
                                 <rect key="frame" x="16" y="60" width="343" height="606"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="waA-pq-78f">
+                                        <rect key="frame" x="153" y="284.66666666666669" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="waA-pq-78f" firstAttribute="centerX" secondItem="gBv-p2-42u" secondAttribute="centerX" id="lsA-g7-fM9"/>
+                                    <constraint firstItem="waA-pq-78f" firstAttribute="centerY" secondItem="gBv-p2-42u" secondAttribute="centerY" id="nvd-oX-7Bk"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q9c-7h-aoz"/>
