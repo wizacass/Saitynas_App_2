@@ -37,6 +37,8 @@
 		A06179CD2757C98300ABBF82 /* ApiClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179CC2757C98300ABBF82 /* ApiClientProtocol.swift */; };
 		A062833627F0B6FD000B3A4B /* GetEnumDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062833527F0B6FD000B3A4B /* GetEnumDTO.swift */; };
 		A062833B27F0BB2A000B3A4B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A062833A27F0BB2A000B3A4B /* SettingsViewModel.swift */; };
+		A070E855281097770065FEB7 /* AgoraSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A070E854281097760065FEB7 /* AgoraSettings.swift */; };
+		A070E857281097840065FEB7 /* AgoraSettingsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A070E856281097840065FEB7 /* AgoraSettingsDTO.swift */; };
 		A07120DA27418CE600B5A945 /* AccessCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120D927418CE600B5A945 /* AccessCommunicator.swift */; };
 		A07120DC27418D3B00B5A945 /* TokensDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120DB27418D3B00B5A945 /* TokensDTO.swift */; };
 		A07120DE27418D8D00B5A945 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07120DD27418D8D00B5A945 /* Role.swift */; };
@@ -169,6 +171,8 @@
 		A06179CC2757C98300ABBF82 /* ApiClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientProtocol.swift; sourceTree = "<group>"; };
 		A062833527F0B6FD000B3A4B /* GetEnumDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEnumDTO.swift; sourceTree = "<group>"; };
 		A062833A27F0BB2A000B3A4B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		A070E854281097760065FEB7 /* AgoraSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoraSettings.swift; sourceTree = "<group>"; };
+		A070E856281097840065FEB7 /* AgoraSettingsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgoraSettingsDTO.swift; sourceTree = "<group>"; };
 		A07120D927418CE600B5A945 /* AccessCommunicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCommunicator.swift; sourceTree = "<group>"; };
 		A07120DB27418D3B00B5A945 /* TokensDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokensDTO.swift; sourceTree = "<group>"; };
 		A07120DD27418D8D00B5A945 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
@@ -475,6 +479,8 @@
 				A0EA55D027BE6F8C00B25C65 /* Patient.swift */,
 				A0B34466280367E900A0CD53 /* IdDto.swift */,
 				A0B344682803685C00A0CD53 /* Id.swift */,
+				A070E854281097760065FEB7 /* AgoraSettings.swift */,
+				A070E856281097840065FEB7 /* AgoraSettingsDTO.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -1019,6 +1025,7 @@
 				A0B9936A274166F000EA60B0 /* Communicator.swift in Sources */,
 				A044726A274EFD77004292EE /* ColorCode.swift in Sources */,
 				A04327C7276000E300CDF63B /* EvaluationsDTO.swift in Sources */,
+				A070E857281097840065FEB7 /* AgoraSettingsDTO.swift in Sources */,
 				A0BCFCA42766B632009378BB /* ChangePasswordViewControllerProtocol.swift in Sources */,
 				A07A3F482744F7CF00B029DE /* ObserverDelegate.swift in Sources */,
 				A00CDEC42760FF8100E1EA13 /* StringExtensions.swift in Sources */,
@@ -1044,6 +1051,7 @@
 				A0B9937227417A0800EA60B0 /* SettingsViewController.swift in Sources */,
 				A07120EE2741CC2C00B5A945 /* SpecialistTableViewController.swift in Sources */,
 				A08AD5E92764DB63000C7EA8 /* AuthenticationViewModel.swift in Sources */,
+				A070E855281097770065FEB7 /* AgoraSettings.swift in Sources */,
 				A0B9936C274178D400EA60B0 /* NaviagtionViewController.swift in Sources */,
 				A0B993762741820C00EA60B0 /* LoginViewController.swift in Sources */,
 				A07120F22741CCE800B5A945 /* SpecialistsDTO.swift in Sources */,

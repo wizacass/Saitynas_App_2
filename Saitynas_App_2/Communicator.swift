@@ -148,7 +148,7 @@ extension Communicator {
     }
 
     func cancelConsultation(
-        _ consultationId: Int,
+        _ consultationId: String,
         _ deviceToken: String,
         onSuccess: @escaping (NullObject?) -> Void,
         onError handleError: @escaping (ErrorDTO?) -> Void
@@ -165,7 +165,7 @@ extension Communicator {
     }
 
     func startConsultation(
-        _ consultationId: Int,
+        _ consultationId: String,
         _ deviceToken: String,
         onSuccess: @escaping (NullObject?) -> Void,
         onError handleError: @escaping (ErrorDTO?) -> Void
@@ -182,7 +182,7 @@ extension Communicator {
     }
 
     func endConsultation(
-        _ consultationId: Int,
+        _ consultationId: String,
         _ deviceToken: String,
         onSuccess: @escaping (NullObject?) -> Void,
         onError handleError: @escaping (ErrorDTO?) -> Void
@@ -206,6 +206,24 @@ extension Communicator {
         let endpoint = "/consultations/accept"
         let body: [String: Any] = [
             "deviceToken": deviceToken
+        ]
+
+        apiClient.post(endpoint, body, onSuccess, { [weak self] error in
+            self?.retryPostRequest(endpoint, body, error, onSuccess, onError: handleError)
+        })
+    }
+}
+
+// MARK: - Agora
+extension Communicator {
+    func getAgoraToken(
+        _ channelId: String,
+        onSuccess: @escaping (AgoraSettingsDTO?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/agora/tokens"
+        let body: [String: Any] = [
+            "channel": channelId
         ]
 
         apiClient.post(endpoint, body, onSuccess, { [weak self] error in

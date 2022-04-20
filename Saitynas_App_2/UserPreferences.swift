@@ -21,9 +21,9 @@ class UserPreferences {
         }
     }
 
-    var consultationId: Int? {
+    var consultationId: String? {
         get {
-            return storage.getInt(consultationIdKey)
+            return storage.getString(consultationIdKey)
         }
 
         set(value) {

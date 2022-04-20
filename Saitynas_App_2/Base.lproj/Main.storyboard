@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2KJ-eN-vWd">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -1597,50 +1597,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consultation View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHM-bP-9g0">
-                                <rect key="frame" x="67" y="387.66666666666669" width="241" height="37"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4G-ZP-EVE">
-                                <rect key="frame" x="89.666666666666686" y="682" width="196" height="48"/>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="destructive" translatesAutoresizingMaskIntoConstraints="NO" id="R4G-ZP-EVE">
+                                <rect key="frame" x="89.666666666666686" y="698" width="196" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="VwO-CV-kXj"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="196" id="pLe-fx-MD4"/>
                                 </constraints>
                                 <color key="tintColor" name="ErrorColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="End Consultation"/>
+                                <buttonConfiguration key="configuration" style="filled" title="End Consultation" cornerStyle="fixed">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="DestructiveButtonBgColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                    <color key="baseForegroundColor" name="DestructiveButtonTextColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="endConsultationPressed:" destination="7Pf-EU-4IA" eventType="touchUpInside" id="iXr-yy-ssR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Os-pR-e6t">
-                                <rect key="frame" x="156" y="440.66666666666669" width="63.333333333333343" height="17"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBv-p2-42u" customClass="RoundableView" customModule="Saitynas_App_2" customModuleProvider="target">
+                                <rect key="frame" x="16" y="60" width="343" height="606"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="waA-pq-78f">
+                                        <rect key="frame" x="153" y="284.66666666666669" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="waA-pq-78f" firstAttribute="centerX" secondItem="gBv-p2-42u" secondAttribute="centerX" id="lsA-g7-fM9"/>
+                                    <constraint firstItem="waA-pq-78f" firstAttribute="centerY" secondItem="gBv-p2-42u" secondAttribute="centerY" id="nvd-oX-7Bk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q9c-7h-aoz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="mHM-bP-9g0" firstAttribute="centerY" secondItem="PrP-JQ-GWw" secondAttribute="centerY" id="94u-2u-pxw"/>
-                            <constraint firstItem="4Os-pR-e6t" firstAttribute="top" secondItem="mHM-bP-9g0" secondAttribute="bottom" constant="16" id="CWM-qo-84v"/>
-                            <constraint firstItem="mHM-bP-9g0" firstAttribute="centerX" secondItem="PrP-JQ-GWw" secondAttribute="centerX" id="H1F-wp-wYJ"/>
-                            <constraint firstItem="Q9c-7h-aoz" firstAttribute="bottom" secondItem="R4G-ZP-EVE" secondAttribute="bottom" constant="48" id="NTO-Ke-Kkw"/>
-                            <constraint firstItem="4Os-pR-e6t" firstAttribute="centerX" secondItem="PrP-JQ-GWw" secondAttribute="centerX" id="pAw-pi-rDO"/>
+                            <constraint firstItem="Q9c-7h-aoz" firstAttribute="bottom" secondItem="R4G-ZP-EVE" secondAttribute="bottom" constant="32" id="NTO-Ke-Kkw"/>
+                            <constraint firstItem="Q9c-7h-aoz" firstAttribute="trailing" secondItem="gBv-p2-42u" secondAttribute="trailing" constant="16" id="PLd-kk-MZ1"/>
+                            <constraint firstItem="gBv-p2-42u" firstAttribute="top" secondItem="Q9c-7h-aoz" secondAttribute="top" constant="16" id="mCv-Pr-bUv"/>
+                            <constraint firstItem="gBv-p2-42u" firstAttribute="leading" secondItem="Q9c-7h-aoz" secondAttribute="leading" constant="16" id="uBt-HS-P2f"/>
+                            <constraint firstItem="R4G-ZP-EVE" firstAttribute="top" secondItem="gBv-p2-42u" secondAttribute="bottom" constant="32" id="vPB-uP-ZDi"/>
                             <constraint firstItem="R4G-ZP-EVE" firstAttribute="centerX" secondItem="PrP-JQ-GWw" secondAttribute="centerX" id="xBQ-6M-Y5D"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="consultationIdLabel" destination="4Os-pR-e6t" id="hQA-Ev-E3T"/>
+                        <outlet property="agoraParentView" destination="gBv-p2-42u" id="UxS-vS-fuk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGe-u4-aqo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2428" y="3153"/>
+            <point key="canvasLocation" x="2428" y="3152.9556650246309"/>
         </scene>
         <!--Evaluation Detail View Controller-->
         <scene sceneID="2cW-Lf-6kn">
@@ -3155,7 +3167,7 @@
             <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
         </designable>
         <designable name="O57-P1-4Wd">
-            <size key="intrinsicContentSize" width="21" height="22"/>
+            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
         </designable>
         <designable name="P0E-k2-5Dm">
             <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
@@ -3185,13 +3197,13 @@
             <size key="intrinsicContentSize" width="78" height="34.333333333333336"/>
         </designable>
         <designable name="m2b-o6-why">
-            <size key="intrinsicContentSize" width="21" height="22"/>
+            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
         </designable>
         <designable name="mND-I9-sCK">
             <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
         </designable>
         <designable name="wPs-5J-iXC">
-            <size key="intrinsicContentSize" width="21" height="22"/>
+            <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
@@ -3221,6 +3233,12 @@
         </namedColor>
         <namedColor name="BackgroundColor">
             <color red="0.93699997663497925" green="0.9649999737739563" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DestructiveButtonBgColor">
+            <color red="0.85490196078431369" green="0.0" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DestructiveButtonTextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ErrorColor">
             <color red="0.85490196078431369" green="0.0" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
