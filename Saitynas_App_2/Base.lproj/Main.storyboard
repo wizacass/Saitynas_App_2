@@ -1597,20 +1597,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4G-ZP-EVE">
-                                <rect key="frame" x="89.666666666666686" y="682" width="196" height="48"/>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="destructive" translatesAutoresizingMaskIntoConstraints="NO" id="R4G-ZP-EVE">
+                                <rect key="frame" x="89.666666666666686" y="698" width="196" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="VwO-CV-kXj"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="196" id="pLe-fx-MD4"/>
                                 </constraints>
                                 <color key="tintColor" name="ErrorColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="End Consultation"/>
+                                <buttonConfiguration key="configuration" style="filled" title="End Consultation" cornerStyle="fixed">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" name="DestructiveButtonBgColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                    <color key="baseForegroundColor" name="DestructiveButtonTextColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="endConsultationPressed:" destination="7Pf-EU-4IA" eventType="touchUpInside" id="iXr-yy-ssR"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBv-p2-42u">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBv-p2-42u" customClass="RoundableView" customModule="Saitynas_App_2" customModuleProvider="target">
                                 <rect key="frame" x="16" y="60" width="343" height="606"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="waA-pq-78f">
@@ -1622,16 +1628,21 @@
                                     <constraint firstItem="waA-pq-78f" firstAttribute="centerX" secondItem="gBv-p2-42u" secondAttribute="centerX" id="lsA-g7-fM9"/>
                                     <constraint firstItem="waA-pq-78f" firstAttribute="centerY" secondItem="gBv-p2-42u" secondAttribute="centerY" id="nvd-oX-7Bk"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q9c-7h-aoz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Q9c-7h-aoz" firstAttribute="bottom" secondItem="R4G-ZP-EVE" secondAttribute="bottom" constant="48" id="NTO-Ke-Kkw"/>
+                            <constraint firstItem="Q9c-7h-aoz" firstAttribute="bottom" secondItem="R4G-ZP-EVE" secondAttribute="bottom" constant="32" id="NTO-Ke-Kkw"/>
                             <constraint firstItem="Q9c-7h-aoz" firstAttribute="trailing" secondItem="gBv-p2-42u" secondAttribute="trailing" constant="16" id="PLd-kk-MZ1"/>
                             <constraint firstItem="gBv-p2-42u" firstAttribute="top" secondItem="Q9c-7h-aoz" secondAttribute="top" constant="16" id="mCv-Pr-bUv"/>
                             <constraint firstItem="gBv-p2-42u" firstAttribute="leading" secondItem="Q9c-7h-aoz" secondAttribute="leading" constant="16" id="uBt-HS-P2f"/>
-                            <constraint firstItem="R4G-ZP-EVE" firstAttribute="top" secondItem="gBv-p2-42u" secondAttribute="bottom" constant="16" id="vPB-uP-ZDi"/>
+                            <constraint firstItem="R4G-ZP-EVE" firstAttribute="top" secondItem="gBv-p2-42u" secondAttribute="bottom" constant="32" id="vPB-uP-ZDi"/>
                             <constraint firstItem="R4G-ZP-EVE" firstAttribute="centerX" secondItem="PrP-JQ-GWw" secondAttribute="centerX" id="xBQ-6M-Y5D"/>
                         </constraints>
                     </view>
@@ -3222,6 +3233,12 @@
         </namedColor>
         <namedColor name="BackgroundColor">
             <color red="0.93699997663497925" green="0.9649999737739563" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DestructiveButtonBgColor">
+            <color red="0.85490196078431369" green="0.0" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DestructiveButtonTextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ErrorColor">
             <color red="0.85490196078431369" green="0.0" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
