@@ -148,7 +148,7 @@ extension Communicator {
     }
 
     func cancelConsultation(
-        _ consultationId: Int,
+        _ consultationId: String,
         _ deviceToken: String,
         onSuccess: @escaping (NullObject?) -> Void,
         onError handleError: @escaping (ErrorDTO?) -> Void
@@ -165,7 +165,7 @@ extension Communicator {
     }
 
     func startConsultation(
-        _ consultationId: Int,
+        _ consultationId: String,
         _ deviceToken: String,
         onSuccess: @escaping (NullObject?) -> Void,
         onError handleError: @escaping (ErrorDTO?) -> Void
@@ -182,7 +182,7 @@ extension Communicator {
     }
 
     func endConsultation(
-        _ consultationId: Int,
+        _ consultationId: String,
         _ deviceToken: String,
         onSuccess: @escaping (NullObject?) -> Void,
         onError handleError: @escaping (ErrorDTO?) -> Void

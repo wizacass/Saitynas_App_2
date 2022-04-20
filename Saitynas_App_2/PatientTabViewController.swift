@@ -77,8 +77,8 @@ class PatientTabViewController: UserTabViewController {
         sem.wait()
     }
 
-    private func shouldAttemptRequest(_ consultationId: Int) -> Bool {
-        return consultationId != 0 && jwtUser?.role == .patient
+    private func shouldAttemptRequest(_ consultationId: String?) -> Bool {
+        return consultationId != nil && jwtUser?.role == .patient
     }
 }
 
