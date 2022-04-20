@@ -10,6 +10,8 @@ class ConsultationViewController: UIViewController {
 
     private var agoraKit: AgoraRtcEngineKit?
     private var consultationsService: ConsultationsService?
+    private var communicator: Communicator?
+    private var preferences: UserPreferences?
 
     private let minimumLocalViewWidth: CGFloat = 120.0
     private let agoraUid: UInt = 0
@@ -17,14 +19,21 @@ class ConsultationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        consultationsService = DIContainer.shared.consultationsService
+        initialize()
+        initializeAgoraView()
 
-        initAgoraView()
-
-        initializeAndJoinChannel()
+        tryLoadingCall()
     }
 
-    private func initAgoraView() {
+    private func initialize() {
+        let c = DIContainer.shared
+
+        consultationsService = c.consultationsService
+        communicator = c.communicator
+        preferences = c.preferences
+    }
+
+    private func initializeAgoraView() {
         remoteView = UIView()
         agoraParentView.addSubview(remoteView)
 
@@ -32,7 +41,20 @@ class ConsultationViewController: UIViewController {
         agoraParentView.addSubview(localView)
     }
 
-    func initializeAndJoinChannel() {
+    private func tryLoadingCall() {
+        guard let channelId = preferences?.consultationId else { return }
+
+        communicator?.getAgoraToken(
+            channelId,
+            onSuccess: initializeAndJoinChannel,
+            onError: { error in
+                print("Error in retrieving Agora token: \(error?.title ?? "FATAL ERROR")")
+        })
+    }
+
+    func initializeAndJoinChannel(_ settings: AgoraSettingsDTO?) {
+        guard let settings = settings?.data else { return }
+
         agoraKit = AgoraRtcEngineKit.sharedEngine(withAppId: "79ad8034ba7441fe8285f4aeb038384b", delegate: self)
 
         agoraKit?.enableVideo()
@@ -40,14 +62,13 @@ class ConsultationViewController: UIViewController {
         let videoCanvas = createAgoraCanvas(localView, uid: agoraUid)
         agoraKit?.setupLocalVideo(videoCanvas)
 
-        // Join the channel with a token. Pass in your token and channel name here
         agoraKit?.joinChannel(
-            byToken: "00679ad8034ba7441fe8285f4aeb038384bIAByfPWJLO4I0TaGJVKFgkcIB49giCyjWAkQPw1JGG3EDAx+f9gAAAAAEACKbcvBh2RgYgEAAQCFZGBi",
-            channelId: "test",
+            byToken: settings.token,
+            channelId: settings.channel,
             info: nil,
             uid: agoraUid,
-            joinSuccess: { (channel, uid, elapsed) in
-            })
+            joinSuccess: { (channel, uid, elapsed) in }
+        )
     }
 
     override func viewDidLayoutSubviews() {

@@ -214,6 +214,24 @@ extension Communicator {
     }
 }
 
+// MARK: - Agora
+extension Communicator {
+    func getAgoraToken(
+        _ channelId: String,
+        onSuccess: @escaping (AgoraSettingsDTO?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/agora/tokens"
+        let body: [String: Any] = [
+            "channel": channelId
+        ]
+
+        apiClient.post(endpoint, body, onSuccess, { [weak self] error in
+            self?.retryPostRequest(endpoint, body, error, onSuccess, onError: handleError)
+        })
+    }
+}
+
 // MARK: - Workplaces
 extension Communicator {
     func getWorkplaces(
