@@ -111,6 +111,8 @@
 		A0C5EAC227E0EA4D0014D81D /* ConsultationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C5EAC127E0EA4D0014D81D /* ConsultationsViewController.swift */; };
 		A0C5EAC427E0F0C50014D81D /* ConsultationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C5EAC327E0F0C50014D81D /* ConsultationsViewModel.swift */; };
 		A0C5EAC627E0F4750014D81D /* UIPickerViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C5EAC527E0F4750014D81D /* UIPickerViewExtensions.swift */; };
+		A0D120C32811EA1B006ADDEA /* CountDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D120C22811EA1B006ADDEA /* CountDTO.swift */; };
+		A0D120C52811EA25006ADDEA /* Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D120C42811EA25006ADDEA /* Count.swift */; };
 		A0DEB6BC2745423900EC62CB /* NullObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEB6BB2745423900EC62CB /* NullObject.swift */; };
 		A0DEB6BE274550C500EC62CB /* SpecialistDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */; };
 		A0EA55CB27BDA1DE00B25C65 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA55CA27BDA1DE00B25C65 /* UserDefaultsStorage.swift */; };
@@ -250,6 +252,8 @@
 		A0C5EAC127E0EA4D0014D81D /* ConsultationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationsViewController.swift; sourceTree = "<group>"; };
 		A0C5EAC327E0F0C50014D81D /* ConsultationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationsViewModel.swift; sourceTree = "<group>"; };
 		A0C5EAC527E0F4750014D81D /* UIPickerViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPickerViewExtensions.swift; sourceTree = "<group>"; };
+		A0D120C22811EA1B006ADDEA /* CountDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDTO.swift; sourceTree = "<group>"; };
+		A0D120C42811EA25006ADDEA /* Count.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Count.swift; sourceTree = "<group>"; };
 		A0DEB6BB2745423900EC62CB /* NullObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullObject.swift; sourceTree = "<group>"; };
 		A0DEB6BD274550C500EC62CB /* SpecialistDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistDTO.swift; sourceTree = "<group>"; };
 		A0EA55CA27BDA1DE00B25C65 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
@@ -481,6 +485,8 @@
 				A0B344682803685C00A0CD53 /* Id.swift */,
 				A070E854281097760065FEB7 /* AgoraSettings.swift */,
 				A070E856281097840065FEB7 /* AgoraSettingsDTO.swift */,
+				A0D120C22811EA1B006ADDEA /* CountDTO.swift */,
+				A0D120C42811EA25006ADDEA /* Count.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -978,6 +984,7 @@
 				A07120E42741967B00B5A945 /* StateObserverDelegate.swift in Sources */,
 				A0A857CA274ED4DD000B133C /* SignupViewModel.swift in Sources */,
 				A06179C12757C3FE00ABBF82 /* WorkplaceTableViewController.swift in Sources */,
+				A0D120C52811EA25006ADDEA /* Count.swift in Sources */,
 				A04327C52760006B00CDF63B /* Evaluation.swift in Sources */,
 				A0BCFC9C27652DC4009378BB /* EvaluationDetailViewController.swift in Sources */,
 				A0B4DA272741566800C0EC1F /* AuthenticationViewController.swift in Sources */,
@@ -1016,6 +1023,7 @@
 				A07120E027418E1700B5A945 /* AuthenticationManager.swift in Sources */,
 				A023652527DE578300A1DDCE /* SpecialistInfoViewModel.swift in Sources */,
 				A06179C72757C5B900ABBF82 /* UITableViewExtensions.swift in Sources */,
+				A0D120C32811EA1B006ADDEA /* CountDTO.swift in Sources */,
 				A0B9935D2741607F00EA60B0 /* ErrorDTO.swift in Sources */,
 				A04327C1275FE1DA00CDF63B /* EvaluationsTableViewController.swift in Sources */,
 				A06179C32757C47400ABBF82 /* WorkplaceTableVIewModel.swift in Sources */,

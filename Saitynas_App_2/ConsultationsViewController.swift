@@ -2,6 +2,8 @@ import UIKit
 
 class ConsultationsViewController: UIViewController {
 
+    @IBOutlet weak var activeSpecialistsCountLabel: UILabel!
+
     @IBOutlet weak var specialityToggle: UISegmentedControl!
     @IBOutlet weak var specialityPicker: UIPickerView!
 
@@ -26,6 +28,14 @@ class ConsultationsViewController: UIViewController {
 
         specialityPicker.delegate = self
         specialityPicker.dataSource = self
+
+        c.communicator.getOnlineSpecialistsCount(onSuccess: { [weak self] dto in
+            guard let count = dto?.data.count else { return }
+
+            self?.activeSpecialistsCountLabel.text = "Currently available specialists: \(count)"
+        }, onError: { error in
+            print("Error in retrieving active specialists count: \(error?.title ?? "FATAL ERROR")")
+        })
     }
 
     override func viewWillAppear(_ animated: Bool) {
