@@ -34,7 +34,6 @@ class SpecialistTabViewController: UserTabViewController {
     }
 
     @objc func appCameToForeground() {
-        print("App came to foreground!")
         DispatchQueue.global(qos: .userInteractive).asyncAfter(
             deadline: .now() + DispatchTimeInterval.seconds(1),
             execute: tryAcceptConsultation
@@ -44,7 +43,6 @@ class SpecialistTabViewController: UserTabViewController {
     private func tryAcceptConsultation() {
         if jwtUser?.role != .specialist { return }
 
-        print("Checking for consultation...")
         consultationsService?.acceptConsultation(onSuccess: handleConsultationAccepted)
     }
 

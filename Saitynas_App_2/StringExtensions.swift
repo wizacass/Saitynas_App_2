@@ -5,7 +5,7 @@ extension String {
         var formatted = prefix(1).capitalized + dropFirst()
         formatted = formatted.replacingOccurrences(of: "_", with: " ")
         
-        return "\(formatted)!"
+        return "\(formatted)"
     }
 
     var formattedDate: String {

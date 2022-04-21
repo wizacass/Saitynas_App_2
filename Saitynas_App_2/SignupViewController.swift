@@ -78,6 +78,9 @@ class SignupViewController: AccessControllerBase {
             let password = passwordTextField.text
         else { return }
 
+        signupButton.disable()
+        signupButton.setTitle("Loading...", for: .normal)
+
         authenticationManager.signup(email, password, viewModel.selectedRole, onError: handleSignupError)
     }
 
@@ -90,6 +93,9 @@ class SignupViewController: AccessControllerBase {
         )
 
         present(alert, animated: true, completion: nil)
+
+        signupButton.setTitle("Sign up", for: .normal)
+        signupButton.enable()
     }
 }
 
@@ -136,7 +142,11 @@ extension SignupViewController: DataSourceObserverDelegate, StateObserverDelegat
     }
 
     func onLogin(_ user: User?) {
-        dismiss(animated: true, completion: nil)
+        signupButton.setTitle("Welcome!", for: .normal)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { [weak self] in
+            self?.dismiss(animated: true, completion: nil)
+        })
     }
 
     func onLogout() { }
