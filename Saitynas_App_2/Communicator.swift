@@ -77,6 +77,17 @@ extension Communicator {
             self?.retryPostRequest(endpoint, body, error, onSuccess, onError: handleError)
         })
     }
+
+    func getOnlineSpecialistsCount(
+        onSuccess: @escaping (CountDTO?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/specialists/active"
+        
+        apiClient.get(endpoint, onSuccess, onError: { [weak self] error in
+            self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
+        })
+    }
 }
 
 // MARK: - Specialities

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2KJ-eN-vWd">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -1729,7 +1729,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="destructive" translatesAutoresizingMaskIntoConstraints="NO" id="R4G-ZP-EVE">
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="destructive" translatesAutoresizingMaskIntoConstraints="NO" id="R4G-ZP-EVE" customClass="PrimaryButton" customModule="Saitynas_App_2" customModuleProvider="target">
                                 <rect key="frame" x="89.666666666666686" y="698" width="196" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="VwO-CV-kXj"/>
@@ -1744,6 +1744,9 @@
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                     <color key="baseForegroundColor" name="DestructiveButtonTextColor"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hasShadow" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="endConsultationPressed:" destination="7Pf-EU-4IA" eventType="touchUpInside" id="iXr-yy-ssR"/>
                                 </connections>
@@ -2170,6 +2173,7 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="GY0-p1-EOS"/>
                     <connections>
+                        <outlet property="activeSpecialistsCountLabel" destination="kgN-ie-jhY" id="kO9-Hu-WDO"/>
                         <outlet property="specialityPicker" destination="zfV-3R-gM5" id="02M-FE-5CW"/>
                         <outlet property="specialityToggle" destination="7VJ-st-guE" id="R9B-Cp-63n"/>
                     </connections>
