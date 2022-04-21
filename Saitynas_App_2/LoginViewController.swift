@@ -72,6 +72,9 @@ class LoginViewController: AccessControllerBase {
             let password = passwordTextField.text
         else { return }
 
+        loginButton.disable()
+        loginButton.setTitle("Loading...", for: .normal)
+
         authenticationManager.login(email, password, onError: handleLoginError)
     }
 
@@ -84,6 +87,9 @@ class LoginViewController: AccessControllerBase {
         )
 
         present(alert, animated: true, completion: nil)
+
+        loginButton.setTitle("Log in", for: .normal)
+        loginButton.enable()
     }
 }
 
@@ -107,7 +113,11 @@ extension LoginViewController: StateObserverDelegate {
     }
 
     func onLogin(_ user: User?) {
-        dismiss(animated: true, completion: nil)
+        loginButton.setTitle("Success!", for: .normal)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { [weak self] in
+            self?.dismiss(animated: true, completion: nil)
+        })
     }
 
     func onLogout() { }
