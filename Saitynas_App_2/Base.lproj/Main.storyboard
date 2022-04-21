@@ -1324,7 +1324,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" name="BackgroundColor"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="ogU-NA-nyn" secondAttribute="trailing" constant="16" id="00m-5N-6h9"/>
                                                     <constraint firstItem="G2f-co-U9C" firstAttribute="leading" secondItem="mzI-yP-ohe" secondAttribute="leading" constant="16" id="8qQ-v4-Lgr"/>
@@ -1374,7 +1374,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Bfk-EQ-uHj" firstAttribute="centerY" secondItem="VcI-QH-Hrw" secondAttribute="centerY" id="2oD-nu-z2c"/>
                                     <constraint firstItem="obV-hE-J09" firstAttribute="top" secondItem="VcI-QH-Hrw" secondAttribute="top" id="4c8-Y9-nFK"/>
@@ -1413,7 +1413,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F98-ze-x2q"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="d4E-fT-Mec" firstAttribute="centerX" secondItem="G6N-xp-ZhU" secondAttribute="centerX" id="DSx-bo-j4B"/>
                             <constraint firstItem="VcI-QH-Hrw" firstAttribute="top" secondItem="zxf-Am-GLW" secondAttribute="bottom" constant="32" id="EWx-jx-7mo"/>
