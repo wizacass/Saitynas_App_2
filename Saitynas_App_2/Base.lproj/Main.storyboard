@@ -2425,13 +2425,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70B-hh-8NA" customClass="ShadowView" customModule="Saitynas_App_2" customModuleProvider="target">
-                                <rect key="frame" x="32" y="145" width="311" height="218"/>
+                                <rect key="frame" x="32" y="145" width="311" height="222"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x1V-HK-oMh" customClass="RoundableView" customModule="Saitynas_App_2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="218"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="222"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fKf-M3-VtS" userLabel="Email View">
-                                                <rect key="frame" x="8" y="8" width="291" height="85"/>
+                                                <rect key="frame" x="8" y="12" width="291" height="85"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yH1-Br-MXj">
                                                         <rect key="frame" x="0.0" y="0.0" width="291" height="17"/>
@@ -2510,7 +2510,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQZ-G0-UWu" userLabel="Password View">
-                                                <rect key="frame" x="8" y="125" width="291" height="85"/>
+                                                <rect key="frame" x="8" y="129" width="291" height="85"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Wm-0v-HQ1">
                                                         <rect key="frame" x="0.0" y="0.0" width="291" height="17"/>
@@ -2597,7 +2597,7 @@
                                             <constraint firstAttribute="bottom" secondItem="GQZ-G0-UWu" secondAttribute="bottom" constant="8" id="8SC-9x-Reu"/>
                                             <constraint firstItem="GQZ-G0-UWu" firstAttribute="top" secondItem="fKf-M3-VtS" secondAttribute="bottom" constant="32" id="INh-Xg-7UK"/>
                                             <constraint firstItem="fKf-M3-VtS" firstAttribute="leading" secondItem="x1V-HK-oMh" secondAttribute="leading" constant="8" id="kPn-oP-PKp"/>
-                                            <constraint firstItem="fKf-M3-VtS" firstAttribute="top" secondItem="x1V-HK-oMh" secondAttribute="top" constant="8" id="xni-4r-Zo6"/>
+                                            <constraint firstItem="fKf-M3-VtS" firstAttribute="top" secondItem="x1V-HK-oMh" secondAttribute="top" constant="12" id="xni-4r-Zo6"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2636,10 +2636,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="TQo-76-sKp" customClass="PrimaryButton" customModule="Saitynas_App_2" customModuleProvider="target">
-                                <rect key="frame" x="89.666666666666686" y="678" width="196" height="48"/>
+                                <rect key="frame" x="89.666666666666686" y="662" width="196" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="196" id="RBz-1A-LCp"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="V0h-rk-POx"/>
+                                    <constraint firstAttribute="height" constant="48" id="V0h-rk-POx"/>
                                     <constraint firstAttribute="height" constant="48" id="aYS-8S-6nP"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2666,9 +2666,9 @@
                         <viewLayoutGuide key="safeArea" id="c3V-Bl-9os"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TQo-76-sKp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="70B-hh-8NA" secondAttribute="bottom" constant="32" id="4r0-A1-c80"/>
+                            <constraint firstItem="TQo-76-sKp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="70B-hh-8NA" secondAttribute="bottom" constant="16" id="4r0-A1-c80"/>
                             <constraint firstItem="c3V-Bl-9os" firstAttribute="trailing" secondItem="70B-hh-8NA" secondAttribute="trailing" constant="32" id="HvI-Ln-20o"/>
-                            <constraint firstItem="c3V-Bl-9os" firstAttribute="bottom" secondItem="TQo-76-sKp" secondAttribute="bottom" constant="32" id="I0n-cn-PZY"/>
+                            <constraint firstItem="c3V-Bl-9os" firstAttribute="bottom" secondItem="TQo-76-sKp" secondAttribute="bottom" constant="48" id="I0n-cn-PZY"/>
                             <constraint firstItem="EhA-s6-J1Q" firstAttribute="centerX" secondItem="5l8-7k-Dfr" secondAttribute="centerX" id="MAj-m9-Q1y"/>
                             <constraint firstItem="70B-hh-8NA" firstAttribute="leading" secondItem="c3V-Bl-9os" secondAttribute="leading" constant="32" id="WTR-HX-R3Z"/>
                             <constraint firstItem="TQo-76-sKp" firstAttribute="centerX" secondItem="5l8-7k-Dfr" secondAttribute="centerX" id="aOA-dn-fZH"/>
