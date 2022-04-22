@@ -10,10 +10,20 @@ extension String {
 
     var formattedDate: String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
 
-        let date = dateFormatter.date(from: self) ?? Date()
+        guard let date = dateFormatter.date(from: self) else { return "Formatting error" }
         dateFormatter.dateFormat = "yyyy-MM-dd"
+
+        return dateFormatter.string(from: date)
+    }
+
+    var formattedDateTime: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ssZ"
+
+        guard let date = dateFormatter.date(from: self) else { return "Formatting error" }
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
 
         return dateFormatter.string(from: date)
     }

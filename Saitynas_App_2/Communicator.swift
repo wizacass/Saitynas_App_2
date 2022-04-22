@@ -324,6 +324,7 @@ extension Communicator {
         onError handleError: @escaping (ErrorDTO?) -> Void
     ) {
         let endpoint = "/users/me/evaluations"
+
         apiClient.get(endpoint, onSuccess, onError: { [weak self] error in
             self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
         })
@@ -334,6 +335,7 @@ extension Communicator {
         onError handleError: @escaping (ErrorDTO?) -> Void
     ) {
         let endpoint = "/users/me/status"
+
         apiClient.get(endpoint, onSuccess, onError: { [weak self] error in
             self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
         })
@@ -353,6 +355,17 @@ extension Communicator {
 
         apiClient.put(endpoint, body, onSuccess, { [weak self] error in
             self?.retryPutRequest(endpoint, body, error, onSuccess, onError: handleError)
+        })
+    }
+
+    func getMyConsultations (
+        onSuccess: @escaping (ConsultationsDTO?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/users/me/consultations"
+
+        apiClient.get(endpoint, onSuccess, onError: { [weak self] error in
+            self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
         })
     }
 }
