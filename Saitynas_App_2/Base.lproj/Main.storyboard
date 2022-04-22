@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2KJ-eN-vWd">
-    <device id="retina5_9" orientation="portrait" appearance="dark"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -2387,13 +2387,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggf-Au-itE">
-                                <rect key="frame" x="108" y="76" width="159" height="30"/>
+                                <rect key="frame" x="108" y="120" width="159" height="30"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="0lD-Sn-Mbc">
-                                <rect key="frame" x="32" y="136.66666666666666" width="313" height="484.33333333333337"/>
+                                <rect key="frame" x="32" y="180.66666666666666" width="313" height="440.33333333333337"/>
                                 <imageReference key="image" image="calendar.badge.clock" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
                                     <hierarchicalColors>
                                         <color name="InputFieldBorderColor"/>
@@ -2410,6 +2410,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Consultations History"/>
+                                <connections>
+                                    <segue destination="DAk-CA-y2r" kind="show" id="Rf7-OG-pd7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ySN-Wz-mcl"/>
@@ -2441,10 +2444,11 @@
                             </hierarchicalColors>
                         </imageReference>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="GEs-q9-qPL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ElP-rG-YaK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4600.8000000000002" y="1087.6847290640394"/>
+            <point key="canvasLocation" x="4601" y="1770"/>
         </scene>
         <!--Reviews-->
         <scene sceneID="ILf-BI-Rtt">
@@ -2485,7 +2489,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Qz6-0i-kLJ" kind="relationship" relationship="viewControllers" id="53f-95-Y34"/>
+                        <segue destination="0pj-p2-WOE" kind="relationship" relationship="viewControllers" id="hwK-Uz-uyC"/>
                         <segue destination="Cnm-fb-8xu" kind="relationship" relationship="viewControllers" id="IZn-sN-CCX"/>
                         <segue destination="9HX-i5-qAb" kind="relationship" relationship="viewControllers" id="YaJ-L0-YyL"/>
                     </connections>
@@ -2493,6 +2497,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g57-75-lHj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3892" y="347"/>
+        </scene>
+        <!--Consultations-->
+        <scene sceneID="JBT-9J-i8Z">
+            <objects>
+                <navigationController id="0pj-p2-WOE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Consultations" id="j1H-OJ-v6T">
+                        <imageReference key="image" image="calendar" catalog="system" symbolScale="default" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="AccentColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <imageReference key="selectedImage" image="calendar" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="AccentColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DDL-Je-gEj">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Qz6-0i-kLJ" kind="relationship" relationship="rootViewController" id="G6N-ZW-BZv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KwG-DY-3uF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4601" y="1088"/>
         </scene>
         <!--Workplaces-->
         <scene sceneID="qw8-Gg-p6P">
@@ -2822,6 +2858,89 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ER-lZ-VeN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3161" y="1770"/>
+        </scene>
+        <!--Consultations History-->
+        <scene sceneID="XTm-NF-wLz">
+            <objects>
+                <tableViewController id="DAk-CA-y2r" customClass="ConsultationsTableViewController" customModule="Saitynas_App_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="USD-X0-r1y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="consultationCell" id="vvz-rS-v3F" customClass="ConsultationsTableViewCell" customModule="Saitynas_App_2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="119"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vvz-rS-v3F" id="vzo-o1-8wp">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="119"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yVp-IC-E5G" customClass="RoundableView" customModule="Saitynas_App_2" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="15" width="335" height="89"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSb-Z2-SAh">
+                                                    <rect key="frame" x="12" y="12" width="311" height="17"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59m-q3-Oeg">
+                                                    <rect key="frame" x="12" y="63" width="49" height="14"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Started at:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUQ-jd-MDR">
+                                                    <rect key="frame" x="12" y="41" width="56" height="14"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" name="BackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="480" id="88q-aB-UWF"/>
+                                                <constraint firstItem="kSb-Z2-SAh" firstAttribute="leading" secondItem="yVp-IC-E5G" secondAttribute="leading" constant="12" id="BeO-If-FzA"/>
+                                                <constraint firstItem="bUQ-jd-MDR" firstAttribute="top" secondItem="kSb-Z2-SAh" secondAttribute="bottom" constant="12" id="QXj-f8-2Xi"/>
+                                                <constraint firstItem="59m-q3-Oeg" firstAttribute="top" secondItem="bUQ-jd-MDR" secondAttribute="bottom" constant="8" id="QeO-qe-u6M"/>
+                                                <constraint firstItem="bUQ-jd-MDR" firstAttribute="leading" secondItem="yVp-IC-E5G" secondAttribute="leading" constant="12" id="Qz4-9B-gtX"/>
+                                                <constraint firstItem="59m-q3-Oeg" firstAttribute="leading" secondItem="yVp-IC-E5G" secondAttribute="leading" constant="12" id="S30-hS-OJO"/>
+                                                <constraint firstAttribute="bottom" secondItem="59m-q3-Oeg" secondAttribute="bottom" constant="12" id="ebn-ID-K01"/>
+                                                <constraint firstAttribute="trailing" secondItem="kSb-Z2-SAh" secondAttribute="trailing" constant="12" id="g1R-pg-ekt"/>
+                                                <constraint firstItem="kSb-Z2-SAh" firstAttribute="top" secondItem="yVp-IC-E5G" secondAttribute="top" constant="12" id="lF8-Fo-sjN"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="yVp-IC-E5G" firstAttribute="centerX" secondItem="vzo-o1-8wp" secondAttribute="centerX" id="eLg-3C-FuF"/>
+                                        <constraint firstItem="yVp-IC-E5G" firstAttribute="leading" secondItem="vzo-o1-8wp" secondAttribute="leadingMargin" priority="750" constant="4" id="lIe-gV-ll1"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="yVp-IC-E5G" secondAttribute="trailing" priority="750" constant="4" id="o9b-Cs-Meb"/>
+                                        <constraint firstItem="yVp-IC-E5G" firstAttribute="top" secondItem="vzo-o1-8wp" secondAttribute="topMargin" constant="4" id="qtd-cr-hty"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="yVp-IC-E5G" secondAttribute="bottom" constant="4" id="sfv-if-YJ6"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="durationLabel" destination="59m-q3-Oeg" id="aZj-vP-4wj"/>
+                                    <outlet property="patientNameLabel" destination="kSb-Z2-SAh" id="V13-Ae-k2N"/>
+                                    <outlet property="startedAtLabel" destination="bUQ-jd-MDR" id="fFi-xT-Yzp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DAk-CA-y2r" id="Cef-lC-Opb"/>
+                            <outlet property="delegate" destination="DAk-CA-y2r" id="tOk-gc-OQP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Consultations History" id="ysL-JC-zkb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hmD-HA-0he" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4600.8000000000002" y="2449.5073891625616"/>
         </scene>
         <!--Consultations-->
         <scene sceneID="Fop-XU-zQn">
@@ -3309,6 +3428,9 @@
         <designable name="P0E-k2-5Dm">
             <size key="intrinsicContentSize" width="20" height="18.666666666666668"/>
         </designable>
+        <designable name="R4G-ZP-EVE">
+            <size key="intrinsicContentSize" width="153.66666666666666" height="34.333333333333336"/>
+        </designable>
         <designable name="SXb-AA-odS">
             <size key="intrinsicContentSize" width="20" height="17"/>
         </designable>
@@ -3344,7 +3466,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="bJb-jQ-KvN"/>
+        <segue reference="YaJ-L0-YyL"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="AccentColor"/>
     <resources>
