@@ -18,15 +18,22 @@ class EditReviewViewModel: ReviewViewModel {
 
     func editReview(_ comment: String, _ onSuccess: @escaping () -> Void) {
         let value = reviews[selectedIndex]
-        communicator.editEvaluation(evaluation.id, value, comment, onSuccess: { [unowned self] _ in
+
+        guard let id = evaluation.id else {
+            onSuccess()
+            return
+        }
+
+        communicator.editEvaluation(id, value, comment, onSuccess: { [unowned self] _ in
             evaluation = Evaluation(
-                id: self.evaluation.id,
+                id: id,
                 specialist: self.evaluation.specialist,
                 author: self.evaluation.author,
                 createdAt: self.evaluation.createdAt,
                 value: value,
                 comment: comment,
-                specialistId: self.evaluation.specialistId
+                specialistId: self.evaluation.specialistId,
+                consultationId: nil
             )
 
             DispatchQueue.main.async(execute: onSuccess)
