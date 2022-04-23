@@ -1709,10 +1709,12 @@
                             <constraint firstItem="e2R-vc-dgP" firstAttribute="top" secondItem="UEe-Mr-2w8" secondAttribute="bottom" constant="32" id="SpO-mi-MbR"/>
                             <constraint firstItem="UEe-Mr-2w8" firstAttribute="centerX" secondItem="zkz-qZ-Tzu" secondAttribute="centerX" id="T70-LI-Dat"/>
                             <constraint firstItem="uMJ-8O-d3q" firstAttribute="trailing" secondItem="e2R-vc-dgP" secondAttribute="trailing" constant="32" id="V9r-aj-JGv"/>
+                            <constraint firstItem="3qo-rn-ajb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="e2R-vc-dgP" secondAttribute="bottom" constant="16" id="tyw-Qk-HAT"/>
                             <constraint firstItem="uMJ-8O-d3q" firstAttribute="bottom" secondItem="3qo-rn-ajb" secondAttribute="bottom" constant="48" id="yOP-UR-hTK"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomConstraint" destination="yOP-UR-hTK" id="dUO-Hi-PLc"/>
                         <outlet property="commentInput" destination="hiz-am-BgN" id="dwh-P7-hRg"/>
                         <outlet property="rolePicker" destination="z1w-VR-GXY" id="cRG-K9-KZE"/>
                     </connections>
