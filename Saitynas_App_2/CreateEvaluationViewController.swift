@@ -1,14 +1,16 @@
 import UIKit
 
-class CreateEvaluationViewController: UIViewController {
+class CreateEvaluationViewController: ViewWithKeyboardBase {
     
     @IBOutlet weak var commentInput: InputField!
     @IBOutlet weak var rolePicker: UIPickerView!
     
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+
     var viewModel: ReviewViewModel!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad(bottomConstraint)
         
         rolePicker.delegate = self
         rolePicker.dataSource = self

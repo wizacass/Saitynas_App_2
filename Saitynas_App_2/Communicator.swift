@@ -274,17 +274,25 @@ extension Communicator {
     func postEvaluation(
         _ value: Int,
         _ comment: String,
-        _ specialistId: Int,
+        _ specialistId: Int?,
+        _ consultationId: String? = nil,
         onSuccess: @escaping (NullObject?) -> Void,
         onError handleError: @escaping (ErrorDTO?) -> Void
     ) {
         let endpoint = "/evaluations"
 
-        let body: [String: Any] = [
+        var body: [String: Any] = [
             "value": value,
-            "comment": comment,
-            "specialistId": specialistId
+            "comment": comment
         ]
+
+        if let specialistId = specialistId {
+            body["specialistId"] = specialistId
+        }
+
+        if let consultationId = consultationId {
+            body["consultationId"] = consultationId
+        }
 
         apiClient.post(endpoint, body, onSuccess, handleError)
     }

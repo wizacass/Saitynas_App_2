@@ -12,6 +12,7 @@ class ConsultationViewController: UIViewController {
     private var consultationsService: ConsultationsService?
     private var communicator: Communicator?
     private var preferences: UserPreferences?
+    private var jwtUser: JwtUser?
 
     private let minimumLocalViewWidth: CGFloat = 120.0
     private let agoraUid: UInt = 0
@@ -31,6 +32,7 @@ class ConsultationViewController: UIViewController {
         consultationsService = c.consultationsService
         communicator = c.communicator
         preferences = c.preferences
+        jwtUser = c.jwtUser
     }
 
     private func initializeAgoraView() {
@@ -49,7 +51,7 @@ class ConsultationViewController: UIViewController {
             onSuccess: initializeAndJoinChannel,
             onError: { error in
                 print("Error in retrieving Agora token: \(error?.title ?? "FATAL ERROR")")
-        })
+            })
     }
 
     func initializeAndJoinChannel(_ settings: AgoraSettingsDTO?) {
@@ -67,7 +69,7 @@ class ConsultationViewController: UIViewController {
             channelId: settings.channel,
             info: nil,
             uid: agoraUid,
-            joinSuccess: { (channel, uid, elapsed) in }
+            joinSuccess: { (_, _, _) in }
         )
     }
 
@@ -98,10 +100,41 @@ class ConsultationViewController: UIViewController {
     }
 
     private func endConsultation() {
-        consultationsService?.endConsultation { [weak self] in
-            self?.navigationController?.popViewController(animated: true)
-            // TODO: Push review alert
+        consultationsService?.endConsultation(onSuccess: handleConsultationEnded)
+    }
+
+    private func handleConsultationEnded() {
+        if jwtUser?.role != .patient {
+            exit()
+            return
         }
+
+        agoraKit?.leaveChannel(nil)
+
+        let alert = UIAlertController.createAlert(
+            "Thank you for consulting!",
+            "Would you like to leave a review?",
+            UIAlertAction(title: "No", style: .destructive, handler: { [weak self] _ in
+                self?.exit()
+            }))
+
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { [weak self] _ in
+            if let viewController = self?.storyboard?.instantiateViewController(.createEvaluationViewController)
+                as? CreateEvaluationViewController {
+                viewController.viewModel = CreateReviewViewModel(self?.communicator, self?.preferences?.consultationId)
+
+                self?.present(viewController, animated: true, completion: nil)
+            }
+
+            self?.navigationController?.popViewController(animated: true)
+        }))
+
+        present(alert, animated: true)
+    }
+
+    private func exit() {
+        preferences?.consultationId = nil
+        navigationController?.popViewController(animated: true)
     }
 
     private func createAgoraCanvas(_ view: UIView, uid: UInt) -> AgoraRtcVideoCanvas {
