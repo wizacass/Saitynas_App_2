@@ -48,7 +48,7 @@ class SpecialistViewController: UIViewController {
     @IBAction func createEvaluationButtonPressed(_ sender: UIButton) {
         if let viewController = storyboard?.instantiateViewController(.createEvaluationViewController)
             as? CreateEvaluationViewController {
-            viewController.viewModel = CreateReviewViewModel(communicator, specialistId ?? 0)
+            viewController.viewModel = CreateReviewViewModel(communicator, specialistId)
 
             present(viewController, animated: true, completion: nil)
         }

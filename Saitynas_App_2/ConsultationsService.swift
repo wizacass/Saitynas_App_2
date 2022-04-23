@@ -24,7 +24,7 @@ class ConsultationsService {
                 self?.userPreferences.consultationId = dto?.data.id
                 onSuccess()
             }, onError: { error in
-                print("Error in requesting consultation: \(error?.title ?? "FATAL ERROR")")
+                print("Error in requesting consultation: \(error?.title ?? "Unkown error")")
             })
     }
     
@@ -38,7 +38,7 @@ class ConsultationsService {
             self?.userPreferences.consultationId = nil
             onSuccess()
         }, onError: { error in
-            print("Error in cancelling consultation: \(error?.title ?? "FATAL ERROR")")
+            print("Error in cancelling consultation: \(error?.title ?? "Unkown error")")
         })
     }
 
@@ -52,7 +52,7 @@ class ConsultationsService {
             onSuccess()
             self?.observers.forEach({ $0?.onDataSourceUpdated(NullObject.instance) })
         }, onError: { error in
-            print("Error in starting consultation: \(error?.title ?? "FATAL ERROR")")
+            print("Error in starting consultation: \(error?.title ?? "Unkown error")")
         })
     }
 
@@ -62,11 +62,10 @@ class ConsultationsService {
             let deviceToken = tokensRepository.deviceToken
         else { return }
 
-        communicator.endConsultation(consultationId, deviceToken, onSuccess: { [weak self] _ in
-            self?.userPreferences.consultationId = nil
+        communicator.endConsultation(consultationId, deviceToken, onSuccess: {  _ in
             onSuccess()
         }, onError: { error in
-            print("Error in ending consultation: \(error?.title ?? "FATAL ERROR")")
+            print("Error in ending consultation: \(error?.title ?? "Unkown error")")
             onSuccess()
         })
     }
@@ -78,7 +77,7 @@ class ConsultationsService {
             self?.userPreferences.consultationId = dto?.data.id
             onSuccess()
         }, onError: { error in
-            print("Error in accepting consultation: \(error?.title ?? "FATAL ERROR")")
+            print("Error in accepting consultation: \(error?.title ?? "Unkown error")")
         })
     }
 }

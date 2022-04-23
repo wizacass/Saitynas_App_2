@@ -24,7 +24,7 @@ class EditReviewViewModel: ReviewViewModel {
             return
         }
 
-        communicator.editEvaluation(id, value, comment, onSuccess: { [unowned self] _ in
+        communicator?.editEvaluation(id, value, comment, onSuccess: { [unowned self] _ in
             evaluation = Evaluation(
                 id: id,
                 specialist: self.evaluation.specialist,
