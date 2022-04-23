@@ -66,9 +66,10 @@ class EvaluationDetailViewController: UIViewController {
 
         present(alert, animated: true, completion: nil)
     }
-
+    
     private func deleteEvalaution(_ action: UIAlertAction) {
-        let id = viewModel.evaluation.id
+        guard let id = viewModel.evaluation.id else { return }
+
         communicator.deleteEvaluation(id, onSuccess: handleDeletedEvaluation, onError: { _ in })
     }
 
