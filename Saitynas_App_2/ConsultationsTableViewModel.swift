@@ -15,7 +15,7 @@ class ConsultationsTableViewModel {
         self.communicator = communicator
     }
 
-    func loadSpecialists() {
+    func loadConsultations() {
         communicator.getMyConsultations(onSuccess: handleConsultationsReceived, onError: { error in
             print("Error in recveiving consultations history: \(error?.title ?? "FATAL ERROR")")
         })
