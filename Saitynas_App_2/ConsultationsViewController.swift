@@ -28,14 +28,6 @@ class ConsultationsViewController: UIViewController {
 
         specialityPicker.delegate = self
         specialityPicker.dataSource = self
-
-        c.communicator.getOnlineSpecialistsCount(onSuccess: { [weak self] dto in
-            guard let count = dto?.data.count else { return }
-
-            self?.activeSpecialistsCountLabel.text = "Currently available specialists: \(count)"
-        }, onError: { error in
-            print("Error in retrieving active specialists count: \(error?.title ?? "FATAL ERROR")")
-        })
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -43,6 +35,18 @@ class ConsultationsViewController: UIViewController {
 
         viewModel.subscribe(self)
         viewModel.loadRoles()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        DIContainer.shared.communicator.getOnlineSpecialistsCount(onSuccess: { [weak self] dto in
+            guard let count = dto?.data.count else { return }
+
+            self?.activeSpecialistsCountLabel.text = "Currently available specialists: \(count)"
+        }, onError: { error in
+            print("Error in retrieving active specialists count: \(error?.title ?? "FATAL ERROR")")
+        })
     }
 
     override func viewWillDisappear(_ animated: Bool) {
