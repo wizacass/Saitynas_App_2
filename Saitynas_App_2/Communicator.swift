@@ -158,6 +158,17 @@ extension Communicator {
         })
     }
 
+    func getConsultation(
+        _ id: String,
+        onSuccess: @escaping (ConsultationDTO?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/consultations/\(id)"
+        apiClient.get(endpoint, onSuccess, onError: { [weak self] error in
+            self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
+        })
+    }
+
     func cancelConsultation(
         _ consultationId: String,
         _ deviceToken: String,

@@ -1771,8 +1771,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are talking to: Alexander Hypatia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZA-ZS-XUM">
-                                <rect key="frame" x="48" y="665.66666666666663" width="279" height="20.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZA-ZS-XUM">
+                                <rect key="frame" x="150.33333333333334" y="665.66666666666663" width="74.666666666666657" height="20.333333333333371"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1793,6 +1793,7 @@
                     </view>
                     <connections>
                         <outlet property="agoraParentView" destination="gBv-p2-42u" id="UxS-vS-fuk"/>
+                        <outlet property="nameLabel" destination="pZA-ZS-XUM" id="rOu-rf-t0G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGe-u4-aqo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

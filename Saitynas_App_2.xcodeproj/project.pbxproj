@@ -30,6 +30,7 @@
 		A057551927F494AC00B148F6 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057551827F494AC00B148F6 /* UIViewControllerExtensions.swift */; };
 		A05F818C2842AD6A00EE5391 /* Speciality.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05F818B2842AD6A00EE5391 /* Speciality.swift */; };
 		A05F818E2842ADA500EE5391 /* SpecialitiesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05F818D2842ADA500EE5391 /* SpecialitiesDTO.swift */; };
+		A05F81902842C18400EE5391 /* ConsultationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05F818F2842C18400EE5391 /* ConsultationDTO.swift */; };
 		A06179C12757C3FE00ABBF82 /* WorkplaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179C02757C3FE00ABBF82 /* WorkplaceTableViewController.swift */; };
 		A06179C32757C47400ABBF82 /* WorkplaceTableVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179C22757C47400ABBF82 /* WorkplaceTableVIewModel.swift */; };
 		A06179C52757C51300ABBF82 /* CellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179C42757C51300ABBF82 /* CellIdentifier.swift */; };
@@ -175,6 +176,7 @@
 		A057551827F494AC00B148F6 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		A05F818B2842AD6A00EE5391 /* Speciality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speciality.swift; sourceTree = "<group>"; };
 		A05F818D2842ADA500EE5391 /* SpecialitiesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialitiesDTO.swift; sourceTree = "<group>"; };
+		A05F818F2842C18400EE5391 /* ConsultationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationDTO.swift; sourceTree = "<group>"; };
 		A06179C02757C3FE00ABBF82 /* WorkplaceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkplaceTableViewController.swift; sourceTree = "<group>"; };
 		A06179C22757C47400ABBF82 /* WorkplaceTableVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkplaceTableVIewModel.swift; sourceTree = "<group>"; };
 		A06179C42757C51300ABBF82 /* CellIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifier.swift; sourceTree = "<group>"; };
@@ -506,8 +508,9 @@
 				A070E856281097840065FEB7 /* AgoraSettingsDTO.swift */,
 				A0D120C22811EA1B006ADDEA /* CountDTO.swift */,
 				A0D120C42811EA25006ADDEA /* Count.swift */,
-				A09C36B2281310F900CACA61 /* ConsultationsDTO.swift */,
 				A09C36B42813112700CACA61 /* Consultation.swift */,
+				A05F818F2842C18400EE5391 /* ConsultationDTO.swift */,
+				A09C36B2281310F900CACA61 /* ConsultationsDTO.swift */,
 				A05F818B2842AD6A00EE5391 /* Speciality.swift */,
 				A05F818D2842ADA500EE5391 /* SpecialitiesDTO.swift */,
 			);
@@ -1079,6 +1082,7 @@
 				A0B4DA252741566800C0EC1F /* SceneDelegate.swift in Sources */,
 				A0EA55E827C1361E00B25C65 /* SpecialistInfoViewController.swift in Sources */,
 				A0A857CC274ED83F000B133C /* EnumDTO.swift in Sources */,
+				A05F81902842C18400EE5391 /* ConsultationDTO.swift in Sources */,
 				A0B993682741650A00EA60B0 /* ApiClient.swift in Sources */,
 				A0447268274EFCAF004292EE /* ButtonWithShadow.swift in Sources */,
 				A0B9937A274182E100EA60B0 /* PatientTabViewController.swift in Sources */,

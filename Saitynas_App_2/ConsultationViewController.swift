@@ -4,6 +4,7 @@ import AgoraRtcKit
 class ConsultationViewController: UIViewController {
 
     @IBOutlet weak var agoraParentView: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
 
     private var localView: UIView!
     private var remoteView: UIView!
@@ -69,8 +70,29 @@ class ConsultationViewController: UIViewController {
             channelId: settings.channel,
             info: nil,
             uid: agoraUid,
-            joinSuccess: { (_, _, _) in }
+            joinSuccess: { [weak self] (_, _, _) in
+                self?.communicator?.getConsultation(
+                    settings.channel,
+                    onSuccess: self!.handleConsultationInfoReceived,
+                    onError: { error in
+                        print("Error in retrieving consultation info: \(error?.title ?? "FATAL ERROR")")
+                    })
+            }
         )
+    }
+
+    private func handleConsultationInfoReceived(_ dto: ConsultationDTO?) {
+        guard let consultation = dto?.data else { return }
+
+        var name: String
+
+        if jwtUser?.role == .patient {
+            name = consultation.specialistName
+        } else {
+            name = consultation.patientName
+        }
+
+        nameLabel.text = "You are talking to: \(name)"
     }
 
     override func viewDidLayoutSubviews() {
