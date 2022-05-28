@@ -93,7 +93,7 @@ extension Communicator {
 // MARK: - Specialities
 extension Communicator {
     func getSpecialities (
-        onSuccess: @escaping (EnumListDTO?) -> Void,
+        onSuccess: @escaping (SpecialitiesDTO?) -> Void,
         onError handleError: @escaping (ErrorDTO?) -> Void
     ) {
         let endpoint = "/specialities"
@@ -155,6 +155,17 @@ extension Communicator {
 
         apiClient.post(endpoint, body, onSuccess, { [weak self] error in
             self?.retryPostRequest(endpoint, body, error, onSuccess, onError: handleError)
+        })
+    }
+
+    func getConsultation(
+        _ id: String,
+        onSuccess: @escaping (ConsultationDTO?) -> Void,
+        onError handleError: @escaping (ErrorDTO?) -> Void
+    ) {
+        let endpoint = "/consultations/\(id)"
+        apiClient.get(endpoint, onSuccess, onError: { [weak self] error in
+            self?.retryGetRequest(endpoint, error, onSuccess, onError: handleError)
         })
     }
 
