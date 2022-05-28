@@ -18,14 +18,13 @@ class ConsultationsTableViewController: UITableViewController {
         if viewModel == nil {
             viewModel = ConsultationsTableViewModel(communicator)
         }
-
-        viewModel.subscribe(self)
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        viewModel.loadSpecialists()
+        viewModel.subscribe(self)
+        viewModel.loadConsultations()
 
-        super.viewWillAppear(animated)
+        super.viewDidAppear(animated)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
