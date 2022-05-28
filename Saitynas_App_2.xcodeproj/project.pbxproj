@@ -1301,7 +1301,9 @@
 				DEVELOPMENT_TEAM = N5F2QJZLPH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Saitynas_App_2/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = SaitynaiApp;
+				INFOPLIST_KEY_CFBundleDisplayName = "Virtual Clinic";
+				INFOPLIST_KEY_NSCameraUsageDescription = "In order to see you during consultations";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "In order to hear you during consultations";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1332,7 +1334,9 @@
 				DEVELOPMENT_TEAM = N5F2QJZLPH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Saitynas_App_2/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = SaitynaiApp;
+				INFOPLIST_KEY_CFBundleDisplayName = "Virtual Clinic";
+				INFOPLIST_KEY_NSCameraUsageDescription = "In order to see you during consultations";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "In order to hear you during consultations";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
