@@ -3,7 +3,11 @@ import Foundation
 class ConsultationsViewModel {
 
     var selectedSpecialityIndex = 0
-    var speciality: [Speciality] = []
+    var specialities: [Speciality] = []
+
+    var activeSpeciality: Speciality {
+        return specialities[selectedSpecialityIndex]
+    }
 
     private var observers: [DataSourceObserverDelegate?] = []
 
@@ -20,8 +24,8 @@ class ConsultationsViewModel {
     private func handleReceivedRoles(_ dto: SpecialitiesDTO?) {
         guard let data = dto?.data else { return }
 
-        speciality = data
-        observers.forEach { $0?.onDataSourceUpdated(speciality) }
+        specialities = data
+        observers.forEach { $0?.onDataSourceUpdated(specialities) }
     }
 }
 

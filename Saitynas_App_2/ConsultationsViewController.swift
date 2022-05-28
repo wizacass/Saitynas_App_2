@@ -9,6 +9,11 @@ class ConsultationsViewController: UIViewController {
 
     private var viewModel: ConsultationsViewModel!
     private var consultationsService: ConsultationsService?
+    private var communicator: Communicator?
+
+    private var totalSpecialistsCount: Int? {
+        didSet { updateSpecialistsCountLabel() }
+    }
 
     private let id = UUID()
 
@@ -25,6 +30,7 @@ class ConsultationsViewController: UIViewController {
 
         viewModel = ConsultationsViewModel(c.communicator)
         consultationsService = c.consultationsService
+        communicator = c.communicator
 
         specialityPicker.delegate = self
         specialityPicker.dataSource = self
@@ -40,10 +46,10 @@ class ConsultationsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        DIContainer.shared.communicator.getOnlineSpecialistsCount(onSuccess: { [weak self] dto in
+        communicator?.getOnlineSpecialistsCount(onSuccess: { [weak self] dto in
             guard let count = dto?.data.count else { return }
 
-            self?.activeSpecialistsCountLabel.text = "Currently available specialists: \(count)"
+            self?.totalSpecialistsCount = count
         }, onError: { error in
             print("Error in retrieving active specialists count: \(error?.title ?? "FATAL ERROR")")
         })
@@ -61,13 +67,15 @@ class ConsultationsViewController: UIViewController {
         } else {
             specialityPicker.enable()
         }
+
+        updateSpecialistsCountLabel()
     }
 
     @IBAction func searchButtonPressed(_ sender: PrimaryButton) {
         var specialityId: Int?
 
         if specialityToggle.selectedSegmentIndex != 0 {
-            specialityId = viewModel.speciality[viewModel.selectedSpecialityIndex].id
+            specialityId = viewModel.activeSpeciality.id
         }
 
         consultationsService?.requestConsultation(specialityId, onSuccess: handleConsultationRequested)
@@ -80,6 +88,19 @@ class ConsultationsViewController: UIViewController {
 
         navigationController?.pushViewController(viewController, animated: true)
     }
+
+    private func updateSpecialistsCountLabel() {
+        var text: String
+
+        if specialityToggle.selectedSegmentIndex == 0 {
+            text = "Total available specialists: \(totalSpecialistsCount ?? 0)"
+        } else {
+            let speciality = viewModel.activeSpeciality
+            text = "Available \(speciality.name) specialists: \(speciality.activeSpecialists)"
+        }
+
+        activeSpecialistsCountLabel.text = text
+    }
 }
 
 // MARK: - Speciality picker Data Source
@@ -89,15 +110,16 @@ extension ConsultationsViewController: UIPickerViewDelegate, UIPickerViewDataSou
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return viewModel.speciality.count
+        return viewModel.specialities.count
     }
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return viewModel.speciality[row].name
+        return viewModel.specialities[row].name
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         viewModel.selectedSpecialityIndex = row
+        updateSpecialistsCountLabel()
     }
 }
 
