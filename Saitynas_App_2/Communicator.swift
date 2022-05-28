@@ -93,7 +93,7 @@ extension Communicator {
 // MARK: - Specialities
 extension Communicator {
     func getSpecialities (
-        onSuccess: @escaping (EnumListDTO?) -> Void,
+        onSuccess: @escaping (SpecialitiesDTO?) -> Void,
         onError handleError: @escaping (ErrorDTO?) -> Void
     ) {
         let endpoint = "/specialities"

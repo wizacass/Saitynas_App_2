@@ -3,7 +3,7 @@ import Foundation
 class ConsultationsViewModel {
 
     var selectedSpecialityIndex = 0
-    var speciality: [EnumDTO] = []
+    var speciality: [Speciality] = []
 
     private var observers: [DataSourceObserverDelegate?] = []
 
@@ -17,7 +17,7 @@ class ConsultationsViewModel {
         communicator.getSpecialities(onSuccess: handleReceivedRoles) { _ in }
     }
 
-    private func handleReceivedRoles(_ dto: EnumListDTO?) {
+    private func handleReceivedRoles(_ dto: SpecialitiesDTO?) {
         guard let data = dto?.data else { return }
 
         speciality = data

@@ -28,6 +28,8 @@
 		A044726E274EFF14004292EE /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044726D274EFF14004292EE /* InputField.swift */; };
 		A057551727F492D400B148F6 /* ConsultationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057551627F492D300B148F6 /* ConsultationSearchViewController.swift */; };
 		A057551927F494AC00B148F6 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057551827F494AC00B148F6 /* UIViewControllerExtensions.swift */; };
+		A05F818C2842AD6A00EE5391 /* Speciality.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05F818B2842AD6A00EE5391 /* Speciality.swift */; };
+		A05F818E2842ADA500EE5391 /* SpecialitiesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05F818D2842ADA500EE5391 /* SpecialitiesDTO.swift */; };
 		A06179C12757C3FE00ABBF82 /* WorkplaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179C02757C3FE00ABBF82 /* WorkplaceTableViewController.swift */; };
 		A06179C32757C47400ABBF82 /* WorkplaceTableVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179C22757C47400ABBF82 /* WorkplaceTableVIewModel.swift */; };
 		A06179C52757C51300ABBF82 /* CellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06179C42757C51300ABBF82 /* CellIdentifier.swift */; };
@@ -171,6 +173,8 @@
 		A044726D274EFF14004292EE /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		A057551627F492D300B148F6 /* ConsultationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationSearchViewController.swift; sourceTree = "<group>"; };
 		A057551827F494AC00B148F6 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		A05F818B2842AD6A00EE5391 /* Speciality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speciality.swift; sourceTree = "<group>"; };
+		A05F818D2842ADA500EE5391 /* SpecialitiesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialitiesDTO.swift; sourceTree = "<group>"; };
 		A06179C02757C3FE00ABBF82 /* WorkplaceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkplaceTableViewController.swift; sourceTree = "<group>"; };
 		A06179C22757C47400ABBF82 /* WorkplaceTableVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkplaceTableVIewModel.swift; sourceTree = "<group>"; };
 		A06179C42757C51300ABBF82 /* CellIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifier.swift; sourceTree = "<group>"; };
@@ -504,6 +508,8 @@
 				A0D120C42811EA25006ADDEA /* Count.swift */,
 				A09C36B2281310F900CACA61 /* ConsultationsDTO.swift */,
 				A09C36B42813112700CACA61 /* Consultation.swift */,
+				A05F818B2842AD6A00EE5391 /* Speciality.swift */,
+				A05F818D2842ADA500EE5391 /* SpecialitiesDTO.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -1007,6 +1013,8 @@
 				A06179C12757C3FE00ABBF82 /* WorkplaceTableViewController.swift in Sources */,
 				A0D120C52811EA25006ADDEA /* Count.swift in Sources */,
 				A04327C52760006B00CDF63B /* Evaluation.swift in Sources */,
+				A05F818C2842AD6A00EE5391 /* Speciality.swift in Sources */,
+				A05F818E2842ADA500EE5391 /* SpecialitiesDTO.swift in Sources */,
 				A0BCFC9C27652DC4009378BB /* EvaluationDetailViewController.swift in Sources */,
 				A0B4DA272741566800C0EC1F /* AuthenticationViewController.swift in Sources */,
 				A0DEB6BE274550C500EC62CB /* SpecialistDTO.swift in Sources */,
